@@ -1,0 +1,33 @@
+@import "_variables";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente-1;
+}
+
+
+html{
+    scroll-behavior: smooth;
+        body{
+            background-color:$clr-gris-claro;
+            font-size:$font-size;
+            
+            h1{ 
+                text-align: center;
+                font-size: 4rem;
+                letter-spacing: 0.1rem;
+                font-family:$fuente-2;
+                color:$clr-gris-fuerte;
+                text-shadow:$clr-primario-hover 1px 1px 1px, $clr-secundario 2px 2px 3px;
+            }
+            h2{
+                text-align: center;
+                font-size: 1.4rem;
+                color: $clr-gris-medio;
+            }
+
+        }
+}
