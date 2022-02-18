@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2b4ac1b9f1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Empeza ahora, es ONLINE</title>
+</head>
+
+<body>
+    <!-- HEADER CON NAV BAR -->
+    <header>
+        <nav>
+            <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
+            <label for="nav__checkbox" class="nav__onoff">
+                <i class="fas fa-bars"></i>
+                <i class="far fa-times-circle"></i>
+            </label>
+            <ul class="nav__listamenu">
+                <li><a href="../index.html"><img src="../multimedia/img/Bulbo_prendido.svg" alt="Logo chico de la empresa"></a></li>
+                <li><a class="link" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a class="link" href="../pages/comofunciona.html">Cómo funciona</a></li>
+                <li><a class="link" href="../pages/trucospararenovar.html">Trucos para renovar</a></li>
+                <li><a href="../pages/empezaahora.html"><button>Empenzá ahora!</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- COMIENZA MAIN - SECCION PRINCIPAL --> 
+    <main>
+        <!-- BOTON IR ARRIBA -->
+        <div class="scroll__btn">
+            <a href="#"><i class="fas fa-angle-double-up"></i></a>
+        </div>
+
+        <div class="contenedor">
+            <H1>Empeza ahora!</H1>
+            <h2>Siempre, para dar el primer paso, hay que orientar el rumbo...que tal comenzando con tú casa?</h2>
+                <!-- FORMULARIO PARA COMPLETAR TODA LA INFO DE LA REMODELACION -->
+                <form id="formulario" action="">
+
+                    <img class="contanos_personaje" src="../multimedia/img/Contanos.png" alt="imagen personaje contanto su idea">
+                    <!-- HABLEMOS DE TU IDEA -->
+                    <div class="base-card contanos">
+                        <h2>Hablemos de tú idéa, detallemos!</h2>
+                        <p>Queremos saber todo respecto a lo que deseas, soñas o te imaginas de ese ambiente, cuantos mas detalles, mejor</p>
+                        <textarea name="" id="" cols="50" rows="8" placeholder="Hola, el ambiente que quiero remodelar..." required></textarea>
+                    </div>
+
+                    <!-- TAMAÑOS DE TÚ AMBIENTE -->
+                    <div class="base-card dimensiones">
+                        <h2>Dimensiones</h2>
+                        <p>Contanos cuantos metros tiene de largo y de ancho aproximado, ese espacio que queres remodelar</p>
+                        <fieldset><legend>Ancho/Largo</legend>
+                            <div>
+                                <label for="ancho">Ancho del ambiente</label>
+                                <input type="number" placeholder="3.5" name="ancho" id="" required>
+                            </div> 
+                            
+                            <div>
+                                <label for="largo">Largo del ambiente</label>
+                                <input type="number" placeholder="5" name="Largo del ambiente" id="" required>
+                            </div>
+
+                        </fieldset>
+                        <p>El ancho y largo, se escriben en metros y pueden ser fracción</p>
+                    </div>
+
+                    <!-- CARGAR FOTOS DE TÚ AMBIENTE -->
+                    <div class=" base-card imagenes">
+                        <h2>Fotos</h2>
+                        <p>Mostranos las fotos actuales de ese espacio y los alrededores. Envianos varias!</p>
+                        <input type="file" >
+                    </div>
+
+                    <!-- QUÉ ESTILO PREFERIS? CARDS CON OPCIONES DE ESTILOS DE REFORMAS COMO GUIA -->
+                    <div class="base-card estilo">
+                        <h2>Cúal es tú estilo</h2>
+                        <p>Para darnos una idea, decino cual es el estilo que mas se asemeja a lo que te gustaria lograr</p>
+                        
+                            <ul>
+                                <li class="img1">
+                                    <h3>clasico<input id="checkclasico" type="checkbox"></h3>
+                                    <!-- <img src="../multimedia/img/ambiente clasico.jpg" alt="Ambiente clasico"> -->
+                                    
+                                </li>
+
+                                <li class="img2">
+                                    <h3>vintage<input id="checkvintage" type="checkbox" checked>
+                                    </li></h3>
+                                    <!-- <img src="../multimedia/img/ambiente vintage.jpg" alt="Ambiente vintage"> -->
+                                       
+    
+                                <li class="img3">
+                                    <h3>green<input id="checkvegetacion" type="checkbox"></h3>
+                                    <!-- <img src="../multimedia/img/ambiente verde.jpg" alt="Ambiente con vegetacion"> -->
+                                    
+                                </li>
+                                
+                                <li class="img4">
+                                    <h3>rústico<input id="checkrustico" type="checkbox"></h3>
+                                    <!-- <img src="../multimedia/img/ambiente rustico.jpg" alt="Ambiente rústico"> -->
+                                    
+
+                                </li>
+                                
+                                <li class="img5">
+                                    <h3>moderno<input id="checkmoderno" type="checkbox"></h3>
+                                    <!-- <img src="../multimedia/img/ambiente moderno.jpg" alt="Ambiente moderno"> -->
+                                    
+                                </li>
+                            </ul> 
+                    </div>
+
+                    <!-- OPCIONES PARA ELEGIR COLORES BASES PARA EL PROYECTO -->
+                    <div class="base-card color">
+                        <h2>Qué colores te gustan?</h2>
+                        <p>Decinos dos colores que te gustarían para tu ambiente. Hace click en el cuadrito de color y elegi que color te gustaria!</p> 
+                        <div class="elegir-color">
+                            <label for="color1">Primer color</label>
+                            <input type="color" name="color1" id="" value="#ffd900">
+                            <label for="color1">Segundo color</label>
+                            <input type="color" name="color2" id="" value="#FF5733">
+                            <label for="color1">Neutro</label>
+                            <input type="color" name="color3" id="" value="#EEEEEE">
+                        </div>
+                    </div>
+
+                    <!-- CARD PARA ELEGIR EL ARQUITECTO PARA EL PROYECTO. IMAGEN MAS DESCRIPCION Y HABILIDADES DEL ARQUI -->
+                    <div class="base-card arqui">
+                        <h2>Elegí a tú arqui</h2>
+                        <p>Elegí a será el que te acompañe en el proceso de reforma</p>
+                        <div class="personas">
+
+                            <div class="img1">
+                                <h3><input type="radio" name="arq" value="Carlos B." >Carlos B.</h3>
+                                <p>Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte, instalaciónes y estructuras.</p>
+                            </div>
+
+                            <div class="img2">
+                                <h3><input type="radio" name="arq" value="Carla P." checked>Carla P.</h3>
+                                <p>Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales.</p>
+                            </div>
+
+                            <div class="img3">
+                                <h3><input type="radio" name="arq" value="Marcos H.">Marcos H.</h3>
+                                <p>Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.</p>
+                            </div>
+
+                            <div class="img4">
+                                <h3><input type="radio" name="arq" value="Martina L.">Martina L.</h3>
+                                <p>Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DOS OPCIONES DE PLANES DE TRABAJO Y PAGOS PARA HACER EL PROYECTO -->
+                    <div class="plan">
+
+                            <div class="personalizado">
+                                <h2>Plan Personalizado</h2>
+                                <h2>6X de <strong>$5.000</strong></h2>
+                                <p><strong>$30.000</strong> de contado X ambiente</p>
+                                <p>Ambientes de mas de 18m2, seran considerados 2</p>
+                                <hr>
+                                <h3>Proyecto de remodelación, con el seguimiento de tu arqui, con computo para tú compras</h3>
+                                <ul>
+                                    <li>Lista de compra personalizada</li>
+                                    <li>Chat y videollamado con el designer</li>
+                                    <li>5 imagenes 3D realistas</li>
+                                    <li>Descuentos exclusivos en tiendas asociadas</li>
+                                    <li>Soporte para compras o dudas sobre el proyecto</li>
+                                    <li>1 pedido de revision del proyecto</li>
+                                </ul>
+                                <h3>Quantos mas ambientes, mayor es el descuento</h3>
+                                <p>2° ambiente por $25.000 o <strong>6X $4.500</strong></p>
+                                <p>3° ambiente por $22.000<strong> 6X $4.000</strong></p>
+                                <input type="radio" name="plan" checked>
+                            </div>
+
+                            <div class="premium">
+                                <h2>Plan Premium</h2>
+                                <h2>6X de <strong>$8.500</strong></h2>
+                                <p><strong>$48.000</strong> de contado X ambiente</p>
+                                <p>Ambientes de mas de 18m2, seran considerados 2</p>
+                                <hr>
+                                <h3>Proyecto personalizado, con mas revisiones y mejores decuentos en tiendas</h3>
+                                <ul>
+                                    <li>Lista de compra personalizada</li>
+                                    <li>Chat y videollamado con el designer</li>
+                                    <li>8 imagenes 3D realistas</li>
+                                    <li>Descuentos exclusivos en tiendas asociadas</li>
+                                    <li>Soporte para compras o dudas sobre el proyecto</li>
+                                    <li>2 pedidos de revision del proyecto</li>
+                                </ul>
+                                <h3>Quantos mas ambientes, mayor es el descuento</h3>
+                                <p>2° ambiente por $45.000 o <strong>6X $7.800</strong></p>
+                                <p>3° ambiente por $ 43.000 o <strong>6X $7.200</strong></p>
+                                <input type="radio" name="plan">
+                            </div>
+                    </div>
+
+                    <div class="formas-de-pago">
+
+                        <h2>Opciones de forma de pago</h2>
+                        <p>Indicanos cual seria el medio de pago que más cómodo te resultaría</p>
+
+                        <div class="pagos">
+                            <div>
+                                <img src="../multimedia/img/mercadpagorecurso_color.png" alt="Logo Mercado pago">
+                                <input type="radio" name="forma-pago" checked>
+                            </div>
+                            <div>
+                                <img src="../multimedia/img/Uala-logo color.png" alt="Logo Tarjeta Uala">
+                                <input type="radio" name="forma-pago">
+                            </div>
+                            <div>
+                                <img src="../multimedia/img/Visa logo color.png" alt="Logo tarjeta Visa">
+                                <input type="radio" name="forma-pago">
+                            </div>
+                            <div>
+                                <img src="../multimedia/img/Master logo color.png" alt="Logo mercado pago">
+                                <input type="radio" name="forma-pago">
+                            </div>
+                            <div>
+                                <img src="../multimedia/img/Red link logo color.png" alt="Logo Red link">
+                                <input type="radio" name="forma-pago">
+                            </div>
+                            <div>
+                                <img src="../multimedia/img/Banelco logo color.png" alt="Logo Red banelco">
+                                <input type="radio" name="forma-pago">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- DATOS DEL CLIENTE PARA CONTACTAR -->
+                    <div class=" contactar">
+                        <h2>Danos tus datos para contactarnos</h2>
+                        <div><label for="nombre">Nombre y apellido</label>*</div>
+                        <input type="text" name="nombre" placeholder="Ej.: nombre y apellido" id="" required>
+                        <div><label for="emailcontacto">Email para contacto</label>*</div>
+                        <input type="email" name="emailcontacto" placeholder="ejemplo@ejemplo.com" id="" required>
+                        <div><label for="celu">Celular o teléfono de contacto</label>*</div>
+                        <input type="tel" name="celu" placeholder="351 3333333" id="" required>
+
+                    </div>
+
+                    <!-- BOTON DE ENVIAR FORM O RESETEAR DATOS -->
+                    <button type="submit">Enviá los datos!</button> <button type="reset" >Resetear formulario</button>
+                    <p>En el plazo de 48hs habiles, se estaran contactando con vos, asi acuerdan formas de pago y entrega del proyecto</p>
+                    
+
+                </form>
+        </div>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- CONTENEDOR PRINCIPAL FOOTER -->
+        <div class="contenedor__footer">
+
+            <!-- PRIMER COLUMNA - LOGO-->
+            <div class="logo">
+                <a href="../#"><img src="../multimedia/img/Bulbo_prendido.svg" alt="Logo chico de la empresa"></a>
+                <p>Suscribite a nuestro canal de Youtube para ver videos de los mejores trucos para reacondicionar tus espacios y dejarlos únicos!</p>
+            </div>
+
+            <!-- SEGUNDA COLUMNA - RRSS -->
+            <div class="sociales">
+                <h3>Nuestras redes</h3>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <p>No dejes de seguirnos, estamos actualizando siempre informacion y eventos que te pueden ser de mucha utilidad</p>
+            </div>
+
+            <!-- TERCER COLUMNA - CONTACTO -->
+            <div class="contacto">
+                <h3>Contacto</h3>
+                <i class="fab fa-whatsapp-square"></i>
+                <p>+54 351 3441306</p>
+                <p>Av. Velez Sarsfield 1254</p>
+                <p id="ciudad">Córdoba, Argentina</p>
+            </div>
+
+            <!-- CUARTA COLUMNA - ESCRIBINOS -->
+            <div class="comentarios">
+                <!-- esta parte del form, no la tengo bien definida, pero me imagino algo para conractar o enviar comentario o newsletter -->
+                <h3>Escribinos</h3>
+                <form action="">
+                    <p>Si tenes alguna duda, consulta o comentario, hacelo acá</p>
+                    <textarea name="texto"  cols="46" rows="4" placeholder="Me gustaria recibier info..."></textarea> 
+                    <input class="enviar" type="submit" value="enviar">
+                </form>
+            </div>
+            
+        </div>
+
+        <!-- ULTIMA LINEA - DERECHOS RESERVADOS -->
+        <div class="right">
+            <hr>
+            <p>EmiDev &copy 2022 - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
