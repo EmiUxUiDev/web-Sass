@@ -1,4 +1,4 @@
-@import "_variables";
+@import '_variables.scss';
 
 
 *{
@@ -20,7 +20,7 @@ html{
                 font-size: 4rem;
                 letter-spacing: 0.1rem;
                 font-family:$fuente-2;
-                color:$clr-gris-fuerte;
+                color:$clr-gris-oscuro;
                 text-shadow:$clr-primario-hover 1px 1px 1px, $clr-secundario 2px 2px 3px;
             }
             h2{
