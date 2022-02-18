@@ -1,0 +1,3724 @@
+/* UI KIT BASICO DE COLORES FUENTES Y RADIOS */
+:root{
+    --clr-primario:#ffe656;
+    --clr-secundario:#ff156f;
+    --clr-primario-hover: #ffd900;
+    --clr-gris-claro: rgb(240, 240, 240);
+    --clr-gris-medio: rgb(122, 122, 122);
+    --clr-gris-fuerte: rgb(65, 65, 65);
+    --radio-suave: 0.2rem;
+    --radio-medio: 1rem;
+    --radio-fuerte: 2rem;
+    --redondo: 50%;
+    --fuente-1: 'Quicksand', sans-serif;
+    --fuente-2: 'Yellowtail', cursive;
+    --font-size:16px;
+}
+/* SETEO MINIMO DE LA WEB AL COMENZAR */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    font-size:var(--font-size);
+}
+
+h1{ 
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    font-family: var(--fuente-2);
+    color: var(--clr-gris-fuerte);
+    text-shadow: var(--clr-primario-hover)1px 1px 1px, var(--clr-secundario)2px 2px 3px;
+}
+h2{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--clr-gris-medio);
+}
+
+/* SUAVIZADO DE MOVIMIENTO DEL SCROLLING */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ----- MEDIA QUERIES 320px/420px/768px/1024px/1200px */
+
+/* ----FIN MEDIA QUERIES */
+
+body{
+    background-color:var(--clr-gris-claro);
+}
+
+
+/* ---INICIO HEADER/NAVBAR--- */
+header ul img{
+    width: 3.5rem;
+}
+.nav__checkbox{display: none;}
+.nav__onoff{display: none;}
+
+div img{
+    width: 25%;
+}
+.nav{
+    background-color:rgb(255, 255, 255) ; 
+}
+header ul{
+    position: relative;
+    width: 100vw;
+    box-shadow: 0px -5px 15px var(--clr-gris-medio);
+    padding: 0.8rem 0;
+    border-radius: var(--radio-suave);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header ul li{
+    list-style-type:none;
+    margin: 0 1.5rem;
+}
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    color:var(--clr-gris-fuerte);
+    font-weight: bold;
+    transition: all 150ms ease-in;  
+}
+header ul li img:hover{
+    cursor: pointer;
+}
+/* Para separar la imagen del logo del resto */
+header ul li:first-child{
+    margin-right: auto;   
+}
+header ul button{
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    border: none; 
+    outline: none;
+    background-color: var(--clr-primario);
+    border-radius: var(--radio-fuerte);
+    font-size: 1rem; 
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+header ul button:hover{
+    
+    background-color: var(--clr-primario-hover);
+    transform: scale(1.05);
+}
+/* Linea con movimiento bajo los items del menu */
+.link::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0.2rem;
+    /* Para q no se vea al inicio */
+    width: 0%;
+    background-color: var(--clr-primario-hover);
+    bottom: -0.5rem;
+    border-radius: 5px;
+    transition: all 250ms ease-in-out ;
+}
+
+.link:hover::after{
+    /* y aca lo hago crecer */
+    width: 100%;
+}
+header ul li img{
+    transition: transform 300ms ease-in-out 0ms ;
+}
+/* Leve movimiento a logo cuando hover */
+header ul li img:hover{
+    transform: rotate(10deg) scale(1.2);
+}
+/* ------------FIN HEADER/NAVBAR------------ */
+
+
+/*------------ BOTON SCROLL TOP----------- */
+.scroll__btn{
+    position: fixed;
+    width: 2.6rem;
+    height: 3.4rem;
+    border-radius: 40%;
+    bottom: 2rem;
+    right: 2rem;
+    outline: 1px solid var(--clr-secundario);
+    z-index: 100;
+    cursor: pointer;
+}
+.scroll__btn i{
+    display: block;
+    font-size: 2rem;
+    color: var(--clr-secundario);
+    text-align: center;
+    margin-top: 0.5rem; 
+}
+.scroll__btn a{
+    text-decoration: none;
+}
+
+.scroll__btn i:hover{
+
+    animation: movimiento_scroll 1s ease-in 0s infinite;  
+}
+
+@keyframes movimiento_scroll{
+    0%{
+        transform: translateY(0px);
+    }
+
+
+    25%{
+        transform: translateY(4px);
+    }
+    50%{
+        transform: translateY(0px)  
+    }
+
+    75%{
+        transform: translateY(4px); 
+    }
+
+
+    100%{
+        transform: translateY(0px);
+    }  
+}
+/*------------FIN BOTON SCROLL TOP----------- */
+
+
+
+/* COMIENZA EL FOOTER */
+footer{
+    width: 100vw;
+    bottom: 0;
+    background: white;
+    border-radius:8rem  0 0 0;
+    padding:3rem 0 0 0 ;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    box-shadow: 0px 10px 20px var(--clr-gris-medio);
+}
+
+/* LO TRANSFORMO EN EL FLEX PRINCIPAL */
+.contenedor__footer{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* 1ER COLUMNA - LOGO  OCUPA EL 20% DEL ANCHO*/
+.logo{
+  flex:0.2;
+  min-height: 15rem;   
+}
+
+.logo img{
+    width: 70px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+/* FIN 1ER COLUMNA - LOGO */
+
+
+/* 2DA COLUMNA - REDES SOCIALES OCUPA EL 20% DEL ANCHO */
+.sociales{
+    min-height: 15rem; 
+    flex:0.2;  
+}
+
+.sociales h3{ 
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--clr-primario-hover);
+    text-align: left;
+}
+
+.sociales i{
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    color: var(--clr-gris-fuerte);
+}
+
+.sociales p{
+    margin-top: 1rem;
+    text-align: left;
+}
+/* FIN 2DA COLUMNA - REDES SOCIALES */
+
+
+/* 3ER COLUMNA - CONTACTO DE LA EMPRESA */
+.contacto{
+    min-height: 15rem; 
+    flex:0.2;
+     
+}
+.contacto h3{
+    margin-bottom: 4rem;   
+    border-bottom: 1px solid var(--clr-primario-hover);
+    text-align: left;
+}
+.contacto i{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: var(--clr-gris-fuerte);
+}
+
+.contacto p{
+    text-align: left;
+}
+
+#ciudad{
+    margin-top: 1rem;
+    font-weight: bold;   
+}
+/*FIN 3ER COLUMNA - CONTACTO DE LA EMPRESA */
+
+
+/* 4TA COLUMNA - ESCRIBINOS, COMENTA */
+.comentarios{
+    min-height: 15rem; 
+    flex:0.3;
+   
+}
+.comentarios h3{
+    margin-bottom: 4rem; 
+    border-bottom: 1px solid var(--clr-primario-hover);
+    text-align: left;
+}
+.comentarios p{
+    margin-bottom: 0.8rem;
+}
+.enviar {
+    width: 100%;
+    display: block;
+    margin-top: 0.8rem;
+    border-radius: var(--radio-fuerte);
+    border:1px solid var(--clr-gris-fuerte);
+    background: transparent;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+}
+.enviar:hover{
+    background-color: var(--clr-primario-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+form{
+    padding-bottom: 1rem;
+}
+textarea{
+    background-color: rgb(243, 243, 243);
+    border:none;
+    outline: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+/* FIN 4TA COLUMNA - ESCRIBINOS, COMENTA */
+
+
+/* INICIO RENGLON FINAL FOOTER */
+.right hr{
+    width: 90vw;
+    margin: 10px auto;
+}
+.right p{
+    text-align: center;
+}
+/* FIN RENGLON FINAL FOOTER */
+/* FIN FOOTER */
+
+
+
+
+
+/* ---------------------------------------------- */
+/* -------INICIA EL CONTENIDO DEL HOME------- */
+
+#titulo{
+    margin-bottom: 40rem;  
+}
+
+/* TARJETA EN PANTALLA PRINCIPAL */
+#comentario{
+    width: 30%;
+    padding: 1rem;
+    border-radius: var(--radio-fuerte);
+    background-color: rgba(255, 255, 255, 0.658);
+    box-shadow: rgba(160, 160, 160, 0.493) 3px 3px 15px;
+}
+
+#comentario h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--clr-gris-fuerte);
+    text-align: center;
+}
+.home__martillo{
+    font-size: 50px;
+    color: var(--clr-gris-medio);
+    animation: martillar 2s ease-in-out 1s infinite normal none;
+}
+
+@keyframes martillar{
+    0%{
+        
+        transform: rotate(0deg);
+        transform-origin: 0rem 3rem;
+    }
+    50%{
+        transform: rotate(5deg);
+        transform-origin: 0rem 3rem;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: 0rem 3rem;
+    }
+}
+/* FIN TARJETA PANTALLA PRINCIPAL */
+
+
+/* ------CARD BAJO LA PANTALLA PRINCIPAL------ */
+
+.home__card2 i{
+    font-size: 4rem;
+    color: var(--clr-primario-hover);
+    text-shadow: var(--clr-gris-fuerte)2px 2px 15px;
+    z-index: 10;
+    transform: rotate(-15deg);
+}
+.home__card2 div{
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: var(--radio-fuerte);
+    outline:1px solid var(--clr-primario-hover);
+}
+.home__parrafos h3{
+    padding: 0.5rem;
+    font-family: var(--fuente-1);
+    font-size: 2rem;
+    color: var(--clr-gris-fuerte);
+    text-align: center;
+}
+/* FIN CARD BAJO PANTALLA PRINCIPAL */
+
+
+
+/* ----INICIO 4 TARJETAS DE PASOS PARA HACER REMODELACION -----*/
+.pasos__contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pasos__contenedor h2{
+    margin-top: 16rem;
+    margin-bottom: -2rem;
+    text-align: center;
+    display: block;
+    font-family: var(--fuente-2);
+    font-size: 3.4rem;
+    color: var(--clr-primario);
+    text-shadow: var(--clr-gris-medio)3px 3px 5px;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+}
+
+/* TARJETAS */
+.pasos__card{
+    width: 90vw;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.pasos__card img{
+    width: 30vw; 
+}
+
+/* TRABAJO SOBRE EL DIV DE LA TARJETA */
+.pasos__card div{
+   
+    background-color: rgba(255, 255, 255, 0.404);
+    border-radius: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.pasos__card h3{
+    color: var(--clr-primario);
+    text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2rem;
+}
+
+.pasos__card p{
+    padding: 0.25rem 2rem ;
+}
+
+/* HICE UN ID PARA TRATAR LA DIMENSION DE ESA IMAGEN EN PARTICULAR */
+ #primerimg{
+    width: 25vw;
+}
+
+/* CALL TO ACTION QUE ME LLEVA A LA PAGINA PARA CARGAR DATOS Y HECER LA REFORMA */
+.pasos__btn{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--clr-gris-medio);
+    color: var(--clr-primario-hover);
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--clr-primario-hover);
+    border-radius: var(--radio-fuerte);
+    margin: 4rem auto;
+    transition: all 300ms ease-in-out;
+}
+.pasos__btn:hover{
+    border: 1px solid var(--clr-gris-claro);
+    outline: 6px solid var(--clr-primario-hover);
+    background-color: white;
+    color: var(--clr-gris-medio);
+}
+.pasos__btn-empeza{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------- */
+/* ------PAGINA SOBRE NOSOTROS--------- */
+.sobre__nos h2{
+    padding: 0.5rem;
+}
+.contenedor__nos{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4rem 0 4rem 0;
+    background-color: rgb(255, 255, 255);
+    border: 10px solid var(--clr-gris-medio);
+    border-radius: var(--radio-fuerte);
+}
+
+.nos__tarjeta{
+    position: relative;
+    min-height: 25rem;
+    width: 18rem;
+    box-shadow:0 0px 8px 0 var(--clr-gris-medio);
+    text-align: center;
+    border-radius: var(--radio-medio);
+    margin: 0.5rem;
+    overflow:hidden;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 3px solid var(--clr-primario-hover);
+    /* transition:all 1s ease-in-out 1; */
+    transition: all 500ms ease-in-out;
+}
+
+.nos__tarjeta:hover{
+    transform: scale(1.02) rotate(0.5deg);
+}
+.nos__tarjeta h2 {
+    
+    font-family: var(--fuente-1);
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    color: var(--clr-gris-fuerte);
+    margin:12rem 0.5rem 0.5rem 0.5rem ;
+}
+.nos__tarjeta p{
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.url1{
+    background-image: url(../multimedia/img/la-cañada-light.jpg);
+}
+.url2{
+    background-image: url(../multimedia/img/estudio-de-arquitectura\ 2.jpg);
+}
+.url3{
+    background-image: url(../multimedia/img/charla.jpg);
+}
+.url4{
+    background-image: url(../multimedia/img/croquis.jpg);
+}
+.img-fondo{
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.contenedor_anidado{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.contenedor__tecnologia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor__tecnologia h2{
+    text-transform: uppercase;
+    color: var(--clr-gris-fuerte);
+}
+.contenedor__tecnologia p{
+   font-weight: 500;
+}
+.tecnologia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tecnologia img{
+    padding: 1.5rem;
+    filter: grayscale(1);
+    transition: all 300ms ease-in-out 0ms;
+}
+.tecnologia img:nth-child(even){
+    width: 250px;
+}
+.tecnologia img:hover{
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
+
+/* ------FIN PAGINA SOBRE NOSOTROS------ */
+/* ---------------------------------------------- */
+
+
+
+
+
+/* ------PAGINA CÓMO FUNCIONA?--------- */
+
+/* ORDENO EN DOS FILAS EL CONTENIDO DE 4 TARJETAS Q SE UBICAN EN DOS FILAS HORIZONTALES */
+.contenedor--p2{
+    display: flex;
+    flex-direction: column;
+}
+
+.primer--flex{
+    width: 80%;
+    margin: 1rem auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primer--flex h2{
+    margin: 2rem 0rem;
+}
+
+.contenedor__tiendas{
+    width: 35vw;
+    margin: 0.5rem auto;
+
+}
+.contenedor__tiendas h2{
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+.contenedor__tiendas p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+#obs{
+    font-size: .9rem;
+    margin-top: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.contenedor__tiendas strong{
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    color: var(--clr-secundario);
+}
+
+.contenedor--p2 p{
+    text-align: center;
+}
+.contenedor__pasos--p2{
+    min-height: 60rem;
+    /* margin: 4rem 0 4rem 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.fila--p2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    min-width: 100vw;
+}
+
+.pasos__card--p2{
+    position: relative;
+    width: 500PX;
+    height: 250PX;
+    margin: 2rem 1rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--radio-fuerte);
+    border-bottom: 2px solid var(--clr-primario-hover);
+}
+.pasos__card--p2 img{
+    flex: 0.5;
+    padding: 0.5rem;
+}
+
+.pasos__card--p2 div{
+    flex: 0.5;
+    padding: 0.5rem;
+}
+
+ .pasos__card--p2 h3{
+    text-align: center; 
+    font-size:1.5rem;
+    color: var(--clr-gris-fuerte);
+ }
+
+ .pasos__card--p2 p{
+     
+    text-align: center; 
+    margin-top: 1rem;
+    font-weight: bold; 
+    color: var(--clr-gris-fuerte);
+ }
+ #num-grande{
+     position: absolute;
+     top: -5rem;
+     left: -1.5rem;
+    font-size: 8rem;
+    color: var(--clr-gris-medio);
+    text-shadow: var(--clr-primario-hover)1px 1px 1px;
+}
+.contenedor__tiendas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagenes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+}
+.imagenes img{
+    width: 6rem;
+    margin: 2rem 0.8rem 2rem 0.8rem ;
+}
+
+
+
+
+
+
+/* -------------------------------------- */
+/* ------INICIO PAGINA "EMPEZA AHORA!" */
+/* -------------------------------------- */
+
+.contenedor form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contanos_personaje{
+    position: absolute;
+    right: 0rem;
+    top: 20vh;
+    width: 20vw;
+}
+
+/* SECC. HABLEMOS DE TÚ IDEA */
+.base-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0rem 1rem 0rem;
+    /* border:1px solid var(--clr-gris-medio); */
+    padding:1rem 0rem 1rem 0rem ;
+    border-radius: var(--radio-medio);
+    width: 90vw;
+}
+.base-card textarea{
+    width: 80vw;
+    background-color: white;
+    border-radius: var(--radio-medio);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    border: 1px solid var(--clr-primario-hover);
+}
+
+.imagenes input{
+    width: 80vw;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: var(--radio-fuerte);
+    background-color: var(--clr-primario);
+}
+
+.base-card ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+.base-card ul li{
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 14rem;
+    width: 14rem;
+    border-radius: var(--radio-medio);
+    margin: 1rem 0.5rem 1rem 0.5rem;
+    text-align: center;
+    list-style:none;
+}
+.base-card ul li h3{
+    color: white;
+    font-weight: 500;
+}
+.base-card ul li input{
+    margin-left: 1rem;
+}
+.img1{
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url(../multimedia/img/ambiente\ clasico-light.jpg);
+}
+.img2{
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url(../multimedia/img/ambiente\ vintage-light.jpg);
+}
+.img3{
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url(../multimedia/img/ambiente\ verde-light.jpg);
+}
+.img4{
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url(../multimedia/img/ambiente\ rustico-light.jpg);
+}
+.img5{
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url(../multimedia/img/ambiente\ moderno-light.jpg);
+}
+.base-card h2{
+    color: var(--clr-gris-fuerte);
+}
+.base-card p{
+    text-align: center;
+    color: black;
+    font-weight: 500;
+}
+.base-card legend{
+    font-weight: 600;
+}
+.base-card label{
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--clr-gris-fuerte);
+    line-height: 0rem;
+
+}
+.base-card fieldset input{
+    width: 15vw;
+    margin: 0rem 0rem;
+}
+.base-card fieldset{
+    width: 80vw;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;   
+    padding: 0.5rem 3rem 1rem 1rem;
+    border-radius: var(--radio-fuerte);
+    border: none;
+    background-color:var(--clr-primario);
+}
+.base-card fieldset div{
+    margin-bottom: 1rem;
+}
+.base-card fieldset p{
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.elegir-color{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    padding: 0rem 1rem 1rem 0;
+    margin-top: 0.5rem;
+    border-radius: var(--radio-fuerte);
+    background-color: var(--clr-primario);
+}
+.elegir-color label{
+    margin: 1rem 1rem 0rem 0.5rem;
+}
+.elegir-color input, p{
+    margin: 1rem 0rem 0rem 0rem;
+}
+.arqui{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw; 
+    margin: 3rem 0rem 3rem 0rem; 
+}
+
+.personas{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0rem 1rem 0rem;
+}
+.personas div{
+    width: 14rem;
+    height: 18rem;
+    margin: 0.5rem;
+}
+
+.personas .img1{
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url(../multimedia/img/arqui3-light.jpg);
+    background-size:cover;
+    background-position: center;
+    border-radius: var(--radio-medio);
+
+}
+.personas .img2{
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url(../multimedia/img/arqui5-light.jpg);
+    background-size:cover;
+    background-position: right;
+    border-radius: var(--radio-medio);
+}
+.personas .img3{
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url(../multimedia/img/arqui2-light.jpg);
+    background-size:cover;
+    background-position: right;
+    border-radius: var(--radio-medio);
+}
+.personas .img4{
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url(../multimedia/img/arqui4-light.jpg);
+    background-size:cover;
+    background-position: center;
+    border-radius: var(--radio-medio);
+}
+.personas p{
+    margin-top: 70%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+.personas input,h3{
+    text-align: center;
+}
+.plan{
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 0rem 3rem 0rem;
+}
+/* .personalizado{
+    width: 25rem;
+} */
+
+.premium{
+    width: 26rem;
+    padding: 1rem;
+    border: 1px solid var(--clr-primario-hover);
+    border-radius: var(--radio-medio);
+    transition: all 300ms ease-in-out 0ms;
+}
+.premium h2{
+    color: var(--clr-gris-fuerte);
+    text-align: center;
+}
+.premium strong{
+    color: var(--clr-secundario);
+}
+.premium ul{
+    color: var(--clr-secundario);
+    font-weight: 500;
+    margin:  2rem  2.5rem 2rem 2rem;
+    line-height: 1.5rem; 
+}
+.premium p,h3{
+    text-align: center;
+}
+.personalizado{
+    width: 26rem;
+    padding: 1rem;
+    border: 1px solid var(--clr-secundario);
+    border-radius: var(--radio-medio);
+    transition: all 300ms ease-in-out 0ms;
+}
+.personalizado h2{
+    color: var(--clr-gris-fuerte);
+    text-align: center;
+}
+.personalizado p strong{
+    color: var(--clr-secundario);
+}
+
+.personalizado ul{
+    color: var(--clr-gris-claro);
+    font-weight: 500;
+    margin:  2rem  2.5rem 2rem 2rem;
+    line-height: 1.5rem; 
+}
+.personalizado p,h3{
+    text-align: center;
+}
+.personalizado:hover{
+    transform: scale(1.02);
+    box-shadow: var(--clr-gris-medio) 1px 2px 5px;
+}
+.premium:hover{
+    transform: scale(1.02) ;
+    box-shadow: var(--clr-gris-medio) 1px 2px 5px;
+}
+.contactar{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+.contactar h2{
+    color: var(--clr-gris-fuerte);
+    margin-top: 2rem;
+}
+.contactar div{
+    margin: 0.3rem 0rem 0rem 0rem;
+}
+.contactar input:last-child{
+    margin-bottom: 1rem;
+}
+.contactar input{
+    padding: 0.2rem 0rem 0.2rem 1rem;
+    border: 1px solid var(--clr-gris-fuerte);
+    border-radius: var(--radio-medio);
+}
+.contenedor form button[type="submit"]{
+    font-size: 1rem;
+    font-weight: bold;
+    color:var(--clr-gris-fuerte);
+    padding: 0.5rem 3.6rem 0.5rem 3.6rem;
+    margin: 1rem 0rem 1rem 0rem;
+    border: 1px solid black;
+    outline: 1px solid var(--clr-primario-hover);
+    border-radius: var(--radio-fuerte);
+    background-color: white;
+    text-transform: uppercase;
+    transition: all 250ms ease-in-out 0ms;
+}
+.contenedor form button[type="reset"]{
+    font-size: 1rem;
+    font-weight: bold;
+    color:var(--clr-gris-fuerte);
+    padding: 0.5rem 3.2rem 0.5rem 3.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--clr-gris-fuerte);
+    border-radius: var(--radio-fuerte);
+}
+.contenedor form button:hover{
+    transform: scale(.98);
+     background-color: var(--clr-primario-hover);
+    box-shadow: var(--clr-gris-medio) 1px 1px 5px;
+}
+form p:last-child{
+    font-style: italic;
+    font-style: 0.9rem;
+    font-weight: 500 ;
+}
+
+.formas-de-pago{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.pagos{
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    align-items:baseline;
+    justify-content: space-around;
+    margin: 1.5rem 0rem;
+    
+}
+
+.pagos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: grayscale(1);
+    transition: all 300ms ease-in-out 0ms; 
+}
+.pagos img{
+   width: 6rem;
+   padding: 0.5rem 0rem; 
+}
+.pagos div:hover{
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
+.formas-de-pago h2, p{
+    color: var(--clr-gris-fuerte);
+    text-align: center;
+}
+.formas-de-pago h2{
+    margin-top: 2rem;
+}
+
+
+
+
+/* ----------------------------- */
+/*----------"TRUCOS PARA RENOVAR"------------- */
+
+ .contenedor__p3{
+    background-color: var(--clr-gris-claro);
+    margin: 0rem 1rem; 
+    display: flex;  
+    flex-direction: column;
+    margin: 2rem 1rem;
+ }
+.titulo--p3{
+    display: flex;
+    align-items: center;   
+}
+.titulo--p3 i{
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.titulo--p3 h1{
+    margin-top: -2rem;
+    margin-left: auto;
+}
+.titulo--p3 input{
+    margin:1rem 0.5rem;
+}
+.contenedor__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 19rem);
+    justify-content: center;
+    margin-top: 2rem;
+}
+.contenedor__p3> p {
+    text-align: center;
+}
+.grid__card{
+    /* height: 550px;
+    max-width: 400px; */
+    overflow: auto;
+    background-color: #fff;
+    border-radius: var(--radio-medio);
+    margin: 1rem 1rem;
+    padding:0rem 1rem;
+    border-top:4px solid var(--clr-primario-hover);
+    box-shadow: var(--clr-gris-medio) 0px 1px 3px;
+}
+.grid__card h2{
+    color: var(--clr-gris-fuerte);
+    text-align: left;
+    margin-left: 0;
+    margin-top: -0.8rem;
+    padding: 1rem 0rem;
+    font-size: 1.3rem;
+}
+.grid__card p{
+    color: var(--clr-gris-medio);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+iframe{
+    height: 250px;
+    width: 100%;
+    border-radius: var(--radio-medio);
+    margin-bottom: 1rem;
+}
+.grid__card a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold; 
+    margin: 1rem 0rem;
+}
+.grid__card i{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;  
+}
+.grid__card div{
+    height: 250px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: var(--clr-secundario);
+    border-radius: var(--radio-medio);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.blog1{
+    background-image: url(../multimedia/img/blog-pileta.jpg);
+}
+.blog2{
+    background-image: url(../multimedia/img/blog-pisomadera.jpg);
+}
+.blog3{
+    background-image: url(../multimedia/img/blog-colores.jpg);
+}
+/*---------FIN "TRUCOS PARA RENOVAR"--------------------------- */
+/*  */ 
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* --------------------MEDIA QUERIES-----------------------*/
+/* --------------420px 600px 850px 1250px----------------- */
+/* ------------------------------------------------------- */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+@media screen and (max-width:420px){
+
+   
+    /*--------CAMBIO FORMATO NAV BAR---------- */
+      .nav__onoff{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        margin: 1.8rem 1rem;
+        right: 0;
+        font-size:1.5rem;
+        color: var(--clr-secundario);
+        z-index: 10;
+    }
+    /* Hago no visible icono cerrar cerrar */
+    .far{
+        display: none;
+    }
+    .fas{
+        display:block;
+    }
+    /* Hago no visible el checkbox */
+    .nav__checkbox{
+        display:none;
+    }
+    
+    header ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    header ul:first-child{
+        margin:auto; 
+        display: block;  
+    }
+    ul.nav__listamenu li:nth-child(2){
+        display: none;
+    }
+    header ul li:nth-child(3){
+        display: none;
+    }
+    header ul li:nth-child(4){
+        display: none;
+    }
+    header ul li:nth-child(5){
+        display: none;
+    }
+   
+    /*ACTIVO O DESACTIVO MENU Y CAMBIO ICONOS DE MENU Y CERRAR---- */
+    #nav__checkbox:checked ~ ul.nav__listamenu li{
+        display: block;     
+    }
+    #nav__checkbox:checked ~ label.nav__onoff .fas{
+        display: none;
+    }
+    #nav__checkbox:checked ~ label.nav__onoff .far{
+        display: block;
+    }
+    /* -------------FIN NAV BAR--------------- */
+
+
+
+
+    /* --------------FOOTER------------------- */
+    footer{
+        border-radius:4rem  0 0 0;
+      
+    
+    }
+    .contenedor__footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__footer div{
+        width: 280px;
+        text-align: center;
+    }
+
+    .sociales h3{
+        margin-top: 1rem;
+    }
+    .sociales h3, .sociales p{
+        text-align: center;
+    }
+
+    .contacto h3, .contacto p{
+        text-align: center;
+    }
+
+    .comentarios h3, .comentarios p{
+        text-align: center;
+    }
+
+   
+
+
+
+
+    /* ------------------------------------------- */
+    /* ------------COMIENZA HOME 420px-------------- */
+   
+    #titulo{
+        margin: 0rem 0 0 -0.8rem;  
+        font-size: 3rem;
+        padding: 0.2rem; 
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
+    }
+    #home{
+        background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+        background-size: auto 50%;
+        background-repeat:no-repeat ;
+        background-position:10% 0% ;
+    }
+
+    #comentario{
+        margin:9rem auto 0rem auto;
+        width: 98%;
+        padding: 0.8rem;
+        border-radius: var(--radio-fuerte);
+        background-color: #ffd90011;
+        /* background: -webkit-linear-gradient(top, #fff, #ffd900); */
+        box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
+        border:4px solid var(--clr-secundario);
+        font-size: 1rem;
+        color: var(--clr-gris-fuerte);
+    }
+    #comentario h2{
+        font-size: 1.5rem;
+        font-family: var(--fuente-1);
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        margin: 0rem 0rem 2rem 0rem;
+        text-shadow: var(--clr-gris-fuerte) 3px 3px 3px;
+    }
+   
+    #comentario i{
+        color: var(--clr-gris-fuerte);
+        margin-top: -2rem;
+        margin-left: -1rem;
+    }
+
+    .home__card2 div{
+        width: 85%;
+        margin: auto 2rem;
+        background-color: transparent;
+        padding: 1rem;
+    }
+    .home__card2 i{
+        font-size: 3rem;
+        color: var(--clr-secundario);
+    }
+    .home_parrafos h3{
+        font-size: 1.6rem;
+    }
+
+    .pasos__card{
+        /* background-color: aquamarine; */
+        justify-content: center;
+        margin-top: 0.3rem;
+    }
+
+    .pasos__contenedor h2{
+        margin-top: 2rem;
+        font-size: 4rem;
+        color: var(--clr-primario-hover);
+        line-height: 4rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    .pasos__contenedor{
+        margin: 0rem auto;
+    }
+
+    .pasos__card{
+        width: 90vw;
+        display: flex; 
+        flex-direction: column;
+        margin: 0.8rem 0rem 2rem 0rem; 
+    }
+    
+    .pasos__card img{
+        width: 20vw; 
+    }
+    
+    
+    .pasos__card div{
+
+        background: #FFD900;
+        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+        padding: 1.5rem 0rem;
+        text-align: center;
+        margin: -1.5rem 0rem 0rem 0.5rem;
+        z-index: -1;
+    }
+    
+    .pasos__card h3{
+        color: var(--clr-primario);
+        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        padding: 0rem 2rem;
+    }
+    
+    .pasos__card p{
+        padding: 0.25rem 2rem ;
+        font-size: 1.2rem;
+        line-height:1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .pasos__card img{
+        width: 70vw;
+    }
+    /* HICE UN ID PARA TRATAR LA DIMENSION DE ESA IMAGEN EN PARTICULAR */
+    #primerimg{
+    width: 60vw;
+    }
+
+    .pasos__btn{
+        width: 80vw;
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+        margin: 4rem auto;
+    }
+
+    /* -------------TERMINA HOME--------------- */
+
+
+
+    /* --------COMIENZA SOBRE NOSOTROS 420px----------- */
+    /* ------------------------------------------ */
+
+    .sobre__nos h1{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3rem;
+        padding: 0.8rem;
+        letter-spacing: 0.15rem;
+    }
+    .sobre__nos h2{
+        font-size: 1.1rem;
+        line-height: 1.5; 
+    }
+    .contenedor__nos{
+        margin-top: 1.5rem;
+    }
+    .nos__tarjeta{
+        margin: 1.2rem 0rem;
+    }
+    .nos__tarjeta h2{
+        font-size: 2rem;
+    }
+    .nos__tarjeta p{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    .contenedor__tecnologia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__tecnologia h2{
+        text-transform: uppercase;
+        color: var(--clr-gris-fuerte);
+    }
+    .contenedor__tecnologia p{
+       font-weight: 600;
+       text-align: center;
+       font-size: 1rem;
+       width: 90%;
+    }
+    .tecnologia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 2rem 0rem;
+        background-color: #ffd900;
+        border-radius: var(--radio-fuerte);
+    }
+    .tecnologia div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;  
+    }
+    .tecnologia p{
+        font-size: 0.8rem;
+        font-family: monospace ;
+        text-transform: uppercase;
+        color: var(--clr-gris-medio);
+        margin: 0;
+    }
+    .tecnologia img{
+        margin-top: 2rem;
+        padding: 0;
+        width: 75%;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms;
+    }
+    .tecnologia img:nth-child(2){
+        width: 72%;
+    }
+    .tecnologia img:nth-child(3){
+        width: 69%;
+    }
+    .tecnologia img:hover{
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+
+/* -------------FIN SOBRE NOSOTROS------------- */
+
+
+
+
+
+
+
+
+/* ---------------EMPEZA AHORA 420px------------------ */
+    .contanos_personaje{
+        position: absolute;
+        right: 0rem;
+        top: 20vh;
+        width: 55vw;
+    }
+
+    .contenedor h1{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3rem;
+        padding: 0.8rem;
+    }
+    .contenedor h2{
+        font-size: 1.2rem;
+        margin: 0rem 0.5rem;
+    }
+
+
+    .base-card legend{
+        font-weight: 600;
+    }
+    .base-card label{
+        font-weight: 700;
+        font-size: .9rem;
+        line-height: 0rem;
+
+    }
+
+    .base-card ul li{
+        height: 16rem;
+        width: 95vw;
+    }
+
+    .base-card fieldset input{
+        width: 15vw;
+        margin: 0rem 0rem;
+    }
+    .base-card fieldset{
+        width: 80vw;
+        padding: 0.5rem 3rem 1rem 1rem;
+    }
+    .base-card fieldset div{
+        margin-bottom: 1rem;
+    }
+
+    .elegir-color{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        padding: 0rem 1rem 1rem 0;
+        margin-top: 0.5rem;
+        border-radius: var(--radio-fuerte);
+        background-color: var(--clr-primario);
+    }
+    .elegir-color label{
+        margin: 1.2rem 0rem 1rem 0rem;
+    }
+    .elegir-color input, p{
+        margin: 0.2rem 0rem 0rem 0rem;
+    }
+
+    .base-card fieldset{
+        flex-direction: column;
+        padding: 1rem 6rem 1rem 2rem;
+        margin: 1rem 0rem 0rem 0rem;
+        border-radius: var(--radio-fuerte);
+        border: none;
+        background-color:var(--clr-primario);
+    }
+    .base-card p{
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
+
+    .personas{
+        flex-direction: column;
+        
+    }
+
+    .personas div{
+        width: 80vw;
+        height: auto;
+        margin: 0.5rem;
+    }
+
+    .plan{
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--clr-primario-hover);
+        margin: 0;
+        padding: 1rem 0rem;
+        border-radius: var(--radio-medio);
+    }
+    .premium{
+        width: 85vw;
+        padding: 0.5rem;
+        border: 1px solid var(--clr-gris-fuerte);
+        border-radius: var(--radio-medio);
+        transition: all 300ms ease-in-out 0ms;
+        margin: 0.5rem 0rem;
+    }
+    .premium h2{
+        color: var(--clr-gris-fuerte);
+        text-align: center;
+    }
+    .premium strong{
+        color: var(--clr-secundario);
+    }
+    .premium ul{
+        color: var(--clr-secundario);
+        font-weight: 500;
+        margin:  2rem  2.5rem 2rem 2rem;
+        line-height: 1.5rem; 
+    }
+    .premium p,h3{
+        text-align: center;
+    }
+    .personalizado{
+        width: 85vw;
+        padding: 0.5rem;
+        border: 1px solid var(--clr-gris-fuerte);
+        border-radius: var(--radio-medio);
+        transition: all 300ms ease-in-out 0ms;
+        margin: 0.5rem 0rem;
+    }
+    .personalizado h2{
+        color: var(--clr-gris-fuerte);
+        text-align: center;
+    }
+    .personalizado p strong{
+        color: var(--clr-secundario);
+    }
+    
+    .personalizado ul{
+        color: var(--clr-secundario);
+        font-weight: 500;
+        margin:  2rem  2.5rem 2rem 2rem;
+        line-height: 1.5rem; 
+    }
+    .personalizado p,h3{
+        text-align: center;
+    }
+
+    .formas-de-pago h2{
+        margin-top: 2rem;
+    }
+
+    .pagos{
+        justify-content: space-around;
+        margin: 1.5rem 0rem;
+        flex-wrap: wrap;
+    }
+    
+    .pagos div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 1rem;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms; 
+    }
+    .pagos img{
+        width: 4rem;
+       padding: 0.5rem 0rem; 
+    }
+
+    .contactar{
+        width: 80vw;
+        margin-bottom: 1rem;
+    }
+    .contactar h2{
+        color: var(--clr-gris-fuerte);
+        margin-bottom: 2rem;
+    }
+    #formulario{
+        margin-bottom: 2rem;
+    }
+
+
+/* ---------------FIN EMPEZA AHORA------------------ */
+
+
+
+
+ /* ---------------TRUCOS PARA RENOVAR-------------- */
+ .titulo--p3{
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.titulo--p3 h1{
+    font-size: 3rem;
+    padding: 0.2rem; 
+}
+
+/* -------------FIN TRUCOS PARA RENOVAR------------- */
+/* ------------------------------------------------ */
+
+
+
+
+
+/* ------------COMIENZA CÓMO FUNCIONA? 420PX------------- */
+
+.primer--flex h1{
+    margin: 0 0 0 -0.8rem;  
+    font-size: 3rem;
+    padding: 0.8rem;
+}
+
+.pasos__card--p2{
+    flex-direction: column;
+    width: 300PX;
+    height: auto;
+    margin: 4rem 0rem 4rem 0rem;
+}
+
+.pasos__card--p2 img{
+    width: 50vw;
+}
+
+.pasos__card--p2 p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pasos__card--p2 p:last-child{
+    color: var(--clr-secundario);
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+#num-grande{
+    top: -2.5rem;
+     left: 0rem;
+    font-size: 5.5rem;
+    
+}
+.contenedor__tiendas{
+    width: 80vw;
+}
+/*--------------FIN CÓMO FUNCIONA?---------------- */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:421px) and (max-width:600px){
+    
+    /* --------CAMBIO FORMATO NAV BAR---------- */
+    .nav__onoff{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        margin: 1.8rem 1rem;
+        right: 0;
+        font-size:1.5rem;
+        color: var(--clr-secundario);
+        z-index: 10;
+    }
+    /* Hago no visible icono cerrar cerrar */
+    .far{
+        display: none;
+    }
+    .fas{
+        display:block;
+    }
+    /* Hago no visible el checkbox */
+    .nav__checkbox{
+        display:none;
+    }
+    
+    header ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    header ul:first-child{
+        margin:auto; 
+        display: block;  
+    }
+    ul.nav__listamenu li:nth-child(2){
+        display: none;
+    }
+    header ul li:nth-child(3){
+        display: none;
+    }
+    header ul li:nth-child(4){
+        display: none;
+    }
+    header ul li:nth-child(5){
+        display: none;
+    }
+
+    /*ACTIVO O DESACTIVO MENU Y CAMBIO ICONOS DE MENU Y CERRAR---- */
+    #nav__checkbox:checked ~ ul.nav__listamenu li{
+        display: block;     
+    }
+    #nav__checkbox:checked ~ label.nav__onoff .fas{
+        display: none;
+    }
+    #nav__checkbox:checked ~ label.nav__onoff .far{
+        display: block;
+    }
+    /* -------------FIN NAV BAR--------------- */
+
+
+
+
+
+    /* --------------FOOTER------------------- */
+    footer{
+        border-radius:4rem  0 0 0;
+    }
+    .contenedor__footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__footer div{
+        width: 300px;
+        text-align: center;
+    }
+    .sociales h3{
+        margin-top: 1rem;
+    }
+    .sociales h3, .sociales p{
+        text-align: center;
+    }
+
+    .contacto h3, .contacto p{
+        text-align: center;
+    }
+
+    .comentarios h3, .comentarios p{
+        text-align: center;
+    }
+
+
+    /* --------------------------------- */
+   
+
+
+
+
+    /* ------------------------------------------- */
+    /* -----------COMIENZA HOME 600px-------------- */
+    #titulo{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3.4rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    }
+    #home{
+        background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+        background-size: auto 65%;
+        background-repeat:no-repeat ;
+        background-position:30% 0% ;
+    }
+
+  
+    #comentario{
+        margin: 22rem 0rem 0rem 0.5rem;
+        width: 98%;
+        padding: 0.8rem;
+        border-radius: var(--radio-fuerte);
+        background-color: #ffd90013;
+        /* background: -webkit-linear-gradient(top, #fff, #ffd900); */
+        box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
+        border:4px solid var(--clr-secundario); 
+    }
+    #comentario h2{
+        font-size: 1.8rem;
+        text-shadow: var(--clr-gris-fuerte) 3px 3px 3px;
+        font-family: var(--fuente-1);
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin: 4rem 0rem 4rem 0rem;
+    }
+    #comentario h3{
+
+        color: var(--clr-gris-fuerte);
+    }
+    #comentario i{
+        color: var(--clr-gris-fuerte);
+        margin-top: -2rem;
+        margin-left: -1rem;
+    }
+    .home__martillo {
+        font-size: 60px;
+    } 
+
+    .home__card2 div{
+        width: 85%;
+        margin: auto 2rem;
+        background-color: transparent;
+        padding: 1rem;
+    }
+    .home__card2 i{
+        font-size: 3rem;
+        color: var(--clr-secundario);
+    }
+    .home__parrafos h3{
+        font-size: 1.6rem;
+    }
+
+    .pasos__card{
+        /* background-color: aquamarine; */
+        justify-content: center;
+        margin-top: 0.3rem;
+    }
+
+    .pasos__contenedor h2{
+        margin-top: 2rem;
+        font-size: 3.6rem;
+        color: var(--clr-primario-hover);
+        line-height: 4rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    .pasos__contenedor{
+        margin: 0rem auto;
+    }
+
+    .pasos__card{
+        width: 90vw;
+        display: flex; 
+        flex-direction: column;
+        margin: 0.8rem 0rem 2rem 0rem; 
+    }
+    
+    .pasos__card img{
+        width: 20vw; 
+    }
+    
+    .pasos__card div{
+
+        background: #FFD900;
+        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+        padding: 1.5rem 0rem;
+        text-align: center;
+        margin: -1.5rem 0rem 0rem 0.5rem;
+        z-index: -1;
+    }
+    
+    .pasos__card h3{
+        color: var(--clr-primario);
+        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        padding: 0rem 2rem;
+    }
+    
+    .pasos__card p{
+        padding: 0.25rem 2rem ;
+        font-size: 1.2rem;
+        line-height:1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .pasos__card img{
+        width: 70vw;
+        margin-bottom: -0.6rem;
+    }
+    
+    /* HICE UN ID PARA TRATAR LA DIMENSION DE ESA IMAGEN EN PARTICULAR */
+    #primerimg{
+        width: 60vw;
+    }
+    /* ----------------TERMINA HOME------------------- */
+
+
+    
+    
+
+    /* --------COMIENZA SOBRE NOSOTROS 600px---------- */
+    /* ------------------------------------------ */
+
+
+   
+
+    .sobre__nos h1{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3.4rem;
+        padding: 0.8rem;
+        letter-spacing: 0.15rem;
+    }
+    .sobre__nos h2{
+        font-size: 1.1rem;
+        line-height: 1.5; 
+        
+    }
+    .contenedor__nos{
+        margin-top: 1.5rem;
+
+    }
+    .nos__tarjeta{
+        margin: 1rem;
+        /* width: 80vw; */
+    }
+    .nos__tarjeta h2{
+        font-size: 2rem;
+    }
+    .nos__tarjeta p{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+    
+    .contenedor__tecnologia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__tecnologia h2{
+        text-transform: uppercase;
+        color: var(--clr-gris-fuerte);
+    }
+    .contenedor__tecnologia p{
+       font-weight: 600;
+       text-align: center;
+       font-size: 1rem;
+       width: 90%;
+    }
+    .tecnologia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 2rem 0rem;
+        background-color: #ffd900;
+        border-radius: var(--radio-fuerte);
+    }
+    .tecnologia div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;  
+    }
+    
+    .tecnologia p{
+        font-size: 0.8rem;
+        font-family: monospace ;
+        text-transform: uppercase;
+        color: var(--clr-gris-medio);
+        margin: 0;
+    }
+    .tecnologia img{
+        margin-top: 2rem;
+        padding: 0;
+        width: 75%;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms;
+    }
+    .tecnologia img:nth-child(2){
+        width: 72%;
+    }
+    .tecnologia img:nth-child(3){
+        width: 69%;
+    }
+    .tecnologia img:hover{
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+
+
+    /* ---------------EMPEZA AHORA 600px------------------ */
+    .contanos_personaje{
+        position: absolute;
+        right: 0rem;
+        top: 10vh;
+        width: 45vw;
+    }
+
+    .contenedor h1{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3.4rem;
+        padding: 0.8rem;
+    }
+    .contenedor h2{
+        font-size: 1.2rem;
+        margin: 0rem 0.5rem;
+    }
+
+    .base-card ul li{
+        height: 24rem;
+        width: 90vw;
+    }
+
+    .base-card legend{
+        font-weight: 600;
+    }
+    .base-card label{
+        font-weight: 700;
+        font-size: .9rem;
+        line-height: 0rem;
+
+    }
+    .base-card fieldset input{
+        width: 15vw;
+        margin: 0rem 0rem;
+    }
+    .base-card fieldset{
+        width: 80vw;
+        padding: 0.5rem 3rem 1rem 1rem;
+    }
+    .base-card fieldset div{
+        margin-bottom: 1rem;
+    }
+
+    .elegir-color{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        padding: 0rem 1rem 1rem 0;
+        margin-top: 0.5rem;
+        border-radius: var(--radio-fuerte);
+        background-color: var(--clr-primario);
+    }
+    .elegir-color label{
+        margin: 1.2rem 0rem 1rem 0rem;
+    }
+    .elegir-color input, p{
+        margin: 0.2rem 0rem 0rem 0rem;
+    }
+
+    .base-card fieldset{
+        flex-direction: column;
+        padding: 1rem 6rem 1rem 2rem;
+        margin: 1rem 0rem 0rem 0rem;
+        border-radius: var(--radio-fuerte);
+        border: none;
+        background-color:var(--clr-primario);
+    }
+    .base-card p{
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
+
+    .personas{
+        flex-wrap: wrap;
+     }
+    
+     .personas div{
+         width: 50vw;
+         height: auto;
+         margin: 1.5rem 1rem;
+     }
+
+    .plan{
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--clr-primario-hover);
+        margin: 0;
+        padding: 1rem 0rem;
+        border-radius: var(--radio-medio);
+    }
+    .premium{
+        width: 85vw;
+        padding: 0.5rem;
+        border: 1px solid var(--clr-gris-fuerte);
+        border-radius: var(--radio-medio);
+        transition: all 300ms ease-in-out 0ms;
+        margin: 0.5rem 0rem;
+    }
+    .premium h2{
+        color: var(--clr-gris-fuerte);
+        text-align: center;
+    }
+    .premium strong{
+        color: var(--clr-secundario);
+    }
+    .premium ul{
+        color: var(--clr-secundario);
+        font-weight: 500;
+        margin:  2rem  2.5rem 2rem 2rem;
+        line-height: 1.5rem; 
+    }
+    .premium p,h3{
+        text-align: center;
+    }
+    .personalizado{
+        width: 85vw;
+        padding: 0.5rem;
+        border: 1px solid var(--clr-gris-fuerte);
+        border-radius: var(--radio-medio);
+        transition: all 300ms ease-in-out 0ms;
+        margin: 0.5rem 0rem;
+    }
+    .personalizado h2{
+        color: var(--clr-gris-fuerte);
+        text-align: center;
+    }
+    .personalizado p strong{
+        color: var(--clr-secundario);
+    }
+    
+    .personalizado ul{
+        color: var(--clr-secundario);
+        font-weight: 500;
+        margin:  2rem  2.5rem 2rem 2rem;
+        line-height: 1.5rem; 
+    }
+    .personalizado p,h3{
+        text-align: center;
+    }
+
+    .formas-de-pago h2{
+        margin-top: 2rem;
+    }
+
+    .pagos{
+        justify-content: space-around;
+        margin: 1.5rem 0rem;
+        flex-wrap: wrap;
+    }
+    
+    .pagos div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 1rem;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms; 
+    }
+    .pagos img{
+        width: 5rem;
+       padding: 0.5rem 0rem; 
+    }
+
+    .contactar{
+        width: 50vw;
+        margin-bottom: 1rem;
+    }
+    .contactar h2{
+        color: var(--clr-gris-fuerte);
+        margin-bottom: 2rem;
+    }
+    #formulario{
+        margin-bottom: 2rem;
+    }
+
+
+/* ---------------FIN EMPEZA AHORA 60PX------------------ */
+
+
+
+    
+    /* ---------------TRUCOS PARA RENOVAR 600PX-------------- */
+    .titulo--p3{
+        flex-direction: column;
+        align-items: center;   
+    }
+    
+    .titulo--p3 h1{
+            margin: 0 0 0 -0.8rem;  
+            font-size: 3.4rem;
+            padding: 0.8rem;
+    }
+    
+    /* -------------FIN TRUCOS PARA RENOVAR 600PX------------- */    
+
+
+    /* ------------COMIENZA CÓMO FUNCIONA? 600PX------------- */
+
+.primer--flex h1{
+    margin: 0 0 0 -0.8rem;  
+    font-size: 3.4rem;
+    padding: 0.8rem;
+}
+
+.pasos__card--p2{
+    width: 360PX;
+    height: auto; 
+}
+#num-grande{
+    top: -5rem;
+     left: -1rem;
+    font-size: 7rem;
+    
+}
+
+/*--------------FIN CÓMO FUNCIONA? 600PX---------------- */
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:601px) and (max-width:850px){
+
+
+    /* --------MODIFICO FUENTES DEL NAV------------- */
+  
+    header ul li{
+        
+        margin: 0rem 0rem 0rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+
+
+    /* -----------FOOTER-------------- */
+     footer{
+        border-radius:6rem 0 0 0;
+    }
+    .contenedor__footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__footer div{
+        width: 500px;
+        text-align: center;
+    }
+
+    .sociales h3{
+        margin-top: 1rem;
+    }
+    .sociales h3, .sociales p{
+        text-align: center;
+    }
+
+    .contacto h3, .contacto p{
+        text-align: center;
+    }
+
+    .comentarios h3, .comentarios p{
+        text-align: center;
+    }
+
+    /* ------------------------------------------ */
+
+    
+
+
+
+
+    /* ------------------------------------------- */
+    /* --------------COMIENZA HOME 850px-------------- */
+    #titulo{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3.8rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    }
+    #home{
+        background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+        background-size: auto 65%;
+        background-repeat:no-repeat ;
+        background-position:10% 0% ;
+    }
+
+
+    #comentario{
+        margin: 20rem 0rem 0rem 0.5rem;
+        width: 98%;
+        padding: 0.8rem;
+        border-radius: var(--radio-fuerte);
+        background-color: #ffd90013;
+        /* background: -webkit-linear-gradient(top, #fff, #ffd900); */
+        box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
+        border:4px solid var(--clr-secundario);  
+    }
+
+    #comentario h2{
+        font-size: 2.2rem;
+        text-shadow: var(--clr-gris-fuerte) 3px 3px 3px;
+        font-family: var(--fuente-1);
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin: 3rem 0rem 3rem 0rem;
+    }
+    #comentario h3{
+        color: var(--clr-gris-fuerte);
+    }
+    #comentario i{
+        color: var(--clr-gris-fuerte);
+        margin-top: -2rem;
+        margin-left: -1rem;
+    }
+
+    .home__card2 div{
+        width: 85%;
+        margin: -5rem auto 0rem auto;
+        background-color: transparent;
+        padding: 1rem;
+    }
+    .home__card2 i{
+        /* position: absolute; */
+        margin-top: 4rem;
+        margin-left: 2rem;
+        font-size: 4rem;
+        color: var(--clr-secundario);
+    }
+    .home__parrafos h3{
+        font-size: 2.2rem;
+    }
+
+    .pasos__contenedor h2{
+        margin-top: 2rem;
+        font-size: 4rem;
+        color: var(--clr-primario-hover);
+        line-height: 4rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    .pasos__contenedor{
+        margin: 0rem auto;
+    }
+
+    .pasos__card{
+        width: 90vw;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.3rem;
+        margin: 0.8rem 0rem 2rem 0rem; 
+    }
+    
+    
+    .pasos__card div{
+
+        background: #FFD900;
+        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+        padding: 1.5rem 0rem;
+        text-align: center;
+        margin: -1.5rem 0rem 0rem 0.5rem;
+        z-index: -1;
+    }
+    
+    .pasos__card h3{
+        color: var(--clr-primario);
+        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+        padding: 0rem 2rem;
+    }
+    
+    .pasos__card p{
+        padding: 0.25rem 2rem ;
+        font-size: 1.2rem;
+        line-height:1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .pasos__card img{
+        width: 50vw;
+        margin-bottom: -0.8rem;
+    }
+
+    /* HICE UN ID PARA TRATAR LA DIMENSION DE ESA IMAGEN EN PARTICULAR */
+    #primerimg{
+        width: 40vw;
+    }
+    /* -------------------TERMINA HOME 850PX--------------*/
+
+
+
+
+
+    /* --------COMIENZA SOBRE NOSOTROS 850px----------- */
+    /* ------------------------------------------------ */
+
+
+    .sobre__nos h1{
+        
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3.8rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+    .sobre__nos>h2{
+        font-size: 1.2rem;
+        line-height: 1.5; 
+        text-align: center;
+        width: 90vw;
+        margin: auto 2rem;
+    }
+    .contenedor__nos{
+        margin-top: 1.5rem;
+
+    }
+    .nos__tarjeta{
+        margin: 1rem;
+       
+    }
+    .nos__tarjeta h2{
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    .nos__tarjeta p{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .img-fondo{
+        position: absolute;
+        height: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .contenedor__tecnologia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__tecnologia h2{
+        text-transform: uppercase;
+        color: var(--clr-gris-fuerte);
+    }
+    .contenedor__tecnologia p{
+       font-weight: 600;
+       text-align: center;
+       font-size: 1rem;
+       width: 90%;
+    }
+    .tecnologia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 2rem 0rem;
+        background-color: #ffd900;
+        border-radius: var(--radio-fuerte);
+
+    }
+    
+    .tecnologia div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;  
+    }
+    .tecnologia p{
+        font-size: 0.8rem;
+        font-family: monospace ;
+        text-transform: uppercase;
+        color: var(--clr-gris-medio);
+        margin: 0;
+    }
+    .tecnologia img{
+        margin-top: 2rem;
+        padding: 0;
+        width: 75%;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms;
+    }
+    .tecnologia img:first-child{
+        width: 80%;
+    }
+    
+    .tecnologia img:hover{
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+    /* ---------------------------------------- */
+
+
+
+    /* ---------------EMPEZA AHORA 850px------------------ */
+
+    .contanos_personaje{
+        position: absolute;
+        right: 0rem;
+        top: 0vh;
+        width: 40vw;
+    }
+
+        .contenedor h1{
+            margin: 0 0 0 -0.8rem;  
+            font-size: 3.8rem;
+            padding: 0.8rem;
+        }
+        .contenedor h2{
+            font-size: 1.2rem;
+            margin: 0rem 0.5rem;
+        }
+        
+        .base-card ul{
+            background-color: var(--clr-gris-claro);
+        }
+
+        .base-card ul li{
+            height: 15rem;
+            width: 15rem;
+            margin: 0.5rem 0.5rem;
+        }
+    
+        .base-card legend{
+            font-weight: 600;
+        }
+        .base-card label{
+            font-weight: 700;
+            font-size: .9rem;
+            line-height: 0rem;
+    
+        }
+        .base-card fieldset input{
+            width: 5vw;
+            margin: 0rem 0rem;
+        }
+        
+        .base-card fieldset div{
+            margin-bottom: 1rem;
+        }
+    
+        .elegir-color{
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80vw;
+            padding: 1rem 0rem 1rem 0rem;
+            margin-top: 0.5rem;
+            border-radius: var(--radio-fuerte);
+            background-color: var(--clr-primario);
+        }
+        .elegir-color label{
+            margin: 1.2rem 0rem 1rem 0rem;
+        }
+        .elegir-color input, p{
+            margin: 0.2rem 0rem 0rem 0rem;
+        }
+    
+        .base-card fieldset{
+            width: 80vw;
+            flex-direction: column;
+            padding: 1rem 6rem 1rem 2rem;
+            margin: 1rem 0rem 0rem 0rem;
+            border-radius: var(--radio-fuerte);
+            border: none;
+            background-color:var(--clr-primario);
+        }
+        .base-card p{
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+    
+    
+        .personas{
+           flex-wrap: wrap;
+        }
+    
+       
+        .personas div{
+            width: 40vw;
+            height: auto;
+            margin: 1.5rem 0rem;
+        }
+    
+        .plan{
+            width: 90vw;
+            align-items: center;
+            background-color: var(--clr-primario-hover);
+            margin: 0rem 0rem 4rem 0rem;
+            padding: 1rem 0rem;
+            border-radius: var(--radio-medio);
+        }
+        .premium{
+            width: 40vw;
+            padding: 0.5rem;
+            border: 1px solid var(--clr-gris-fuerte);
+            border-radius: var(--radio-medio);
+            transition: all 300ms ease-in-out 0ms;
+            margin: 0.5rem 0rem;
+        }
+        .premium h2{
+            color: var(--clr-gris-fuerte);
+            text-align: center;
+        }
+        .premium strong{
+            color: var(--clr-secundario);
+        }
+        .premium ul{
+            color: var(--clr-secundario);
+            font-weight: 500;
+            margin:  2rem  2.5rem 2rem 2rem;
+            line-height: 1.5rem; 
+        }
+        .premium p,h3{
+            text-align: center;
+        }
+        .personalizado{
+            width: 40vw;
+            padding: 0.5rem;
+            border: 1px solid var(--clr-gris-fuerte);
+            border-radius: var(--radio-medio);
+            transition: all 300ms ease-in-out 0ms;
+            margin: 0.5rem 0rem;
+        }
+        .personalizado h2{
+            color: var(--clr-gris-fuerte);
+            text-align: center;
+        }
+        .personalizado p strong{
+            color: var(--clr-secundario);
+        }
+        
+        .personalizado ul{
+            color: var(--clr-secundario);
+            font-weight: 500;
+            margin:  2rem  2.5rem 2rem 2rem;
+            line-height: 1.5rem; 
+        }
+        .personalizado p,h3{
+            text-align: center;
+        }
+    
+        .pagos{
+            justify-content: space-around;
+            margin: 1.5rem 0rem;
+            flex-wrap: wrap;
+        }
+        
+        .pagos div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 1rem;
+            filter: grayscale(1);
+            transition: all 300ms ease-in-out 0ms; 
+        }
+        .pagos img{
+            width: 5rem;
+           padding: 0.5rem 0rem; 
+        }
+    
+        .contactar{
+            width: 40vw;
+            margin-bottom: 1rem;
+        }
+        .contactar h2{
+            color: var(--clr-gris-fuerte);
+            margin-bottom: 2rem;
+        }
+        #formulario{
+            margin-bottom: 2rem;
+        }
+    
+    
+    /* ---------------FIN EMPEZA AHORA 850PX------------------ */
+
+
+
+    /* ------------TRUCOS PARA RENOVAR 850PX------------- */
+  
+    .titulo--p3{
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .titulo--p3 h1{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 3.8rem;
+        padding: 0.8rem;
+    }
+    /* -----------FIN TRUCOS PARA RENOVAR 850PX------------- */
+
+
+
+    /* ------------COMIENZA CÓMO FUNCIONA? 850PX------------- */
+
+        .primer--flex h1{
+            margin: 0 0 0 -0.8rem;  
+            font-size: 3.8rem;
+            padding: 0.8rem;
+        }
+    
+    /*--------------FIN CÓMO FUNCIONA? 850PX---------------- */
+
+}
+
+   
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------- */
+@media screen and (min-width:851px) and (max-width:1250px){
+    
+    /* --------MODIFICO FUENTES DEL NAV------------- */
+  
+    header ul li{
+        margin: 0rem 0rem 0rem 1.5rem;
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    header ul li button{
+        font-size: 1.1rem;
+    }
+
+
+
+
+    /* --------------------------------------------*/
+    /*------------COMIENZA HOME 1250px------------------- */
+
+    #titulo{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 4.8rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    }
+    #home{
+        background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+        background-size:contain;
+        background-repeat:no-repeat ;
+        /* background-position:10% 0% ; */
+    }
+
+    #comentario{
+        margin: 25rem 0rem 0rem 0.75rem;
+        width: 98%;
+        padding: 2rem;
+        border-radius: var(--radio-fuerte);
+        background-color: #ffd90013;
+        /* background: -webkit-linear-gradient(top, #fff, #ffd900); */
+        box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
+        border:6px solid var(--clr-secundario);  
+    }
+
+    #comentario h2{
+        font-size: 3rem;
+        text-shadow: var(--clr-gris-fuerte) 3px 3px 3px;
+        font-family: var(--fuente-1);
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin: 2rem 0rem 3rem 0rem;
+    }
+
+    #comentario h3{
+        color: var(--clr-gris-fuerte);
+        padding:1rem 5rem ;
+        font-size: 1.4rem;
+    }
+
+    #comentario i{
+        color: var(--clr-gris-fuerte);
+        margin-top: -3rem;
+        margin-left: -1rem;
+        font-size: 6rem;
+    }
+
+    .home__card2{
+        margin: 4rem auto;
+    }
+
+    .home__card2 div{
+        width: 85%;
+        margin: -5rem auto 0rem auto;
+        background-color: transparent;
+        padding: 1rem;
+        border: 3px solid var(--clr-primario-hover);
+    }
+    .home__card2 i{
+        /* position: absolute; */
+        margin-top: 4rem;
+        margin-left: 2rem;
+        font-size: 5rem;
+        color: var(--clr-secundario);
+    }
+    .home__parrafos h3{
+        font-size: 3rem;
+    }
+
+    .pasos__contenedor h2{
+        margin-top: 2rem;
+        font-size: 5rem;
+        color: var(--clr-primario-hover);
+        line-height: 4rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    .pasos__contenedor{
+        margin: 0rem auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pasos__card{
+        width: 90vw;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.3rem;
+        margin: 0.8rem 0rem 4rem 0rem; 
+    }
+    .pasos__card:nth-child(4){
+        margin-bottom: 0rem;
+    }
+    
+    .pasos__card div{
+
+        background: #FFD900;
+        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+        padding: 1.5rem 0rem;
+        text-align: center;
+        margin: -1.5rem 0rem 0rem 0.5rem;
+        z-index: -1;
+    }
+    
+    .pasos__card h3{
+        color: var(--clr-primario);
+        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+        padding: 0rem 2rem;
+    }
+    
+    .pasos__card p{
+        padding: 0.25rem 2rem ;
+        font-size: 1.4rem;
+        line-height:1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .pasos__card img{
+        width: 45vw;
+        margin-bottom: -0.8rem;
+    }
+
+    /* HICE UN ID PARA TRATAR LA DIMENSION DE ESA IMAGEN EN PARTICULAR */
+    #primerimg{
+        width: 35vw;
+    }
+
+    /*-----------------FIN HOME 1250PX------------------ */
+    /* --------------------------------------------*/
+  
+
+
+
+
+    /* --------COMIENZA SOBRE NOSOTROS 1250px----------- */
+    /* ------------------------------------------ */
+
+    .sobre__nos h1{
+        
+        margin: 0 0 0 -0.8rem;  
+        font-size: 4.8rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+    .sobre__nos>h2{
+        font-size: 1.2rem;
+        line-height: 1.5; 
+        text-align: center;
+        width: 90vw;
+        margin: auto 2rem;
+    }
+    .contenedor__nos{
+        margin-top: 1.5rem;
+
+    }
+    .nos__tarjeta{
+        margin: 1.2rem;
+        
+    }
+    .nos__tarjeta h2{
+       
+        font-size: 2rem;
+    }
+    .nos__tarjeta p{
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .img-fondo{
+        position: absolute;
+        height: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    /* .contenedor__tecnologia{
+        justify-content: space-around;
+        align-items: center;
+    } */
+    .tecnologia{
+        justify-content: space-around;
+        margin: 3rem 0rem;
+        background-color: var(--clr-primario-hover);
+        border-radius: var(--radio-fuerte);
+    }
+    .tecnologia p{
+        font-size: 0.8rem;
+        font-family: monospace ;
+        text-transform: uppercase;
+        color: var(--clr-gris-medio);
+        margin: 0 0 0.5rem 1.5rem;
+        display: block;
+    }
+    .tecnologia img{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        padding: 0;
+        width:80%;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms;
+    }
+    #first{
+        margin-bottom: -1rem;
+    }
+
+    .tecnologia img:hover{
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+
+    /* ---------------FIN SOBRE NOSOTROS 1250PX--------------- */
+
+    
+
+
+      /* ---------------EMPEZA AHORA 1250px------------------ */
+      .contanos_personaje{
+        position: absolute;
+        right: 0rem;
+        top: -5vh;
+        width: 30vw;
+    }
+
+      .contenedor h1{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 4.8rem;
+        padding: 0.8rem;
+    }
+    .contenedor h2{
+        font-size: 1.5rem;
+        margin: 0rem 0.5rem;
+    }
+
+    .base-card ul li{
+        height: 16rem;
+        width: 16rem;
+    }
+
+    .base-card legend{
+        font-weight: 600;
+    }
+    .base-card label{
+        font-weight: 700;
+        font-size: .9rem;
+        line-height: 0rem;
+
+    }
+    .base-card fieldset input{
+        width: 5vw;
+        margin: 0rem 0rem;
+    }
+    
+    .base-card fieldset div{
+        margin-bottom: 1rem;
+    }
+
+    .elegir-color{
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80vw;
+        padding: 1rem 0rem 1rem 0rem;
+        margin-top: 0.5rem;
+        border-radius: var(--radio-fuerte);
+        background-color: var(--clr-primario);
+    }
+    .elegir-color label{
+        margin: 1.2rem 0rem 1rem 0rem;
+    }
+    .elegir-color input, p{
+        margin: 0.2rem 0rem 0rem 0rem;
+    }
+
+    .base-card fieldset{
+        width: 80vw;
+        flex-direction: column;
+        padding: 1rem 6rem 1rem 2rem;
+        margin: 1rem 0rem 0rem 0rem;
+        border-radius: var(--radio-fuerte);
+        border: none;
+        background-color:var(--clr-primario);
+    }
+    .base-card p{
+        font-style: italic;
+        font-size: 0.9rem;
+    }
+
+
+    .personas{
+       flex-wrap: wrap;
+    }
+
+   
+    .personas div{
+        width: 28vw;
+        height: auto;
+        margin: 1.5rem 0.5rem;
+    }
+
+    .plan{
+        width: 90vw;
+        align-items: center;
+        background-color: var(--clr-primario-hover);
+        margin: 0rem 0rem 4rem 0rem;
+        padding: 1rem 0rem;
+        border-radius: var(--radio-medio);
+    }
+    .premium{
+        width: 40vw;
+        padding: 0.5rem;
+        border: 1px solid var(--clr-gris-fuerte);
+        border-radius: var(--radio-medio);
+        transition: all 300ms ease-in-out 0ms;
+        margin: 0.5rem 0rem;
+    }
+    .premium h2{
+        color: var(--clr-gris-fuerte);
+        text-align: center;
+    }
+    .premium strong{
+        color: var(--clr-secundario);
+    }
+    .premium ul{
+        color: var(--clr-secundario);
+        font-weight: 500;
+        margin:  2rem  2.5rem 2rem 2rem;
+        line-height: 1.5rem; 
+    }
+    .premium p,h3{
+        text-align: center;
+    }
+    .personalizado{
+        width: 40vw;
+        padding: 0.5rem;
+        border: 1px solid var(--clr-gris-fuerte);
+        border-radius: var(--radio-medio);
+        transition: all 300ms ease-in-out 0ms;
+        margin: 0.5rem 0rem;
+    }
+    .personalizado h2{
+        color: var(--clr-gris-fuerte);
+        text-align: center;
+    }
+    .personalizado p strong{
+        color: var(--clr-secundario);
+    }
+    
+    .personalizado ul{
+        color: var(--clr-secundario);
+        font-weight: 500;
+        margin:  2rem 2.5rem 2rem 2rem;
+        line-height: 1.5rem; 
+    }
+    .personalizado p,h3{
+        text-align: center;
+    }
+
+    .pagos{
+        justify-content: space-around;
+        margin: 1.5rem 0rem;
+        flex-wrap: wrap;
+    }
+    
+    .pagos div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0rem;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms; 
+    }
+    
+    .pagos img{
+        width: 5.5rem;
+       padding: 0.5rem 0rem; 
+    }
+
+    .contactar{
+        width: 30vw;
+        margin-bottom: 1rem;
+    }
+    .contactar h2{
+        color: var(--clr-gris-fuerte);
+        margin-bottom: 2rem;
+    }
+    #formulario{
+        margin-bottom: 2rem;
+    }
+
+
+/* ---------------FIN EMPEZA AHORA 1250PX------------------ */
+
+
+
+  /* ---------------TRUCOS PARA RENOVAR 1250PX-------------- */
+
+.titulo--p3 h1{
+    font-size: 4.8rem;
+    padding: 0.8rem;
+}
+.titulo--p3{
+    margin: 2rem 0;
+}
+
+.contenedor__grid{
+    margin-top: 3rem;
+}
+
+/* -------------FIN TRUCOS PARA RENOVAR 1250PX------------- */
+
+
+
+/* ------------COMIENZA CÓMO FUNCIONA? 1250PX------------- */
+.primer--flex h1{
+    margin: 0 0 0 -0.8rem;  
+    font-size: 4.8rem;
+    padding: 0.8rem;
+    }
+
+/*--------------FIN CÓMO FUNCIONA? 1250PX---------------- */
+
+
+}
+  
+
+
+
+
+
+
+
+
+@media screen and (min-width:1251px){
+
+   
+    /*--------MODIFICO FUENTES DEL NAV------------- */
+  
+     header ul li{
+        
+        margin: 0 1rem;
+        font-size: 1.1rem;
+    }
+
+    header ul li button{
+        font-size: 1.2rem;
+    }
+    /*--------------------------------------------*/
+
+
+
+    /*-------------COMIENZA HOME >1250px----------------- */
+
+    #titulo{
+        margin: 0 0 0 -0.8rem;  
+        font-size: 5.4rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    }
+    #home{
+        background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+        background-size:contain;
+        background-repeat:no-repeat ;
+        /* background-position:10% 0% ; */
+    }
+
+    #comentario{
+        margin: 25rem 0rem 0rem 0.75rem;
+        width: 98%;
+        padding: 2rem;
+        border-radius: var(--radio-fuerte);
+        background-color: #ffd90013;
+        /* background: -webkit-linear-gradient(top, #fff, #ffd900); */
+        box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
+        border:6px solid var(--clr-secundario);
+        
+    }
+    #comentario h2{
+        font-size: 3rem;
+        text-shadow: var(--clr-gris-fuerte) 3px 3px 3px;
+        font-family: var(--fuente-1);
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        margin: 2rem 0rem 3rem 0rem;
+    }
+    #comentario h3{
+        color: var(--clr-gris-fuerte);
+        padding:1rem 5rem ;
+        font-size: 1.4rem;
+    }
+    #comentario i{
+        color: var(--clr-gris-fuerte);
+        margin-top: -3rem;
+        margin-left: -1rem;
+        font-size: 6rem;
+    }
+
+    .home__card2{
+        margin: 4rem auto;
+    }
+
+    .home__card2 div{
+        width: 65%;
+        margin: -5rem auto 0rem auto;
+        background-color: transparent;
+        padding: 1rem;
+        border: 6px solid var(--clr-primario-hover);
+    }
+    .home__card2 i{
+        /* position: absolute; */
+        margin-top: 4rem;
+        margin-left: 10rem;
+        font-size: 5rem;
+        color: var(--clr-secundario);
+    }
+    .home__parrafos h3{
+        font-size: 2.5rem;
+    }
+
+    .pasos__contenedor h2{
+        margin-top: 2rem;
+        font-size: 6.5rem;
+        color: var(--clr-primario-hover);
+        line-height: 4rem;
+        letter-spacing: 0.25rem;
+    }
+    
+    .pasos__contenedor{
+        margin: 0rem auto;
+    }
+
+    .pasos__card{
+        width: 90vw;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.3rem;
+        margin: 0.8rem 0rem 4rem 0rem; 
+    }
+    .pasos__card:nth-child(4){
+        margin-bottom: 0rem;
+    }
+    
+    .pasos__card div{
+
+        background: #FFD900;
+        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+        padding: 1.5rem 0rem;
+        text-align: center;
+        margin: -1.5rem 0rem 0rem 0.5rem;
+        z-index: -1;
+    }
+    
+    .pasos__card h3{
+        color: var(--clr-primario);
+        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+        padding: 0rem 2rem;
+    }
+    
+    .pasos__card p{
+        padding: 0.25rem 2rem ;
+        font-size: 1.4rem;
+        line-height:1.6rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .pasos__card img{
+        width: 45vw;
+        margin-bottom: -0.8rem;
+    }
+
+    /* HICE UN ID PARA TRATAR LA DIMENSION DE ESA IMAGEN EN PARTICULAR */
+    #primerimg{
+        width: 28vw;
+    }
+    /*-----------------FIN HOME------------------ */ 
+    /*--------------------------------------------*/
+
+
+
+
+    /* --------SOBRE NOSOTROS >1250px----------- */
+    .sobre__nos h1{  
+        margin: 0 0 0 -0.8rem;  
+        font-size: 5.4rem;
+        padding: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+   
+    .nos__tarjeta{
+        margin: 1rem;
+    }
+    .tecnologia{
+        justify-content: space-around;
+        margin: 3rem 0rem;
+        background-color: var(--clr-primario-hover);
+        border-radius: var(--radio-fuerte);
+    }
+    .tecnologia p{
+        font-size: 0.8rem;
+        font-family: monospace ;
+        text-transform: uppercase;
+        color: var(--clr-gris-medio);
+        margin: 0 0 0.5rem 1.5rem;
+        display: block;
+    }
+    .tecnologia img{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        padding: 0;
+        width:80%;
+        filter: grayscale(1);
+        transition: all 300ms ease-in-out 0ms;
+    }
+    #first{
+        margin-bottom: -1rem;
+    }
+
+    .tecnologia img:hover{
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+
+    /* -----------FIN SOBRE NOSOTROS >1250px----------------- */
+
+
+
+
+    /* -------------EMPEZA AHORA >1250px--------------- */
+    .contanos_personaje{
+        position: absolute;
+        right: 0rem;
+        top: -8vh;
+        width: 25vw;
+    }
+
+        .contenedor h1{
+            margin: 0 0 0 -0.8rem;  
+            font-size: 5.4rem;
+            padding: 0.8rem;
+            letter-spacing: 0.15rem;
+        }
+        .contenedor h2{
+            font-size: 1.5rem;
+            margin: 0rem 0.5rem;
+        }
+    
+        .base-card ul li{
+            height: 16rem;
+            width: 16rem;
+        }
+    
+        .base-card legend{
+            font-weight: 600;
+        }
+        .base-card label{
+            font-weight: 700;
+            font-size: .9rem;
+            line-height: 0rem;
+    
+        }
+        .base-card fieldset input{
+            width: 5vw;
+            margin: 0rem 0rem;
+        }
+        
+        .base-card fieldset div{
+            margin-bottom: 1rem;
+        }
+    
+        .elegir-color{
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80vw;
+            padding: 1rem 0rem 1rem 0rem;
+            margin-top: 0.5rem;
+            border-radius: var(--radio-fuerte);
+            background-color: var(--clr-primario);
+        }
+        .elegir-color label{
+            margin: 1.2rem 0rem 1rem 0rem;
+        }
+        .elegir-color input, p{
+            margin: 0.2rem 0rem 0rem 0rem;
+        }
+    
+        .base-card fieldset{
+            width: 80vw;
+            flex-direction: column;
+            padding: 1rem 6rem 1rem 2rem;
+            margin: 1rem 0rem 0rem 0rem;
+            border-radius: var(--radio-fuerte);
+            border: none;
+            background-color:var(--clr-primario);
+        }
+        .base-card p{
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+    
+    
+        .personas{
+           flex-wrap: wrap;
+        }
+    
+       
+        .personas div{
+            width: 20vw;
+            height: auto;
+            margin: 1.5rem 0.5rem;
+        }
+    
+        .plan{
+            width: 90vw;
+            align-items: center;
+            background-color: var(--clr-primario-hover);
+            margin: 0rem 0rem 4rem 0rem;
+            padding: 1rem 0rem;
+            border-radius: var(--radio-medio);
+        }
+        .premium{
+            width: 40vw;
+            padding: 0.5rem;
+            border: 1px solid var(--clr-gris-fuerte);
+            border-radius: var(--radio-medio);
+            transition: all 300ms ease-in-out 0ms;
+            margin: 0.5rem 0rem;
+        }
+        .premium h2{
+            color: var(--clr-gris-fuerte);
+            text-align: center;
+        }
+        .premium strong{
+            color: var(--clr-secundario);
+        }
+        .premium ul{
+            color: var(--clr-secundario);
+            font-weight: 500;
+            margin:  2rem  2.5rem 2rem 2rem;
+            line-height: 1.5rem; 
+        }
+        .premium p,h3{
+            text-align: center;
+        }
+        .personalizado{
+            width: 40vw;
+            padding: 0.5rem;
+            border: 1px solid var(--clr-gris-fuerte);
+            border-radius: var(--radio-medio);
+            transition: all 300ms ease-in-out 0ms;
+            margin: 0.5rem 0rem;
+        }
+        .personalizado h2{
+            color: var(--clr-gris-fuerte);
+            text-align: center;
+        }
+        .personalizado p strong{
+            color: var(--clr-secundario);
+        }
+        
+        .personalizado ul{
+            color: var(--clr-secundario);
+            font-weight: 500;
+            margin:  2rem  2.5rem 2rem 2rem;
+            line-height: 1.5rem; 
+        }
+        .personalizado p,h3{
+            text-align: center;
+        }
+    
+        .pagos{
+            justify-content: space-around;
+            margin: 1.5rem 0rem;
+            flex-wrap: wrap;
+        }
+        
+        .pagos div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0rem;
+            filter: grayscale(1);
+            transition: all 300ms ease-in-out 0ms; 
+        }
+        
+        .pagos img{
+            width: 5.5rem;
+           padding: 0.5rem 0rem; 
+        }
+    
+        .contactar{
+            width: 30vw;
+            margin-bottom: 1rem;
+        }
+        .contactar h2{
+            color: var(--clr-gris-fuerte);
+            margin-bottom: 2rem;
+        }
+        #formulario{
+            margin-bottom: 2rem;
+        }
+    
+    /* -------------FIN EMPEZA AHORA >1250PX---------------- */
+
+
+
+
+
+
+    /* ------------TRUCOS PARA RENOVAR >1250PX---------- */
+
+    .titulo--p3 h1{
+        font-size: 5.8rem;
+        padding: 0.8rem;
+    }
+    .titulo--p3{
+        margin: 2rem 0;
+    }
+    
+    .contenedor__grid{
+        margin-top: 3rem;
+    }
+
+/* --------FIN TRUCOS PARA RENOVAR >1250PX-------------- */
+
+
+
+/* ------------COMIENZA CÓMO FUNCIONA? >1250PX------------- */
+.primer--flex h1{
+    margin: 0 0 0 -0.8rem;  
+    font-size: 5.8rem;
+    padding: 0.8rem;
+
+    }
+
+/*--------------FIN CÓMO FUNCIONA? 1250PX---------------- */
+
+}

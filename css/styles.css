@@ -1,1 +1,44 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+header .nav {
+  background-color: white;
+}
+
+header .nav ul {
+  position: relative;
+  width: 100vw;
+  -webkit-box-shadow: 0px -5px 15px var(--clr-gris-medio);
+          box-shadow: 0px -5px 15px var(--clr-gris-medio);
+  padding: 0.8rem 0;
+  border-radius: var(--radio-suave);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav ul li {
+  list-style-type: none;
+  margin: 0 1.5rem;
+}
+
+header .nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--clr-gris-fuerte);
+  font-weight: bold;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+
+header .nav ul li a img {
+  width: 3.5rem;
+}
+
+header .nav ul li a img:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
