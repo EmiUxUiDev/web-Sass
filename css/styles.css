@@ -30,11 +30,19 @@ html body h2 {
   color: #7a7a7a;
 }
 
-header .nav {
+header nav {
   background-color: white;
 }
 
-header .nav ul {
+header nav .nav__checkbox {
+  display: none;
+}
+
+header nav .nav__onoff {
+  display: none;
+}
+
+header nav ul {
   position: relative;
   width: 100vw;
   -webkit-box-shadow: 0px -5px 15px #7a7a7a;
@@ -52,16 +60,16 @@ header .nav ul {
           align-items: center;
 }
 
-header .nav ul li {
+header nav ul li {
   list-style-type: none;
   margin: 0 1.5rem;
 }
 
-header .nav ul li:first-child {
+header nav ul li:first-child {
   margin-right: auto;
 }
 
-header .nav ul li a {
+header nav ul li a {
   position: relative;
   text-decoration: none;
   color: #414141;
@@ -70,25 +78,24 @@ header .nav ul li a {
   transition: all 150ms ease-in;
 }
 
-header .nav ul li a .link::after {
+header nav ul li a.link::after {
   content: "";
   position: absolute;
   display: block;
   height: 0.2rem;
-  /* Para q no se vea al inicio */
   width: 0%;
-  background-color: var(--clr-primario-hover);
+  background-color: #ffd900;
   bottom: -0.5rem;
   border-radius: 5px;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
-header .nav ul li a .link:hover::after {
+header nav ul li a.link:hover::after {
   width: 100%;
 }
 
-header .nav ul li a img {
+header nav ul li a img {
   width: 3.5rem;
   -webkit-transition: -webkit-transform 300ms ease-in-out 0ms;
   transition: -webkit-transform 300ms ease-in-out 0ms;
@@ -96,13 +103,13 @@ header .nav ul li a img {
   transition: transform 300ms ease-in-out 0ms, -webkit-transform 300ms ease-in-out 0ms;
 }
 
-header .nav ul li a img:hover {
+header nav ul li a img:hover {
   cursor: pointer;
   -webkit-transform: rotate(10deg) scale(1.2);
           transform: rotate(10deg) scale(1.2);
 }
 
-header .nav ul li a button {
+header nav ul li a button {
   font-weight: bold;
   padding: 0.5rem 2rem;
   border: none;
@@ -115,73 +122,9 @@ header .nav ul li a button {
   transition: all 300ms ease-in-out;
 }
 
-header .nav ul li a button:hover {
-  background-color: var(--clr-primario-hover);
+header nav ul li a button:hover {
+  background-color: #ffd900;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-html body {
-  background-color: #f0f0f0;
-  font-size: 16px;
-}
-
-html body h1 {
-  text-align: center;
-  font-size: 4rem;
-  letter-spacing: 0.1rem;
-  font-family: "Yellowtail", cursive;
-  color: #414141;
-  text-shadow: #ffd900 1px 1px 1px, #ff156f 2px 2px 3px;
-}
-
-html body h2 {
-  text-align: center;
-  font-size: 1.4rem;
-  color: #7a7a7a;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-html body {
-  background-color: #f0f0f0;
-  font-size: 16px;
-}
-
-html body h1 {
-  text-align: center;
-  font-size: 4rem;
-  letter-spacing: 0.1rem;
-  font-family: "Yellowtail", cursive;
-  color: #414141;
-  text-shadow: #ffd900 1px 1px 1px, #ff156f 2px 2px 3px;
-}
-
-html body h2 {
-  text-align: center;
-  font-size: 1.4rem;
-  color: #7a7a7a;
 }
 /*# sourceMappingURL=styles.css.map */

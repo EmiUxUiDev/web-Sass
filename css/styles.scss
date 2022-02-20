@@ -1,3 +1,6 @@
-@import "./partials/header";
-@import "./partials/main";
-@import "./partials/footer"
+@import 'bases/_variables';
+@import 'bases/_root';
+@import './partials/header';
+@import './partials/main';
+@import './partials/footer';
+

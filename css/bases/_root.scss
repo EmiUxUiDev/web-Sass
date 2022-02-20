@@ -11,23 +11,23 @@
 
 html{
     scroll-behavior: smooth;
-        body{
-            background-color:$clr-gris-claro;
-            font-size:$font-size;
-            
-            h1{ 
-                text-align: center;
-                font-size: 4rem;
-                letter-spacing: 0.1rem;
-                font-family:$fuente-2;
-                color:$clr-gris-oscuro;
-                text-shadow:$clr-primario-hover 1px 1px 1px, $clr-secundario 2px 2px 3px;
-            }
-            h2{
-                text-align: center;
-                font-size: 1.4rem;
-                color: $clr-gris-medio;
-            }
-
+    body{
+        background-color:$clr-gris-claro;
+        font-size:$font-size;
+        
+        h1{ 
+            text-align: center;
+            font-size: 4rem;
+            letter-spacing: 0.1rem;
+            font-family:$fuente-2;
+            color:$clr-gris-oscuro;
+            text-shadow:$clr-primario-hover 1px 1px 1px, $clr-secundario 2px 2px 3px;
         }
+        h2{
+            text-align: center;
+            font-size: 1.4rem;
+            color: $clr-gris-medio;
+        }
+    
+    }
 }

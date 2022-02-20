@@ -1,9 +1,9 @@
-@import '../bases/variables';
-@import '../bases/root';
 
 header {
-    .nav{
-        background-color:rgb(255, 255, 255) ; 
+    nav{
+        background-color:rgb(255, 255, 255); 
+        .nav__checkbox{display: none;}
+        .nav__onoff{display: none;}
         
         ul{
             position: relative;
@@ -14,7 +14,6 @@ header {
             display: flex;
             justify-content: flex-end;
             align-items: center;
-
                 li{
                     list-style-type:none;
                     margin: 0 1.5rem;
@@ -27,30 +26,27 @@ header {
                                 color:$clr-gris-oscuro;
                                 font-weight: bold;
                                 transition: all 150ms ease-in;   
-                                    & .link::after{
+                                    &.link::after{
                                         content: "";
                                         position: absolute;
                                         display: block;
                                         height: 0.2rem;
-                                        /* Para q no se vea al inicio */
                                         width: 0%;
-                                        background-color: var(--clr-primario-hover);
+                                        background-color: $clr-primario-hover;
                                         bottom: -0.5rem;
                                         border-radius: 5px;
                                         transition: all 250ms ease-in-out ;
                                     }
-                                    & .link:hover::after{
+                                    &.link:hover::after{
                                         width: 100%;
                                     } 
                                         img{
                                             width: 3.5rem;
                                             transition: transform 300ms ease-in-out 0ms ;
-
                                             &:hover{
                                                 cursor: pointer;
                                                 transform: rotate(10deg) scale(1.2);
                                                 }
-
                                         } 
                                         button{
                                             font-weight: bold;
@@ -63,15 +59,12 @@ header {
                                             cursor: pointer;
                                             transition: all 300ms ease-in-out;
                                                 &:hover{
-                                                    background-color: var(--clr-primario-hover);
+                                                    background-color: $clr-primario-hover;
                                                     transform: scale(1.05);
                                                 }
                                         }
                             }
-
                 }
         }
-
     }
-
 }
