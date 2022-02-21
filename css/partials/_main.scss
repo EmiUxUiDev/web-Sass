@@ -1,3 +1,111 @@
 @import '../bases/_variables';
 
+main{
+    //-----BOTON IR ARRIBA----
+    .scroll__btn{
+        position: fixed;
+        width: 2.6rem;
+        height: 3.4rem;
+        border-radius: 40%;
+        bottom: 2rem;
+        right: 2rem;
+        outline: 1px solid $clr-secundario;
+        z-index: 100;
+        cursor: pointer;
+    }
+    div{
+        a{
+            text-decoration: none;
+            i{
+                display: block;
+                font-size: 2rem;
+                color: $clr-secundario;
+                // text-align: center;
+                margin-left: 0.65rem;
+                margin-top: 0.5rem;
+                &:hover{animation: movimiento_scroll 1s ease-in 0s infinite;  }    
+            }
+        }
+        @keyframes movimiento_scroll{
+        0%{
+            transform: translateY(0px);
+        }
+        25%{
+            transform: translateY(4px);
+        }
+        50%{
+            transform: translateY(0px)  
+        }
+        75%{
+            transform: translateY(4px); 
+        }
+        100%{
+            transform: translateY(0px);
+        }  
+        }
+    }    
+    //-----FIN BOTON IR ARRIBA----
+    
+
+    // -----SECCION INICIO/HOME-------
+    section#home {
+        background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+        background-size:contain;
+        background-repeat:no-repeat ;
+        h1#titulo{
+            margin-bottom: 40rem; 
+        }
+        div#comentario{
+            margin: 25rem 0rem 0rem 0.75rem;
+            width: 98%;
+            padding: 2rem;
+            border-radius:$radio-fuerte;
+            background-color: #ffd90013;
+            box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
+            border:6px solid $clr-secundario;
+            margin-left: auto;
+            i.home__martillo{
+                font-size: 6rem;
+                color: $clr-gris-oscuro;
+                margin-top: -3rem;
+                margin-left: -1rem;
+                animation: martillar 2s ease-in-out 1s infinite normal none;
+            }
+            @keyframes martillar{
+                0%{
+                    
+                    transform: rotate(0deg);
+                    transform-origin: 0rem 3rem;
+                }
+                50%{
+                    transform: rotate(5deg);
+                    transform-origin: 0rem 3rem;
+                }
+                100%{
+                    transform: rotate(0deg);
+                    transform-origin: 0rem 3rem;
+                }
+                }
+            h2{
+                font-size: 3rem;
+                text-shadow: $clr-gris-oscuro 3px 3px 3px;
+                font-family: $fuente-1;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                margin: 2rem 0rem 3rem 0rem;
+            }
+            h3{
+                color: $clr-gris-oscuro;
+                padding:1rem 5rem ;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    
+// -----FIN SECCION INICIO/HOME-------
+}
+
+
+
 
