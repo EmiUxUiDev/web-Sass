@@ -3354,7 +3354,7 @@ iframe{
         /* background: -webkit-linear-gradient(top, #fff, #ffd900); */
         box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
         border:6px solid var(--clr-secundario);
-        
+                
     }
     #comentario h2{
         font-size: 3rem;

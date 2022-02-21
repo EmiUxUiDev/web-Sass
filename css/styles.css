@@ -210,7 +210,12 @@ main section#home {
 }
 
 main section#home h1#titulo {
-  margin-bottom: 40rem;
+  margin: 0 0 0 -0.8rem;
+  font-size: 4.8rem;
+  padding: 0.8rem;
+  letter-spacing: 0.2rem;
+  background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
 }
 
 main section#home div#comentario {
@@ -222,7 +227,6 @@ main section#home div#comentario {
   -webkit-box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
           box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
   border: 6px solid #ff156f;
-  margin-left: auto;
 }
 
 main section#home div#comentario i.home__martillo {
@@ -290,5 +294,138 @@ main section#home div#comentario h3 {
   color: #414141;
   padding: 1rem 5rem;
   font-size: 1.4rem;
+  text-align: center;
+}
+
+main section#home div.home__card2 {
+  position: relative;
+  margin: 6rem auto 0rem auto;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 65%;
+  background-color: transparent;
+  border: 6px solid #ffd900;
+}
+
+main section#home div.home__card2 i {
+  position: absolute;
+  margin-left: -4rem;
+  margin-top: -2rem;
+  font-size: 5rem;
+  color: #ff156f;
+  text-shadow: #414141 2px 2px 15px;
+  z-index: 10;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+main section#home div.home__card2 h3 {
+  padding: 0.5rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.5rem;
+  color: #414141;
+  text-align: center;
+}
+
+main section div.pasos__contenedor {
+  margin: 0rem auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main section div.pasos__contenedor h2 {
+  margin-top: 4rem;
+  font-size: 6rem;
+  color: #ffd900;
+  line-height: 4rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: -2rem;
+  text-align: center;
+  display: block;
+  font-family: "Yellowtail", cursive;
+  text-shadow: #7a7a7a 3px 3px 5px;
+  text-transform: capitalize;
+}
+
+main section div.pasos__contenedor div.pasos__card {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.3rem;
+  margin: 0.8rem 0rem 4rem 0rem;
+}
+
+main section div.pasos__contenedor div.pasos__card img#primerimg {
+  width: 45vw;
+  margin-bottom: -0.8rem;
+}
+
+main section div.pasos__contenedor div.pasos__card img {
+  width: 45vw;
+  margin-bottom: -0.8rem;
+}
+
+main section div.pasos__contenedor div.pasos__card div {
+  background: #FFD900;
+  background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+  padding: 1.5rem 0rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin: -1.5rem 0rem 0rem 0.5rem;
+  z-index: -1;
+}
+
+main section div.pasos__contenedor div.pasos__card div h3 {
+  color: #ffe656;
+  text-shadow: #414141 1px 1px 5px;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem 2rem;
+}
+
+main section div.pasos__contenedor div.pasos__card div p {
+  padding: 0.25rem 2rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+main section div.pasos__contenedor a button.pasos__btn {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #7a7a7a;
+  color: #ffd900;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ffd900;
+  border-radius: 2rem;
+  margin: 4rem auto;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+main section div.pasos__contenedor a button.pasos__btn:hover {
+  border: 1px solid #f0f0f0;
+  outline: 6px solid #ffd900;
+  background-color: white;
+  color: #7a7a7a;
 }
 /*# sourceMappingURL=styles.css.map */
