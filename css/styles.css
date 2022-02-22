@@ -428,4 +428,149 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   background-color: white;
   color: #7a7a7a;
 }
+
+footer {
+  width: 100vw;
+  bottom: 0;
+  background: white;
+  border-radius: 8rem  0 0 0;
+  padding: 3rem 0 0 0;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  -webkit-box-shadow: 0px 10px 20px #7a7a7a;
+          box-shadow: 0px 10px 20px #7a7a7a;
+}
+
+footer div.contenedor__footer {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer div.contenedor__footer div.logo {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  min-height: 15rem;
+}
+
+footer div.contenedor__footer div.logo a img {
+  width: 70px;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+footer div.contenedor__footer div.sociales {
+  min-height: 15rem;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+footer div.contenedor__footer div.sociales h3 {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #ffd900;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.sociales div a i {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  color: #414141;
+}
+
+footer div.contenedor__footer div.sociales p {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.contacto {
+  min-height: 15rem;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+footer div.contenedor__footer div.contacto h3 {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #ffd900;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.contacto div i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: #414141;
+}
+
+footer div.contenedor__footer div.contacto div p {
+  text-align: left;
+}
+
+footer div.contenedor__footer div.contacto div p#ciudad {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+footer div.contenedor__footer div.comentarios {
+  min-height: 15rem;
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+
+footer div.contenedor__footer div.comentarios h3 {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #ffd900;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.comentarios p {
+  margin-bottom: 0.8rem;
+}
+
+footer div.contenedor__footer div.comentarios form {
+  padding-bottom: 1rem;
+}
+
+footer div.contenedor__footer div.comentarios form textarea {
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+footer div.contenedor__footer div.comentarios form input.enviar {
+  width: 100%;
+  display: block;
+  margin-top: 0.8rem;
+  border-radius: 2rem;
+  border: 1px solid #414141;
+  background: transparent;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+footer div.contenedor__footer div.comentarios form input.enviar:hover {
+  background-color: #ffd900;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
 /*# sourceMappingURL=styles.css.map */
