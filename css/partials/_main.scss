@@ -172,11 +172,14 @@ main{
 
                 img#primerimg{
                     width: 45vw;
-                    margin-bottom: -0.8rem;  
+                    margin: 0.5rem;
+                    margin-bottom: -1.8rem; 
+                    filter: drop-shadow(5px 5px 5px $clr-gris-medio); 
                 }
                 img{
                     width: 45vw;
                     margin-bottom: -0.8rem;
+                    filter: drop-shadow(5px 5px 5px $clr-gris-medio); 
                 }
                 div{
                     background: #FFD900;
@@ -189,9 +192,9 @@ main{
                     h3{
                         color:$clr-primario;
                         text-shadow:$clr-gris-oscuro 1px 1px 5px;
-                        font-size: 2rem;
+                        font-size: 2.4rem;
                         letter-spacing: 0.2rem;
-                        padding: 1rem 2rem;
+                        padding: 1.5rem 2rem;
                     }
                     p{
                         padding: 0.25rem 2rem ;
