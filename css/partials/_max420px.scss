@@ -3,6 +3,7 @@
 // BREAKPOINT DE 310PX A 420PX
 
 // ---NAVBAR COMPACTO-----
+@media screen and (max-width:420px){
 header{
     nav{
         input.nav__checkbox{
@@ -52,4 +53,5 @@ header{
         }
     }
     
+}
 }

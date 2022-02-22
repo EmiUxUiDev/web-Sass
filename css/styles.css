@@ -434,71 +434,61 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   color: #7a7a7a;
 }
 
-header nav input.nav__checkbox {
-  display: none;
-}
-
-header nav input.nav__checkbox:checked ~ ul.nav__listamenu li {
-  display: block;
-}
-
-header nav input.nav__checkbox:checked label.nav__onoff .fas {
-  display: none;
-}
-
-header nav input.nav__checkbox:checked label.nav__onoff .far {
-  display: block;
-}
-
-header nav label.nav__onoff {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  margin: 1.8rem 1rem;
-  right: 0;
-  font-size: 1.5rem;
-  color: var(--clr-secundario);
-  z-index: 10;
-}
-
-header nav label.nav__onoff i.fas {
-  display: block;
-}
-
-header nav label.nav__onoff i.far {
-  display: none;
-}
-
-header nav ul.nav__listamenu {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-}
-
-header nav ul.nav__listamenu:first-child {
-  margin: auto;
-  display: block;
-}
-
-header nav ul.nav__listamenu li:nth-child(2) {
-  display: none;
-}
-
-header nav ul.nav__listamenu li:nth-child(3) {
-  display: none;
-}
-
-header nav ul.nav__listamenu li:nth-child(4) {
-  display: none;
-}
-
-header nav ul.nav__listamenu li:nth-child(5) {
-  display: none;
+@media screen and (max-width: 420px) {
+  header nav input.nav__checkbox {
+    display: none;
+  }
+  header nav input.nav__checkbox:checked ~ ul.nav__listamenu li {
+    display: block;
+  }
+  header nav input.nav__checkbox:checked label.nav__onoff .fas {
+    display: none;
+  }
+  header nav input.nav__checkbox:checked label.nav__onoff .far {
+    display: block;
+  }
+  header nav label.nav__onoff {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    margin: 1.8rem 1rem;
+    right: 0;
+    font-size: 1.5rem;
+    color: var(--clr-secundario);
+    z-index: 10;
+  }
+  header nav label.nav__onoff i.fas {
+    display: block;
+  }
+  header nav label.nav__onoff i.far {
+    display: none;
+  }
+  header nav ul.nav__listamenu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+  }
+  header nav ul.nav__listamenu:first-child {
+    margin: auto;
+    display: block;
+  }
+  header nav ul.nav__listamenu li:nth-child(2) {
+    display: none;
+  }
+  header nav ul.nav__listamenu li:nth-child(3) {
+    display: none;
+  }
+  header nav ul.nav__listamenu li:nth-child(4) {
+    display: none;
+  }
+  header nav ul.nav__listamenu li:nth-child(5) {
+    display: none;
+  }
 }
 
 footer {

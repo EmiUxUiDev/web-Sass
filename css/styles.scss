@@ -2,6 +2,10 @@
 @import 'bases/_root';
 @import './partials/header';
 @import './partials/main';
-@import './partials/breakpoints';
+@import './partials/max420px';
+@import './partials/421px-600px';
+@import './partials/601px-850px';
+@import './partials/851px-1250px';
+@import './partials/min1251px';
 @import './partials/footer';
 
