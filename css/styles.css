@@ -688,19 +688,19 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   }
   body main section#home {
     background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-    background-size: auto 50%;
+    background-size: auto 65%;
     background-repeat: no-repeat;
-    background-position: 10% 0%;
+    background-position: 30% 0%;
   }
   body main section#home h1#titulo {
-    margin: 0rem 0 0 -0.8rem;
-    font-size: 3rem;
+    margin: 0rem auto 0rem auto;
+    font-size: 3.4rem;
     padding: 0.2rem;
     background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
     background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 9rem auto 2rem auto;
+    margin: 22rem 0rem 0rem 0.5rem;
     width: 98%;
     padding: 0.8rem;
     border-radius: 2rem;
@@ -732,7 +732,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   }
   body main section#home div.home__card2 {
     width: 85%;
-    margin: 1rem auto;
+    margin: 3rem auto;
     background-color: transparent;
     padding: 1rem;
     border: 4px solid #ffd900;
@@ -746,7 +746,16 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     font-size: 1.6rem;
   }
   body main section.pasos div.pasos__contenedor {
-    margin: auto 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body main section.pasos div.pasos__contenedor h2 {
     margin-top: 2rem;
@@ -768,7 +777,8 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   }
   body main section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
     width: 65vw;
-    margin-bottom: 0rem;
+    margin-top: -0.05rem;
+    margin-bottom: -0.45rem;
   }
   body main section.pasos div.pasos__contenedor div.pasos__card img {
     width: 80vw;
@@ -776,7 +786,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   body main section.pasos div.pasos__contenedor div.pasos__card div h3 {
     font-size: 2rem;
     letter-spacing: 0.2rem;
-    padding: 0rem 2rem;
+    padding: 0.25rem 2rem;
   }
   body main section.pasos div.pasos__contenedor div.pasos__card div p {
     padding: 0.25rem 2rem;
@@ -825,6 +835,177 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   body footer div.right p {
     padding: 0rem 1rem;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 850px) {
+  body nav ul li {
+    margin: 0rem 0.25rem 0rem 2rem;
+    font-size: 0.95rem;
+  }
+  body nav ul li a img {
+    margin-left: -1rem;
+  }
+  body main section#home {
+    background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+    background-size: auto 65%;
+    background-repeat: no-repeat;
+    background-position: 10% 0%;
+  }
+  body main section#home h1#titulo {
+    margin: 0rem auto 0rem auto;
+    font-size: 3.8rem;
+    padding: 0.8rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+  }
+  body main section#home div#comentario {
+    margin: 20rem 0rem 0rem 0.5rem;
+    width: 98%;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    background-color: #ffd90011;
+    -webkit-box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
+            box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
+    border: 4px solid #ff156f;
+    color: #414141;
+  }
+  body main section#home div#comentario i.home__martillo {
+    color: #414141;
+    font-size: 4rem;
+    margin-top: -2rem;
+    margin-left: -1rem;
+  }
+  body main section#home div#comentario h2 {
+    font-size: 2rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0rem 0rem 2rem 0rem;
+    text-shadow: #414141 3px 3px 3px;
+  }
+  body main section#home div#comentario h3 {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  body main section#home div.home__card2 {
+    width: 70%;
+    margin: 4rem auto;
+    background-color: transparent;
+    padding: 1rem;
+    border: 4px solid #ffd900;
+  }
+  body main section#home div.home__card2 i {
+    left: 2.5rem;
+    font-size: 3.5rem;
+    color: #ff156f;
+  }
+  body main section#home div.home__card2 div.home__parrafos h3 {
+    font-size: 2rem;
+  }
+  body main section.pasos div.pasos__contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main section.pasos div.pasos__contenedor h2 {
+    margin-top: 2rem;
+    font-size: 5rem;
+    color: #ffd900;
+    line-height: 4rem;
+    letter-spacing: 0.25rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card {
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.5rem 0rem 2rem 0rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
+    width: 65vw;
+    margin-top: 0.5rem;
+    margin-bottom: -1.25rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card img {
+    width: 70vw;
+    margin-top: 1.5rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div h3 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p {
+    padding: 0.25rem 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  body main section.pasos div.pasos__contenedor a button.pasos__btn {
+    width: 60vw;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+    margin: 4rem auto;
+  }
+  body footer div.contenedor__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body footer div.contenedor__footer div {
+    width: 280px;
+    text-align: center;
+  }
+  body footer div.contenedor__footer div.sociales h3 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  body footer div.contenedor__footer div.sociales p {
+    text-align: center;
+  }
+  body footer div.contenedor__footer div.contacto h3 {
+    text-align: center;
+  }
+  body footer div.contenedor__footer div.contacto div p {
+    text-align: center;
+  }
+  body footer div.contenedor__footer div.comentarios h3 {
+    text-align: center;
+  }
+  body footer div.right hr {
+    width: 90vw;
+    margin: 10px auto;
+  }
+  body footer div.right p {
+    padding: 0rem 1rem;
+    text-align: center;
+  }
+  body footer div.contenedor__footer div {
+    width: 500px;
+    text-align: center;
+  }
+  body footer div.contenedor__footer div h3 {
+    font-size: 1.4rem;
+    padding-bottom: 0.25rem;
+  }
+  body footer div.contenedor__footer div div.sociales a i {
+    font-size: 2rem;
   }
 }
 
