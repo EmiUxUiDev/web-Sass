@@ -5,56 +5,9 @@
 // ---NAVBAR COMPACTO-----
 @media screen and (max-width:420px){
 body{
-    header{
-        nav{
-            input.nav__checkbox{
-                display:none;
-                &:checked ~ ul.nav__listamenu li{display: block; }
-                &:checked label.nav__onoff .fas{display: none;}
-                &:checked label.nav__onoff .far{ display: block;}  
-            }
-            label.nav__onoff{
-                display: block;
-                position: absolute;
-                cursor: pointer;
-                margin: 1.8rem 1rem;
-                right: 0;
-                font-size:1.5rem;
-                color: $clr-secundario;
-                z-index: 10;
-                i.fas{
-                    display: block;
-                }
-                i.far{
-                    display: none;
-                }
-            }
-            ul.nav__listamenu{
-                flex-direction: column;
-                align-items: center;
-                gap: 2rem;
-                &:first-child{
-                    margin:auto; 
-                    display: block;
-                }
-                li{
-                    &:nth-child(2){
-                        display: none;    
-                    }
-                    &:nth-child(3){
-                        display: none;
-                    }
-                    &:nth-child(4){
-                        display: none;
-                    }
-                    &:nth-child(5){
-                        display: none;
-                    }   
-                }
-            }
-        }
-        
-    }
+    @import './navbarcompacto';
+    
+    // -------INICIO MAIN -----
     main{
         section#home{
             background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
@@ -161,47 +114,6 @@ body{
             }
         }
     }
-    footer{
-        div.contenedor__footer{
-            flex-direction: column;
-            align-items: center;
-            div{
-                width: 280px;
-                text-align: center;
-            }
-            div.sociales{
-                h3{
-                    margin-top: 1rem;
-                    text-align: center;
-                }
-                p{
-                    text-align: center;
-                }    
-            }
-            div.contacto{
-                h3{
-                    text-align: center;
-                }
-                div{
-                    p{text-align: center;}
-                }
-            }
-            div.comentarios{
-                h3{
-                    text-align: center;
-                }
-            }
-        }
-        div.right{
-            hr{
-                width: 90vw;
-                margin: 10px auto;
-            }
-            p{
-                padding: 0rem 1rem;
-                text-align: center;
-            }
-        }
-    }
+    @import './footercompacto';
     }
 }    
