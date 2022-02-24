@@ -1,15 +1,31 @@
 @media screen and (min-width:601px) and (max-width:850px){
     @import '../bases/variables';
 
-    // ---NAVBAR-----
+    // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
     body{
-        nav{
-            ul{
-                li{
-                    margin: 0rem 0.25rem 0rem 2rem;
-                    font-size: 0.95rem;
-                    a{
-                        img{margin-left: -1rem;}
+        header{
+            nav{
+                ul{
+                    li{
+                        margin: 0rem 0rem 0rem 1.5rem;
+                        font-size: 1rem;
+                        a{
+                            img{
+                                margin-left: -1rem;
+                                width: 4rem;
+                            }
+                            
+                        }
+                        a{
+                            button{
+                                font-size: 1rem;
+                                margin: auto 0.25rem;
+                                
+                            }
+                        }
+                        a.link{
+                            font-size: 1rem;
+                        }
                     }
                 }
             }
@@ -44,17 +60,16 @@
                         margin-left: -1rem;
                     }
                     h2{
-                        font-size: 2rem;
+                        font-size: 2.4rem;
                         font-family: $fuente-1;
                         font-weight: bold;
                         color: white;
                         text-align: center;
-                        margin: 0rem 0rem 2rem 0rem;
+                        margin: 0rem 0rem 3.5rem 0rem;
                         text-shadow: $clr-gris-oscuro 3px 3px 3px;
                     }
                     h3{
                         font-size: 1.2rem;
-                        padding: 0;
                     }
                 }
                 div.home__card2{
@@ -125,9 +140,11 @@
                 }
             }
         }
-        @import './footercompacto';
+        // ---MODIFICACIONES AL FOOTER, ACORDE A MQ------
         footer{
             div.contenedor__footer{
+                flex-direction: column;
+                align-items: center;
                 div{
                     width: 500px;
                     text-align: center;
@@ -135,11 +152,47 @@
                         font-size: 1.4rem;
                         padding-bottom: 0.25rem;
                     }
-                    div.sociales{
+                }
+                div.logo{
+                    a{
+                        img{width: 6rem;}
+                    }
+                }
+                div.sociales{
+                    h3{
+                        margin-top: 1rem;
+                        text-align: center;
+                    }
+                    p{
+                        text-align: center;
+                    } 
+                    div{
                         a{
                             i{font-size: 2rem;}
                         }
                     }
+                }
+                div.contacto{
+                    h3{text-align: center;}
+                    div{
+                        i{font-size: 2rem;}
+                        p{text-align: center;}
+                    }
+                }
+                div.comentarios{
+                    h3{
+                        text-align: center;
+                    }
+                }
+            }
+            div.right{
+                hr{
+                    width: 90vw;
+                    margin: 10px auto;
+                }
+                p{
+                    padding: 0rem 1rem;
+                    text-align: center;
                 }
             }
         }

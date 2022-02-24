@@ -5,7 +5,61 @@
 // ---NAVBAR COMPACTO-----
 @media screen and (max-width:420px){
 body{
-    @import './navbarcompacto';
+    header{
+        nav{
+            input.nav__checkbox{
+                display:none;
+                &:checked ~ ul.nav__listamenu li{display: block; }
+                &:checked ~ label.nav__onoff .fas{display: none;}
+                &:checked ~ label.nav__onoff .far{ display: block;}  
+            }
+            label.nav__onoff{
+                display: block;
+                position: absolute;
+                cursor: pointer;
+                margin: 1.8rem 1rem;
+                right: 0;
+                font-size:1.5rem;
+                color: $clr-secundario;
+                z-index: 10;
+                i.fas{
+                    display: block;
+                }
+                i.far{
+                    display: none;
+                }
+            }
+            ul.nav__listamenu{
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                &:first-child{
+                    margin:auto; 
+                    display: block;
+                }
+                li{
+                    &:nth-child(2){
+                        display: none;    
+                    }
+                    &:nth-child(3){
+                        display: none;
+                    }
+                    &:nth-child(4){
+                        display: none;
+                    }
+                    &:nth-child(5){
+                        display: none;
+                    } 
+                    a{
+                        img{
+                            width: 3.6rem;
+                        }
+                    }  
+                }
+            }
+        }
+        
+    }
     
     // -------INICIO MAIN -----
     main{
@@ -15,7 +69,7 @@ body{
             background-repeat:no-repeat ;
             background-position:10% 0% ;
             h1#titulo{
-                    margin: 0rem 0 0 -0.8rem;  
+                    margin: 0.25rem auto ;  
                     font-size: 3rem;
                     padding: 0.2rem; 
                     background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
@@ -37,7 +91,7 @@ body{
                     margin-left: -1rem;
                 }
                 h2{
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                     font-family: $fuente-1;
                     font-weight: bold;
                     color: white;
@@ -46,7 +100,7 @@ body{
                     text-shadow: $clr-gris-oscuro 3px 3px 3px;
                 }
                 h3{
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     padding: 0;
                 }
             }
@@ -80,9 +134,9 @@ body{
                 }
                 div.pasos__card{
                     width: 90vw;
-                    display: flex; 
+                    display: flex;
                     flex-direction: column;
-                    margin: 0.5rem 0rem 2rem 0rem; 
+                    align-items: center;
                     img#primerimg{
                         width: 65vw;
                         margin-bottom: 0rem;
@@ -114,6 +168,48 @@ body{
             }
         }
     }
-    @import './footercompacto';
+     // ----INICIO FOOTER COMPACTO-----
+     footer{
+        div.contenedor__footer{
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 280px;
+                text-align: center;
+            }
+            div.sociales{
+                h3{
+                    margin-top: 1rem;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }    
+            }
+            div.contacto{
+                h3{
+                    text-align: center;
+                }
+                div{
+                    p{text-align: center;}
+                }
+            }
+            div.comentarios{
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+        div.right{
+            hr{
+                width: 90vw;
+                margin: 10px auto;
+            }
+            p{
+                padding: 0rem 1rem;
+                text-align: center;
+            }
+        }
+    }
     }
 }    

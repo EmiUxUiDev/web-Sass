@@ -1,3 +1,143 @@
 @media screen and (min-width:851px) and (max-width:1250px){
-    
+    @import '../bases/variables';
+
+    // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
+    body{
+        header{
+            nav{
+                ul{
+                    li{
+                        margin: 0rem 0.25rem 0rem 2rem;
+                        font-size: 1rem;
+                        a{
+                            img{
+                                margin-left: -1rem;
+                                width: 4.2rem;
+                            }
+                            
+                        }
+                        a{
+                            button{font-size: 1rem;}
+                        }
+                        a.link{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        // -----INICIO MAIN-----
+        main{
+            section#home{
+                background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+                background-size: contain;
+                background-repeat:no-repeat;
+                
+                h1#titulo{
+                        margin: 0rem auto 0rem auto;  
+                        font-size: 4.2rem;
+                        padding: 0.8rem; 
+                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
+                }
+                div#comentario{
+                    margin: 25rem 0rem 0rem 0.5rem;
+                    width: 98%;
+                    padding: 0.8rem;
+                    border-radius: $radio-fuerte;
+                    background-color: #ffd90011;
+                    box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
+                    border:4px solid $clr-secundario;
+                    color: $clr-gris-oscuro;
+                    i.home__martillo{
+                        color: $clr-gris-oscuro;
+                        font-size: 4rem;
+                        margin-top: -2rem;
+                        margin-left: -1rem;
+                    }
+                    h2{
+                        font-size: 3rem;
+                        font-family: $fuente-1;
+                        font-weight: bold;
+                        color: white;
+                        text-align: center;
+                        margin: 2rem 0rem 3rem 0rem;
+                        text-shadow: $clr-gris-oscuro 3px 3px 3px;
+                        
+                    }
+                    h3{
+                        font-size: 1.4rem;
+                        padding: 0;
+                    }
+                }
+                div.home__card2{
+                    width: 55%;
+                    margin: 4rem auto;
+                    background-color: transparent;
+                    padding: 1rem;
+                    border: 4px solid $clr-primario-hover;
+                    i{
+                        left: 2.5rem;
+                        font-size: 3.5rem;
+                        color: $clr-secundario;
+                    }
+                    div.home__parrafos{
+                        h3{
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+            section.pasos{
+                div.pasos__contenedor{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h2{
+                        margin-top: 2rem;
+                        font-size: 5rem;
+                        color: $clr-primario-hover;
+                        line-height: 4rem;
+                        letter-spacing: 0.25rem;
+                    }
+                    div.pasos__card{
+                        width: 90vw;
+                        display: flex; 
+                        flex-direction: column;
+                        margin: 0.5rem 0rem 2rem 0rem; 
+                        img#primerimg{
+                            width: 50vw;
+                            margin-top: 0.5rem;
+                            margin-bottom: -2rem;
+                        }
+                        img{
+                            width: 50vw; 
+                            margin-top: 1.5rem;
+                        }
+                        div{
+                            h3{
+                                font-size: 2.5rem;
+                                letter-spacing: 0.2rem;
+                                padding: 1.25rem 2rem;
+                            }
+                            p{
+                                padding: 0.25rem 2rem ;
+                                font-size: 1.2rem;
+                                line-height:1.6rem;
+                            }
+                        }
+                    }
+                    a{
+                        button.pasos__btn{
+                            width: 40vw;
+                            font-size: 1.4rem;
+                            padding: 0.8rem 1.5rem;
+                            margin: 4rem auto;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }   
 }

@@ -2,10 +2,62 @@
 
 @media screen and (min-width:421px) and (max-width:600px){
     
-    // ---NAVBAR COMPACTO-----
+    // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
     body{
-        @import './navbarcompacto';
-
+        header{
+            nav{
+                input.nav__checkbox{
+                    display:none;
+                    &:checked ~ ul.nav__listamenu li{display: block; }
+                    &:checked ~ label.nav__onoff .fas{display: none;}
+                    &:checked ~ label.nav__onoff .far{ display: block;}  
+                }
+                label.nav__onoff{
+                    display: block;
+                    position: absolute;
+                    cursor: pointer;
+                    margin: 1.8rem 1rem;
+                    right: 0;
+                    font-size:1.5rem;
+                    color: $clr-secundario;
+                    z-index: 10;
+                    i.fas{
+                        display: block;
+                    }
+                    i.far{
+                        display: none;
+                    }
+                }
+                ul.nav__listamenu{
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+                    &:first-child{
+                        margin:auto; 
+                        display: block;
+                    }
+                    li{
+                        &:nth-child(2){
+                            display: none;    
+                        }
+                        &:nth-child(3){
+                            display: none;
+                        }
+                        &:nth-child(4){
+                            display: none;
+                        }
+                        &:nth-child(5){
+                            display: none;
+                        }
+                        a{
+                            img{
+                                width: 3.6rem;
+                            }
+                        }   
+                    }
+                }
+            }
+}
         // -----INICIO MAIN-----
         main{
             section#home{
@@ -31,12 +83,13 @@
                     color: $clr-gris-oscuro;
                     i.home__martillo{
                         color: $clr-gris-oscuro;
+                        text-shadow: $clr-primario 0px 0px 4px;
                         font-size: 3rem;
                         margin-top: -2rem;
                         margin-left: -1rem;
                     }
                     h2{
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                         font-family: $fuente-1;
                         font-weight: bold;
                         color: white;
@@ -116,7 +169,49 @@
                 }
             }
         }
-        @import './footercompacto';
+         // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
+    footer{
+        div.contenedor__footer{
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 280px;
+                text-align: center;
+            }
+            div.sociales{
+                h3{
+                    margin-top: 1rem;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }    
+            }
+            div.contacto{
+                h3{
+                    text-align: center;
+                }
+                div{
+                    p{text-align: center;}
+                }
+            }
+            div.comentarios{
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+        div.right{
+            hr{
+                width: 90vw;
+                margin: 10px auto;
+            }
+            p{
+                padding: 0rem 1rem;
+                text-align: center;
+            }
+        }
+    }
     }   
 }    
 

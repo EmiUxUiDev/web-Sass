@@ -39,30 +39,38 @@ header {
                                     }
                                     &.link:hover::after{
                                         width: 100%;
-                                    } 
-                                        img{
-                                            width: 3.5rem;
-                                            transition: transform 300ms ease-in-out 0ms ;
-                                            &:hover{
-                                                cursor: pointer;
-                                                transform: rotate(10deg) scale(1.2);
-                                                }
-                                        } 
-                                        button{
-                                            font-weight: bold;
-                                            padding: 0.5rem 2rem;
-                                            border: none; 
-                                            outline: none;
-                                            background-color: $clr-primario;
-                                            border-radius: $radio-fuerte;
-                                            font-size: 1rem; 
-                                            cursor: pointer;
-                                            transition: all 300ms ease-in-out;
-                                                &:hover{
-                                                    background-color: $clr-primario-hover;
-                                                    transform: scale(1.05);
-                                                }
+                                    }      
+                            }
+                            a{
+                                img{
+                                    width: 4.5rem;
+                                    margin-left: -1rem;
+                                    transition: transform 300ms ease-in-out 0ms ;
+                                    &:hover{
+                                        cursor: pointer;
+                                        transform: rotate(10deg) scale(1.2);
                                         }
+                                }
+                            }
+                            a.link{
+                                font-size: 1.1rem;
+                            }
+                            a{
+                                button{
+                                    font-weight: bold;
+                                    padding: 0.5rem 2rem;
+                                    border: none; 
+                                    outline: none;
+                                    background-color: $clr-primario;
+                                    border-radius: $radio-fuerte;
+                                    font-size: 1.1rem; 
+                                    cursor: pointer;
+                                    transition: all 300ms ease-in-out;
+                                        &:hover{
+                                            background-color: $clr-primario-hover;
+                                            transform: scale(1.05);
+                                        }
+                                }
                             }
                 }
         }
