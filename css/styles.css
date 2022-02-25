@@ -501,18 +501,18 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
     background-size: auto 50%;
     background-repeat: no-repeat;
-    background-position: 10% 0%;
+    background-position: 17% 0%;
   }
   body main section#home h1#titulo {
     margin: 0.25rem auto;
-    font-size: 3rem;
+    font-size: 2.8rem;
     padding: 0.2rem;
     background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
     background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
     margin: 9rem auto 2rem auto;
-    width: 98%;
+    width: 96%;
     padding: 0.8rem;
     border-radius: 2rem;
     background-color: #ffd90011;
@@ -526,7 +526,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     color: #414141;
     font-size: 3rem;
     margin-top: -2rem;
-    margin-left: -1rem;
+    margin-left: -1.4rem;
   }
   body main section#home div#comentario h2 {
     font-size: 1.8rem;
@@ -534,12 +534,17 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     font-weight: bold;
     color: white;
     text-align: center;
-    margin: 0rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 2.5rem 0rem;
     text-shadow: #414141 3px 3px 3px;
   }
   body main section#home div#comentario h3 {
     font-size: 1rem;
-    padding: 0;
+    padding: 0.5rem 0rem;
+  }
+  body main section#home div#comentario h3:last-child {
+    font-size: 0.9rem;
+    color: #000;
+    font-weight: 500;
   }
   body main section#home div.home__card2 {
     width: 85%;
@@ -561,6 +566,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   }
   body main section.pasos div.pasos__contenedor h2 {
     margin-top: 2rem;
+    margin-bottom: -2.4rem;
     font-size: 4rem;
     color: #ffd900;
     line-height: 4rem;
@@ -585,6 +591,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   }
   body main section.pasos div.pasos__contenedor div.pasos__card img {
     width: 80vw;
+    margin-bottom: -0.25rem;
   }
   body main section.pasos div.pasos__contenedor div.pasos__card div h3 {
     font-size: 2rem;
@@ -595,6 +602,9 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     padding: 0.25rem 2rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p a {
+    padding: 1rem;
   }
   body main section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 80vw;
@@ -1314,5 +1324,6 @@ footer div.right hr {
 footer div.right p {
   padding: 0rem 1rem;
   text-align: center;
+  font-size: 0.85rem;
 }
 /*# sourceMappingURL=styles.css.map */
