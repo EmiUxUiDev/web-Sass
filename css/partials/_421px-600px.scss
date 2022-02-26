@@ -72,7 +72,7 @@
                         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
-                    margin: 22rem 0rem 0rem 0.5rem;
+                    margin: 32rem 0rem 0rem 0.5rem;
                     width: 98%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;
@@ -84,23 +84,29 @@
                     i.home__martillo{
                         color: $clr-gris-oscuro;
                         text-shadow: $clr-primario 0px 0px 4px;
-                        font-size: 3rem;
+                        font-size: 3.5rem;
                         margin-top: -2rem;
                         margin-left: -1rem;
                     }
                     h2{
-                        font-size: 2rem;
+                        font-size: 2.2rem;
                         font-family: $fuente-1;
                         font-weight: bold;
                         color: white;
                         text-align: center;
-                        margin: 0rem 0rem 2rem 0rem;
+                        margin: -4.3rem 0rem 0rem 0rem;
                         text-shadow: $clr-gris-oscuro 3px 3px 3px;
                     }
                     h3{
                         font-size: 1.2rem;
                         padding: 0;
+                        margin-top: 6rem;
+                        &:last-child{
+                            margin-top: 2rem;
+                            font-size: 1.1rem;
+                        }
                     }
+                    
                 }
                 div.home__card2{
                     width: 85%;
@@ -155,6 +161,16 @@
                                 padding: 0.25rem 2rem ;
                                 font-size: 1.2rem;
                                 line-height:1.6rem;
+                                &:last-child{
+                                    font-size: 1.1rem;
+                                    font-weight: 500;
+                                    padding: 1rem;
+                                    a{  
+                                        font-size: 1.3rem;
+                                        font-weight: bold;
+                                        cursor: pointer;
+                                    }
+                                }
                             }
                         }
                     }

@@ -534,7 +534,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     font-weight: bold;
     color: white;
     text-align: center;
-    margin: 0rem 0rem 2.5rem 0rem;
+    margin: 0rem 0rem 3.4rem 0rem;
     text-shadow: #414141 3px 3px 3px;
   }
   body main section#home div#comentario h3 {
@@ -603,8 +603,15 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
-  body main section.pasos div.pasos__contenedor div.pasos__card div p a {
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
+    font-size: 1rem;
+    font-weight: 600;
     padding: 1rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
   }
   body main section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 80vw;
@@ -723,7 +730,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 22rem 0rem 0rem 0.5rem;
+    margin: 32rem 0rem 0rem 0.5rem;
     width: 98%;
     padding: 0.8rem;
     border-radius: 2rem;
@@ -737,22 +744,27 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   body main section#home div#comentario i.home__martillo {
     color: #414141;
     text-shadow: #ffe656 0px 0px 4px;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-top: -2rem;
     margin-left: -1rem;
   }
   body main section#home div#comentario h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     color: white;
     text-align: center;
-    margin: 0rem 0rem 2rem 0rem;
+    margin: -4.3rem 0rem 0rem 0rem;
     text-shadow: #414141 3px 3px 3px;
   }
   body main section#home div#comentario h3 {
     font-size: 1.2rem;
     padding: 0;
+    margin-top: 6rem;
+  }
+  body main section#home div#comentario h3:last-child {
+    margin-top: 2rem;
+    font-size: 1.1rem;
   }
   body main section#home div.home__card2 {
     width: 85%;
@@ -816,6 +828,16 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     padding: 0.25rem 2rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
   }
   body main section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 80vw;
@@ -892,7 +914,7 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 20rem 0rem 0rem 0.5rem;
+    margin: 30rem 0rem 0rem 0.5rem;
     width: 98%;
     padding: 0.8rem;
     border-radius: 2rem;
@@ -909,16 +931,22 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     margin-left: -1rem;
   }
   body main section#home div#comentario h2 {
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     color: white;
     text-align: center;
-    margin: 0rem 0rem 3.5rem 0rem;
+    margin: -5.6rem 0rem 0rem 0rem;
     text-shadow: #414141 3px 3px 3px;
   }
   body main section#home div#comentario h3 {
     font-size: 1.2rem;
+    padding: 0;
+    margin-top: 6rem;
+  }
+  body main section#home div#comentario h3:last-child {
+    margin-top: 2rem;
+    font-size: 1.1rem;
   }
   body main section#home div.home__card2 {
     width: 70%;
@@ -983,6 +1011,16 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     padding: 0.25rem 2rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
   }
   body main section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 60vw;
@@ -1070,34 +1108,41 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 25rem 0rem 0rem 0.5rem;
-    width: 98%;
+    margin: 22rem auto 0rem auto;
+    width: 96%;
     padding: 0.8rem;
     border-radius: 2rem;
     background-color: #ffd90011;
-    -webkit-box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-            box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-    border: 4px solid #ff156f;
+    -webkit-box-shadow: rgba(48, 48, 48, 0.993) 3px 3px 15px;
+            box-shadow: rgba(48, 48, 48, 0.993) 3px 3px 15px;
+    border: 6px solid #ff156f;
     color: #414141;
   }
   body main section#home div#comentario i.home__martillo {
     color: #414141;
-    font-size: 4rem;
-    margin-top: -2rem;
+    -webkit-filter: drop-shadow(3px 0px 1px #ff156f);
+            filter: drop-shadow(3px 0px 1px #ff156f);
+    font-size: 5rem;
+    margin-top: 0rem;
     margin-left: -1rem;
   }
   body main section#home div#comentario h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     color: white;
     text-align: center;
-    margin: 2rem 0rem 3rem 0rem;
-    text-shadow: #414141 3px 3px 3px;
+    margin: -2rem 0rem 3rem 0rem;
+    text-shadow: #000 3px 3px 4px;
   }
   body main section#home div#comentario h3 {
     font-size: 1.4rem;
     padding: 0;
+    margin-top: 6rem;
+  }
+  body main section#home div#comentario h3:last-child {
+    margin-top: 2rem;
+    font-size: 1.1rem;
   }
   body main section#home div.home__card2 {
     width: 55%;
@@ -1162,6 +1207,162 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     padding: 0.25rem 2rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1.4rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  body main section.pasos div.pasos__contenedor a button.pasos__btn {
+    width: 40vw;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.5rem;
+    margin: 4rem auto;
+  }
+}
+
+@media screen and (min-width: 1251px) and (max-width: 1500px) {
+  body header nav ul li {
+    margin: 0rem 0.25rem 0rem 2rem;
+    font-size: 1rem;
+  }
+  body header nav ul li a img {
+    margin-left: -1rem;
+    width: 4.2rem;
+  }
+  body header nav ul li a button {
+    font-size: 1rem;
+  }
+  body header nav ul li a.link {
+    font-size: 1rem;
+  }
+  body main section#home {
+    background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body main section#home h1#titulo {
+    margin: 0rem auto 0rem auto;
+    font-size: 5.6rem;
+    padding: 0.8rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+  }
+  body main section#home div#comentario {
+    margin: 22rem auto 0rem auto;
+    width: 90%;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    background-color: #ffd90011;
+    -webkit-box-shadow: rgba(71, 71, 71, 0.993) 3px 3px 15px;
+            box-shadow: rgba(71, 71, 71, 0.993) 3px 3px 15px;
+    border: 6px solid #ff156f;
+    color: #414141;
+  }
+  body main section#home div#comentario i.home__martillo {
+    color: #414141;
+    -webkit-filter: drop-shadow(3px 0px 1px #ff156f);
+            filter: drop-shadow(3px 0px 1px #ff156f);
+    font-size: 6rem;
+    margin-top: 0rem;
+    margin-left: -1rem;
+  }
+  body main section#home div#comentario h2 {
+    font-size: 4rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 6.5rem 0rem 3rem 0rem;
+    text-shadow: #000 3px 3px 4px;
+  }
+  body main section#home div#comentario h3 {
+    font-size: 1.4rem;
+    padding: 0;
+    margin-top: 6rem;
+  }
+  body main section#home div#comentario h3:last-child {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  body main section#home div.home__card2 {
+    width: 55%;
+    margin: 4rem auto;
+    background-color: transparent;
+    padding: 1rem;
+    border: 4px solid #ffd900;
+  }
+  body main section#home div.home__card2 i {
+    left: 2.5rem;
+    font-size: 3.5rem;
+    color: #ff156f;
+  }
+  body main section#home div.home__card2 div.home__parrafos h3 {
+    font-size: 2.5rem;
+  }
+  body main section.pasos div.pasos__contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main section.pasos div.pasos__contenedor h2 {
+    margin-top: 2rem;
+    font-size: 6rem;
+    color: #ffd900;
+    line-height: 4rem;
+    letter-spacing: 0.25rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card {
+    width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.5rem 0rem 2rem 0rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
+    width: 40vw;
+    margin-top: 0.5rem;
+    margin-bottom: -2rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card img {
+    width: 50vw;
+    margin-top: 1.5rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div h3 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    padding: 1.25rem 2rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p {
+    padding: 0.25rem 2rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 1.4rem;
+  }
+  body main section.pasos div.pasos__contenedor div.pasos__card div p:last-child a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
   }
   body main section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 40vw;
