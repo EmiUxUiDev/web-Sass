@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +134,7 @@ header nav ul li a button:hover {
           transform: scale(1.05);
 }
 
-main .scroll__btn {
+main div.scroll__btn {
   position: fixed;
   width: 2.6rem;
   height: 3.4rem;
@@ -439,6 +440,252 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   color: #7a7a7a;
 }
 
+main.sobre__nos h2 {
+  padding: 0.5rem;
+}
+
+main.sobre__nos div.contenedor__nos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 4rem 0 4rem 0;
+  background-color: white;
+  border: 10px solid #7a7a7a;
+  border-radius: 2rem;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
+  position: relative;
+  min-height: 25rem;
+  width: 17.8rem;
+  -webkit-box-shadow: 0 0px 8px 0 #7a7a7a;
+          box-shadow: 0 0px 8px 0 #7a7a7a;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+  border-bottom: 3px solid #ffd900;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta:hover {
+  -webkit-transform: scale(1.02) rotate(0.5deg);
+          transform: scale(1.02) rotate(0.5deg);
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url1 {
+  background-image: url(../multimedia/img/la-cañada-light.jpg);
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url2 {
+  background-image: url(../multimedia/img/estudio-de-arquitectura2.jpg);
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url3 {
+  background-image: url(../multimedia/img/charla.jpg);
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url4 {
+  background-image: url(../multimedia/img/croquis.jpg);
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.img-fondo {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: #414141;
+  margin: 12rem 0.5rem 0.5rem 0.5rem;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta p {
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+footer {
+  width: 100vw;
+  bottom: 0;
+  background: white;
+  border-radius: 8rem  0 0 0;
+  padding: 3rem 0 0 0;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  -webkit-box-shadow: 0px 10px 20px #7a7a7a;
+          box-shadow: 0px 10px 20px #7a7a7a;
+}
+
+footer div.contenedor__footer {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer div.contenedor__footer div.logo {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  min-height: 15rem;
+}
+
+footer div.contenedor__footer div.logo a img {
+  width: 70px;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+footer div.contenedor__footer div.sociales {
+  min-height: 15rem;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+footer div.contenedor__footer div.sociales h3 {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #ffd900;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.sociales div a i {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  color: #414141;
+}
+
+footer div.contenedor__footer div.sociales p {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.contacto {
+  min-height: 15rem;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+footer div.contenedor__footer div.contacto h3 {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #ffd900;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.contacto div i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: #414141;
+}
+
+footer div.contenedor__footer div.contacto div p {
+  text-align: left;
+}
+
+footer div.contenedor__footer div.contacto div p#ciudad {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+footer div.contenedor__footer div.comentarios {
+  min-height: 15rem;
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+
+footer div.contenedor__footer div.comentarios h3 {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #ffd900;
+  text-align: left;
+}
+
+footer div.contenedor__footer div.comentarios p {
+  margin-bottom: 0.8rem;
+}
+
+footer div.contenedor__footer div.comentarios form {
+  padding-bottom: 1rem;
+}
+
+footer div.contenedor__footer div.comentarios form textarea {
+  background-color: #f3f3f3;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+footer div.contenedor__footer div.comentarios form input.enviar {
+  width: 100%;
+  display: block;
+  margin-top: 0.8rem;
+  border-radius: 2rem;
+  border: 1px solid #414141;
+  background: transparent;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+footer div.contenedor__footer div.comentarios form input.enviar:hover {
+  background-color: #ffd900;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+footer div.right hr {
+  width: 90vw;
+  margin: 10px auto;
+}
+
+footer div.right p {
+  padding: 0rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
 @media screen and (max-width: 420px) {
   body header nav input.nav__checkbox {
     display: none;
@@ -618,6 +865,29 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     font-size: 1.2rem;
     padding: 0.5rem 1.5rem;
     margin: 4rem auto;
+  }
+  body main.sobre__nos h1 {
+    margin: 0 0 0 -0.8rem;
+    font-size: 3rem;
+    padding: 0.8rem;
+    letter-spacing: 0.15rem;
+  }
+  body main.sobre__nos h2 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  body main.sobre__nos div.contenedor__nos {
+    margin-top: 1.5rem;
+  }
+  body main.sobre__nos div.contenedor__nos div.nos__tarjeta {
+    margin: 1.2rem 0rem;
+  }
+  body main.sobre__nos div.contenedor__nos div.nos__tarjeta h2 {
+    font-size: 2rem;
+  }
+  body main.sobre__nos div.contenedor__nos div.nos__tarjeta p {
+    font-size: 1.1rem;
+    font-weight: 600;
   }
   body footer div.contenedor__footer {
     -webkit-box-orient: vertical;
@@ -1370,161 +1640,5 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
     padding: 0.8rem 1.5rem;
     margin: 4rem auto;
   }
-}
-
-footer {
-  width: 100vw;
-  bottom: 0;
-  background: white;
-  border-radius: 8rem  0 0 0;
-  padding: 3rem 0 0 0;
-  font-size: 0.9rem;
-  line-height: 1rem;
-  -webkit-box-shadow: 0px 10px 20px #7a7a7a;
-          box-shadow: 0px 10px 20px #7a7a7a;
-}
-
-footer div.contenedor__footer {
-  width: 90%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-footer div.contenedor__footer div.logo {
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
-  min-height: 15rem;
-}
-
-footer div.contenedor__footer div.logo a img {
-  width: 70px;
-  margin-bottom: 3rem;
-  cursor: pointer;
-}
-
-footer div.contenedor__footer div.sociales {
-  min-height: 15rem;
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
-}
-
-footer div.contenedor__footer div.sociales h3 {
-  margin-bottom: 4rem;
-  border-bottom: 1px solid #ffd900;
-  text-align: left;
-}
-
-footer div.contenedor__footer div.sociales div a i {
-  font-size: 1.5rem;
-  margin-right: 1.5rem;
-  cursor: pointer;
-  color: #414141;
-}
-
-footer div.contenedor__footer div.sociales p {
-  margin-top: 1rem;
-  text-align: left;
-}
-
-footer div.contenedor__footer div.contacto {
-  min-height: 15rem;
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
-}
-
-footer div.contenedor__footer div.contacto h3 {
-  margin-bottom: 4rem;
-  border-bottom: 1px solid #ffd900;
-  text-align: left;
-}
-
-footer div.contenedor__footer div.contacto div i {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  color: #414141;
-}
-
-footer div.contenedor__footer div.contacto div p {
-  text-align: left;
-}
-
-footer div.contenedor__footer div.contacto div p#ciudad {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-footer div.contenedor__footer div.comentarios {
-  min-height: 15rem;
-  -webkit-box-flex: 0.3;
-      -ms-flex: 0.3;
-          flex: 0.3;
-}
-
-footer div.contenedor__footer div.comentarios h3 {
-  margin-bottom: 4rem;
-  border-bottom: 1px solid #ffd900;
-  text-align: left;
-}
-
-footer div.contenedor__footer div.comentarios p {
-  margin-bottom: 0.8rem;
-}
-
-footer div.contenedor__footer div.comentarios form {
-  padding-bottom: 1rem;
-}
-
-footer div.contenedor__footer div.comentarios form textarea {
-  background-color: #f3f3f3;
-  border: none;
-  outline: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  width: 100%;
-}
-
-footer div.contenedor__footer div.comentarios form input.enviar {
-  width: 100%;
-  display: block;
-  margin-top: 0.8rem;
-  border-radius: 2rem;
-  border: 1px solid #414141;
-  background: transparent;
-  padding: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  font-weight: bold;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-}
-
-footer div.contenedor__footer div.comentarios form input.enviar:hover {
-  background-color: #ffd900;
-  cursor: pointer;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-footer div.right hr {
-  width: 90vw;
-  margin: 10px auto;
-}
-
-footer div.right p {
-  padding: 0rem 1rem;
-  text-align: center;
-  font-size: 0.85rem;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,7 +2,7 @@
 
 main{
     //-----BOTON IR ARRIBA----
-    .scroll__btn{
+    div.scroll__btn{
         position: fixed;
         width: 2.6rem;
         height: 3.4rem;
@@ -20,7 +20,6 @@ main{
                 display: block;
                 font-size: 2rem;
                 color: $clr-secundario;
-                // text-align: center;
                 margin-left: 0.65rem;
                 margin-top: 0.5rem;
                 &:hover{animation: movimiento_scroll 1s ease-in 0s infinite;  }    
@@ -47,6 +46,12 @@ main{
     //-----FIN BOTON IR ARRIBA----
     
 
+
+    // --------------------------------
+    // -----PAGINA HOME/INICIO---------
+    // --------------------------------
+
+    
     // -----SECCION INICIO/HOME-------
     section#home {
         background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
@@ -229,6 +234,77 @@ main{
         }    
         }
     }
+}
+main.sobre__nos{
+    h2{
+        padding: 0.5rem;
+    }
+    div.contenedor__nos{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 4rem 0 4rem 0;
+        background-color: rgb(255, 255, 255);
+        border: 10px solid $clr-gris-medio;
+        border-radius: $radio-fuerte;
+        div.contenedor__anidado{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            div.nos__tarjeta{
+                position: relative;
+                min-height: 25rem;
+                width: 17.8rem;
+                box-shadow:0 0px 8px 0 $clr-gris-medio;
+                text-align: center;
+                border-radius: $radio-medio;
+                margin: 0.5rem;
+                overflow:hidden;
+                background-color: rgb(255, 255, 255);
+                border-bottom: 3px solid $clr-primario-hover;
+                transition: all 500ms ease-in-out;
+                &:hover{
+                    transform: scale(1.02) rotate(0.5deg);
+                }
+                div.url1{
+                    background-image: url(../multimedia/img/la-cañada-light.jpg);
+                }
+                div.url2{
+                    background-image: url(../multimedia/img/estudio-de-arquitectura2.jpg);
+                }
+                div.url3{
+                    background-image: url(../multimedia/img/charla.jpg);
+                }
+                div.url4{
+                    background-image: url(../multimedia/img/croquis.jpg);
+                }
+                div.img-fondo{
+                    position: absolute;
+                    height: 40%;
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center top;
+                }
+                h2 {
+        
+                    font-family: $fuente-1;
+                    font-size: 1.6rem;
+                    letter-spacing: 0.1rem;
+                    color: $clr-gris-oscuro;
+                    margin:12rem 0.5rem 0.5rem 0.5rem ;
+                }
+                p{
+                    margin: 0.5rem 0.5rem 1rem 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+    }
+
 }
 
 

@@ -1,6 +1,6 @@
 @import '../bases/variables';
 
-// BREAKPOINT DE 310PX A 420PX
+// BREAKPOINT MAX 420PX
 
 // ---NAVBAR COMPACTO-----
 @media screen and (max-width:420px){
@@ -63,6 +63,10 @@ body{
     
     // -------INICIO MAIN -----
     main{
+
+    // --------------------------------
+    // -----PAGINA HOME/INICIO---------
+    // --------------------------------
         section#home{
             background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
             background-size: auto 50%;
@@ -186,9 +190,50 @@ body{
                 }
             }
         }
+    // --------------------------------
+    // ---FIN PAGINA HOME/INICIO-------
+    // --------------------------------
     }
+
+
+    // --------------------------------
+    // --- PAGINA SOBRE NOSOTROS-------
+    // --------------------------------    
+
+    main.sobre__nos{
+        h1{
+            margin: 0 0 0 -0.8rem;  
+            font-size: 3rem;
+            padding: 0.8rem;
+            letter-spacing: 0.15rem;
+        }
+        h2{
+            font-size: 1.1rem;
+            line-height: 1.5; 
+        }
+        div.contenedor__nos{
+            margin-top: 1.5rem;
+            div.nos__tarjeta{
+                margin: 1.2rem 0rem;
+            }
+            div.nos__tarjeta h2{
+                font-size: 2rem;
+            }
+            div.nos__tarjeta p{
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    // --------------------------------
+    // --- FIN SOBRE NOSOTROS-------
+    // -------------------------------- 
+
+
+
      // ----INICIO FOOTER COMPACTO-----
-     footer{
+    footer{
         div.contenedor__footer{
             flex-direction: column;
             align-items: center;
@@ -203,7 +248,7 @@ body{
                 }
                 p{
                     text-align: center;
-                }    
+                } 
             }
             div.contacto{
                 h3{
