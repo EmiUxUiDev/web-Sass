@@ -440,8 +440,17 @@ main section div.pasos__contenedor a button.pasos__btn:hover {
   color: #7a7a7a;
 }
 
+main.sobre__nos h1 {
+  margin: 0 0 0 -0.8rem;
+  font-size: 5.4rem;
+  padding: 0.8rem;
+  letter-spacing: 0.2rem;
+}
+
 main.sobre__nos h2 {
   padding: 0.5rem;
+  width: 70vw;
+  margin: 2rem auto;
 }
 
 main.sobre__nos div.contenedor__nos {
@@ -478,7 +487,7 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
           box-shadow: 0 0px 8px 0 #7a7a7a;
   text-align: center;
   border-radius: 1rem;
-  margin: 0.5rem;
+  margin: 1rem;
   overflow: hidden;
   background-color: white;
   border-bottom: 3px solid #ffd900;
@@ -528,6 +537,241 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta p {
   margin: 0.5rem 0.5rem 1rem 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+}
+
+main.sobre__nos div.contenedor__tecnologia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.sobre__nos div.contenedor__tecnologia h2 {
+  text-transform: uppercase;
+  color: #414141;
+}
+
+main.sobre__nos div.contenedor__tecnologia p {
+  font-weight: 500;
+}
+
+main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0rem;
+  background-color: #ffd900;
+  border-radius: 2rem;
+}
+
+main.sobre__nos div.contenedor__tecnologia div.tecnologia div img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding: 0;
+  width: 80%;
+  filter: grayscale(1);
+  transition: all 300ms ease-in-out 0ms;
+}
+
+main.sobre__nos div.contenedor__tecnologia div.tecnologia div img:nth-child(even) {
+  width: 250px;
+}
+
+main.sobre__nos div.contenedor__tecnologia div.tecnologia div img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+main.sobre__nos div.contenedor__tecnologia div.tecnologia div img#first {
+  margin-bottom: -1rem;
+}
+
+main.sobre__nos div.contenedor__tecnologia div.tecnologia div p {
+  font-size: 0.8rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  margin: 0 0 0.5rem 1.5rem;
+  display: block;
+}
+
+main div.contenedor--p2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+main div.contenedor--p2 div.primer__flex {
+  width: 80%;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.contenedor--p2 div.primer__flex h1 {
+  margin: 0 0 0 -0.8rem;
+  font-size: 4.8rem;
+  padding: 0.8rem;
+}
+
+main div.contenedor--p2 div.primer__flex h2 {
+  margin: 2rem 0rem;
+}
+
+main div.contenedor__pasos--p2 {
+  min-height: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 100vw;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 {
+  position: relative;
+  width: 500PX;
+  height: 250PX;
+  margin: 2rem 1rem 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  border-bottom: 2px solid #ffd900;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 h3#num-grande {
+  position: absolute;
+  top: -5rem;
+  left: -1.5rem;
+  font-size: 8rem;
+  color: #7a7a7a;
+  text-shadow: #ffd900 1px 1px 1px;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 img {
+  width: 250px;
+  padding: 0.5rem;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div {
+  width: 250px;
+  padding: 0.5rem;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #414141;
+}
+
+main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div p {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #414141;
+}
+
+main div.contenedor__tiendas div {
+  width: 35vw;
+  margin: 0.5rem auto;
+}
+
+main div.contenedor__tiendas div h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+main div.contenedor__tiendas div p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+main div.contenedor__tiendas div p#obs {
+  font-size: .9rem;
+  margin-top: 8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+main div.contenedor__tiendas div strong {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  color: #ff156f;
+}
+
+main div.contenedor__tiendas div.imagenes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80vw;
+}
+
+main div.contenedor__tiendas div.imagenes img {
+  width: 6rem;
+  margin: 2rem 0.8rem 2rem 0.8rem;
 }
 
 footer {

@@ -520,7 +520,7 @@ textarea{
     border: 10px solid var(--clr-gris-medio);
     border-radius: var(--radio-fuerte);
 }
-
+    
 .nos__tarjeta{
     position: relative;
     min-height: 25rem;
