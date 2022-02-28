@@ -385,11 +385,7 @@ main{
            } 
            h2{
             margin: 2rem 0rem;
-           }
-        //    p{
-     
-        //    }
-    
+           }   
         }
     }
     div.contenedor__pasos--p2{
@@ -484,5 +480,104 @@ main{
 }
 
 
+
+    // --------------------------------
+    // ---PAGINA TRUCOS PARA RENOVAR---
+    // --------------------------------  
+main.contenedor__p3{
+    background-color: $clr-gris-claro;
+    margin: 0rem 1rem; 
+    display: flex;  
+    flex-direction: column;
+    margin: 2rem 1rem;
+    p{text-align: center;}
+    div.titulo--p3{
+        display: flex;
+        align-items: center; 
+        margin: 2rem 0;
+        h1{
+            margin-top: -2rem;
+            margin-left: auto;
+            font-size: 4.8rem;
+            padding: 0.8rem;
+        } 
+        p{
+            margin-left: 1rem;
+            input{
+                margin:1rem 0.5rem;
+                i{
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    margin-bottom: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    div.contenedor__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 19rem);
+        justify-content: center;
+        margin-top: 3rem;
+        div.grid__card{
+            overflow: auto;
+            background-color: #fff;
+            border-radius: $radio-medio;
+            margin: 1rem 1rem;
+            padding:0rem 1rem;
+            border-top:4px solid $clr-primario-hover;
+            box-shadow: $clr-gris-medio 0px 1px 3px;
+            p{
+                color: $clr-gris-medio;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+            }
+            h2{
+                color: $clr-gris-oscuro;
+                text-align: left;
+                margin-left: 0rem;
+                margin-top: -0.8rem;
+                padding: 1rem 0rem;
+                font-size: 1.3rem;
+            }
+            iframe{
+                height: 250px;
+                width: 100%;
+                border-radius: $radio-medio;
+                margin-bottom: 1rem;
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                font-weight: bold; 
+                margin: 1rem 0rem;
+            }
+            i{
+                font-size: 0.8rem;
+                margin-left: 0.5rem;  
+            }
+            div{
+                height: 250px;
+                width: 100%;
+                margin-bottom: 1rem;
+                background-color: $clr-secundario;
+                border-radius: $radio-medio;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            div.blog1{
+                background-image: url(../multimedia/img/blog-pileta.jpg); 
+            }
+            div.blog2{
+                background-image: url(../multimedia/img/blog-pisomadera.jpg);
+            }
+            div.blog3{
+                background-image: url(../multimedia/img/blog-colores.jpg);
+            }
+        }
+    }
+}
 
 
