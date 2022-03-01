@@ -928,6 +928,12 @@ main.empeza div.contenedor form#formulario {
           align-items: center;
 }
 
+main.empeza div.contenedor form#formulario:last-child {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
 main.empeza div.contenedor form#formulario img.contanos_personaje {
   position: absolute;
   right: 0rem;
@@ -1111,7 +1117,6 @@ main.empeza div.contenedor form#formulario div.arqui {
           align-items: center;
   width: 90vw;
   margin: 3rem 0rem 3rem 0rem;
-  background-color: #FFD900;
 }
 
 main.empeza div.contenedor form#formulario div.arqui div.personas {
@@ -1176,20 +1181,27 @@ main.empeza div.contenedor form#formulario div.arqui div.personas div.img4 {
 }
 
 main.empeza div.contenedor form#formulario div.plan {
-  width: 80vw;
+  width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 3rem 0rem 3rem 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0rem 0rem 4rem 0rem;
+  padding: 1rem 0rem;
+  background-color: #ffd900;
+  border-radius: 1rem;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado {
-  width: 26rem;
-  padding: 1rem;
-  border: 1px solid #ff156f;
+  width: 40vw;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem;
+  border: 1px solid #414141;
   border-radius: 1rem;
   -webkit-transition: all 300ms ease-in-out 0ms;
   transition: all 300ms ease-in-out 0ms;
@@ -1200,8 +1212,17 @@ main.empeza div.contenedor form#formulario div.plan div.personalizado h2 {
   text-align: center;
 }
 
+main.empeza div.contenedor form#formulario div.plan div.personalizado h2:nth-child(2) {
+  font-size: 3rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.personalizado h2:first-child {
+  margin-top: 1rem;
+}
+
 main.empeza div.contenedor form#formulario div.plan div.personalizado h3 {
   text-align: center;
+  padding: 0.5rem 0rem;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado strong {
@@ -1210,19 +1231,40 @@ main.empeza div.contenedor form#formulario div.plan div.personalizado strong {
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado p {
   text-align: center;
+  padding: 0.15rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.personalizado p:last-child {
+  padding: 1rem;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado ul {
   color: #ff156f;
   font-weight: 500;
-  margin: 2rem 2.5rem 2rem 2rem;
+  margin: 2rem 2.5rem 2rem 5rem;
   line-height: 1.5rem;
 }
 
+main.empeza div.contenedor form#formulario div.plan div.personalizado ul li {
+  padding: 0.2rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.personalizado:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: #7a7a7a 1px 2px 5px;
+          box-shadow: #7a7a7a 1px 2px 5px;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.personalizado:hover strong.precio {
+  font-size: 4rem;
+}
+
 main.empeza div.contenedor form#formulario div.plan div.premium {
-  width: 26rem;
-  padding: 1rem;
-  border: 1px solid #ff156f;
+  width: 40vw;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem;
+  border: 1px solid #414141;
   border-radius: 1rem;
   -webkit-transition: all 300ms ease-in-out 0ms;
   transition: all 300ms ease-in-out 0ms;
@@ -1233,8 +1275,17 @@ main.empeza div.contenedor form#formulario div.plan div.premium h2 {
   text-align: center;
 }
 
+main.empeza div.contenedor form#formulario div.plan div.premium h2:nth-child(2) {
+  font-size: 2.5rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium h2:first-child {
+  margin-top: 1rem;
+}
+
 main.empeza div.contenedor form#formulario div.plan div.premium h3 {
   text-align: center;
+  padding: 0.5rem 0rem;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.premium strong {
@@ -1243,13 +1294,175 @@ main.empeza div.contenedor form#formulario div.plan div.premium strong {
 
 main.empeza div.contenedor form#formulario div.plan div.premium p {
   text-align: center;
+  padding: 0.15rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium p:last-child {
+  padding: 1rem;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.premium ul {
   color: #ff156f;
   font-weight: 500;
-  margin: 2rem 2.5rem 2rem 2rem;
+  margin: 2rem 2.5rem 2rem 5rem;
   line-height: 1.5rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium ul li {
+  padding: 0.2rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: #7a7a7a 1px 2px 5px;
+          box-shadow: #7a7a7a 1px 2px 5px;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium:hover strong.precio {
+  font-size: 4rem;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago h2, main.empeza div.contenedor form#formulario div.formas-de-pago p {
+  color: #414141;
+  text-align: center;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago h2 {
+  margin-top: 2rem;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80vw;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1.5rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0rem;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div img {
+  width: 5.5rem;
+  padding: 0.5rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30vw;
+  margin-bottom: 1rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar h2 {
+  color: #414141;
+  margin: 3rem 0rem 2rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar div {
+  margin: 0.3rem 0rem 0rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar input {
+  padding: 0.2rem 0rem 0.2rem 1rem;
+  border: 1px solid #414141;
+  border-radius: 1rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar input:last-child {
+  margin-bottom: 1rem;
+}
+
+main.empeza div.contenedor form#formulario button[type="submit"] {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #414141;
+  padding: 0.5rem 3.6rem 0.5rem 3.6rem;
+  margin: 1rem 0rem 1rem 0rem;
+  border: 1px solid black;
+  outline: 1px solid #ffd900;
+  border-radius: 2rem;
+  background-color: white;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out 0ms;
+  transition: all 250ms ease-in-out 0ms;
+}
+
+main.empeza div.contenedor form#formulario button[type="submit"]:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  background-color: #ffd900;
+  -webkit-box-shadow: #7a7a7a 1px 1px 5px;
+          box-shadow: #7a7a7a 1px 1px 5px;
+}
+
+main.empeza div.contenedor form#formulario button[type="reset"] {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #414141;
+  padding: 0.5rem 3.2rem 0.5rem 3.2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #414141;
+  border-radius: 2rem;
+}
+
+main.empeza div.contenedor form#formulario button[type="reset"]:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  background-color: #ffd900;
+  -webkit-box-shadow: #7a7a7a 1px 1px 5px;
+          box-shadow: #7a7a7a 1px 1px 5px;
 }
 
 footer {
