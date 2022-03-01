@@ -581,3 +581,262 @@ main.contenedor__p3{
 }
 
 
+
+    // --------------------------------
+    // ---PAGINA TRUCOS PARA RENOVAR---
+    // --------------------------------  
+main.empeza{
+    div.contenedor{
+        h1{
+            margin: 0 0 1rem -0.8rem;  
+            font-size: 4.8rem;
+            padding: 0.8rem;
+        }
+        h2{
+            font-size: 1.5rem;
+            margin: 0rem 0rem 2rem 0rem;
+        }
+        form#formulario{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img.contanos_personaje{
+                position: absolute;
+                right: 0rem;
+                top: -5vh;
+                width: 25vw;
+            }
+            div.base-card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 1.5rem 0rem 1rem 0rem;
+                padding:1rem 0rem 1rem 0rem ;
+                border-radius:$radio-medio;
+                width: 90vw;
+                h2{
+                    color: $clr-gris-oscuro;
+                    margin: 0rem;
+                }
+                p{
+                    text-align: center;
+                    color: black;
+                    font-weight: 500;
+                    font-style: italic;
+                    font-size: 0.9rem;
+                }
+                label{
+                    font-weight: 700;
+                    font-size: .9rem;
+                    line-height: 1.5rem;
+                    color: $clr-gris-oscuro;
+                }
+                textarea{
+                    width: 80vw;
+                    background-color: white;
+                    border-radius: $radio-medio;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-top: 1.5rem;
+                    border: 1px solid $clr-primario-hover;
+                }
+                fieldset{
+                    width: 80vw;
+                    display: flex; 
+                    justify-content: space-around;
+                    align-items: center;   
+                    padding: 0.5rem 3rem 1rem 1rem;
+                    border-radius: $radio-fuerte;
+                    border: none;
+                    background-color:$clr-primario;
+                    legend{font-weight: 600;}
+                    div{
+                        margin:1rem;
+                        input{
+                            width: 5vw;
+                            margin: 0rem;
+                        }
+                    }
+                }
+                ul{
+                    li.img1{
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.jpg");
+                    }
+                    li.img2{
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente vintage-light.jpg");
+                    }
+                    li.img3{
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente verde-light.jpg");
+                    }
+                    li.img4{
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente rustico-light.jpg");
+                    }
+                    li.img5{
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente moderno-light.jpg");
+                    }
+                }               
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    li{
+                        background-size:cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 16rem;
+                        width: 16rem;
+                        border-radius: $radio-medio;
+                        margin: 1rem 0.5rem 1rem 0.5rem;
+                        text-align: center;
+                        list-style:none;
+                        h3{
+                            color: white;
+                            font-weight: 500;
+                            input{
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }    
+            }
+            div.elegir-color{
+                display: flex;
+                justify-content: space-evenly;
+                width: 80vw;
+                padding: 0rem 1rem 1rem 0rem;
+                margin-top: 0.5rem;
+                border-radius: $radio-fuerte;
+                background-color: $clr-primario;
+
+                label{
+                    margin: 1rem 1rem 0rem 0.5rem;
+                }
+                input{
+                    margin: 1rem 0rem 0rem 0rem;
+                }
+            } 
+            div.imagen{
+                input{
+                    width: 80vw;
+                    padding: 1rem;
+                    margin-top: 0.5rem;
+                    border-radius: $radio-fuerte;
+                    background-color: $clr-primario;
+                }
+            }
+            div.arqui{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 90vw; 
+                margin: 3rem 0rem 3rem 0rem; 
+                background-color: #FFD900;
+                div.personas{
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    margin: 1rem 0rem 1rem 0rem;
+                    div{
+                        width: 28vw;
+                        height: auto;
+                        margin: 1.5rem 0.5rem;
+                        p{
+                            margin-top: 70%;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            color: white;
+                            text-align: center;
+                        }
+                    }
+                    h3{
+                        text-align: center;
+                    }
+                    div.img1{
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui3-light.jpg");
+                        background-size:cover;
+                        background-position: center;
+                        border-radius: $radio-medio; 
+                    }
+                    div.img2{
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui5-light.jpg");
+                        background-size:cover;
+                        background-position: center;
+                        border-radius: $radio-medio;
+                    }
+                    div.img3{
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui2-light.jpg");
+                        background-size:cover;
+                        background-position: center;
+                        border-radius: $radio-medio;
+                    }
+                    div.img4{
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui4-light.jpg");
+                        background-size:cover;
+                        background-position: center;
+                        border-radius: $radio-medio;
+                    }
+                }
+            }
+            div.plan{
+                width: 80vw;
+                display: flex;
+                justify-content: space-evenly;
+                margin: 3rem 0rem 3rem 0rem;
+                div.personalizado{
+                    width: 26rem;
+                    padding: 1rem;
+                    border: 1px solid $clr-secundario;
+                    border-radius: $radio-medio;
+                    transition: all 300ms ease-in-out 0ms;
+                    h2 {
+                        color: $clr-gris-oscuro;
+                        text-align: center;
+                    }
+                    h3{text-align: center;}
+                    strong{
+                        color:$clr-secundario;
+                    }
+                    p{
+                        text-align: center;
+                    }
+                    ul{
+                        color:$clr-secundario;
+                        font-weight: 500;
+                        margin:  2rem 2.5rem 2rem 2rem;
+                        line-height: 1.5rem; 
+                    }
+                    
+                }
+                div.premium{
+                    width: 26rem;
+                    padding: 1rem;
+                    border: 1px solid $clr-secundario;
+                    border-radius: $radio-medio;
+                    transition: all 300ms ease-in-out 0ms;
+                    h2 {
+                        color: $clr-gris-oscuro;
+                        text-align: center;
+                    }
+                    h3{text-align: center;}
+                    strong{
+                        color:$clr-secundario;
+                    }
+                    p{
+                        text-align: center;
+                    }
+                    ul{
+                        color:$clr-secundario;
+                        font-weight: 500;
+                        margin:  2rem 2.5rem 2rem 2rem;
+                        line-height: 1.5rem; 
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}
+
+
