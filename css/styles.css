@@ -48,7 +48,7 @@ header nav ul {
   width: 100vw;
   -webkit-box-shadow: 0px -5px 15px #7a7a7a;
           box-shadow: 0px -5px 15px #7a7a7a;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0.5rem;
   border-radius: 0.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +63,7 @@ header nav ul {
 
 header nav ul li {
   list-style-type: none;
-  margin: 0 1.5rem;
+  margin: 0rem 1.5rem;
 }
 
 header nav ul li:first-child {
@@ -479,6 +479,11 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado {
       flex-wrap: wrap;
 }
 
+main.sobre__nos div.contenedor__nos div.contenedor__anidado p {
+  text-align: center;
+  margin: 1rem;
+}
+
 main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
   position: relative;
   min-height: 25rem;
@@ -537,6 +542,17 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta p {
   margin: 0.5rem 0.5rem 1rem 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta em {
+  color: #000;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta hr {
+  width: 80%;
+  border-top: 1px solid #ffd900;
+  margin: 0.25rem auto;
 }
 
 main.sobre__nos div.contenedor__tecnologia {
@@ -610,6 +626,12 @@ main.sobre__nos div.contenedor__tecnologia div.tecnologia div p {
   color: #7a7a7a;
   margin: 0 0 0.5rem 1.5rem;
   display: block;
+}
+
+main.sobre__nos div.contenedor__tecnologia p:nth-child(6) {
+  color: #ff156f;
+  margin-top: 0.35rem;
+  margin-bottom: 3rem;
 }
 
 main div.contenedor--p2 {
@@ -726,13 +748,18 @@ main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div p {
 }
 
 main div.contenedor__tiendas div {
-  width: 35vw;
+  width: 80vw;
   margin: 0.5rem auto;
 }
 
 main div.contenedor__tiendas div h2 {
   margin-bottom: 2rem;
   font-size: 1.8rem;
+}
+
+main div.contenedor__tiendas div h2 strong {
+  font-size: 1.8rem;
+  color: #414141;
 }
 
 main div.contenedor__tiendas div p {
@@ -742,10 +769,16 @@ main div.contenedor__tiendas div p {
 }
 
 main div.contenedor__tiendas div p#obs {
-  font-size: .9rem;
+  font-size: 1rem;
   margin-top: 8rem;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
+}
+
+main div.contenedor__tiendas div hr {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px dotted #ff156f;
 }
 
 main div.contenedor__tiendas div strong {
@@ -1213,7 +1246,7 @@ main.empeza div.contenedor form#formulario div.plan div.personalizado h2 {
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado h2:nth-child(2) {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado h2:first-child {
@@ -1227,6 +1260,8 @@ main.empeza div.contenedor form#formulario div.plan div.personalizado h3 {
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado strong {
   color: #ff156f;
+  -webkit-transition: all 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado p {
@@ -1250,8 +1285,6 @@ main.empeza div.contenedor form#formulario div.plan div.personalizado ul li {
 }
 
 main.empeza div.contenedor form#formulario div.plan div.personalizado:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
   -webkit-box-shadow: #7a7a7a 1px 2px 5px;
           box-shadow: #7a7a7a 1px 2px 5px;
 }
@@ -1290,6 +1323,8 @@ main.empeza div.contenedor form#formulario div.plan div.premium h3 {
 
 main.empeza div.contenedor form#formulario div.plan div.premium strong {
   color: #ff156f;
+  -webkit-transition: all 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
 }
 
 main.empeza div.contenedor form#formulario div.plan div.premium p {
@@ -1313,8 +1348,6 @@ main.empeza div.contenedor form#formulario div.plan div.premium ul li {
 }
 
 main.empeza div.contenedor form#formulario div.plan div.premium:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
   -webkit-box-shadow: #7a7a7a 1px 2px 5px;
           box-shadow: #7a7a7a 1px 2px 5px;
 }
@@ -1612,6 +1645,7 @@ footer div.contenedor__footer div.comentarios form input.enviar:hover {
 
 footer div.right hr {
   width: 90vw;
+  border-top: 1px solid #a8a8a8;
   margin: 10px auto;
 }
 

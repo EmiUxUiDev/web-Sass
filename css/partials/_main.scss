@@ -263,6 +263,10 @@ main.sobre__nos{
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            p{
+                text-align: center;
+                margin: 1rem;
+            }
             div.nos__tarjeta{
                 position: relative;
                 min-height: 25rem;
@@ -309,6 +313,15 @@ main.sobre__nos{
                     margin: 0.5rem 0.5rem 1rem 0.5rem;
                     font-size: 1rem;
                     font-weight: 500;
+                }
+                em{
+                    color: #000;
+                    margin: 0.5rem 0.5rem 1rem 0.5rem;
+                }
+                hr{
+                    width: 80%;
+                    border-top: 1px solid $clr-primario-hover;
+                    margin:0.25rem auto;
                 }
             }
         }
@@ -357,10 +370,15 @@ main.sobre__nos{
                     color: $clr-gris-medio;
                     margin: 0 0 0.5rem 1.5rem;
                     display: block;
-
                 }
             }
         }
+        p:nth-child(6){
+            color: $clr-secundario;
+            margin-top: 0.35rem;
+            margin-bottom: 3rem;
+        }
+
     }
 }
 
@@ -442,11 +460,15 @@ main{
     div.contenedor__tiendas{
         
         div{
-            width: 35vw;
+            width: 80vw;
             margin: 0.5rem auto;
             h2{
                 margin-bottom: 2rem;
                 font-size: 1.8rem;
+                strong{
+                    font-size: 1.8rem;
+                    color: $clr-gris-oscuro;
+                }
             }
             p{
                 font-size: 1.2rem;
@@ -454,10 +476,15 @@ main{
                 line-height: 2rem;
             }
             p#obs{
-                font-size: .9rem;
+                font-size: 1rem;
                 margin-top: 8rem;
-                font-weight: 400;
+                font-weight: 500;
                 text-transform: uppercase;
+            }
+            hr{
+                width: 80%;
+                margin: 0 auto;
+                border-top:1px dotted $clr-secundario;
             }
             strong{
                 font-size: 1.4rem;
@@ -583,7 +610,7 @@ main.contenedor__p3{
 
 
     // --------------------------------
-    // ---PAGINA TRUCOS PARA RENOVAR---
+    // ---PAGINA EMPEZÁ AHORA---
     // --------------------------------  
 main.empeza{
     div.contenedor{
@@ -602,7 +629,6 @@ main.empeza{
             flex-direction: column;
             align-items: center;
             &:last-child{
-                // font-style: italic;
                 font-size: 0.9rem;
                 font-weight: 500 ;
                 margin-bottom: 0.25rem;
@@ -802,9 +828,8 @@ main.empeza{
                     h2 {
                         color: $clr-gris-oscuro;
                         text-align: center;
-                        &:nth-child(2){font-size: 3rem;}
-                        &:first-child{margin-top: 1rem;}
-                        
+                        &:nth-child(2){font-size: 2.5rem;}
+                        &:first-child{margin-top: 1rem;}  
                     }
                     h3{
                         text-align: center;
@@ -813,6 +838,7 @@ main.empeza{
                     
                     strong{
                         color:$clr-secundario;
+                        transition: all 300ms ease-in-out 0ms;
                     }
                     p{
                         text-align: center;
@@ -831,7 +857,6 @@ main.empeza{
                     }
                     &:hover{
                         strong.precio{font-size: 4rem;}
-                        transform: scale(1.02);
                         box-shadow:$clr-gris-medio 1px 2px 5px;
                     }
                 }
@@ -853,7 +878,9 @@ main.empeza{
                         padding: 0.5rem 0rem;
                     }
                     strong{
-                        color:$clr-secundario;}
+                        color:$clr-secundario;
+                        transition: all 300ms ease-in-out 0ms;
+                    }
                     p{
                         text-align: center;
                         padding: 0.15rem;
@@ -872,7 +899,6 @@ main.empeza{
                     }
                     &:hover{
                         strong.precio{font-size: 4rem;}
-                        transform: scale(1.02);
                         box-shadow:$clr-gris-medio 1px 2px 5px;
                     }
                 }
