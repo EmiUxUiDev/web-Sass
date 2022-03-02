@@ -3,6 +3,7 @@
 
     // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
     body{
+        position:relative;
         header{
             nav{
                 ul{
@@ -30,15 +31,34 @@
         // -----INICIO MAIN-----
         main{
             section#home{
-                background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-                background-size: contain;
-                background-repeat:no-repeat;
-                
+                div.imgliving{
+                    position: absolute;
+                    width: 100vw;
+                    height: 30rem;
+                    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    z-index: -1;
+                }
+                div.pinceladas{
+                    position:absolute;
+                    margin-top:-5rem;
+                    width: 100vw;
+                    height: 25rem;
+                    background-image: url("../multimedia/img/fondo.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat; 
+                    z-index: -1; 
+                }  
+                // background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
+                // background-size: contain;
+                // background-repeat:no-repeat;
                 h1#titulo{
                         margin: 0rem auto 0rem auto;  
                         font-size: 4.2rem;
                         padding: 0.8rem; 
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
+                        z-index: 10000;
+                        // background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
                     margin: 22rem auto 0rem auto;
