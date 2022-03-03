@@ -61,18 +61,35 @@
         // -----INICIO MAIN-----
         main{
             section#home{
-                background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-                background-size: auto 65%;
-                background-repeat:no-repeat;
-                background-position:30% 0%;
+                div.imgliving{
+                    position: absolute;
+                    width: 100vw;
+                    height: 30rem;
+                    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+                    background-size: 150%;
+                    background-position: 10% 20%;
+                    background-repeat: no-repeat;
+                    z-index: -1;
+                }
+                div.pinceladas{
+                    position:absolute;
+                    margin-top:-5rem;
+                    width: 100vw;
+                    height: 25rem;
+                    background-image: url("../multimedia/img/fondo.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat; 
+                    z-index: -1; 
+                } 
                 h1#titulo{
-                        margin: 0rem auto 0rem auto;  
+                        margin: 1rem auto 0rem auto;  
                         font-size: 3.4rem;
-                        padding: 0.2rem; 
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
+                        line-height: 3.4rem;
+                        padding: 0rem; 
+                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
-                    margin: 32rem 0rem 0rem 0.5rem;
+                    margin: 20rem 0rem 0rem 0.5rem;
                     width: 98%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;

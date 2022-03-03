@@ -12,7 +12,7 @@ html {
 }
 
 html body {
-  background-color: #f0f0f0;
+  background-color: transparent;
   background-image: url("../multimedia/img/fondo.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -71,6 +71,7 @@ header nav ul li {
 
 header nav ul li:first-child {
   margin-right: auto;
+  margin-left: 0.5rem;
 }
 
 header nav ul li a {
@@ -99,16 +100,28 @@ header nav ul li a.link:hover::after {
   width: 100%;
 }
 
-header nav ul li a img {
+header nav ul li a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li a p img {
   width: 4.5rem;
-  margin-left: -1rem;
   -webkit-transition: -webkit-transform 300ms ease-in-out 0ms;
   transition: -webkit-transform 300ms ease-in-out 0ms;
   transition: transform 300ms ease-in-out 0ms;
   transition: transform 300ms ease-in-out 0ms, -webkit-transform 300ms ease-in-out 0ms;
 }
 
-header nav ul li a img:hover {
+header nav ul li a p img:hover {
   cursor: pointer;
   -webkit-transform: rotate(10deg) scale(1.2);
           transform: rotate(10deg) scale(1.2);
@@ -212,9 +225,30 @@ main div a i:hover {
   }
 }
 
+main section#home div.imgliving {
+  position: absolute;
+  width: 100vw;
+  height: 40rem;
+  background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+main section#home div.pinceladas {
+  position: absolute;
+  margin-top: -5rem;
+  width: 100vw;
+  height: 25rem;
+  background-image: url("../multimedia/img/fondo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 main section#home h1#titulo {
   margin: 0 0 0 -0.8rem;
-  font-size: 4.8rem;
+  font-size: 5.8rem;
   padding: 0.8rem;
   letter-spacing: 0.2rem;
 }
@@ -1525,10 +1559,32 @@ footer div.contenedor__footer div.logo {
   min-height: 15rem;
 }
 
-footer div.contenedor__footer div.logo a img {
+footer div.contenedor__footer div.logo div.logo__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+footer div.contenedor__footer div.logo div.logo__img a img {
   width: 70px;
-  margin-bottom: 3rem;
   cursor: pointer;
+}
+
+footer div.contenedor__footer div.logo div.logo__img p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+footer div.contenedor__footer div.logo div.logo__img p strong {
+  font-size: 1.2rem;
+  color: #ffd900;
+  padding: 0.15rem;
+  text-shadow: 1px 1px 1px #7a7a7a;
 }
 
 footer div.contenedor__footer div.sociales {
@@ -1707,21 +1763,37 @@ footer div.right p {
   body header nav ul.nav__listamenu li a img {
     width: 3.6rem;
   }
-  body main section#home {
-    background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-    background-size: auto 50%;
+  body main section#home div.imgliving {
+    position: absolute;
+    width: 100vw;
+    height: 30rem;
+    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+    background-size: 180%;
     background-repeat: no-repeat;
-    background-position: 17% 0%;
+    background-position: center 10%;
+    z-index: -1;
+  }
+  body main section#home div.pinceladas {
+    position: absolute;
+    margin-top: -2rem;
+    width: 100vw;
+    height: 25rem;
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: 150%;
+    background-position: left -5%;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
   body main section#home h1#titulo {
-    margin: 0.25rem auto;
+    margin: 0.5rem auto;
     font-size: 2.8rem;
-    padding: 0.2rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    line-height: 2.8rem;
+    padding: 0rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(70%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 9rem auto 2rem auto;
+    margin: 13rem auto 2rem auto;
     width: 96%;
     padding: 0.8rem;
     border-radius: 2rem;
@@ -1733,10 +1805,11 @@ footer div.right p {
     color: #414141;
   }
   body main section#home div#comentario i.home__martillo {
-    color: #414141;
+    color: #f0f0f0;
     font-size: 3rem;
     margin-top: -2rem;
     margin-left: -1.4rem;
+    text-shadow: #000 1px 1px 1px;
   }
   body main section#home div#comentario h2 {
     font-size: 1.8rem;
@@ -1746,6 +1819,9 @@ footer div.right p {
     text-align: center;
     margin: 0rem 0rem 3.4rem 0rem;
     text-shadow: #414141 3px 3px 3px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(30%, rgba(56, 56, 56, 0.301)), color-stop(80%, rgba(211, 211, 211, 0.288)));
+    background: linear-gradient(-90deg, rgba(56, 56, 56, 0.301) 30%, rgba(211, 211, 211, 0.288) 80%);
+    border-radius: 1rem;
   }
   body main section#home div#comentario h3 {
     font-size: 1rem;
@@ -1949,21 +2025,36 @@ footer div.right p {
   body header nav ul.nav__listamenu li a img {
     width: 3.6rem;
   }
-  body main section#home {
-    background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-    background-size: auto 65%;
+  body main section#home div.imgliving {
+    position: absolute;
+    width: 100vw;
+    height: 30rem;
+    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+    background-size: 150%;
+    background-position: 10% 20%;
     background-repeat: no-repeat;
-    background-position: 30% 0%;
+    z-index: -1;
+  }
+  body main section#home div.pinceladas {
+    position: absolute;
+    margin-top: -5rem;
+    width: 100vw;
+    height: 25rem;
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
   body main section#home h1#titulo {
-    margin: 0rem auto 0rem auto;
+    margin: 1rem auto 0rem auto;
     font-size: 3.4rem;
-    padding: 0.2rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    line-height: 3.4rem;
+    padding: 0rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(60%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 32rem 0rem 0rem 0.5rem;
+    margin: 20rem 0rem 0rem 0.5rem;
     width: 98%;
     padding: 0.8rem;
     border-radius: 2rem;
@@ -2133,21 +2224,35 @@ footer div.right p {
   body header nav ul li a.link {
     font-size: 1rem;
   }
-  body main section#home {
-    background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-    background-size: auto 65%;
+  body main section#home div.imgliving {
+    position: absolute;
+    width: 100vw;
+    height: 30rem;
+    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 10% 0%;
+    z-index: -1;
+  }
+  body main section#home div.pinceladas {
+    position: absolute;
+    margin-top: -5rem;
+    width: 100vw;
+    height: 25rem;
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
   body main section#home h1#titulo {
-    margin: 0rem auto 0rem auto;
+    margin: 1rem auto 0rem auto;
     font-size: 3.8rem;
-    padding: 0.8rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    line-height: 3.8rem;
+    padding: 0rem;
+    background: -webkit-gradient(linear, right top, left top, color-stop(60%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
-    margin: 30rem 0rem 0rem 0.5rem;
+    margin: 20rem 0rem 0rem 0.5rem;
     width: 98%;
     padding: 0.8rem;
     border-radius: 2rem;
@@ -2321,9 +2426,8 @@ footer div.right p {
     margin: 0rem 0.25rem 0rem 2rem;
     font-size: 1rem;
   }
-  body header nav ul li a img {
-    margin-left: -1rem;
-    width: 4.2rem;
+  body header nav ul li a p img {
+    width: 3.6rem;
   }
   body header nav ul li a button {
     font-size: 1rem;
@@ -2334,7 +2438,7 @@ footer div.right p {
   body main section#home div.imgliving {
     position: absolute;
     width: 100vw;
-    height: 30rem;
+    height: 40rem;
     background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -2351,10 +2455,13 @@ footer div.right p {
     z-index: -1;
   }
   body main section#home h1#titulo {
-    margin: 0rem auto 0rem auto;
-    font-size: 4.2rem;
-    padding: 0.8rem;
+    margin: 1rem auto 0rem auto;
+    font-size: 4.8rem;
+    padding: 0rem;
+    line-height: 4.2rem;
     z-index: 10000;
+    background: -webkit-gradient(linear, right top, left top, color-stop(70%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
     margin: 22rem auto 0rem auto;
@@ -2369,8 +2476,8 @@ footer div.right p {
   }
   body main section#home div#comentario i.home__martillo {
     color: #414141;
-    -webkit-filter: drop-shadow(3px 0px 1px #ff156f);
-            filter: drop-shadow(3px 0px 1px #ff156f);
+    -webkit-filter: drop-shadow(2px 2px 1px #fff);
+            filter: drop-shadow(2px 2px 1px #fff);
     font-size: 5rem;
     margin-top: 0rem;
     margin-left: -1rem;
@@ -2491,16 +2598,33 @@ footer div.right p {
     font-size: 1rem;
   }
   body main section#home {
-    background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-    background-size: contain;
+    background-color: transparent;
+  }
+  body main section#home div.imgliving {
+    position: absolute;
+    width: 100vw;
+    height: 60rem;
+    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+    background-size: 100%;
+    background-position: left -10%;
     background-repeat: no-repeat;
+    z-index: -1;
+  }
+  body main section#home div.pinceladas {
+    position: absolute;
+    margin-top: -5rem;
+    width: 100vw;
+    height: 25rem;
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
   body main section#home h1#titulo {
     margin: 0rem auto 0rem auto;
     font-size: 5.6rem;
-    padding: 0.8rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%);
+    line-height: 5.6rem;
+    padding: 1rem;
   }
   body main section#home div#comentario {
     margin: 22rem auto 0rem auto;
@@ -2515,8 +2639,8 @@ footer div.right p {
   }
   body main section#home div#comentario i.home__martillo {
     color: #414141;
-    -webkit-filter: drop-shadow(3px 0px 1px #ff156f);
-            filter: drop-shadow(3px 0px 1px #ff156f);
+    -webkit-filter: drop-shadow(3px 3px 1px #fff);
+            filter: drop-shadow(3px 3px 1px #fff);
     font-size: 6rem;
     margin-top: 0rem;
     margin-left: -1rem;

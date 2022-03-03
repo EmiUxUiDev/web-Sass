@@ -68,18 +68,36 @@ body{
     // -----PAGINA HOME/INICIO---------
     // --------------------------------
         section#home{
-            background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-            background-size: auto 50%;
-            background-repeat:no-repeat;
-            background-position:17% 0%;
+            div.imgliving{
+                position: absolute;
+                width: 100vw;
+                height: 30rem;
+                background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+                background-size: 180%;
+                background-repeat: no-repeat;
+                background-position:center 10% ;
+                z-index: -1;
+            }
+            div.pinceladas{
+                position:absolute;
+                margin-top:-2rem;
+                width: 100vw;
+                height: 25rem;
+                background-image: url("../multimedia/img/fondo.svg");
+                background-size: 150%;
+                background-position: left -5%;
+                background-repeat: no-repeat; 
+                z-index: -1; 
+            }
             h1#titulo{
-                    margin: 0.25rem auto;  
+                    margin: 0.5rem auto;  
                     font-size: 2.8rem;
-                    padding: 0.2rem; 
-                    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
+                    line-height: 2.8rem;
+                    padding: 0rem; 
+                    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
             }
             div#comentario{
-                margin:9rem auto 2rem auto;
+                margin:13rem auto 2rem auto;
                 width: 96%;
                 padding: 0.8rem;
                 border-radius: $radio-fuerte;
@@ -89,10 +107,11 @@ body{
                 font-size: 1rem;
                 color: $clr-gris-oscuro;
                 i.home__martillo{
-                    color: $clr-gris-oscuro;
+                    color: $clr-gris-claro;
                     font-size: 3rem;
                     margin-top: -2rem;
                     margin-left: -1.4rem;
+                    text-shadow: #000 1px 1px 1px;
                 }
                 h2{
                     font-size: 1.8rem;
@@ -102,6 +121,8 @@ body{
                     text-align: center;
                     margin: 0rem 0rem 3.4rem 0rem;
                     text-shadow: $clr-gris-oscuro 3px 3px 3px;
+                    background: linear-gradient(-90deg, rgba(56, 56, 56, 0.301) 30%, rgba(211, 211, 211, 0.288)80%); 
+                    border-radius: $radio-medio;
                 }
                 h3{
                     font-size: 1rem;

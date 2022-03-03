@@ -30,15 +30,33 @@
         // -----INICIO MAIN-----
         main{
             section#home{
-                background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-                background-size: contain;
-                background-repeat:no-repeat;
-                
+                background-color: transparent;
+                div.imgliving{
+                    position: absolute;
+                    width: 100vw;
+                    height: 60rem;
+                    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+                    background-size: 100%;
+                    background-position: left -10%;
+                    background-repeat: no-repeat;
+                    z-index: -1;
+                }
+                div.pinceladas{
+                    position:absolute;
+                    margin-top:-5rem;
+                    width: 100vw;
+                    height: 25rem;
+                    background-image: url("../multimedia/img/fondo.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat; 
+                    z-index: -1; 
+                } 
                 h1#titulo{
                         margin: 0rem auto 0rem auto;  
                         font-size: 5.6rem;
-                        padding: 0.8rem; 
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.699) 80%); 
+                        line-height: 5.6rem;
+                        padding: 1rem; 
+                        // background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
                     margin: 22rem auto 0rem auto;
@@ -51,7 +69,7 @@
                     color: $clr-gris-oscuro;
                     i.home__martillo{
                         color: $clr-gris-oscuro;
-                        filter: drop-shadow(3px 0px 1px $clr-secundario);
+                        filter: drop-shadow(3px 3px 1px #fff);
                         font-size: 6rem;
                         margin-top: 0rem;
                         margin-left: -1rem;

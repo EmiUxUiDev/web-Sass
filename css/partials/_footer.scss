@@ -18,13 +18,28 @@ footer{
         div.logo{
             flex:0.2;
             min-height: 15rem;
-            a{
-                img{
-                    width: 70px;
-                    margin-bottom: 3rem;
-                    cursor: pointer; 
+            div.logo__img{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2rem;
+                a{  
+                    img{
+                        width: 70px;
+                        // margin-bottom: 3rem;
+                        cursor: pointer; 
+                    }
+                } 
+                p{
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    strong{
+                        font-size: 1.2rem;
+                        color: $clr-primario-hover;
+                        padding: 0.15rem;
+                        text-shadow:1px 1px 1px $clr-gris-medio;
+                    }
                 }
-            } 
+            }
         }
         div.sociales{
             min-height: 15rem; 

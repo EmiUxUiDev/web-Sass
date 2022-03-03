@@ -19,6 +19,7 @@ header {
                     margin: 0rem 1.5rem;
                         &:first-child{
                             margin-right: auto;
+                            margin-left: 0.5rem;
                         }
                             a{
                                 position: relative;
@@ -42,14 +43,19 @@ header {
                                     }      
                             }
                             a{
-                                img{
-                                    width: 4.5rem;
-                                    margin-left: -1rem;
-                                    transition: transform 300ms ease-in-out 0ms ;
-                                    &:hover{
-                                        cursor: pointer;
-                                        transform: rotate(10deg) scale(1.2);
-                                        }
+                                p{ 
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    img{
+                                        width: 4.5rem;
+                                        // margin-left: -1rem;
+                                        transition: transform 300ms ease-in-out 0ms ;
+                                        &:hover{
+                                            cursor: pointer;
+                                            transform: rotate(10deg) scale(1.2);
+                                            }
+                                    }
                                 }
                             }
                             a.link{
