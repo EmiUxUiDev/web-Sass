@@ -90,11 +90,10 @@ body{
                 z-index: -1; 
             }
             h1#titulo{
-                    margin: 0.5rem auto;  
-                    font-size: 2.8rem;
-                    line-height: 2.8rem;
+                    margin: 0.8rem auto;  
+                    font-size: 3rem;
                     padding: 0rem; 
-                    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
+                    // background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
             }
             div#comentario{
                 margin:13rem auto 2rem auto;
@@ -220,12 +219,15 @@ body{
     // --------------------------------
     // --- PAGINA SOBRE NOSOTROS-------
     // --------------------------------    
-
+    
     main.sobre__nos{
+        background-image: url("../multimedia/img/fondo.svg");
+        background-size: 160%;
+        background-position: left -1%;
+        background-repeat: no-repeat;
         h1{
-            margin: 0 0 0 -0.8rem;  
+            margin: 0rem auto; 
             font-size: 3rem;
-            padding: 0.8rem;
             letter-spacing: 0.15rem;
         }
         h2{
@@ -233,7 +235,8 @@ body{
             line-height: 1.5; 
         }
         div.contenedor__nos{
-            margin-top: 1.5rem;
+            margin: 1.5rem 0rem;
+            border: 6px solid $clr-gris-medio;
             div.nos__tarjeta{
                 margin: 1.2rem 0rem;
             }
@@ -245,6 +248,31 @@ body{
                 font-weight: 600;
             }
         }
+        div.contenedor__tecnologia{
+            div.tecnologia{
+                width: 80vw;
+                flex-direction: column;
+
+                div{
+                    text-align: center;
+                    margin-left: -0.8rem;
+                
+                    &:last-child{
+                        margin-bottom: 2rem;
+                        img{width: 75%;}
+                    }
+                }
+            }
+            p{
+                width: 80vw;
+                text-align: center;
+                margin: 0.5rem 0rem;
+                color: $clr-gris-oscuro;
+                em{
+                    font-weight: 600;
+                }
+            }
+        }
     }
 
     // --------------------------------
@@ -252,6 +280,189 @@ body{
     // -------------------------------- 
 
 
+
+
+
+    // --------------------------------
+    // -------CÓMO FUNCIONA?-----------
+    // -------------------------------- 
+    main.como__funciona{
+        background-image: url("../multimedia/img/fondo.svg");
+        background-size: 160%;
+        background-position: left -1%;
+        background-repeat: no-repeat;
+        div.contenedor--p2{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            div.primer__flex{
+                
+            h1{ 
+                margin: 0rem auto; 
+                padding: 0rem;
+                font-size: 3rem;
+                letter-spacing: 0.15rem;
+                }
+            h2{
+                font-size: 1.1rem;
+                line-height: 1.5; 
+            }  
+            }
+        }
+        div.contenedor__pasos--p2{
+            min-height: 60rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly; 
+            align-items: center;
+            div.fila--p2{
+                div.pasos__card--p2{
+                    width: 260PX;
+                    height: auto;
+                    margin: 3.5rem 1rem 2rem 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        width: 220px;
+                        padding: 0.5rem;
+                    }
+                    div{
+                        width: 250px;
+                        padding: 0.5rem;
+                        h3{
+                            text-align: center; 
+                            font-size:1.5rem;
+                            color: $clr-gris-oscuro;
+                        }
+                        p{
+                            text-align: center; 
+                            margin-top: 1rem;
+                            font-weight: bold; 
+                            color: $clr-gris-oscuro;
+                        }
+                    }
+                }
+            }   
+        }
+        div.contenedor__tiendas{
+            
+            div{
+                h2{
+                    strong{
+                        font-size: 1.5rem;
+                    }
+                }
+                
+                p#obs{
+                    margin-top: 6rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+            }
+            div.imagenes{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 80vw;
+                img{
+                    width: 6rem;
+                    margin: 2rem 0.8rem 2rem 0.8rem ;
+                }
+            }
+        }
+    }
+    
+    // --------------------------------
+    // -------TRUCOS PARA RENOVAR-----------
+    // -------------------------------- 
+main.contenedor__p3{
+    margin: 0 auto;
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: 160%;
+    background-position: left -1%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    div.titulo--p3{
+        flex-direction: column;
+        h1{
+            margin: -1.4rem auto 0rem auto; 
+            font-size: 3rem;
+            letter-spacing: 0.15rem;
+        } 
+        p{
+        margin: 0 auto;
+            input{
+                margin:1rem 0.5rem;
+                }
+        }
+        }
+        p{
+            width: 80vw;
+            margin: 1rem auto;
+            em{
+                font-weight: 700;
+                color: $clr-gris-oscuro;
+            }
+        }
+        
+        div.contenedor__grid{
+            
+            grid-template-columns: repeat(auto-fit, 21rem);
+            div.grid__card{
+                padding-bottom: 1rem;
+                p{
+                    color: $clr-gris-medio;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1rem;
+                }
+                h2{
+                    font-size: 1.1rem;
+                    line-height: 1.5; 
+                }
+                iframe{
+                    height: 250px;
+                    width: 100%;
+                    border-radius: $radio-medio;
+                    margin-bottom: 1rem;
+                }
+                a{
+                    display: block;
+                    text-decoration: none;
+                    font-weight: bold; 
+                    margin: 1rem 0rem;
+                }
+                i{
+                    font-size: 0.8rem;
+                    margin-left: 0.5rem;  
+                }
+                div{
+                    height: 250px;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    background-color: $clr-secundario;
+                    border-radius: $radio-medio;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                div.blog1{
+                    background-image: url(../multimedia/img/blog-pileta.jpg); 
+                }
+                div.blog2{
+                    background-image: url(../multimedia/img/blog-pisomadera.jpg);
+                }
+                div.blog3{
+                    background-image: url(../multimedia/img/blog-colores.jpg);
+                }
+            }
+        }
+    
+}
 
      // ----INICIO FOOTER COMPACTO-----
     footer{
@@ -298,3 +509,136 @@ body{
     }
     }
 }    
+
+
+    // --------------------------------
+    // ---PAGINA EMPEZÁ AHORA---
+    // --------------------------------  
+    main.empeza{
+        div.contenedor{
+            background-image: url("../multimedia/img/fondo.svg");
+            background-size: 160%;
+            background-position: left -0.4%;
+            background-repeat: no-repeat;
+            h1{
+                margin: 0rem auto; 
+                font-size: 3rem;
+                letter-spacing: 0.15rem;
+            }
+            h2{
+                width: 80vw;
+                margin: 0 auto;
+                font-size: 1.1rem;
+                line-height: 1.5; 
+                margin-bottom: 0;
+            }
+            form#formulario{
+                p{
+                    &:last-child{
+                        width: 80vw;
+                        text-align: center;
+                        margin-bottom: 0.25rem;
+                    }
+                }
+                img.contanos_personaje{
+                    top: 30vh;
+                    width: 35vw;
+                }
+                div.base-card{
+                    fieldset{
+                        width: 80vw;
+                        flex-direction: column; 
+                        justify-content: space-between;
+                        align-items: center;   
+                        padding: 0rem;
+
+                        legend{font-weight: 600;}
+                        div{
+                            margin:1rem;
+                            input{
+                                width: 25vw;
+                                margin: 0rem;
+                            }
+                        }
+                    }
+                }
+                div.elegir-color{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    background-color: transparent;
+                    border: 4px solid $clr-primario-hover;
+                } 
+                div.arqui{
+
+                    div.personas{
+                        flex-direction: column;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        div{
+                            width: 80vw;
+                            padding-bottom: 0.25rem;
+                            overflow: auto;
+                            p{
+                                font-weight: 500;
+                            }
+                        }
+                        h3{
+                            font-size: 1.4rem;
+                            color: #fff;
+                            background-color: rgba(0, 0, 0, 0.253);
+                        }
+                    }
+                }
+                div.plan{
+                    width: 95vw;
+                    flex-direction: column;
+                    div.personalizado{
+                        width: 90vw;
+                        margin: 0.5rem 0rem;                 
+                        ul{
+                            font-weight: 600;
+                            margin:  2rem 2.5rem 2rem 2.5rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                    div.premium{
+                        width: 90vw;                 
+                        ul{
+                            font-weight: 600;
+                            margin:  2rem 2.5rem 2rem 2.5rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+                div.formas-de-pago{
+                    h2, p{width: 80vw;}
+                    div.pagos{
+                        width: 80vw;
+                        flex-wrap: wrap;
+                        div{
+                            width: 6rem;
+                        }
+                    }
+                }
+                div.contactar{
+                    width: 80vw;
+                    margin-bottom: 1rem;
+                    
+                    div{
+                        margin: 0.3rem 0rem 0rem 0rem;
+                    }
+                    input{
+                        padding: 0.2rem 0rem 0.2rem 1rem;
+                        border: 1px solid $clr-gris-oscuro;
+                        border-radius:$radio-medio;
+                        &:last-child{margin-bottom: 1rem;}
+                    }
+                }
+            }
+        }
+    
+    }
+
+
+

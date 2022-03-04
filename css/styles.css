@@ -1785,12 +1785,9 @@ footer div.right p {
     z-index: -1;
   }
   body main section#home h1#titulo {
-    margin: 0.5rem auto;
-    font-size: 2.8rem;
-    line-height: 2.8rem;
+    margin: 0.8rem auto;
+    font-size: 3rem;
     padding: 0rem;
-    background: -webkit-gradient(linear, right top, left top, color-stop(70%, rgba(255, 255, 255, 0)), color-stop(80%, rgba(255, 255, 255, 0.699)));
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%);
   }
   body main section#home div#comentario {
     margin: 13rem auto 2rem auto;
@@ -1905,10 +1902,15 @@ footer div.right p {
     padding: 0.5rem 1.5rem;
     margin: 4rem auto;
   }
+  body main.sobre__nos {
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: 160%;
+    background-position: left -1%;
+    background-repeat: no-repeat;
+  }
   body main.sobre__nos h1 {
-    margin: 0 0 0 -0.8rem;
+    margin: 0rem auto;
     font-size: 3rem;
-    padding: 0.8rem;
     letter-spacing: 0.15rem;
   }
   body main.sobre__nos h2 {
@@ -1916,7 +1918,8 @@ footer div.right p {
     line-height: 1.5;
   }
   body main.sobre__nos div.contenedor__nos {
-    margin-top: 1.5rem;
+    margin: 1.5rem 0rem;
+    border: 6px solid #7a7a7a;
   }
   body main.sobre__nos div.contenedor__nos div.nos__tarjeta {
     margin: 1.2rem 0rem;
@@ -1927,6 +1930,219 @@ footer div.right p {
   body main.sobre__nos div.contenedor__nos div.nos__tarjeta p {
     font-size: 1.1rem;
     font-weight: 600;
+  }
+  body main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+    width: 80vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div {
+    text-align: center;
+    margin-left: -0.8rem;
+  }
+  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div:last-child {
+    margin-bottom: 2rem;
+  }
+  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div:last-child img {
+    width: 75%;
+  }
+  body main.sobre__nos div.contenedor__tecnologia p {
+    width: 80vw;
+    text-align: center;
+    margin: 0.5rem 0rem;
+    color: #414141;
+  }
+  body main.sobre__nos div.contenedor__tecnologia p em {
+    font-weight: 600;
+  }
+  body main.como__funciona {
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: 160%;
+    background-position: left -1%;
+    background-repeat: no-repeat;
+  }
+  body main.como__funciona div.contenedor--p2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  body main.como__funciona div.contenedor--p2 div.primer__flex h1 {
+    margin: 0rem auto;
+    padding: 0rem;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+  }
+  body main.como__funciona div.contenedor--p2 div.primer__flex h2 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  body main.como__funciona div.contenedor__pasos--p2 {
+    min-height: 60rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 {
+    width: 260PX;
+    height: auto;
+    margin: 3.5rem 1rem 2rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 img {
+    width: 220px;
+    padding: 0.5rem;
+  }
+  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div {
+    width: 250px;
+    padding: 0.5rem;
+  }
+  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #414141;
+  }
+  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div p {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #414141;
+  }
+  body main.como__funciona div.contenedor__tiendas div h2 strong {
+    font-size: 1.5rem;
+  }
+  body main.como__funciona div.contenedor__tiendas div p#obs {
+    margin-top: 6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  body main.como__funciona div.contenedor__tiendas div.imagenes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 80vw;
+  }
+  body main.como__funciona div.contenedor__tiendas div.imagenes img {
+    width: 6rem;
+    margin: 2rem 0.8rem 2rem 0.8rem;
+  }
+  body main.contenedor__p3 {
+    margin: 0 auto;
+    background-image: url("../multimedia/img/fondo.svg");
+    background-size: 160%;
+    background-position: left -1%;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  body main.contenedor__p3 div.titulo--p3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main.contenedor__p3 div.titulo--p3 h1 {
+    margin: -1.4rem auto 0rem auto;
+    font-size: 3rem;
+    letter-spacing: 0.15rem;
+  }
+  body main.contenedor__p3 div.titulo--p3 p {
+    margin: 0 auto;
+  }
+  body main.contenedor__p3 div.titulo--p3 p input {
+    margin: 1rem 0.5rem;
+  }
+  body main.contenedor__p3 p {
+    width: 80vw;
+    margin: 1rem auto;
+  }
+  body main.contenedor__p3 p em {
+    font-weight: 700;
+    color: #414141;
+  }
+  body main.contenedor__p3 div.contenedor__grid {
+    -ms-grid-columns: (21rem)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 21rem);
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card {
+    padding-bottom: 1rem;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card p {
+    color: #7a7a7a;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card h2 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card iframe {
+    height: 250px;
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem 0rem;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card i {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card div {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #ff156f;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card div.blog1 {
+    background-image: url(../multimedia/img/blog-pileta.jpg);
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card div.blog2 {
+    background-image: url(../multimedia/img/blog-pisomadera.jpg);
+  }
+  body main.contenedor__p3 div.contenedor__grid div.grid__card div.blog3 {
+    background-image: url(../multimedia/img/blog-colores.jpg);
   }
   body footer div.contenedor__footer {
     -webkit-box-orient: vertical;
@@ -1965,6 +2181,170 @@ footer div.right p {
     padding: 0rem 1rem;
     text-align: center;
   }
+}
+
+main.empeza div.contenedor {
+  background-image: url("../multimedia/img/fondo.svg");
+  background-size: 160%;
+  background-position: left -0.4%;
+  background-repeat: no-repeat;
+}
+
+main.empeza div.contenedor h1 {
+  margin: 0rem auto;
+  font-size: 3rem;
+  letter-spacing: 0.15rem;
+}
+
+main.empeza div.contenedor h2 {
+  width: 80vw;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+main.empeza div.contenedor form#formulario p:last-child {
+  width: 80vw;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+main.empeza div.contenedor form#formulario img.contanos_personaje {
+  top: 30vh;
+  width: 35vw;
+}
+
+main.empeza div.contenedor form#formulario div.base-card fieldset {
+  width: 80vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.base-card fieldset legend {
+  font-weight: 600;
+}
+
+main.empeza div.contenedor form#formulario div.base-card fieldset div {
+  margin: 1rem;
+}
+
+main.empeza div.contenedor form#formulario div.base-card fieldset div input {
+  width: 25vw;
+  margin: 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.elegir-color {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: transparent;
+  border: 4px solid #ffd900;
+}
+
+main.empeza div.contenedor form#formulario div.arqui div.personas {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.empeza div.contenedor form#formulario div.arqui div.personas div {
+  width: 80vw;
+  padding-bottom: 0.25rem;
+  overflow: auto;
+}
+
+main.empeza div.contenedor form#formulario div.arqui div.personas div p {
+  font-weight: 500;
+}
+
+main.empeza div.contenedor form#formulario div.arqui div.personas h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.253);
+}
+
+main.empeza div.contenedor form#formulario div.plan {
+  width: 95vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.personalizado {
+  width: 90vw;
+  margin: 0.5rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.personalizado ul {
+  font-weight: 600;
+  margin: 2rem 2.5rem 2rem 2.5rem;
+  line-height: 1.5rem;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium {
+  width: 90vw;
+}
+
+main.empeza div.contenedor form#formulario div.plan div.premium ul {
+  font-weight: 600;
+  margin: 2rem 2.5rem 2rem 2.5rem;
+  line-height: 1.5rem;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago h2, main.empeza div.contenedor form#formulario div.formas-de-pago p {
+  width: 80vw;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
+  width: 80vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
+  width: 6rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar {
+  width: 80vw;
+  margin-bottom: 1rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar div {
+  margin: 0.3rem 0rem 0rem 0rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar input {
+  padding: 0.2rem 0rem 0.2rem 1rem;
+  border: 1px solid #414141;
+  border-radius: 1rem;
+}
+
+main.empeza div.contenedor form#formulario div.contactar input:last-child {
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 421px) and (max-width: 600px) {
