@@ -1,5 +1,5 @@
 ![reonline_ico](https://user-images.githubusercontent.com/94999530/156890166-4d86ac8c-c44d-477c-bdf2-18459e1c94ab.png)
-# web-Sass | Trabajo practico de desarrollo de WEB Re+online
+# Re+online | Trabajo practico de desarrollo de WEB 
 Este sitio, es resultado de lo que voy aprendiendo en el cusrso de Desarrollo web de Coderhouse, en el que estoy estudiando.
 Se trata, de un desarrollo frontend con solo HTML,CSS y SASS.
 
