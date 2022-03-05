@@ -3,7 +3,7 @@
 
     // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
     body{
-        position:relative;
+        // position:relative;
         header{
             nav{
                 ul{
@@ -30,33 +30,14 @@
         }
 
         // -----INICIO MAIN-----
-        main{
+        main.inicio{
             section#home{
-                div.imgliving{
-                    position: absolute;
-                    width: 100vw;
-                    height: 40rem;
-                    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    z-index: -1;
-                }
-                div.pinceladas{
-                    position:absolute;
-                    margin-top:-5rem;
-                    width: 100vw;
-                    height: 25rem;
-                    background-image: url("../multimedia/img/fondo.svg");
-                    background-size: cover;
-                    background-repeat: no-repeat; 
-                    z-index: -1; 
-                }  
                 h1#titulo{
-                        margin: 1rem auto 0rem auto;  
+                        padding: 2rem;
+                        letter-spacing: 0.2rem;
+                        text-align: center; 
                         font-size: 4.8rem;
-                        padding: 0rem; 
-                        line-height: 4.2rem;
-                        z-index: 10000;
+                        line-height: 3rem;
                         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
@@ -173,6 +154,60 @@
                 }
             }
         }
+
+            // --------------------------------
+    // --- PAGINA SOBRE NOSOTROS-------
+    // --------------------------------   
+main.sobre__nos{
+    h1{
+        padding: 2rem;
+        letter-spacing: 0.2rem;
+        text-align: center; 
+        font-size: 4.8rem;
+        line-height: 3rem;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    div.contenedor__nos{
+        div.contenedor__anidado{
+            div.nos__tarjeta{
+                width: 24rem;
+            }
+        }
+    }
+    p{text-align: center;
+        padding: 0.5rem;}
+    div.contenedor__tecnologia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            text-transform: uppercase;
+            color: $clr-gris-oscuro;
+        }
+        p{
+            font-weight: 500;
+            text-align: center;
+        }
+        div.tecnologia{
+            margin: 2rem 1rem;
+            }
         
-    }   
+        p:nth-child(6){
+            color: $clr-secundario;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            width: 95%;
+            text-align: center;
+        }
+
+    }
+}
+
+
+
+        
+}   
 }

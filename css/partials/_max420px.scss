@@ -61,42 +61,20 @@ body{
         
     }
     
-    // -------INICIO MAIN -----
-    main{
-
     // --------------------------------
     // -----PAGINA HOME/INICIO---------
     // --------------------------------
+    main.inicio{
+        background-size: 170%;
+        background-position:center -0.5%;
         section#home{
-            div.imgliving{
-                position: absolute;
-                width: 100vw;
-                height: 30rem;
-                background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
-                background-size: 180%;
-                background-repeat: no-repeat;
-                background-position:center 10% ;
-                z-index: -1;
-            }
-            div.pinceladas{
-                position:absolute;
-                margin-top:-2rem;
-                width: 100vw;
-                height: 25rem;
-                background-image: url("../multimedia/img/fondo.svg");
-                background-size: 150%;
-                background-position: left -5%;
-                background-repeat: no-repeat; 
-                z-index: -1; 
-            }
             h1#titulo{
-                    margin: 0.8rem auto;  
                     font-size: 3rem;
-                    padding: 0rem; 
-                    // background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
+                    padding: 0.5rem; 
+                    text-align: center;
             }
             div#comentario{
-                margin:13rem auto 2rem auto;
+                margin:7.5rem auto 2rem auto;
                 width: 96%;
                 padding: 0.8rem;
                 border-radius: $radio-fuerte;
@@ -210,9 +188,6 @@ body{
                 }
             }
         }
-    // --------------------------------
-    // ---FIN PAGINA HOME/INICIO-------
-    // --------------------------------
     }
 
 
@@ -221,32 +196,34 @@ body{
     // --------------------------------    
     
     main.sobre__nos{
-        background-image: url("../multimedia/img/fondo.svg");
-        background-size: 160%;
-        background-position: left -1%;
-        background-repeat: no-repeat;
         h1{
-            margin: 0rem auto; 
             font-size: 3rem;
             letter-spacing: 0.15rem;
+            text-align: center;
         }
         h2{
             font-size: 1.1rem;
             line-height: 1.5; 
         }
-        div.contenedor__nos{
-            margin: 1.5rem 0rem;
-            border: 6px solid $clr-gris-medio;
-            div.nos__tarjeta{
-                margin: 1.2rem 0rem;
+            div.contenedor__nos{
+                margin: 1.5rem 0rem;
+                border: 6px solid $clr-gris-medio;
+                div.contenedor__anidado{
+                    div.nos__tarjeta{
+                        h2{
+                            margin-bottom: 0;
+                        }
+                        p{
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
             }
-            div.nos__tarjeta h2{
-                font-size: 2rem;
-            }
-            div.nos__tarjeta p{
-                font-size: 1.1rem;
-                font-weight: 600;
-            }
+        p{
+            text-align: center;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
         }
         div.contenedor__tecnologia{
             div.tecnologia{
@@ -266,7 +243,7 @@ body{
             p{
                 width: 80vw;
                 text-align: center;
-                margin: 0.5rem 0rem;
+                margin: 1rem 0rem;
                 color: $clr-gris-oscuro;
                 em{
                     font-weight: 600;
@@ -275,22 +252,12 @@ body{
         }
     }
 
-    // --------------------------------
-    // --- FIN SOBRE NOSOTROS-------
-    // -------------------------------- 
-
-
-
 
 
     // --------------------------------
     // -------CÓMO FUNCIONA?-----------
     // -------------------------------- 
     main.como__funciona{
-        background-image: url("../multimedia/img/fondo.svg");
-        background-size: 160%;
-        background-position: left -1%;
-        background-repeat: no-repeat;
         div.contenedor--p2{
             display: flex;
             flex-direction: column;
@@ -377,40 +344,32 @@ body{
     }
     
     // --------------------------------
-    // -------TRUCOS PARA RENOVAR-----------
+    // ------TRUCOS PARA RENOVAR------
     // -------------------------------- 
 main.contenedor__p3{
-    margin: 0 auto;
-    background-image: url("../multimedia/img/fondo.svg");
-    background-size: 160%;
-    background-position: left -1%;
-    background-repeat: no-repeat;
-    z-index: -1;
     div.titulo--p3{
         flex-direction: column;
         h1{
-            margin: -1.4rem auto 0rem auto; 
             font-size: 3rem;
             letter-spacing: 0.15rem;
+            text-align: center;
+            margin-top: -3.5rem;
         } 
         p{
-        margin: 0 auto;
+        text-align: center;
             input{
                 margin:1rem 0.5rem;
                 }
         }
         }
         p{
-            width: 80vw;
-            margin: 1rem auto;
+            text-align: center;
             em{
                 font-weight: 700;
                 color: $clr-gris-oscuro;
             }
         }
-        
         div.contenedor__grid{
-            
             grid-template-columns: repeat(auto-fit, 21rem);
             div.grid__card{
                 padding-bottom: 1rem;
@@ -464,62 +423,12 @@ main.contenedor__p3{
     
 }
 
-     // ----INICIO FOOTER COMPACTO-----
-    footer{
-        div.contenedor__footer{
-            flex-direction: column;
-            align-items: center;
-            div{
-                width: 280px;
-                text-align: center;
-            }
-            div.sociales{
-                h3{
-                    margin-top: 1rem;
-                    text-align: center;
-                }
-                p{
-                    text-align: center;
-                } 
-            }
-            div.contacto{
-                h3{
-                    text-align: center;
-                }
-                div{
-                    p{text-align: center;}
-                }
-            }
-            div.comentarios{
-                h3{
-                    text-align: center;
-                }
-            }
-        }
-        div.right{
-            hr{
-                width: 90vw;
-                margin: 10px auto;
-            }
-            p{
-                padding: 0rem 1rem;
-                text-align: center;
-            }
-        }
-    }
-    }
-}    
-
 
     // --------------------------------
     // ---PAGINA EMPEZÁ AHORA---
-    // --------------------------------  
+    // -------------------------------- 
     main.empeza{
         div.contenedor{
-            background-image: url("../multimedia/img/fondo.svg");
-            background-size: 160%;
-            background-position: left -0.4%;
-            background-repeat: no-repeat;
             h1{
                 margin: 0rem auto; 
                 font-size: 3rem;
@@ -535,9 +444,10 @@ main.contenedor__p3{
             form#formulario{
                 p{
                     &:last-child{
-                        width: 80vw;
+                        width: 75vw;
+                        margin: 0rem auto 0.25rem auto;
                         text-align: center;
-                        margin-bottom: 0.25rem;
+                       
                     }
                 }
                 img.contanos_personaje{
@@ -551,12 +461,11 @@ main.contenedor__p3{
                         justify-content: space-between;
                         align-items: center;   
                         padding: 0rem;
-
                         legend{font-weight: 600;}
                         div{
                             margin:1rem;
                             input{
-                                width: 25vw;
+                                width: 65px;;
                                 margin: 0rem;
                             }
                         }
@@ -570,7 +479,6 @@ main.contenedor__p3{
                     border: 4px solid $clr-primario-hover;
                 } 
                 div.arqui{
-
                     div.personas{
                         flex-direction: column;
                         justify-content: space-around;
@@ -637,8 +545,53 @@ main.contenedor__p3{
                 }
             }
         }
-    
+    }  
+     // ----INICIO FOOTER COMPACTO-----
+    footer{
+        div.contenedor__footer{
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 280px;
+                text-align: center;
+            }
+            div.sociales{
+                h3{
+                    margin-top: 1rem;
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                } 
+            }
+            div.contacto{
+                h3{
+                    text-align: center;
+                }
+                div{
+                    p{text-align: center;}
+                }
+            }
+            div.comentarios{
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+        div.right{
+            hr{
+                width: 90vw;
+                margin: 10px auto;
+            }
+            p{
+                padding: 0rem 1rem;
+                text-align: center;
+            }
+        }
     }
+    }
+}      
+
 
 
 

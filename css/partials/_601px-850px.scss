@@ -32,36 +32,15 @@
         }
 
         // -----INICIO MAIN-----
-        main{
-            section#home{
-                div.imgliving{
-                    position: absolute;
-                    width: 100vw;
-                    height: 30rem;
-                    background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    z-index: -1;
-                }
-                div.pinceladas{
-                    position:absolute;
-                    margin-top:-5rem;
-                    width: 100vw;
-                    height: 25rem;
-                    background-image: url("../multimedia/img/fondo.svg");
-                    background-size: cover;
-                    background-repeat: no-repeat; 
-                    z-index: -1; 
-                }  
-                // background-image: url(../multimedia/img/living-room-g8c65edcdb_1920.jpg);
-                // background-size: auto 65%;
-                // background-repeat:no-repeat;
-                // background-position:10% 0%;
-                h1#titulo{
-                        margin: 1rem auto 0rem auto;  
+        main.inicio{
+            background-size: 120%;
+            background-position:center 0%;
+            section#home{   
+                h1#titulo{ 
                         font-size: 3.8rem;
                         line-height: 3.8rem;
-                        padding: 0rem; 
+                        text-align: center;
+                        padding: 1rem; 
                         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
@@ -69,7 +48,7 @@
                     width: 98%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;
-                    background-color: #ffd90011;
+                    background-color: #ffffff80;
                     box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
                     border:4px solid $clr-secundario;
                     color: $clr-gris-oscuro;
@@ -92,6 +71,7 @@
                         font-size: 1.2rem;
                         padding: 0;
                         margin-top: 6rem;
+                        color: $clr-gris-oscuro;
                         &:last-child{
                             margin-top: 2rem;
                             font-size: 1.1rem;
@@ -176,6 +156,266 @@
                 }
             }
         }
+
+    // --------------------------------
+    // --- PAGINA SOBRE NOSOTROS-------
+    // --------------------------------   
+main.sobre__nos{
+    h1{
+        font-size: 3.8rem;
+        line-height: 3.8rem;
+        text-align: center;
+        padding: 1rem; 
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    div.contenedor__nos{
+        div.contenedor__anidado{
+            div.nos__tarjeta{
+                width: 24rem;
+            }
+        }
+    }
+    p{text-align: center;
+        padding: 0.5rem;}
+    div.contenedor__tecnologia{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            text-transform: uppercase;
+            color: $clr-gris-oscuro;
+        }
+        p{
+            font-weight: 500;
+            text-align: center;
+        }
+        div.tecnologia{
+            margin: 2rem 1rem;
+            }
+        
+        p:nth-child(6){
+            color: $clr-secundario;
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            width: 95%;
+            text-align: center;
+        }
+
+    }
+}
+
+    // --------------------------------
+    // -----TRUCOS PARA RENOVAR---------
+    // --------------------------------
+    main.contenedor__p3{
+        div.titulo--p3{
+            h1{
+                font-size: 3.8rem;
+                letter-spacing: 0.15rem;
+                line-height: 3.8rem;
+            } 
+            }
+            
+            div.contenedor__grid{
+                
+                grid-template-columns: repeat(auto-fit, 32rem);
+                div.grid__card{
+                    padding-bottom: 1rem;
+                    p{
+                        color: $clr-gris-medio;
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.1rem;
+                    }
+                    h2{
+                        font-size: 1.1rem;
+                        line-height: 1.5; 
+                    }
+                    iframe{
+                        height: 250px;
+                        width: 100%;
+                        border-radius: $radio-medio;
+                        margin-bottom: 1rem;
+                    }
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        font-weight: bold; 
+                        margin: 1rem 0rem;
+                    }
+                    i{
+                        font-size: 0.8rem;
+                        margin-left: 0.5rem;  
+                    }
+                    div{
+                        height: 250px;
+                        width: 100%;
+                        margin-bottom: 1rem;
+                        background-color: $clr-secundario;
+                        border-radius: $radio-medio;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    div.blog1{
+                        background-image: url(../multimedia/img/blog-pileta.jpg); 
+                    }
+                    div.blog2{
+                        background-image: url(../multimedia/img/blog-pisomadera.jpg);
+                    }
+                    div.blog3{
+                        background-image: url(../multimedia/img/blog-colores.jpg);
+                    }
+                }
+            }
+        
+    }
+        
+    // --------------------------------
+    // ---PAGINA EMPEZÁ AHORA---
+    // -------------------------------- 
+    main.empeza{
+        div.contenedor{
+            h1{
+                margin: 0rem auto; 
+                font-size: 3.4rem;
+                letter-spacing: 0.15rem;
+            }
+            h2{
+                font-size: 1.1rem;
+                line-height: 1.5; 
+                margin-bottom: 0;
+            }
+            form#formulario{
+                p{
+                    &:last-child{
+                        width: 75vw;
+                        margin: 0rem auto 0.25rem auto;
+                        text-align: center; 
+                    }
+                }
+                img.contanos_personaje{
+                    top: 10vh;
+                    width: 30vw;
+                }
+                div.base-card{
+                    h2{font-size: 1.4rem;}
+                    input{margin-top: 1rem;}
+                    fieldset{
+                        width: 80vw;
+                        margin-top: 1rem; 
+                        justify-content: space-evenly;
+                        align-items: center;   
+                        padding: 0rem;
+                        legend{font-weight: 600;}
+                        div{
+                            margin:1rem;
+                            input{
+                                width: 65px;
+                                margin: 0rem;
+                            }
+                        }
+                    }
+                    ul{
+                        li{
+                            width: 22rem;
+                            height: 22rem;
+                        }
+                    }
+                }
+                
+                div.elegir-color{
+                    margin-top: 1rem;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    background-color: transparent;
+                    border: 4px solid $clr-primario-hover;
+                } 
+                div.arqui{
+                    div.personas{
+                        div{
+                            width: 50vw;
+                            padding-bottom: 0.25rem;
+                            overflow: auto;
+                            p{
+                                font-weight: 500;
+                                width: 48vw;
+                            }
+                        }
+                        h3{
+                            font-size: 1.4rem;
+                            color: #fff;
+                            background-color: rgba(0, 0, 0, 0.253);
+                        }
+                    }
+                }
+                div.plan{
+                    width: 95vw;
+                    flex-direction: column;
+                    background-color: transparent;
+                    
+                    div.personalizado{
+                        width: 90vw;
+                        margin: 0.5rem 0rem;  
+                        h2{
+                            strong{font-size: 1.5rem;}
+                        } 
+                        .precio{font-size: 3rem;}                
+                        ul{
+                            font-weight: 600;
+                            margin:  2rem 2.5rem 2rem 2.5rem;
+                            line-height: 1.5rem;
+                            text-align: center;
+                        }
+                    }
+                    div.premium{
+                        width: 90vw; 
+                        h2{
+                            strong{font-size: 1.5rem;}
+                        } 
+                        .precio{font-size: 3rem;}                
+                        ul{
+                            font-weight: 600;
+                            margin:  2rem 2.5rem 2rem 2.5rem;
+                            line-height: 1.5rem;
+                            text-align: center;
+                        }
+                    }
+                }
+                div.formas-de-pago{
+                    h2, p{width: 80vw;}
+                    h2{font-size: 1.4rem;}
+                    div.pagos{
+                        width: 80vw;
+                        flex-wrap: wrap;
+                        div{
+                            width: 6rem;
+                        }
+                    }
+                }
+                div.contactar{
+                    width: 35vw;
+                    margin-bottom: 1rem;
+                    h2{
+                        font-size: 1.5rem;
+                        margin: 0.25rem auto;
+                    }
+                    // div{
+                    //     margin: 0.3rem 0rem 0rem 0rem;
+                    // }
+                    input{
+                        padding: 0.2rem 0rem 0.2rem 1rem;
+                        border: 1px solid $clr-gris-oscuro;
+                        border-radius:$radio-medio;
+                        &:last-child{margin-bottom: 1rem;}
+                    }
+                }
+            }
+        }
+    }
         // ---MODIFICACIONES AL FOOTER, ACORDE A MQ------
         footer{
             div.contenedor__footer{
