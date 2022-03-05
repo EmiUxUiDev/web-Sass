@@ -34,9 +34,9 @@ Por otro lado, la incorporacion y uso de una herramienta de versionado, <strong>
 Seguramente es algo simple para muchos, pero es un gran paso en lo que llevo aprendiendo, y en tan poco tiempo.
 Estoy muy satisfecho con lo que llevo haciendo en este periodo de aprendizaje.
 
-Queda mucho por aprender y eso, es lo que mas me motiva y me mantiene entisiasmado.
+Queda mucho por aprender y eso, es lo que mas me motiva y me mantiene entusiasmado.<br><br>
 
-Para quien llego hasta acá, gracias por leer!.
+<strong><em>Para quien llego hasta acá, gracias por leer!</em></strong><br>
 
-Emiliano Agú.
+Emiliano Agú 😉
 
