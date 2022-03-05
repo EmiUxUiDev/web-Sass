@@ -28,7 +28,7 @@ En lo que va del trabajo, he puesto en practica:<br><hr>
 
 
 Por otro lado, la incorporacion y uso de una herramienta de versionado, <strong>Git</strong> ![git-original-wordmark](https://user-images.githubusercontent.com/94999530/156891602-1296a4d8-e789-4976-be32-dbeafbc68011.svg)
-   y alohamiento de codigo en ![github-original-wordmark](https://user-images.githubusercontent.com/94999530/156891619-bf1af081-4daa-437f-81f5-7ea7bca3a5c7.svg)<br><hr>
+   y alojamiento de codigo en ![github-original-wordmark](https://user-images.githubusercontent.com/94999530/156891619-bf1af081-4daa-437f-81f5-7ea7bca3a5c7.svg)<br><hr>
 
 
 Seguramente es algo simple para muchos, pero es un gran paso en lo que llevo aprendiendo, y en tan poco tiempo.
