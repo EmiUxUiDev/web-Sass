@@ -313,6 +313,39 @@ body{
                 }
             }   
         }
+
+        p{
+            padding: 0rem 0.25rem;
+        }
+        ul{
+            li{
+                font-size: 1rem;
+                padding: 0.4rem;
+                text-transform: uppercase;
+                &:last-child{margin-bottom: 1.5rem;}
+            }
+        }
+        section.galeria__tec, section.galeria__renders{
+            div.grid__tec, div.grid__renders {
+                grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+                width: 95%;
+                margin:1rem auto 4rem auto;
+                grid-gap: 2rem;
+                padding: 1.5rem 0.25rem;
+                a{
+                    img{
+                        max-width: 300px;
+                    }
+                }
+            }
+            article.light-box{
+                &:target{
+                    transform: scale(0);
+                }
+                
+            }
+        }
+    
         div.contenedor__tiendas{
             
             div{

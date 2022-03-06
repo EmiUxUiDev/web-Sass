@@ -671,7 +671,8 @@ main div.contenedor--p2 div.primer__flex h2 {
 }
 
 main div.contenedor__pasos--p2 {
-  min-height: 60rem;
+  background-color: rgba(0, 0, 0, 0.301);
+  min-height: 42rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,9 +680,9 @@ main div.contenedor__pasos--p2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -721,7 +722,7 @@ main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 h3#num-grande {
   left: -1.5rem;
   font-size: 8rem;
   color: #7a7a7a;
-  text-shadow: #ffd900 1px 1px 1px;
+  text-shadow: #ffd900 3px -2px 1px;
 }
 
 main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 img {
@@ -747,19 +748,48 @@ main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div p {
   color: #414141;
 }
 
+main h2 {
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+
+main h2 strong {
+  font-size: 1.8rem;
+  color: #414141;
+}
+
+main hr {
+  width: 90vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-top: 5px solid #ffd90075;
+  margin-bottom: 1.5rem;
+}
+
+main ul li {
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+main ul li:last-child {
+  margin-bottom: 1.5rem;
+}
+
 main section.galeria__tec div.grid__tec, main section.galeria__tec div.grid__renders, main section.galeria__renders div.grid__tec, main section.galeria__renders div.grid__renders {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 90%;
-  margin: 0 auto;
-  grid-gap: 0.5rem;
+  margin: 0.5rem auto 4rem auto;
+  grid-gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5rem 0rem;
-  overflow: hidden;
+  padding: 1.5rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.31);
+  border-radius: 1rem;
 }
 
 main section.galeria__tec div.grid__tec a, main section.galeria__tec div.grid__renders a, main section.galeria__renders div.grid__tec a, main section.galeria__renders div.grid__renders a {
@@ -768,11 +798,12 @@ main section.galeria__tec div.grid__tec a, main section.galeria__tec div.grid__r
   overflow: hidden;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  -webkit-transition: all 300ms ease-in-out 0ms;
+  transition: all 300ms ease-in-out 0ms;
 }
 
 main section.galeria__tec div.grid__tec a:hover, main section.galeria__tec div.grid__renders a:hover, main section.galeria__renders div.grid__tec a:hover, main section.galeria__renders div.grid__renders a:hover {
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   z-index: 100;
@@ -780,10 +811,9 @@ main section.galeria__tec div.grid__tec a:hover, main section.galeria__tec div.g
 
 main section.galeria__tec div.grid__tec img, main section.galeria__tec div.grid__renders img, main section.galeria__renders div.grid__tec img, main section.galeria__renders div.grid__renders img {
   width: 100%;
+  max-width: 400px;
   vertical-align: top;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
   -webkit-transition: -webkit-transform 500ms ease-in-out 0s;
   transition: -webkit-transform 500ms ease-in-out 0s;
   transition: transform 500ms ease-in-out 0s;
@@ -857,7 +887,7 @@ main div.contenedor__tiendas div {
 }
 
 main div.contenedor__tiendas div h2 {
-  margin-bottom: 2rem;
+  margin: 2rem;
   font-size: 1.8rem;
 }
 
@@ -2083,6 +2113,32 @@ footer div.right p {
     font-weight: bold;
     color: #414141;
   }
+  body main.como__funciona p {
+    padding: 0rem 0.25rem;
+  }
+  body main.como__funciona ul li {
+    font-size: 1rem;
+    padding: 0.4rem;
+    text-transform: uppercase;
+  }
+  body main.como__funciona ul li:last-child {
+    margin-bottom: 1.5rem;
+  }
+  body main.como__funciona section.galeria__tec div.grid__tec, body main.como__funciona section.galeria__tec div.grid__renders, body main.como__funciona section.galeria__renders div.grid__tec, body main.como__funciona section.galeria__renders div.grid__renders {
+    -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 95%;
+    margin: 1rem auto 4rem auto;
+    grid-gap: 2rem;
+    padding: 1.5rem 0.25rem;
+  }
+  body main.como__funciona section.galeria__tec div.grid__tec a img, body main.como__funciona section.galeria__tec div.grid__renders a img, body main.como__funciona section.galeria__renders div.grid__tec a img, body main.como__funciona section.galeria__renders div.grid__renders a img {
+    max-width: 300px;
+  }
+  body main.como__funciona section.galeria__tec article.light-box:target, body main.como__funciona section.galeria__renders article.light-box:target {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
   body main.como__funciona div.contenedor__tiendas div h2 strong {
     font-size: 1.5rem;
   }
@@ -2612,6 +2668,36 @@ footer div.right p {
   body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 img {
     width: 280px;
   }
+  body main.como__funciona p {
+    padding: 0rem 0.25rem;
+  }
+  body main.como__funciona ul li {
+    font-size: 1rem;
+    padding: 0.4rem;
+    text-transform: uppercase;
+  }
+  body main.como__funciona ul li:last-child {
+    margin-bottom: 1.5rem;
+  }
+  body main.como__funciona section.galeria__tec div.grid__tec, body main.como__funciona section.galeria__tec div.grid__renders, body main.como__funciona section.galeria__renders div.grid__tec, body main.como__funciona section.galeria__renders div.grid__renders {
+    -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    width: 95%;
+    margin: 1rem auto 4rem auto;
+    grid-gap: 2rem;
+    padding: 1.5rem 0.25rem;
+  }
+  body main.como__funciona section.galeria__tec div.grid__tec a:hover, body main.como__funciona section.galeria__tec div.grid__renders a:hover, body main.como__funciona section.galeria__renders div.grid__tec a:hover, body main.como__funciona section.galeria__renders div.grid__renders a:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  body main.como__funciona section.galeria__tec div.grid__tec a img, body main.como__funciona section.galeria__tec div.grid__renders a img, body main.como__funciona section.galeria__renders div.grid__tec a img, body main.como__funciona section.galeria__renders div.grid__renders a img {
+    max-width: 400px;
+  }
+  body main.como__funciona section.galeria__tec article.light-box:target, body main.como__funciona section.galeria__renders article.light-box:target {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
   body main.contenedor__p3 div.titulo--p3 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3067,6 +3153,37 @@ footer div.right p {
     margin-bottom: 3rem;
     width: 95%;
     text-align: center;
+  }
+  body main section.galeria__tec div.grid__tec, body main section.galeria__tec div.grid__renders, body main section.galeria__renders div.grid__tec, body main section.galeria__renders div.grid__renders {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 90%;
+    margin: 0.5rem auto 4rem auto;
+    grid-gap: 1.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.5rem 0rem;
+    background-color: rgba(0, 0, 0, 0.301);
+    padding: 0.35rem;
+    border-radius: 1rem;
+  }
+  body main section.galeria__tec div.grid__tec a:hover, body main section.galeria__tec div.grid__renders a:hover, body main section.galeria__renders div.grid__tec a:hover, body main section.galeria__renders div.grid__renders a:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  body main section.galeria__tec div.grid__tec img, body main section.galeria__tec div.grid__renders img, body main section.galeria__renders div.grid__tec img, body main section.galeria__renders div.grid__renders img {
+    width: 100%;
+    max-width: 380px;
+  }
+  body main section.galeria__tec article.light-box:target, body main section.galeria__renders article.light-box:target {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  body main section.galeria__tec article.light-box .light__proxima, body main section.galeria__renders article.light-box .light__proxima {
+    display: none;
   }
   body main.contenedor__p3 div.titulo--p3 h1 {
     font-size: 3.8rem;

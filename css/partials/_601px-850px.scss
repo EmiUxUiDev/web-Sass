@@ -208,6 +208,46 @@ main.sobre__nos{
 }
 
     // --------------------------------
+    // ------PAGINA CÓMO FUNCIONA?-----
+    // --------------------------------   
+    main{
+        section.galeria__tec, section.galeria__renders{
+
+            div.grid__tec, div.grid__renders {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+                width: 90%;
+                margin:0.5rem auto 4rem auto;
+                grid-gap: 1.5rem;
+                align-items: center;
+                padding: 1.5rem 0rem;
+                background-color: rgba(0, 0, 0, 0.301);
+                padding: 0.35rem;
+                border-radius: $radio-medio;
+                a{
+                    &:hover{
+                        transform: scale(1);
+                    }
+                }
+                img{
+                    width: 100%;
+                    max-width: 380px;
+                }
+            }
+            article.light-box{
+                &:target{
+                    transform: scale(1);
+                }
+                .light__proxima{
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+
+    // --------------------------------
     // -----TRUCOS PARA RENOVAR---------
     // --------------------------------
     main.contenedor__p3{

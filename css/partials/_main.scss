@@ -402,10 +402,11 @@ main{
         }
     }
     div.contenedor__pasos--p2{
-        min-height: 60rem;
+        background-color: rgba(0, 0, 0, 0.301);
+        min-height: 42rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly; 
+        justify-content: space-between; 
         align-items: center;
         div.fila--p2{
             display: flex;
@@ -428,7 +429,7 @@ main{
                     left: -1.5rem;
                     font-size: 8rem;
                     color: $clr-gris-medio;
-                    text-shadow: $clr-primario-hover 1px 1px 1px;
+                    text-shadow: $clr-primario-hover 3px -2px 1px;
                 }
                 img{
                     width: 250px;
@@ -452,33 +453,56 @@ main{
             }
         }   
     }
+    h2{
+        margin: 2rem;
+        font-size: 1.8rem;
+        strong{
+            font-size: 1.8rem;
+            color: $clr-gris-oscuro;
+        }
+    }
+    hr{
+        width: 90vw;
+        align-self: center;
+        border-top:5px solid #ffd90075;
+        margin-bottom: 1.5rem;
+    }
+    ul{
+        li{
+            padding: 0.5rem;
+            text-transform: uppercase;
+            &:last-child{margin-bottom: 1.5rem;}
+        }
+    }
     section.galeria__tec, section.galeria__renders{
 
-        div.grid__tec, div.grid__renders{
+        div.grid__tec, div.grid__renders {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
             width: 90%;
-            margin:0 auto;
-            grid-gap: 0.5rem;
+            margin:0.5rem auto 4rem auto;
+            grid-gap: 2rem;
             align-items: center;
-            padding: 1.5rem 0rem;
-            overflow: hidden;
+            padding: 1.5rem 0.5rem;
+            background-color: rgba(0, 0, 0, 0.31);
+            border-radius: $radio-medio;
             a{
                 display: block;
                 position: relative;
                 overflow: hidden;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                border-radius: $radio-medio;
+                transition: all 300ms ease-in-out 0ms;
                 &:hover{
-                    filter: blur(1px);
                     transform: scale(1.1);
                     z-index: 100;
                 }
             }
             img{
                 width: 100%;
+                max-width: 400px;
                 vertical-align: top;
                 height: auto;
-                object-fit: cover;
                 transition: transform 500ms ease-in-out 0s;
             }
         }
@@ -528,7 +552,6 @@ main{
             }
         }
     }
-    
 
     div.contenedor__tiendas{
         
@@ -536,7 +559,7 @@ main{
             width: 80vw;
             margin: 0.5rem auto;
             h2{
-                margin-bottom: 2rem;
+                margin: 2rem;
                 font-size: 1.8rem;
                 strong{
                     font-size: 1.8rem;
