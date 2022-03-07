@@ -5,12 +5,12 @@ main{
     div.scroll__btn{
         position: fixed;
         width: 2.6rem;
-        height: 3.4rem;
+        height: 3rem;
         border-radius: 40%;
-        bottom: 2rem;
-        right: 2rem;
+        bottom: 1.3rem;
+        left:2rem;
         outline: 1px solid $clr-secundario;
-        z-index: 100;
+        z-index: 100000;
         cursor: pointer;
     }
     div{
