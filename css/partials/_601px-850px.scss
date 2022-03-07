@@ -4,14 +4,18 @@
     // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
     body{
         header{
+            height: 80rem;
             nav{
+                position: sticky;
+                top:0rem;
+                z-index: 10000;
                 ul{
                     li{
                         margin: 0rem 0rem 0rem 1.5rem;
                         font-size: 1rem;
                         a{
                             img{
-                                margin-left: -1rem;
+                                margin-left: 0rem;
                                 width: 4rem;
                             }
                             
@@ -35,6 +39,7 @@
         main.inicio{
             background-size: 120%;
             background-position:center 0%;
+            margin-top: -74.7rem;
             section#home{   
                 h1#titulo{ 
                         font-size: 3.8rem;
@@ -59,13 +64,15 @@
                         margin-left: -1rem;
                     }
                     h2{
-                        font-size: 3rem;
-                        font-family: $fuente-1;
-                        font-weight: bold;
-                        color: white;
-                        text-align: center;
                         margin: -5.6rem 0rem 0rem 0rem;
-                        text-shadow: $clr-gris-oscuro 3px 3px 3px;
+                        strong{
+                            font-size: 3rem;
+                            font-family: $fuente-1;
+                            font-weight: bold;
+                            color: white;
+                            text-align: center;
+                            text-shadow: $clr-gris-oscuro 3px -3px 3px;
+                        }
                     }
                     h3{
                         font-size: 1.2rem;
@@ -161,6 +168,7 @@
     // --- PAGINA SOBRE NOSOTROS-------
     // --------------------------------   
 main.sobre__nos{
+    margin-top: -72rem;
     h1{
         font-size: 3.8rem;
         line-height: 3.8rem;
@@ -169,7 +177,8 @@ main.sobre__nos{
         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
     }
     h2{
-        font-size: 1.2rem;
+        strong{font-size: 1.2rem;
+            color: $clr-gris-oscuro;}
     }
     div.contenedor__nos{
         div.contenedor__anidado{
@@ -210,7 +219,22 @@ main.sobre__nos{
     // --------------------------------
     // ------PAGINA CÓMO FUNCIONA?-----
     // --------------------------------   
-    main{
+    main.como__funciona{
+        margin-top: -73rem;
+        div.contenedor--p2{
+            div.primer__flex{
+                h1{
+                    font-size: 3.8rem;
+                    line-height: 3.8rem;
+                    text-align: center;
+                    padding: 1rem; 
+                }
+                h2{
+                    strong{font-size: 1.2rem;
+                        color: $clr-gris-oscuro;}
+                }
+            }
+        }
         section.galeria__tec, section.galeria__renders{
 
             div.grid__tec, div.grid__renders {
@@ -251,6 +275,7 @@ main.sobre__nos{
     // -----TRUCOS PARA RENOVAR---------
     // --------------------------------
     main.contenedor__p3{
+        margin-top: -72rem;
         div.titulo--p3{
             h1{
                 font-size: 3.8rem;
@@ -318,16 +343,16 @@ main.sobre__nos{
     // ---PAGINA EMPEZÁ AHORA---
     // -------------------------------- 
     main.empeza{
+        margin-top: -72rem;
         div.contenedor{
             h1{
-                margin: 0rem auto; 
-                font-size: 3.4rem;
-                letter-spacing: 0.15rem;
+                font-size: 3.8rem;
+                line-height: 3.8rem;
+                text-align: center;
+                padding: 1rem; 
             }
             h2{
-                font-size: 1.1rem;
-                line-height: 1.5; 
-                margin-bottom: 0;
+                strong{font-size: 1.2rem;}
             }
             form#formulario{
                 p{

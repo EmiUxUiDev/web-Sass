@@ -5,7 +5,11 @@
     // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
     body{
         header{
+            height: 80rem;
             nav{
+                position: sticky;
+                top:0rem;
+                z-index: 10000;
                 input.nav__checkbox{
                     display:none;
                     &:checked ~ ul.nav__listamenu li{display: block; }
@@ -64,6 +68,7 @@
         main.inicio{
             background-size: 160%;
             background-position:center -0.5%;
+            margin-top: -75rem;
             section#home{ 
                 h1#titulo{ 
                         font-size: 3.4rem;
@@ -73,8 +78,8 @@
                         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
-                    margin: 16rem 0rem 0rem 0.5rem;
-                    width: 98%;
+                    margin: 16rem auto 0rem auto;
+                    width: 96%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;
                     background-color: #ffffff80;
@@ -90,13 +95,15 @@
                         margin-left: -1rem;
                     }
                     h2{
-                        font-size: 2.2rem;
+                        margin: -4.3rem 0rem 0rem 0rem;
+                        strong{
+                            font-size: 2.2rem;
                         font-family: $fuente-1;
                         font-weight: bold;
                         color: white;
-                        text-align: center;
-                        margin: -4.3rem 0rem 0rem 0rem;
                         text-shadow: $clr-gris-oscuro 3px 3px 3px;
+                        text-align: center;
+                        }
                     }
                     h3{
                         font-size: 1.2rem;
@@ -192,6 +199,7 @@
     // --------------------------------    
     
     main.sobre__nos{
+        margin-top: -73rem;
         h1{
             letter-spacing: 0.15rem;
             font-size: 3.4rem;
@@ -199,8 +207,8 @@
             text-align: center;
         }
         h2{
-            font-size: 1.2rem;
-            line-height: 1.5; 
+            strong{font-size: 1.2rem;
+                color: $clr-gris-oscuro;}
         }
         div.contenedor__nos{
             div.contenedor__anidado{
@@ -244,12 +252,17 @@
     // -----PAGINA CÓMO FUNCIONA?---------
     // --------------------------------
     main.como__funciona{
+        margin-top: -73rem;
         div.contenedor--p2{
             div.primer__flex{
                 h1{
                     font-size: 3.4rem;
                     line-height: 3.4rem;
                     text-align: center;
+                }
+                h2{
+                    strong{font-size: 1.2rem;
+                        color: $clr-gris-oscuro;}
                 }
             }
         }
@@ -309,6 +322,7 @@
     // -----TRUCOS PARA RENOVAR---------
     // --------------------------------
     main.contenedor__p3{
+        margin-top: -73rem;
         div.titulo--p3{
             flex-direction: column;
             h1{
@@ -393,6 +407,7 @@
     // ---PAGINA EMPEZÁ AHORA---
     // -------------------------------- 
     main.empeza{
+        margin-top: -73rem;
         div.contenedor{
             h1{
                 margin: 0rem auto; 
@@ -405,6 +420,7 @@
                 font-size: 1.1rem;
                 line-height: 1.5; 
                 margin-bottom: 0;
+                strong{font-size: 1.2rem;}
             }
             form#formulario{
                 p{

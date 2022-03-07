@@ -1,7 +1,7 @@
 
 header {
     nav{
-        background-color:rgb(255, 255, 255); 
+        background-color:rgba(255, 255, 255, 0.8); 
         .nav__checkbox{display: none;}
         .nav__onoff{display: none;}
         
@@ -20,6 +20,8 @@ header {
                         &:first-child{
                             margin-right: auto;
                             margin-left: 0.5rem;
+                            display: flex;
+                            align-items:flex-end ;
                         }
                             a{
                                 position: relative;
@@ -40,8 +42,18 @@ header {
                                     }
                                     &.link:hover::after{
                                         width: 100%;
-                                    }      
+                                    }     
                             }
+                            p{
+                                font-weight: bold;
+                                margin-left: -0.5rem;
+                                strong{
+                                    font-size: 1.15rem;
+                                    padding: 0rem 0.1rem;
+                                    color: $clr-primario-hover;
+                                    text-shadow: $clr-gris-oscuro 1px 1px 1.5px;
+                                }
+                            } 
                             a{
                                 p{ 
                                     display: flex;

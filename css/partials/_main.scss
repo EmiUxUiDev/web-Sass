@@ -475,7 +475,15 @@ main{
         }
     }
     section.galeria__tec, section.galeria__renders{
-
+        background-color: rgba(0, 0, 0, 0.3);
+        h2{
+            strong{color: $clr-gris-oscuro;}
+        }
+        p{
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
         div.grid__tec, div.grid__renders {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
@@ -484,18 +492,26 @@ main{
             grid-gap: 2rem;
             align-items: center;
             padding: 1.5rem 0.5rem;
-            background-color: rgba(0, 0, 0, 0.31);
             border-radius: $radio-medio;
             a{
                 display: block;
                 position: relative;
                 overflow: hidden;
+                background-color: rgba(0, 0, 0, 0.6);
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
                 border-radius: $radio-medio;
                 transition: all 300ms ease-in-out 0ms;
                 &:hover{
                     transform: scale(1.1);
                     z-index: 100;
+                }
+                p{
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-weight: 500;
+                    letter-spacing: 0.05rem;
+                    
                 }
             }
             img{

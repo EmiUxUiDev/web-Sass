@@ -6,7 +6,11 @@
 @media screen and (max-width:420px){
 body{
     header{
+        height: 80rem;
         nav{
+            position: sticky;
+            top:0rem;
+            z-index: 10000;
             input.nav__checkbox{
                 display:none;
                 &:checked ~ ul.nav__listamenu li{display: block; }
@@ -67,6 +71,7 @@ body{
     main.inicio{
         background-size: 170%;
         background-position:center -0.5%;
+        margin-top: -75rem;
         section#home{
             h1#titulo{
                     font-size: 3rem;
@@ -78,7 +83,7 @@ body{
                 width: 96%;
                 padding: 0.8rem;
                 border-radius: $radio-fuerte;
-                background-color: #ffd90011;
+                background-color: #ffffff5e;
                 box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
                 border:4px solid $clr-secundario;
                 font-size: 1rem;
@@ -91,15 +96,17 @@ body{
                     text-shadow: #000 1px 1px 1px;
                 }
                 h2{
-                    font-size: 1.8rem;
+                    margin: 0rem 0rem 3.4rem 0rem;
+                    strong{
+                        font-size: 1.8rem;
                     font-family: $fuente-1;
                     font-weight: bold;
                     color: white;
                     text-align: center;
-                    margin: 0rem 0rem 3.4rem 0rem;
                     text-shadow: $clr-gris-oscuro 3px 3px 3px;
-                    background: linear-gradient(-90deg, rgba(56, 56, 56, 0.301) 30%, rgba(211, 211, 211, 0.288)80%); 
+                    background: linear-gradient(-90deg, rgba(56, 56, 56, 0.301) 70%, rgba(211, 211, 211, 0.288)80%); 
                     border-radius: $radio-medio;
+                    }
                 }
                 h3{
                     font-size: 1rem;
@@ -136,10 +143,11 @@ body{
                 h2{
                     margin-top: 2rem;
                     margin-bottom: -2.4rem;
-                    font-size: 4rem;
+                    font-size: 3.8rem;
                     color: $clr-primario-hover;
                     line-height: 4rem;
                     letter-spacing: 0.25rem;
+                    text-align: center;
                 }
                 div.pasos__card{
                     width: 90vw;
@@ -196,14 +204,15 @@ body{
     // --------------------------------    
     
     main.sobre__nos{
+        margin-top: -73rem;
         h1{
             font-size: 3rem;
             letter-spacing: 0.15rem;
             text-align: center;
         }
         h2{
-            font-size: 1.1rem;
-            line-height: 1.5; 
+            strong{font-size: 1.2rem;
+                color: $clr-gris-oscuro;}
         }
             div.contenedor__nos{
                 margin: 1.5rem 0rem;
@@ -258,6 +267,7 @@ body{
     // -------CÓMO FUNCIONA?-----------
     // -------------------------------- 
     main.como__funciona{
+        margin-top: -74rem;
         div.contenedor--p2{
             display: flex;
             flex-direction: column;
@@ -271,10 +281,10 @@ body{
                 font-size: 3rem;
                 letter-spacing: 0.15rem;
                 }
-            h2{
-                font-size: 1.1rem;
-                line-height: 1.5; 
-            }  
+                h2{
+                    strong{font-size: 1.2rem;
+                        color: $clr-gris-oscuro;}
+                }  
             }
         }
         div.contenedor__pasos--p2{
@@ -380,6 +390,7 @@ body{
     // ------TRUCOS PARA RENOVAR------
     // -------------------------------- 
 main.contenedor__p3{
+    margin-top: -72rem;
     div.titulo--p3{
         flex-direction: column;
         h1{
@@ -461,6 +472,7 @@ main.contenedor__p3{
     // ---PAGINA EMPEZÁ AHORA---
     // -------------------------------- 
     main.empeza{
+        margin-top: -73rem;
         div.contenedor{
             h1{
                 margin: 0rem auto; 
@@ -473,6 +485,7 @@ main.contenedor__p3{
                 font-size: 1.1rem;
                 line-height: 1.5; 
                 margin-bottom: 0;
+                strong{font-size: 1.2rem;}
             }
             form#formulario{
                 p{
