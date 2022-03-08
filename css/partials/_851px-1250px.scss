@@ -33,7 +33,7 @@
         // -----INICIO MAIN-----
         main.inicio{
             margin-top: -75rem;
-            svg{margin-top: -95rem;}
+            svg{margin-top: -100rem;}
             section#home{
                 h1#titulo{
                         padding: 2rem;
@@ -41,10 +41,10 @@
                         text-align: center; 
                         font-size: 4.8rem;
                         line-height: 3rem;
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
+                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
-                    margin: 22rem auto 0rem auto;
+                    margin: 26rem auto 0rem auto;
                     width: 96%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;
@@ -104,28 +104,17 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    h2{
-                        margin-top: 2rem;
-                        font-size: 5rem;
-                        color: $clr-primario-hover;
-                        line-height: 4rem;
-                        letter-spacing: 0.25rem;
-                    }
                     div.pasos__card{
-                        width: 90vw;
-                        display: flex; 
-                        flex-direction: column;
-                        margin: 0.5rem 0rem 2rem 0rem; 
                         img#primerimg{
-                            width: 50vw;
+                            width: 35vw;
                             margin-top: 0.5rem;
-                            margin-bottom: -2rem;
                         }
                         img{
-                            width: 50vw; 
+                            width: 40vw; 
                             margin-top: 1.5rem;
                         }
                         div{
+                            width: 65vw;
                             h3{
                                 font-size: 2.5rem;
                                 letter-spacing: 0.2rem;
@@ -139,21 +128,16 @@
                                     font-size: 1.1rem;
                                     font-weight: 500;
                                     padding: 1.4rem;
-                                    a{  
-                                        font-size: 1.6rem;
-                                        font-weight: bold;
-                                        cursor: pointer;
-                                    }
                                 }
+                            }
+                            a{  
+                                width: 30vw;
                             }
                         }
                     }
                     a{
                         button.pasos__btn{
-                            width: 40vw;
-                            font-size: 1.4rem;
-                            padding: 0.8rem 1.5rem;
-                            margin: 4rem auto;
+                            margin: 0rem auto 5rem auto;
                         }
                     }
                 }

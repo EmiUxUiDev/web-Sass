@@ -73,8 +73,7 @@ body{
         background-position:center -0.5%;
         margin-top: -75rem;
         svg{   
-            margin-top: -80rem;
-            opacity: 80%;
+            margin-top: -84rem;
         }
         section#home{
             h1#titulo{
@@ -83,7 +82,7 @@ body{
                     text-align: center;
             }
             div#comentario{
-                margin:8rem auto 4rem auto;
+                margin:10rem auto 4rem auto;
                 width: 96%;
                 padding: 0.25rem;
                 border-radius: $radio-fuerte;
@@ -143,7 +142,9 @@ body{
         }
         section.pasos{
             div.pasos__contenedor{
-                margin: auto 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 h2{
                     margin-top: 2rem;
                     margin-bottom: -2.4rem;
@@ -154,17 +155,14 @@ body{
                     text-align: center;
                 }
                 div.pasos__card{
-                    width: 90vw;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     img#primerimg{
                         width: 65vw;
-                        margin-bottom: 0rem;
+                        margin-bottom: -1.6rem;
+                        margin-top: 0.4rem;
                     }
                     img{
                         width: 80vw; 
-                        margin-bottom: -0.25rem;
+                        margin-bottom: -1.6rem;
                     }
                     div{
                         h3{
@@ -180,22 +178,14 @@ body{
                                 font-size: 1rem;
                                 font-weight: 600;
                                 padding: 1rem;
-                                a{  
-                                    font-size: 1.3rem;
-                                    font-weight: bold;
-                                    cursor: pointer;
-                                }
+                                margin-bottom: 1rem;
                             }
                         }
                     }
-
                 }
                 a{
                     button.pasos__btn{
                         width: 80vw;
-                        font-size: 1.2rem;
-                        padding: 0.5rem 1.5rem;
-                        margin: 4rem auto;
                     }
                 }
             }

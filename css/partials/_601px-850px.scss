@@ -41,7 +41,7 @@
             background-position:center 0%;
             margin-top: -74.7rem;
             svg{   
-                margin-top: -96rem;
+                margin-top: -92rem;
             }
             section#home{   
                 h1#titulo{ 
@@ -52,7 +52,7 @@
                         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
-                    margin: 20rem 0rem 0rem 0.5rem;
+                    margin: 19rem 0rem 0rem 0.5rem;
                     width: 98%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;
@@ -113,25 +113,20 @@
                     h2{
                         margin-top: 2rem;
                         font-size: 5rem;
-                        color: $clr-primario-hover;
                         line-height: 4rem;
                         letter-spacing: 0.25rem;
                     }
                     div.pasos__card{
-                        width: 90vw;
-                        display: flex; 
-                        flex-direction: column;
-                        margin: 0.5rem 0rem 2rem 0rem; 
                         img#primerimg{
-                            width: 65vw;
+                            width: 50vw;
                             margin-top: 0.5rem;
-                            margin-bottom: -1.25rem;
+                            margin-bottom: -2.8rem;
                         }
                         img{
-                            width: 70vw; 
-                            margin-top: 1.5rem;
-                        }
+                            width: 55vw; 
+                            margin-bottom: -2rem;}
                         div{
+                            width: 75vw;
                             h3{
                                 font-size: 2.5rem;
                                 letter-spacing: 0.2rem;
@@ -145,21 +140,17 @@
                                     font-size: 1.1rem;
                                     font-weight: 500;
                                     padding: 1rem;
-                                    a{  
-                                        font-size: 1.3rem;
-                                        font-weight: bold;
-                                        cursor: pointer;
-                                    }
                                 }
+                            }
+                            a{  
+                                width: 50vw;
+
                             }
                         }
                     }
                     a{
                         button.pasos__btn{
-                            width: 60vw;
-                            font-size: 1.4rem;
-                            padding: 0.8rem 1.5rem;
-                            margin: 4rem auto;
+                            width: 50vw;
                         }
                     }
                 }

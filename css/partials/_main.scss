@@ -159,6 +159,7 @@ main{
             div.pasos__contenedor{
                 margin: 0rem auto;
                 flex-direction: row;
+                align-items: center;
                 flex-wrap: wrap;
             
                 h2{
@@ -175,32 +176,32 @@ main{
                     text-transform: capitalize;
                 }
                 div.pasos__card{
-                    width: 90vw;
                     display: flex; 
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
-                    margin-top: 0.3rem;
                     margin: 0.8rem 0rem 4rem 0rem; 
 
                     img#primerimg{
                         width: 45vw;
-                        margin: 0.5rem;
-                        margin-bottom: -1.8rem; 
+                        margin-bottom: -2.5rem; 
                         filter: drop-shadow(5px 5px 5px $clr-gris-medio); 
                     }
                     img{
                         width: 45vw;
-                        margin-bottom: -0.8rem;
+                        margin-bottom: -2rem;
                         filter: drop-shadow(5px 5px 5px $clr-gris-medio); 
                     }
                     div{
-                        background: #FFD900;
-                        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+                        width: 90vw;
+                        margin: 0rem auto 2rem auto;
                         padding: 1.5rem 0rem;
                         border-radius: 2rem;
                         text-align: center;
-                        margin: -1.5rem 0rem 0rem 0.5rem;
+                        background: #FFD900;
+                        background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+                        display: flex; 
+                        flex-direction: column;
+                        align-items: center;
                         z-index: -1;
                         h3{
                             color:$clr-primario;
@@ -216,29 +217,39 @@ main{
                             font-weight: bold;
                             color: #fff;
                         }
+                        a{  
+                            font-size: 1.3rem;
+                            font-weight: bold;
+                            margin: 2rem;
+                            width: 70vw;
+                            padding: 0.5rem 1rem;
+                            outline: 1px solid rgb(255, 255, 255);
+                            border-radius: $radio-fuerte;
+                            cursor: pointer;
+                        }
                     }
                 }
             a{
                 button.pasos__btn{
-                display: block;
-                font-size: 1.5rem;
-                font-weight: bold;
-                text-transform: uppercase;
-                background-color: $clr-gris-medio;
-                color: $clr-primario-hover;
-                padding: 0.5rem 1.5rem;
-                border: 1px solid $clr-primario-hover;
-                border-radius:$radio-fuerte;
-                margin: 4rem auto;
-                transition: all 300ms ease-in-out;
-                    &:hover{
-                        border: 1px solid $clr-gris-claro;
-                        outline: 6px solid $clr-primario-hover;
-                        background-color: white;
-                        color: $clr-gris-medio;
-                    }
-                    }
-            }    
+                    width: 30vw;
+                    font-size: 1.2rem; 
+                    font-weight: bold;
+                    padding: 0.5rem 2rem;
+                    margin: 0rem auto 6rem auto;
+                    text-transform: uppercase;
+                    border: none; 
+                    outline: none;
+                    color: $clr-gris-oscuro;
+                    background-color: $clr-primario;
+                    border-radius: $radio-fuerte;
+                    cursor: pointer;
+                    transition: all 300ms ease-in-out;
+                        &:hover{
+                            background-color: $clr-primario-hover;
+                            transform: scale(1.05);
+                        }
+                    } 
+                }   
             }
         }
     }
