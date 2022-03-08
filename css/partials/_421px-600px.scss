@@ -69,6 +69,9 @@
             background-size: 160%;
             background-position:center -0.5%;
             margin-top: -75rem;
+            svg{   
+                margin-top: -84rem;
+            }
             section#home{ 
                 h1#titulo{ 
                         font-size: 3.4rem;
@@ -78,13 +81,12 @@
                         background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
-                    margin: 16rem auto 0rem auto;
+                    margin: 18rem auto 0rem auto;
                     width: 96%;
                     padding: 0.8rem;
                     border-radius: $radio-fuerte;
                     background-color: #ffffff80;
                     box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-                    border:4px solid $clr-secundario;
                     font-size: 1rem;
                     color: $clr-gris-oscuro;
                     i.home__martillo{
@@ -92,7 +94,7 @@
                         text-shadow: $clr-primario 0px 0px 4px;
                         font-size: 3.5rem;
                         margin-top: -2rem;
-                        margin-left: -1rem;
+                        margin-left: -1.4rem;
                     }
                     h2{
                         margin: -4.3rem 0rem 0rem 0rem;
@@ -103,6 +105,7 @@
                         color: white;
                         text-shadow: $clr-gris-oscuro 3px 3px 3px;
                         text-align: center;
+
                         }
                     }
                     h3{

@@ -40,6 +40,9 @@
             background-size: 120%;
             background-position:center 0%;
             margin-top: -74.7rem;
+            svg{   
+                margin-top: -96rem;
+            }
             section#home{   
                 h1#titulo{ 
                         font-size: 3.8rem;
@@ -55,7 +58,6 @@
                     border-radius: $radio-fuerte;
                     background-color: #ffffff80;
                     box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-                    border:4px solid $clr-secundario;
                     color: $clr-gris-oscuro;
                     i.home__martillo{
                         color: $clr-gris-oscuro;
@@ -64,7 +66,7 @@
                         margin-left: -1rem;
                     }
                     h2{
-                        margin: -5.6rem 0rem 0rem 0rem;
+                        margin: -2rem 0rem 0rem 0rem;
                         strong{
                             font-size: 3rem;
                             font-family: $fuente-1;
@@ -77,7 +79,7 @@
                     h3{
                         font-size: 1.2rem;
                         padding: 0;
-                        margin-top: 6rem;
+                        margin-top: 2rem;
                         color: $clr-gris-oscuro;
                         &:last-child{
                             margin-top: 2rem;

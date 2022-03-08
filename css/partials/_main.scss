@@ -1,6 +1,13 @@
 @import '../bases/_variables';
 
 main{
+    position:relative;
+    svg{
+        position:absolute;    
+        margin-top: -100rem;
+        z-index:10;
+        opacity: 80%;
+    }
     //-----BOTON IR ARRIBA----
     div.scroll__btn{
         position: fixed;
@@ -66,14 +73,16 @@ main{
                 background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
                 }
             div#comentario{
+                position: relative;
                 margin: 25rem 0rem 0rem 0.75rem;
                 width: 98%;
                 padding: 2rem;
                 border-radius:$radio-fuerte;
                 background-color: #ffd90013;
                 box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
-                border:6px solid $clr-secundario;
-    
+                backdrop-filter: blur(0.1rem);
+                border: 1px solid rgba(255, 255, 255, 0.363);
+                z-index: 100;
                 i.home__martillo{
                     font-size: 6rem;
                     color: $clr-gris-oscuro;
@@ -122,7 +131,7 @@ main{
                     width: 65%;
                     background-color: transparent;
                     border: 6px solid $clr-primario-hover;
-    
+                    z-index: 100;
                 i{
                     position: absolute;
                     margin-left: -4rem;
