@@ -173,16 +173,16 @@ main.sobre__nos{
         strong{font-size: 1.2rem;
             color: $clr-gris-oscuro;}
     }
-    div.contenedor__nos{
+    section.contenedor__nos{
         div.contenedor__anidado{
-            div.nos__tarjeta{
+            article.nos__tarjeta{
                 width: 24rem;
             }
         }
     }
     p{text-align: center;
         padding: 0.5rem;}
-    div.contenedor__tecnologia{
+    section.contenedor__tecnologia{
         display: flex;
         flex-direction: column;
         align-items: center;

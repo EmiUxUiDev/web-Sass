@@ -170,7 +170,6 @@ main {
 
 main svg {
   position: absolute;
-  margin-top: -100rem;
   z-index: 10;
   opacity: 80%;
 }
@@ -380,7 +379,7 @@ main.inicio section#home div.home__card2 h3 {
   text-align: center;
 }
 
-main.inicio section div.pasos__contenedor {
+main.inicio section.pasos div.pasos__contenedor {
   margin: 0rem auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -393,7 +392,7 @@ main.inicio section div.pasos__contenedor {
       flex-wrap: wrap;
 }
 
-main.inicio section div.pasos__contenedor h2 {
+main.inicio section.pasos div.pasos__contenedor h2 {
   margin-top: 4rem;
   font-size: 6rem;
   color: #ffd900;
@@ -407,7 +406,7 @@ main.inicio section div.pasos__contenedor h2 {
   text-transform: capitalize;
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,21 +420,21 @@ main.inicio section div.pasos__contenedor div.pasos__card {
   margin: 0.8rem 0rem 4rem 0rem;
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card img#primerimg {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
   width: 45vw;
   margin-bottom: -2.5rem;
   -webkit-filter: drop-shadow(5px 5px 5px #7a7a7a);
           filter: drop-shadow(5px 5px 5px #7a7a7a);
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card img {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card img {
   width: 45vw;
   margin-bottom: -2rem;
   -webkit-filter: drop-shadow(5px 5px 5px #7a7a7a);
           filter: drop-shadow(5px 5px 5px #7a7a7a);
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card div {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div {
   width: 90vw;
   margin: 0rem auto 2rem auto;
   padding: 1.5rem 0rem;
@@ -456,7 +455,7 @@ main.inicio section div.pasos__contenedor div.pasos__card div {
   z-index: -1;
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card div h3 {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div h3 {
   color: #ffe656;
   text-shadow: #414141 1px 1px 5px;
   font-size: 2.4rem;
@@ -464,7 +463,7 @@ main.inicio section div.pasos__contenedor div.pasos__card div h3 {
   padding: 1.5rem 2rem;
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card div p {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div p {
   padding: 0.25rem 2rem;
   font-size: 1.4rem;
   line-height: 1.6rem;
@@ -472,24 +471,31 @@ main.inicio section div.pasos__contenedor div.pasos__card div p {
   color: #fff;
 }
 
-main.inicio section div.pasos__contenedor div.pasos__card div a {
-  font-size: 1.3rem;
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
   font-weight: bold;
-  margin: 2rem;
-  width: 70vw;
-  padding: 0.5rem 1rem;
-  outline: 1px solid white;
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+  background-color: #ffe656;
   border-radius: 2rem;
+  font-size: 1.1rem;
   cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
-main.inicio section div.pasos__contenedor a button.pasos__btn {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div a:hover {
+  background-color: #ffd900;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
   width: 30vw;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0.5rem 2rem;
   margin: 0rem auto 6rem auto;
-  text-transform: uppercase;
   border: none;
   outline: none;
   color: #414141;
@@ -500,7 +506,7 @@ main.inicio section div.pasos__contenedor a button.pasos__btn {
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section div.pasos__contenedor a button.pasos__btn:hover {
+main.inicio section.pasos div.pasos__contenedor a button.pasos__btn:hover {
   background-color: #ffd900;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -518,7 +524,7 @@ main.sobre__nos h2 {
   margin: 2rem auto;
 }
 
-main.sobre__nos div.contenedor__nos {
+main.sobre__nos section.contenedor__nos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,7 +539,7 @@ main.sobre__nos div.contenedor__nos {
   border-radius: 2rem;
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,7 +550,7 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado {
       flex-wrap: wrap;
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta {
   position: relative;
   min-height: 25rem;
   width: 17.8rem;
@@ -560,28 +566,28 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
   transition: all 500ms ease-in-out;
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta:hover {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta:hover {
   -webkit-transform: scale(1.02) rotate(0.5deg);
           transform: scale(1.02) rotate(0.5deg);
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url1 {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url1 {
   background-image: url(../multimedia/img/la-cañada-light.jpg);
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url2 {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url2 {
   background-image: url(../multimedia/img/estudio-de-arquitectura2.jpg);
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url3 {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url3 {
   background-image: url(../multimedia/img/charla.jpg);
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.url4 {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url4 {
   background-image: url(../multimedia/img/croquis.jpg);
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div.img-fondo {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.img-fondo {
   position: absolute;
   height: 35%;
   width: 100%;
@@ -589,7 +595,7 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta div
   background-size: cover;
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta h2 {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta h2 {
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
@@ -597,19 +603,25 @@ main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta h2 
   margin-top: 13rem;
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta p {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta p {
   font-size: 1rem;
   font-weight: 500;
   margin: 0rem 0.5rem;
 }
 
-main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta hr {
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta em {
+  font-size: 0.95rem;
+  color: #414141;
+  font-weight: 500;
+}
+
+main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta hr {
   width: 80%;
   border-top: 1px solid #ffd900;
   margin: 0.25rem auto;
 }
 
-main.sobre__nos div.contenedor__tecnologia {
+main.sobre__nos section.contenedor__tecnologia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -622,16 +634,16 @@ main.sobre__nos div.contenedor__tecnologia {
           align-items: center;
 }
 
-main.sobre__nos div.contenedor__tecnologia h2 {
+main.sobre__nos section.contenedor__tecnologia h2 {
   text-transform: uppercase;
   color: #414141;
 }
 
-main.sobre__nos div.contenedor__tecnologia p {
+main.sobre__nos section.contenedor__tecnologia p {
   font-weight: 500;
 }
 
-main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+main.sobre__nos section.contenedor__tecnologia div.tecnologia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -645,7 +657,7 @@ main.sobre__nos div.contenedor__tecnologia div.tecnologia {
   border-radius: 2rem;
 }
 
-main.sobre__nos div.contenedor__tecnologia div.tecnologia div img {
+main.sobre__nos section.contenedor__tecnologia div.tecnologia div img {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   -webkit-transition: all 300ms ease-in-out 0ms;
@@ -658,22 +670,22 @@ main.sobre__nos div.contenedor__tecnologia div.tecnologia div img {
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.sobre__nos div.contenedor__tecnologia div.tecnologia div img:nth-child(even) {
+main.sobre__nos section.contenedor__tecnologia div.tecnologia div img:nth-child(even) {
   width: 250px;
 }
 
-main.sobre__nos div.contenedor__tecnologia div.tecnologia div img:hover {
+main.sobre__nos section.contenedor__tecnologia div.tecnologia div img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
 
-main.sobre__nos div.contenedor__tecnologia div.tecnologia div img#first {
+main.sobre__nos section.contenedor__tecnologia div.tecnologia div img#first {
   margin-bottom: -1rem;
 }
 
-main.sobre__nos div.contenedor__tecnologia div.tecnologia div p {
+main.sobre__nos section.contenedor__tecnologia div.tecnologia div p {
   font-size: 0.8rem;
   font-family: monospace;
   text-transform: uppercase;
@@ -682,7 +694,7 @@ main.sobre__nos div.contenedor__tecnologia div.tecnologia div p {
   display: block;
 }
 
-main.sobre__nos div.contenedor__tecnologia p:nth-child(6) {
+main.sobre__nos section.contenedor__tecnologia p:nth-child(6) {
   color: #ff156f;
   margin-top: 0.35rem;
   margin-bottom: 3rem;
@@ -724,8 +736,8 @@ main div.contenedor--p2 div.primer__flex h2 {
   margin: 2rem 0rem;
 }
 
-main div.contenedor__pasos--p2 {
-  background-color: rgba(0, 0, 0, 0.301);
+main section.contenedor__pasos--p2 {
+  background-color: rgba(0, 0, 0, 0.25);
   min-height: 42rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,7 +754,7 @@ main div.contenedor__pasos--p2 {
           align-items: center;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 {
+main section.contenedor__pasos--p2 div.fila--p2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,7 +766,7 @@ main div.contenedor__pasos--p2 div.fila--p2 {
   min-width: 100vw;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 {
+main section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 {
   position: relative;
   width: 500PX;
   height: 250PX;
@@ -770,7 +782,7 @@ main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 {
   border-bottom: 2px solid #ffd900;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 h3#num-grande {
+main section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 h3#num-grande {
   position: absolute;
   top: -5rem;
   left: -1.5rem;
@@ -779,78 +791,78 @@ main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 h3#num-grande {
   text-shadow: #ffd900 3px -2px 1px;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 img {
+main section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 img {
   width: 250px;
   padding: 0.5rem;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div {
+main section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 div {
   width: 250px;
   padding: 0.5rem;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div h3 {
+main section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 div h3 {
   text-align: center;
   font-size: 1.5rem;
   color: #414141;
 }
 
-main div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div p {
+main section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 div p {
   text-align: center;
   margin-top: 1rem;
   font-weight: bold;
   color: #414141;
 }
 
-main h2 {
+main section.recibir h2 {
   margin: 2rem;
   font-size: 1.8rem;
 }
 
-main h2 strong {
+main section.recibir h2 strong {
   font-size: 1.8rem;
   color: #414141;
 }
 
-main hr {
+main section.recibir hr {
   width: 90vw;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin: 0rem auto;
   border-top: 5px solid #ffd90075;
   margin-bottom: 1.5rem;
 }
 
-main ul li {
+main section.recibir ul li {
   padding: 0.5rem;
   text-transform: uppercase;
 }
 
-main ul li:last-child {
+main section.recibir ul li:last-child {
   margin-bottom: 1.5rem;
 }
 
-main section.galeria__tec, main section.galeria__renders {
-  background-color: rgba(0, 0, 0, 0.3);
+main section.recibir article.galeria__tec, main section.recibir article.galeria__renders {
+  padding-top: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
-main section.galeria__tec h2 strong, main section.galeria__renders h2 strong {
-  color: #414141;
+main section.recibir article.galeria__tec h2 strong, main section.recibir article.galeria__renders h2 strong {
+  color: #fff;
+  text-shadow: 1px 1px 1px #414141;
 }
 
-main section.galeria__tec p, main section.galeria__renders p {
+main section.recibir article.galeria__tec p, main section.recibir article.galeria__renders p {
   color: black;
-  font-weight: bold;
+  font-weight: 600;
   padding-bottom: 1rem;
 }
 
-main section.galeria__tec div.grid__tec, main section.galeria__tec div.grid__renders, main section.galeria__renders div.grid__tec, main section.galeria__renders div.grid__renders {
+main section.recibir article.galeria__tec div.grid__tec, main section.recibir article.galeria__tec div.grid__renders, main section.recibir article.galeria__renders div.grid__tec, main section.recibir article.galeria__renders div.grid__renders {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 90%;
-  margin: 0.5rem auto 4rem auto;
+  margin: 1rem auto 4rem auto;
   grid-gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -859,11 +871,11 @@ main section.galeria__tec div.grid__tec, main section.galeria__tec div.grid__ren
   border-radius: 1rem;
 }
 
-main section.galeria__tec div.grid__tec a, main section.galeria__tec div.grid__renders a, main section.galeria__renders div.grid__tec a, main section.galeria__renders div.grid__renders a {
+main section.recibir article.galeria__tec div.grid__tec a, main section.recibir article.galeria__tec div.grid__renders a, main section.recibir article.galeria__renders div.grid__tec a, main section.recibir article.galeria__renders div.grid__renders a {
   display: block;
   position: relative;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
@@ -871,13 +883,13 @@ main section.galeria__tec div.grid__tec a, main section.galeria__tec div.grid__r
   transition: all 300ms ease-in-out 0ms;
 }
 
-main section.galeria__tec div.grid__tec a:hover, main section.galeria__tec div.grid__renders a:hover, main section.galeria__renders div.grid__tec a:hover, main section.galeria__renders div.grid__renders a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+main section.recibir article.galeria__tec div.grid__tec a:hover, main section.recibir article.galeria__tec div.grid__renders a:hover, main section.recibir article.galeria__renders div.grid__tec a:hover, main section.recibir article.galeria__renders div.grid__renders a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   z-index: 100;
 }
 
-main section.galeria__tec div.grid__tec a p, main section.galeria__tec div.grid__renders a p, main section.galeria__renders div.grid__tec a p, main section.galeria__renders div.grid__renders a p {
+main section.recibir article.galeria__tec div.grid__tec a p, main section.recibir article.galeria__tec div.grid__renders a p, main section.recibir article.galeria__renders div.grid__tec a p, main section.recibir article.galeria__renders div.grid__renders a p {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: #fff;
@@ -885,7 +897,7 @@ main section.galeria__tec div.grid__tec a p, main section.galeria__tec div.grid_
   letter-spacing: 0.05rem;
 }
 
-main section.galeria__tec div.grid__tec img, main section.galeria__tec div.grid__renders img, main section.galeria__renders div.grid__tec img, main section.galeria__renders div.grid__renders img {
+main section.recibir article.galeria__tec div.grid__tec img, main section.recibir article.galeria__tec div.grid__renders img, main section.recibir article.galeria__renders div.grid__tec img, main section.recibir article.galeria__renders div.grid__renders img {
   width: 100%;
   max-width: 400px;
   vertical-align: top;
@@ -896,7 +908,7 @@ main section.galeria__tec div.grid__tec img, main section.galeria__tec div.grid_
   transition: transform 500ms ease-in-out 0s, -webkit-transform 500ms ease-in-out 0s;
 }
 
-main section.galeria__tec article.light-box, main section.galeria__renders article.light-box {
+main section.recibir article.galeria__tec div.light-box, main section.recibir article.galeria__renders div.light-box {
   position: fixed;
   top: 0;
   left: 0;
@@ -919,16 +931,16 @@ main section.galeria__tec article.light-box, main section.galeria__renders artic
   transition: all 300ms ease-in-out 0s;
 }
 
-main section.galeria__tec article.light-box:target, main section.galeria__renders article.light-box:target {
+main section.recibir article.galeria__tec div.light-box:target, main section.recibir article.galeria__renders div.light-box:target {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-main section.galeria__tec article.light-box a, main section.galeria__renders article.light-box a {
+main section.recibir article.galeria__tec div.light-box a, main section.recibir article.galeria__renders div.light-box a {
   margin: 0rem 1.5rem;
 }
 
-main section.galeria__tec article.light-box .light__cerrar, main section.galeria__renders article.light-box .light__cerrar {
+main section.recibir article.galeria__tec div.light-box .light__cerrar, main section.recibir article.galeria__renders div.light-box .light__cerrar {
   display: block;
   position: absolute;
   top: 3rem;
@@ -944,7 +956,7 @@ main section.galeria__tec article.light-box .light__cerrar, main section.galeria
   cursor: pointer;
 }
 
-main section.galeria__tec article.light-box .light__proxima, main section.galeria__renders article.light-box .light__proxima {
+main section.recibir article.galeria__tec div.light-box .light__proxima, main section.recibir article.galeria__renders div.light-box .light__proxima {
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
@@ -957,47 +969,47 @@ main section.galeria__tec article.light-box .light__proxima, main section.galeri
   cursor: pointer;
 }
 
-main div.contenedor__tiendas div {
+main section.contenedor__tiendas div {
   width: 80vw;
   margin: 0.5rem auto;
 }
 
-main div.contenedor__tiendas div h2 {
+main section.contenedor__tiendas div h2 {
   margin: 2rem;
   font-size: 1.8rem;
 }
 
-main div.contenedor__tiendas div h2 strong {
+main section.contenedor__tiendas div h2 strong {
   font-size: 1.8rem;
   color: #414141;
 }
 
-main div.contenedor__tiendas div p {
+main section.contenedor__tiendas div p {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 2rem;
 }
 
-main div.contenedor__tiendas div p#obs {
+main section.contenedor__tiendas div p#obs {
   font-size: 1rem;
   margin-top: 8rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-main div.contenedor__tiendas div hr {
+main section.contenedor__tiendas div hr {
   width: 80%;
   margin: 0 auto;
   border-top: 1px dotted #ff156f;
 }
 
-main div.contenedor__tiendas div strong {
+main section.contenedor__tiendas div strong {
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   color: #ff156f;
 }
 
-main div.contenedor__tiendas div.imagenes {
+main section.contenedor__tiendas div.imagenes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1012,7 +1024,7 @@ main div.contenedor__tiendas div.imagenes {
   width: 80vw;
 }
 
-main div.contenedor__tiendas div.imagenes img {
+main section.contenedor__tiendas div.imagenes img {
   width: 6rem;
   margin: 2rem 0.8rem 2rem 0.8rem;
 }
@@ -1961,7 +1973,7 @@ footer div.right p {
     margin-top: -75rem;
   }
   body main.inicio svg {
-    margin-top: -84rem;
+    margin-top: -92rem;
   }
   body main.inicio section#home h1#titulo {
     font-size: 2.8rem;
@@ -2082,14 +2094,14 @@ footer div.right p {
     font-size: 1.2rem;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__nos {
+  body main.sobre__nos section.contenedor__nos {
     margin: 1.5rem 0rem;
     border: 6px solid #7a7a7a;
   }
-  body main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta h2 {
+  body main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta h2 {
     margin-bottom: 0;
   }
-  body main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta p {
+  body main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta p {
     font-size: 1.1rem;
     font-weight: 600;
   }
@@ -2098,44 +2110,34 @@ footer div.right p {
     padding: 0.5rem;
     margin-bottom: 1rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia {
     width: 80vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div {
     text-align: center;
     margin-left: -0.8rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div:last-child {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div:last-child {
     margin-bottom: 2rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div:last-child img {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div:last-child img {
     width: 75%;
   }
-  body main.sobre__nos div.contenedor__tecnologia p {
+  body main.sobre__nos section.contenedor__tecnologia p {
     width: 80vw;
     text-align: center;
     margin: 1rem 0rem;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__tecnologia p em {
+  body main.sobre__nos section.contenedor__tecnologia p em {
     font-weight: 600;
   }
   body main.como__funciona {
     margin-top: -74rem;
-  }
-  body main.como__funciona div.contenedor--p2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
   }
   body main.como__funciona div.contenedor--p2 div.primer__flex h1 {
     margin: 0rem auto;
@@ -2147,24 +2149,14 @@ footer div.right p {
     font-size: 1.2rem;
     color: #414141;
   }
-  body main.como__funciona div.contenedor__pasos--p2 {
+  body main.como__funciona section.contenedor__pasos--p2 {
     min-height: 60rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 {
-    width: 260PX;
+  body main.como__funciona section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 {
+    width: 240PX;
     height: auto;
     margin: 3.5rem 1rem 2rem 1rem;
     display: -webkit-box;
@@ -2178,48 +2170,54 @@ footer div.right p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 img {
+  body main.como__funciona section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 img {
     width: 220px;
     padding: 0.5rem;
   }
-  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div {
+  body main.como__funciona section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 div {
     width: 250px;
     padding: 0.5rem;
   }
-  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div h3 {
+  body main.como__funciona section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 div h3 {
     text-align: center;
     font-size: 1.5rem;
     color: #414141;
   }
-  body main.como__funciona div.contenedor__pasos--p2 div.fila--p2 div.pasos__card--p2 div p {
+  body main.como__funciona section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 div p {
     text-align: center;
-    margin-top: 1rem;
+    margin: 1rem;
     font-weight: bold;
     color: #414141;
   }
   body main.como__funciona p {
     padding: 0rem 0.25rem;
   }
-  body main.como__funciona ul li {
+  body main.como__funciona section.recibir ul li {
     font-size: 1rem;
     padding: 0.4rem;
     text-transform: uppercase;
   }
-  body main.como__funciona ul li:last-child {
+  body main.como__funciona section.recibir ul li:last-child {
     margin-bottom: 1.5rem;
   }
-  body main.como__funciona section.galeria__tec div.grid__tec, body main.como__funciona section.galeria__tec div.grid__renders, body main.como__funciona section.galeria__renders div.grid__tec, body main.como__funciona section.galeria__renders div.grid__renders {
+  body main.como__funciona section.recibir article.galeria__tec, body main.como__funciona section.recibir article.galeria__renders {
+    padding-bottom: 0.1rem;
+  }
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
     -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 95%;
-    margin: 1rem auto 4rem auto;
-    grid-gap: 2rem;
     padding: 1.5rem 0.25rem;
+    grid-gap: 3.5rem;
   }
-  body main.como__funciona section.galeria__tec div.grid__tec a img, body main.como__funciona section.galeria__tec div.grid__renders a img, body main.como__funciona section.galeria__renders div.grid__tec a img, body main.como__funciona section.galeria__renders div.grid__renders a img {
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a img, body main.como__funciona section.recibir article.galeria__tec div.grid__renders a img, body main.como__funciona section.recibir article.galeria__renders div.grid__tec a img, body main.como__funciona section.recibir article.galeria__renders div.grid__renders a img {
+    margin-top: 0.5rem;
     max-width: 300px;
   }
-  body main.como__funciona section.galeria__tec article.light-box:target, body main.como__funciona section.galeria__renders article.light-box:target {
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a p, body main.como__funciona section.recibir article.galeria__tec div.grid__renders a p, body main.como__funciona section.recibir article.galeria__renders div.grid__tec a p, body main.como__funciona section.recibir article.galeria__renders div.grid__renders a p {
+    padding-bottom: 0;
+  }
+  body main.como__funciona section.recibir article.galeria__tec div.light-box:target, body main.como__funciona section.recibir article.galeria__renders div.light-box:target {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
@@ -2688,12 +2686,7 @@ footer div.right p {
     font-weight: 500;
     padding: 1rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div p:last-child a {
-    font-size: 1.3rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card a button.pasos__btn {
     width: 70vw;
   }
   body main.sobre__nos {
@@ -2709,40 +2702,40 @@ footer div.right p {
     font-size: 1.2rem;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
+  body main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta {
     width: 22rem;
   }
   body main.sobre__nos p {
     text-align: center;
     padding: 0.5rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia {
     width: 60vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div {
     text-align: center;
     margin-left: -0.8rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div:last-child {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div:last-child {
     margin-bottom: 2rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div:last-child img {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div:last-child img {
     width: 45%;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia div img {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia div img {
     width: 50%;
   }
-  body main.sobre__nos div.contenedor__tecnologia p {
+  body main.sobre__nos section.contenedor__tecnologia p {
     width: 80vw;
     text-align: center;
     margin: 0.5rem 0rem;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__tecnologia p em {
+  body main.sobre__nos section.contenedor__tecnologia p em {
     font-weight: 600;
   }
   body main.como__funciona {
@@ -3237,14 +3230,14 @@ footer div.right p {
     font-size: 1.2rem;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
+  body main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta {
     width: 24rem;
   }
   body main.sobre__nos p {
     text-align: center;
     padding: 0.5rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia {
+  body main.sobre__nos section.contenedor__tecnologia {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3256,18 +3249,18 @@ footer div.right p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body main.sobre__nos div.contenedor__tecnologia h2 {
+  body main.sobre__nos section.contenedor__tecnologia h2 {
     text-transform: uppercase;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__tecnologia p {
+  body main.sobre__nos section.contenedor__tecnologia p {
     font-weight: 500;
     text-align: center;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia {
     margin: 2rem 1rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia p:nth-child(6) {
+  body main.sobre__nos section.contenedor__tecnologia p:nth-child(6) {
     color: #ff156f;
     margin-top: 1.5rem;
     margin-bottom: 3rem;
@@ -3726,14 +3719,14 @@ footer div.right p {
   body main.sobre__nos h2 strong {
     font-size: 1.2rem;
   }
-  body main.sobre__nos div.contenedor__nos div.contenedor__anidado div.nos__tarjeta {
+  body main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta {
     width: 24rem;
   }
   body main.sobre__nos p {
     text-align: center;
     padding: 0.5rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia {
+  body main.sobre__nos section.contenedor__tecnologia {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3745,18 +3738,18 @@ footer div.right p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body main.sobre__nos div.contenedor__tecnologia h2 {
+  body main.sobre__nos section.contenedor__tecnologia h2 {
     text-transform: uppercase;
     color: #414141;
   }
-  body main.sobre__nos div.contenedor__tecnologia p {
+  body main.sobre__nos section.contenedor__tecnologia p {
     font-weight: 500;
     text-align: center;
   }
-  body main.sobre__nos div.contenedor__tecnologia div.tecnologia {
+  body main.sobre__nos section.contenedor__tecnologia div.tecnologia {
     margin: 2rem 1rem;
   }
-  body main.sobre__nos div.contenedor__tecnologia p:nth-child(6) {
+  body main.sobre__nos section.contenedor__tecnologia p:nth-child(6) {
     color: #ff156f;
     margin-top: 1.5rem;
     margin-bottom: 3rem;

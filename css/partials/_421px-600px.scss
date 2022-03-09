@@ -174,14 +174,8 @@
                                     font-size: 1.1rem;
                                     font-weight: 500;
                                     padding: 1rem;
-                                    a{  
-                                        font-size: 1.3rem;
-                                        font-weight: bold;
-                                        cursor: pointer;
-                                    }
                                 }
                             }
-                        }
                     }
                     a{
                         button.pasos__btn{
@@ -191,7 +185,7 @@
                 }
             }
         }
-
+    }
     // --------------------------------
     // --- PAGINA SOBRE NOSOTROS-------
     // --------------------------------    
@@ -208,16 +202,16 @@
             strong{font-size: 1.2rem;
                 color: $clr-gris-oscuro;}
         }
-        div.contenedor__nos{
+        section.contenedor__nos{
             div.contenedor__anidado{
-                div.nos__tarjeta{
+                article.nos__tarjeta{
                     width: 22rem;
                 }
             }
         }
         p{text-align: center;
         padding: 0.5rem;}
-        div.contenedor__tecnologia{
+        section.contenedor__tecnologia{
             div.tecnologia{
                 width: 60vw;
                 flex-direction: column;

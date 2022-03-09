@@ -73,7 +73,7 @@ body{
         background-position:center -0.5%;
         margin-top: -75rem;
         svg{   
-            margin-top: -84rem;
+            margin-top: -92rem;
         }
         section#home{
             h1#titulo{
@@ -107,8 +107,6 @@ body{
                         color: $clr-gris-oscuro;
                         text-align: center;
                         text-shadow: #fff 0px 0px 2px;
-                        // background: linear-gradient(-90deg, rgba(56, 56, 56, 0.301) 70%, rgba(211, 211, 211, 0.288)80%); 
-                        // border-radius: $radio-medio;
                     }
                 }
                 h3{
@@ -208,11 +206,11 @@ body{
             strong{font-size: 1.2rem;
                 color: $clr-gris-oscuro;}
         }
-            div.contenedor__nos{
+            section.contenedor__nos{
                 margin: 1.5rem 0rem;
                 border: 6px solid $clr-gris-medio;
                 div.contenedor__anidado{
-                    div.nos__tarjeta{
+                    article.nos__tarjeta{
                         h2{
                             margin-bottom: 0;
                         }
@@ -228,7 +226,7 @@ body{
             padding: 0.5rem;
             margin-bottom: 1rem;
         }
-        div.contenedor__tecnologia{
+        section.contenedor__tecnologia{
             div.tecnologia{
                 width: 80vw;
                 flex-direction: column;
@@ -263,12 +261,7 @@ body{
     main.como__funciona{
         margin-top: -74rem;
         div.contenedor--p2{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            
-            div.primer__flex{
-                
+            div.primer__flex{  
             h1{ 
                 margin: 0rem auto; 
                 padding: 0rem;
@@ -281,15 +274,12 @@ body{
                 }  
             }
         }
-        div.contenedor__pasos--p2{
+        section.contenedor__pasos--p2{
             min-height: 60rem;
-            display: flex;
-            flex-direction: column;
             justify-content: space-evenly; 
-            align-items: center;
             div.fila--p2{
-                div.pasos__card--p2{
-                    width: 260PX;
+                article.pasos__card--p2{
+                    width: 240PX;
                     height: auto;
                     margin: 3.5rem 1rem 2rem 1rem;
                     display: flex;
@@ -309,7 +299,7 @@ body{
                         }
                         p{
                             text-align: center; 
-                            margin-top: 1rem;
+                            margin: 1rem;
                             font-weight: bold; 
                             color: $clr-gris-oscuro;
                         }
@@ -321,34 +311,41 @@ body{
         p{
             padding: 0rem 0.25rem;
         }
-        ul{
-            li{
-                font-size: 1rem;
-                padding: 0.4rem;
-                text-transform: uppercase;
-                &:last-child{margin-bottom: 1.5rem;}
+        section.recibir{
+            ul{
+                li{
+                    font-size: 1rem;
+                    padding: 0.4rem;
+                    text-transform: uppercase;
+                    &:last-child{margin-bottom: 1.5rem;}
+                }
             }
-        }
-        section.galeria__tec, section.galeria__renders{
-            div.grid__tec, div.grid__renders {
-                grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-                width: 95%;
-                margin:1rem auto 4rem auto;
-                grid-gap: 2rem;
-                padding: 1.5rem 0.25rem;
-                a{
-                    img{
-                        max-width: 300px;
+            article.galeria__tec, article.galeria__renders{
+                padding-bottom: 0.1rem ;
+                div.grid__tec, div.grid__renders {
+                    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+                    width: 95%;
+                    padding: 1.5rem 0.25rem;
+                    grid-gap: 3.5rem;
+                    a{
+                        img{
+                            margin-top: 0.5rem;
+                            max-width: 300px;
+                        }
+                        p{
+                            padding-bottom: 0;
+                        }
                     }
                 }
-            }
-            article.light-box{
-                &:target{
-                    transform: scale(0);
+                div.light-box{
+                    &:target{
+                        transform: scale(0);
+                    }
+                    
                 }
-                
             }
         }
+
     
         div.contenedor__tiendas{
             
