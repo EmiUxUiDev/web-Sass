@@ -255,7 +255,66 @@ main.inicio {
   background-repeat: no-repeat;
 }
 
-main.inicio section#home h1#titulo {
+main.inicio div.whatsapp {
+  top: 27rem;
+  left: 78rem;
+  position: fixed;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  background-color: #25d36542;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1000;
+  -webkit-animation: onda 3s ease-in-out 5s infinite;
+          animation: onda 3s ease-in-out 5s infinite;
+}
+
+main.inicio div.whatsapp div.whatsapp__chico {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: #25d365;
+}
+
+main.inicio div.whatsapp a svg.wp {
+  margin-top: 0.75rem;
+  margin-left: 0.75rem;
+  color: #fff;
+}
+
+@-webkit-keyframes onda {
+  0% {
+    background-color: #25d36542;
+  }
+  50% {
+    background-color: #25d36580;
+  }
+  100% {
+    background-color: #25d36542;
+  }
+}
+
+@keyframes onda {
+  0% {
+    background-color: #25d36542;
+  }
+  50% {
+    background-color: #25d36580;
+  }
+  100% {
+    background-color: #25d36542;
+  }
+}
+
+section#home h1#titulo {
   text-align: center;
   font-size: 5.8rem;
   padding: 0.8rem;
@@ -264,7 +323,7 @@ main.inicio section#home h1#titulo {
   background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%);
 }
 
-main.inicio section#home div#comentario {
+section#home div#comentario {
   position: relative;
   margin: 25rem 0rem 0rem 0.75rem;
   width: 98%;
@@ -279,7 +338,7 @@ main.inicio section#home div#comentario {
   z-index: 100;
 }
 
-main.inicio section#home div#comentario i.home__martillo {
+section#home div#comentario i.home__martillo {
   font-size: 6rem;
   color: #414141;
   margin-top: -3rem;
@@ -330,7 +389,7 @@ main.inicio section#home div#comentario i.home__martillo {
   }
 }
 
-main.inicio section#home div#comentario h2 {
+section#home div#comentario h2 {
   font-size: 3rem;
   text-shadow: #414141 3px 3px 3px;
   font-family: "Quicksand", sans-serif;
@@ -340,14 +399,14 @@ main.inicio section#home div#comentario h2 {
   margin: 2rem 0rem 3rem 0rem;
 }
 
-main.inicio section#home div#comentario h3 {
+section#home div#comentario h3 {
   color: #414141;
   padding: 1rem 5rem;
   font-size: 1.4rem;
   text-align: center;
 }
 
-main.inicio section#home div.home__card2 {
+section#home div.home__card2 {
   position: relative;
   margin: 6rem auto 0rem auto;
   background-color: transparent;
@@ -359,7 +418,7 @@ main.inicio section#home div.home__card2 {
   z-index: 100;
 }
 
-main.inicio section#home div.home__card2 i {
+section#home div.home__card2 i {
   position: absolute;
   margin-left: -4rem;
   margin-top: -2rem;
@@ -371,7 +430,7 @@ main.inicio section#home div.home__card2 i {
           transform: rotate(-15deg);
 }
 
-main.inicio section#home div.home__card2 h3 {
+section#home div.home__card2 h3 {
   padding: 0.5rem;
   font-family: "Quicksand", sans-serif;
   font-size: 2.5rem;
@@ -379,7 +438,7 @@ main.inicio section#home div.home__card2 h3 {
   text-align: center;
 }
 
-main.inicio section.pasos div.pasos__contenedor {
+section.pasos div.pasos__contenedor {
   margin: 0rem auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -392,7 +451,7 @@ main.inicio section.pasos div.pasos__contenedor {
       flex-wrap: wrap;
 }
 
-main.inicio section.pasos div.pasos__contenedor h2 {
+section.pasos div.pasos__contenedor h2 {
   margin-top: 4rem;
   font-size: 6rem;
   color: #ffd900;
@@ -406,7 +465,7 @@ main.inicio section.pasos div.pasos__contenedor h2 {
   text-transform: capitalize;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card {
+section.pasos div.pasos__contenedor div.pasos__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,21 +479,21 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card {
   margin: 0.8rem 0rem 4rem 0rem;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
+section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
   width: 45vw;
   margin-bottom: -2.5rem;
   -webkit-filter: drop-shadow(5px 5px 5px #7a7a7a);
           filter: drop-shadow(5px 5px 5px #7a7a7a);
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card img {
+section.pasos div.pasos__contenedor div.pasos__card img {
   width: 45vw;
   margin-bottom: -2rem;
   -webkit-filter: drop-shadow(5px 5px 5px #7a7a7a);
           filter: drop-shadow(5px 5px 5px #7a7a7a);
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div {
+section.pasos div.pasos__contenedor div.pasos__card div {
   width: 90vw;
   margin: 0rem auto 2rem auto;
   padding: 1.5rem 0rem;
@@ -455,7 +514,7 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div {
   z-index: -1;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div h3 {
+section.pasos div.pasos__contenedor div.pasos__card div h3 {
   color: #ffe656;
   text-shadow: #414141 1px 1px 5px;
   font-size: 2.4rem;
@@ -463,7 +522,7 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div h3 {
   padding: 1.5rem 2rem;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div p {
+section.pasos div.pasos__contenedor div.pasos__card div p {
   padding: 0.25rem 2rem;
   font-size: 1.4rem;
   line-height: 1.6rem;
@@ -471,7 +530,7 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div p {
   color: #fff;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
+section.pasos div.pasos__contenedor div.pasos__card div a {
   font-weight: bold;
   padding: 0.5rem 2rem;
   border: none;
@@ -484,13 +543,13 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div a:hover {
+section.pasos div.pasos__contenedor div.pasos__card div a:hover {
   background-color: #ffd900;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
+section.pasos div.pasos__contenedor a button.pasos__btn {
   width: 30vw;
   font-size: 1.2rem;
   font-weight: bold;
@@ -506,7 +565,7 @@ main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section.pasos div.pasos__contenedor a button.pasos__btn:hover {
+section.pasos div.pasos__contenedor a button.pasos__btn:hover {
   background-color: #ffd900;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -1071,7 +1130,7 @@ main.contenedor__p3 div.titulo--p3 p input i {
   cursor: pointer;
 }
 
-main.contenedor__p3 div.contenedor__grid {
+main.contenedor__p3 section.contenedor__grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (24rem)[auto-fit];
@@ -1083,7 +1142,7 @@ main.contenedor__p3 div.contenedor__grid {
   margin: 3rem 0rem;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card {
+main.contenedor__p3 section.contenedor__grid article.grid__card {
   overflow: auto;
   background-color: #fff;
   border-radius: 1rem;
@@ -1094,14 +1153,14 @@ main.contenedor__p3 div.contenedor__grid div.grid__card {
           box-shadow: #7a7a7a 0px 1px 3px;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card p {
+main.contenedor__p3 section.contenedor__grid article.grid__card p {
   color: #7a7a7a;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card h2 {
+main.contenedor__p3 section.contenedor__grid article.grid__card h2 {
   color: #414141;
   text-align: left;
   margin-left: 0rem;
@@ -1110,26 +1169,26 @@ main.contenedor__p3 div.contenedor__grid div.grid__card h2 {
   font-size: 1.3rem;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card iframe {
+main.contenedor__p3 section.contenedor__grid article.grid__card iframe {
   height: 250px;
   width: 100%;
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card a {
+main.contenedor__p3 section.contenedor__grid article.grid__card a {
   display: block;
   text-decoration: none;
   font-weight: bold;
   margin: 1rem 0rem;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card i {
+main.contenedor__p3 section.contenedor__grid article.grid__card i {
   font-size: 0.8rem;
   margin-left: 0.5rem;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card div {
+main.contenedor__p3 section.contenedor__grid article.grid__card div {
   height: 250px;
   width: 100%;
   margin-bottom: 1rem;
@@ -1140,15 +1199,15 @@ main.contenedor__p3 div.contenedor__grid div.grid__card div {
   background-position: center;
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card div.blog1 {
+main.contenedor__p3 section.contenedor__grid article.grid__card div.blog1 {
   background-image: url(../multimedia/img/blog-pileta.jpg);
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card div.blog2 {
+main.contenedor__p3 section.contenedor__grid article.grid__card div.blog2 {
   background-image: url(../multimedia/img/blog-pisomadera.jpg);
 }
 
-main.contenedor__p3 div.contenedor__grid div.grid__card div.blog3 {
+main.contenedor__p3 section.contenedor__grid article.grid__card div.blog3 {
   background-image: url(../multimedia/img/blog-colores.jpg);
 }
 

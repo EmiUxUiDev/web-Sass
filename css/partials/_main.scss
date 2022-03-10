@@ -64,6 +64,43 @@ main{
         background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
         background-size:contain;
         background-repeat: no-repeat;
+        div.whatsapp{
+            top: 27rem;
+            left: 78rem;
+            position: fixed;
+            width: 6vw;
+            height: 6vw;
+            border-radius: 50%;
+            background-color: #25d36542;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: onda 3s ease-in-out 5s infinite;
+            // &:hover{
+                
+        
+            // }
+            div.whatsapp__chico{
+            width: 4vw;
+            height: 4vw;
+            border-radius: 50%;
+            background-color: #25d365;
+            }
+            a{
+                svg.wp{
+                    margin-top: 0.75rem;
+                    margin-left: 0.75rem;
+                    color: #fff;
+                }
+            }  
+            }
+        }
+        @keyframes onda{
+            0%{background-color: #25d36542;}
+            50%{background-color: #25d36580;}
+            100%{background-color: #25d36542;}
+        }
         section#home {
             h1#titulo{
                 text-align: center;
@@ -257,7 +294,8 @@ main{
                 }   
             }
         }
-    }
+    
+
     
 
     // --------------------------------
@@ -684,13 +722,13 @@ main.contenedor__p3{
             }
         }
     }
-    div.contenedor__grid{
+    section.contenedor__grid{
         display: grid;
         grid-template-columns: repeat(auto-fit, 24rem);
         justify-content: center;
         grid-gap: 2rem;
         margin: 3rem 0rem;
-        div.grid__card{
+        article.grid__card{
             overflow: auto;
             background-color: #fff;
             border-radius: $radio-medio;
