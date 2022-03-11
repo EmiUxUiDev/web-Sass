@@ -129,7 +129,6 @@ body{
                 i{
                     left: 2.5rem;
                     font-size: 3rem;
-                    color: $clr-secundario;
                 }
                 div.home__parrafos{
                     h3{
@@ -179,11 +178,13 @@ body{
                                 margin-bottom: 1rem;
                             }
                         }
+                        
                     }
                 }
                 a{
                     button.pasos__btn{
-                        width: 80vw;
+                        width: 90vw;
+                        padding: 0.5rem 1rem;
                     }
                 }
             }

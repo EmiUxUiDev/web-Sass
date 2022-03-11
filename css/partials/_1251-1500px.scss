@@ -49,12 +49,9 @@
                     border-radius: $radio-fuerte;
                     background-color: #ffffff5b;
                     box-shadow: rgba(71, 71, 71, 0.993) 3px 3px 15px;
-                    // border:6px solid $clr-secundario;
                     color: $clr-gris-oscuro;
                     i.home__martillo{
-                        color: $clr-gris-oscuro;
                         filter: drop-shadow(3px 3px 1px #fff);
-                        font-size: 6rem;
                         margin-top: 0rem;
                         margin-left: -1.5rem;
                     }
@@ -62,15 +59,10 @@
                         margin: 0rem 0rem 3rem 0rem;
                         strong{
                             font-size: 4rem;
-                            font-family: $fuente-1;
-                            font-weight: bold;
-                            color: white;
-                            text-align: center;
                             text-shadow: #000 3px 3px 4px;
                         } 
                     }
                     h3{
-                        font-size: 1.4rem;
                         padding: 0;
                         margin-top: 6rem;
                         &:last-child{
@@ -82,13 +74,10 @@
                 div.home__card2{
                     width: 55%;
                     margin: 4rem auto;
-                    background-color: transparent;
-                    padding: 1rem;
                     border: 4px solid $clr-primario-hover;
                     i{
                         left: 2.5rem;
                         font-size: 3.5rem;
-                        color: $clr-secundario;
                     }
                     div.home__parrafos{
                         h3{
@@ -99,17 +88,12 @@
             }
             section.pasos{
                 div.pasos__contenedor{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     h2{
                         margin-top: 2rem;
                         font-size: 6rem;
-                        color: $clr-primario-hover;
-                        line-height: 4rem;
-                        letter-spacing: 0.25rem;
                     }
                     div.pasos__card{
+                        &:nth-child(5){margin: 0.8rem 0rem 1rem 0rem;}
                         img#primerimg{
                             width: 35vw;
                             margin-top: 0rem;
@@ -131,24 +115,15 @@
                                 padding: 0.25rem 2rem ;
                                 font-size: 1.4rem;
                                 line-height:1.6rem;
-                                &:last-child{
-                                    font-size: 1.1rem;
-                                    font-weight: 500;
-                                    padding: 1.4rem;
-                                }
-                            }
-                            a{  
-                                width: 25vw;
-                                font-size: 1.6rem;
                             }
                         }
                     }
                     a{
+                        // margin: 4rem auto;
                         button.pasos__btn{
                             width: 40vw;
                             font-size: 1.4rem;
-                            padding: 0.8rem 1.5rem;
-                            margin: 4rem auto;
+                            padding: 0.6rem 1.5rem;
                         }
                     }
                 }
@@ -162,7 +137,6 @@
             margin-top: -73rem;
             h1{
                 padding: 2rem;
-                letter-spacing: 0.2rem;
                 text-align: center; 
                 font-size: 5.2rem;
                 line-height: 3rem;
@@ -170,6 +144,15 @@
             }
             h2{
                 strong{font-size: 1.2rem;}
+            }
+            section.contenedor__nos{
+                div.contenedor__anidado{
+                    article.nos__tarjeta{
+                        h2{
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
         }    
 
@@ -206,7 +189,7 @@
         // ---EMPEZA AHORA!----
         // ---------------------
         main.empeza{
-            margin-top: -74rem;
+            margin-top: -74.5rem;
             div.contenedor{
                     h1{
                         margin: 0 0 1rem -0.8rem;  
@@ -216,7 +199,6 @@
                     h2{
                         font-size: 1.5rem;
                         margin: 0rem 0rem 2rem 0rem;
-                        strong{font-size: 1.2rem;}
                     }
         
                 form#formulario{

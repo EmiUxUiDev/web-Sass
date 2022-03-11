@@ -12,6 +12,12 @@ html {
 }
 
 html body {
+  background: #ffe656;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 230, 86, 0.5)), color-stop(35%, white));
+  background: linear-gradient(0deg, rgba(255, 230, 86, 0.5) 0%, white 35%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-size: 16px;
 }
 
@@ -168,12 +174,6 @@ main {
   position: relative;
 }
 
-main svg {
-  position: absolute;
-  z-index: 10;
-  opacity: 80%;
-}
-
 main div.scroll__btn {
   position: fixed;
   width: 2.6rem;
@@ -292,25 +292,25 @@ main div.whatsapp div.whatsapp__chico a svg.wp {
 
 @-webkit-keyframes onda {
   0% {
-    background-color: #25d36535;
+    background-color: #25d36525;
   }
   50% {
     background-color: #25d36580;
   }
   100% {
-    background-color: #25d36535;
+    background-color: #25d36525;
   }
 }
 
 @keyframes onda {
   0% {
-    background-color: #25d36535;
+    background-color: #25d36525;
   }
   50% {
     background-color: #25d36580;
   }
   100% {
-    background-color: #25d36535;
+    background-color: #25d36525;
   }
 }
 
@@ -429,8 +429,8 @@ main.inicio section#home div.home__card2 i {
   margin-left: -4rem;
   margin-top: -2rem;
   font-size: 5rem;
-  color: #ff156f;
-  text-shadow: #414141 2px 2px 15px;
+  color: #7a7a7a;
+  text-shadow: rgba(0, 0, 0, 0.842) 2px 2px 1px;
   z-index: 10;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
@@ -446,15 +446,16 @@ main.inicio section#home div.home__card2 h3 {
 
 main.inicio section.pasos div.pasos__contenedor {
   margin: 0rem auto;
-  -webkit-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 main.inicio section.pasos div.pasos__contenedor h2 {
@@ -485,8 +486,12 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card {
   margin: 0.8rem 0rem 4rem 0rem;
 }
 
+main.inicio section.pasos div.pasos__contenedor div.pasos__card:nth-child(5) {
+  margin: 0.8rem 0rem -1rem 0rem;
+}
+
 main.inicio section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
-  width: 45vw;
+  width: 40vw;
   margin-bottom: -2.5rem;
   -webkit-filter: drop-shadow(5px 5px 5px #7a7a7a);
           filter: drop-shadow(5px 5px 5px #7a7a7a);
@@ -502,11 +507,11 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card img {
 main.inicio section.pasos div.pasos__contenedor div.pasos__card div {
   width: 90vw;
   margin: 0rem auto 2rem auto;
-  padding: 1.5rem 0rem;
+  padding: 1.5rem 0rem 0rem 0rem;
   border-radius: 2rem;
   text-align: center;
-  background: #FFD900;
-  background: -webkit-radial-gradient(top left, #ffd900, #ff166f);
+  background-color: #fff;
+  outline: 1px solid #7a7a7a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,64 +522,79 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: -1;
 }
 
 main.inicio section.pasos div.pasos__contenedor div.pasos__card div h3 {
-  color: #ffe656;
-  text-shadow: #414141 1px 1px 5px;
+  color: #414141;
+  text-shadow: #f0f0f0 1px 1px 5px;
   font-size: 2.4rem;
   letter-spacing: 0.2rem;
   padding: 1.5rem 2rem;
 }
 
 main.inicio section.pasos div.pasos__contenedor div.pasos__card div p {
-  padding: 0.25rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  line-height: 1.6rem;
   font-weight: bold;
-  color: #fff;
+  color: #7a7a7a;
+}
+
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div p:nth-child(3) {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #414141;
+  padding: 1rem;
 }
 
 main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
+  z-index: 10;
+}
+
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button {
+  width: 35vw;
   font-weight: bold;
-  padding: 0.5rem 2rem;
+  padding: 0.6rem 1rem;
+  margin: 1.5rem 0rem 2.5rem 0rem;
   border: none;
   outline: none;
   background-color: #ffe656;
   border-radius: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   cursor: pointer;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div a:hover {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button:hover {
   background-color: #ffd900;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
-main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
-  width: 30vw;
-  font-size: 1.2rem;
+main.inicio section.pasos a button.pasos__btn {
+  width: 35vw;
+  margin: 4rem auto 8rem auto;
   font-weight: bold;
-  padding: 0.5rem 2rem;
-  margin: 0rem auto 6rem auto;
+  padding: 0.6rem 1rem;
   border: none;
   outline: none;
-  color: #414141;
   background-color: #ffe656;
   border-radius: 2rem;
+  font-size: 1.4rem;
   cursor: pointer;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section.pasos div.pasos__contenedor a button.pasos__btn:hover {
+main.inicio section.pasos a button.pasos__btn:hover {
   background-color: #ffd900;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 main.sobre__nos h1 {
@@ -587,6 +607,7 @@ main.sobre__nos h1 {
 main.sobre__nos h2 {
   padding: 0.5rem;
   margin: 2rem auto;
+  color: #414141;
 }
 
 main.sobre__nos section.contenedor__nos {
@@ -599,6 +620,7 @@ main.sobre__nos section.contenedor__nos {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 4rem 0 4rem 0;
+  padding-bottom: 0.25rem;
   background-color: white;
   border: 10px solid #7a7a7a;
   border-radius: 2rem;
@@ -619,11 +641,12 @@ main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tar
   position: relative;
   min-height: 25rem;
   width: 17.8rem;
+  padding-bottom: 0.5rem;
   -webkit-box-shadow: 0 0px 8px 0 #7a7a7a;
           box-shadow: 0 0px 8px 0 #7a7a7a;
   text-align: center;
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 2rem 1rem;
   overflow: hidden;
   background-color: white;
   border-bottom: 3px solid #ffd900;
@@ -803,7 +826,7 @@ main.como__funciona div.contenedor--p2 div.primer__flex h2 {
 
 main.como__funciona section.contenedor__pasos--p2 {
   margin-top: 2rem;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #d6d6d6;
   min-height: 42rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -908,7 +931,7 @@ main.como__funciona section.recibir ul li:last-child {
 
 main.como__funciona section.recibir article.galeria__tec, main.como__funciona section.recibir article.galeria__renders {
   padding-top: 0.6rem;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: #d6d6d6;
 }
 
 main.como__funciona section.recibir article.galeria__tec h2 strong, main.como__funciona section.recibir article.galeria__renders h2 strong {
@@ -1235,8 +1258,19 @@ main.empeza div.contenedor h1 {
 }
 
 main.empeza div.contenedor h2 {
-  font-size: 1.5rem;
-  margin: 0rem 0rem 2rem 0rem;
+  text-align: center;
+  color: #414141;
+  text-transform: uppercase;
+  margin: 0rem 0rem -2rem 0rem;
+}
+
+main.empeza div.contenedor h2 strong {
+  text-transform: none;
+  font-size: 1.4rem;
+}
+
+main.empeza div.contenedor p {
+  color: #414141;
 }
 
 main.empeza div.contenedor form#formulario {
@@ -1266,16 +1300,11 @@ main.empeza div.contenedor form#formulario img.contanos_personaje {
   width: 25vw;
 }
 
-main.empeza div.contenedor form#formulario h2 {
-  color: #414141;
-  text-transform: uppercase;
-}
-
 main.empeza div.contenedor form#formulario p {
   margin-bottom: 1rem;
 }
 
-main.empeza div.contenedor form#formulario div.base-card {
+main.empeza div.contenedor form#formulario section.base-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1292,37 +1321,33 @@ main.empeza div.contenedor form#formulario div.base-card {
   width: 90vw;
 }
 
-main.empeza div.contenedor form#formulario div.base-card h2 {
-  color: #414141;
-  margin: 0rem;
-}
-
-main.empeza div.contenedor form#formulario div.base-card p {
+main.empeza div.contenedor form#formulario section.base-card p {
   text-align: center;
   color: black;
   font-weight: 500;
   font-style: italic;
   font-size: 0.9rem;
+  margin-bottom: 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.base-card label {
+main.empeza div.contenedor form#formulario section.base-card label {
   font-weight: 700;
   font-size: .9rem;
   line-height: 1.5rem;
   color: #414141;
 }
 
-main.empeza div.contenedor form#formulario div.base-card textarea {
+main.empeza div.contenedor form#formulario section.base-card textarea {
   width: 80vw;
   background-color: white;
   border-radius: 1rem;
   font-size: 1rem;
   font-weight: 500;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   border: 1px solid #ffd900;
 }
 
-main.empeza div.contenedor form#formulario div.base-card fieldset {
+main.empeza div.contenedor form#formulario section.base-card fieldset {
   width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1338,45 +1363,45 @@ main.empeza div.contenedor form#formulario div.base-card fieldset {
   background-color: #ffe656;
 }
 
-main.empeza div.contenedor form#formulario div.base-card fieldset legend {
+main.empeza div.contenedor form#formulario section.base-card fieldset legend {
   font-weight: 600;
 }
 
-main.empeza div.contenedor form#formulario div.base-card fieldset div {
+main.empeza div.contenedor form#formulario section.base-card fieldset div {
   margin: 1rem;
 }
 
-main.empeza div.contenedor form#formulario div.base-card fieldset div input {
+main.empeza div.contenedor form#formulario section.base-card fieldset div input {
   width: 5vw;
   margin: 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li.img1 {
+main.empeza div.contenedor form#formulario section.base-card ul li.img1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente clasico-light.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.jpg");
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li.img2 {
+main.empeza div.contenedor form#formulario section.base-card ul li.img2 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente vintage-light.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente vintage-light.jpg");
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li.img3 {
+main.empeza div.contenedor form#formulario section.base-card ul li.img3 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente verde-light.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente verde-light.jpg");
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li.img4 {
+main.empeza div.contenedor form#formulario section.base-card ul li.img4 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente rustico-light.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente rustico-light.jpg");
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li.img5 {
+main.empeza div.contenedor form#formulario section.base-card ul li.img5 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente moderno-light.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente moderno-light.jpg");
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul {
+main.empeza div.contenedor form#formulario section.base-card ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1387,7 +1412,7 @@ main.empeza div.contenedor form#formulario div.base-card ul {
       flex-wrap: wrap;
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li {
+main.empeza div.contenedor form#formulario section.base-card ul li {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1399,17 +1424,17 @@ main.empeza div.contenedor form#formulario div.base-card ul li {
   list-style: none;
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li h3 {
+main.empeza div.contenedor form#formulario section.base-card ul li h3 {
   color: white;
   font-weight: 600;
   font-size: 1.2rem;
 }
 
-main.empeza div.contenedor form#formulario div.base-card ul li h3 input {
+main.empeza div.contenedor form#formulario section.base-card ul li h3 input {
   margin-left: 1rem;
 }
 
-main.empeza div.contenedor form#formulario div.elegir-color {
+main.empeza div.contenedor form#formulario section.base-card div.elegir-color {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1426,11 +1451,11 @@ main.empeza div.contenedor form#formulario div.elegir-color {
   background-color: #ffe656;
 }
 
-main.empeza div.contenedor form#formulario div.elegir-color input {
+main.empeza div.contenedor form#formulario section.base-card div.elegir-color input {
   margin: 1rem 0rem 1.5rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.imagen input {
+main.empeza div.contenedor form#formulario section.imagen input {
   width: 80vw;
   padding: 1rem;
   margin-top: 0.5rem;
@@ -1438,7 +1463,7 @@ main.empeza div.contenedor form#formulario div.imagen input {
   background-color: #ffe656;
 }
 
-main.empeza div.contenedor form#formulario div.arqui {
+main.empeza div.contenedor form#formulario section.arqui {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1453,7 +1478,7 @@ main.empeza div.contenedor form#formulario div.arqui {
   margin: 3rem 0rem 3rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas {
+main.empeza div.contenedor form#formulario section.arqui div.personas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1464,13 +1489,13 @@ main.empeza div.contenedor form#formulario div.arqui div.personas {
   margin: 1rem 0rem 1rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas div {
+main.empeza div.contenedor form#formulario section.arqui div.personas div {
   width: 28vw;
   height: auto;
   margin: 1.5rem 0.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas div p {
+main.empeza div.contenedor form#formulario section.arqui div.personas div p {
   margin-top: 70%;
   font-size: 1rem;
   font-weight: 400;
@@ -1478,43 +1503,48 @@ main.empeza div.contenedor form#formulario div.arqui div.personas div p {
   text-align: center;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas h3 {
+main.empeza div.contenedor form#formulario section.arqui div.personas h3 {
   text-align: center;
+  font-size: 1.2rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas div.img1 {
+main.empeza div.contenedor form#formulario section.arqui div.personas div.img1 {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui3-light.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui3-light.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
+  padding: 0.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas div.img2 {
+main.empeza div.contenedor form#formulario section.arqui div.personas div.img2 {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui5-light.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui5-light.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
+  padding: 0.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas div.img3 {
+main.empeza div.contenedor form#formulario section.arqui div.personas div.img3 {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui2-light.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui2-light.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
+  padding: 0.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.arqui div.personas div.img4 {
+main.empeza div.contenedor form#formulario section.arqui div.personas div.img4 {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui4-light.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui4-light.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
+  padding: 0.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan {
+main.empeza div.contenedor form#formulario section.plan {
   width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1529,8 +1559,9 @@ main.empeza div.contenedor form#formulario div.plan {
   padding: 1rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado, main.empeza div.contenedor form#formulario div.plan div.premium {
+main.empeza div.contenedor form#formulario section.plan article.personalizado, main.empeza div.contenedor form#formulario section.plan article.premium {
   width: 40vw;
+  background-color: #fff;
   margin: 0.5rem 0rem;
   padding: 0.5rem;
   border: 1px solid #414141;
@@ -1539,61 +1570,61 @@ main.empeza div.contenedor form#formulario div.plan div.personalizado, main.empe
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado h2, main.empeza div.contenedor form#formulario div.plan div.premium h2 {
+main.empeza div.contenedor form#formulario section.plan article.personalizado h2, main.empeza div.contenedor form#formulario section.plan article.premium h2 {
   color: #414141;
   text-align: center;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado h2:nth-child(1), main.empeza div.contenedor form#formulario div.plan div.premium h2:nth-child(1) {
+main.empeza div.contenedor form#formulario section.plan article.personalizado h2:nth-child(1), main.empeza div.contenedor form#formulario section.plan article.premium h2:nth-child(1) {
   font-size: 1.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado h3, main.empeza div.contenedor form#formulario div.plan div.premium h3 {
+main.empeza div.contenedor form#formulario section.plan article.personalizado h3, main.empeza div.contenedor form#formulario section.plan article.premium h3 {
   text-align: center;
   padding: 0.5rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado strong, main.empeza div.contenedor form#formulario div.plan div.premium strong {
+main.empeza div.contenedor form#formulario section.plan article.personalizado strong, main.empeza div.contenedor form#formulario section.plan article.premium strong {
   font-size: 1.5rem;
   color: #ff156f;
   -webkit-transition: all 300ms ease-in-out 0ms;
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado .precio, main.empeza div.contenedor form#formulario div.plan div.premium .precio {
+main.empeza div.contenedor form#formulario section.plan article.personalizado .precio, main.empeza div.contenedor form#formulario section.plan article.premium .precio {
   font-size: 2rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado p, main.empeza div.contenedor form#formulario div.plan div.premium p {
+main.empeza div.contenedor form#formulario section.plan article.personalizado p, main.empeza div.contenedor form#formulario section.plan article.premium p {
   text-align: center;
   padding: 0.15rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado p:last-child, main.empeza div.contenedor form#formulario div.plan div.premium p:last-child {
+main.empeza div.contenedor form#formulario section.plan article.personalizado p:last-child, main.empeza div.contenedor form#formulario section.plan article.premium p:last-child {
   padding: 1rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado ul, main.empeza div.contenedor form#formulario div.plan div.premium ul {
+main.empeza div.contenedor form#formulario section.plan article.personalizado ul, main.empeza div.contenedor form#formulario section.plan article.premium ul {
   color: #ff156f;
   font-weight: 500;
   margin: 2rem 2.5rem 2rem 5rem;
   line-height: 1.5rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado ul li, main.empeza div.contenedor form#formulario div.plan div.premium ul li {
+main.empeza div.contenedor form#formulario section.plan article.personalizado ul li, main.empeza div.contenedor form#formulario section.plan article.premium ul li {
   padding: 0.2rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado:hover, main.empeza div.contenedor form#formulario div.plan div.premium:hover {
+main.empeza div.contenedor form#formulario section.plan article.personalizado:hover, main.empeza div.contenedor form#formulario section.plan article.premium:hover {
   -webkit-box-shadow: #7a7a7a 1px 2px 5px;
           box-shadow: #7a7a7a 1px 2px 5px;
 }
 
-main.empeza div.contenedor form#formulario div.plan div.personalizado:hover strong.precio, main.empeza div.contenedor form#formulario div.plan div.premium:hover strong.precio {
+main.empeza div.contenedor form#formulario section.plan article.personalizado:hover strong.precio, main.empeza div.contenedor form#formulario section.plan article.premium:hover strong.precio {
   font-size: 4rem;
 }
 
-main.empeza div.contenedor form#formulario div.formas-de-pago {
+main.empeza div.contenedor form#formulario section.formas-de-pago {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1606,16 +1637,7 @@ main.empeza div.contenedor form#formulario div.formas-de-pago {
           align-items: center;
 }
 
-main.empeza div.contenedor form#formulario div.formas-de-pago h2, main.empeza div.contenedor form#formulario div.formas-de-pago p {
-  color: #414141;
-  text-align: center;
-}
-
-main.empeza div.contenedor form#formulario div.formas-de-pago h2 {
-  margin-top: 2rem;
-}
-
-main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
+main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1630,7 +1652,7 @@ main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
   margin: 1.5rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
+main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1651,19 +1673,19 @@ main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div:hover {
+main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
 
-main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div img {
+main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div img {
   width: 5.5rem;
   padding: 0.5rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.contactar {
+main.empeza div.contenedor form#formulario section.contactar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1675,22 +1697,22 @@ main.empeza div.contenedor form#formulario div.contactar {
   margin-bottom: 1rem;
 }
 
-main.empeza div.contenedor form#formulario div.contactar h2 {
+main.empeza div.contenedor form#formulario section.contactar h2 {
   color: #414141;
   margin: 3rem 0rem 2rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.contactar div {
+main.empeza div.contenedor form#formulario section.contactar div {
   margin: 0.3rem 0rem 0rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario div.contactar input {
+main.empeza div.contenedor form#formulario section.contactar input {
   padding: 0.2rem 0rem 0.2rem 1rem;
   border: 1px solid #414141;
   border-radius: 1rem;
 }
 
-main.empeza div.contenedor form#formulario div.contactar input:last-child {
+main.empeza div.contenedor form#formulario section.contactar input:last-child {
   margin-bottom: 1rem;
 }
 
@@ -1740,7 +1762,7 @@ main.empeza div.contenedor form#formulario button[type="reset"]:hover {
 footer {
   width: 100vw;
   bottom: 0;
-  background: white;
+  background-color: #fff;
   border-radius: 8rem  0 0 0;
   padding: 3rem 0 0 0;
   font-size: 0.9rem;
@@ -2044,7 +2066,6 @@ footer div.right p {
   body main.inicio section#home div.home__card2 i {
     left: 2.5rem;
     font-size: 3rem;
-    color: #ff156f;
   }
   body main.inicio section#home div.home__card2 div.home__parrafos h3 {
     font-size: 1.6rem;
@@ -2096,7 +2117,8 @@ footer div.right p {
     margin-bottom: 1rem;
   }
   body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
-    width: 80vw;
+    width: 90vw;
+    padding: 0.5rem 1rem;
   }
   body main.sobre__nos {
     margin-top: -73rem;
@@ -2646,7 +2668,6 @@ footer div.right p {
   body main.inicio section#home div.home__card2 i {
     left: 2.5rem;
     font-size: 3rem;
-    color: #ff156f;
   }
   body main.inicio section#home div.home__card2 div.home__parrafos h3 {
     font-size: 1.6rem;
@@ -2697,7 +2718,7 @@ footer div.right p {
     font-weight: 500;
     padding: 1rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card a button.pasos__btn {
+  body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 70vw;
   }
   body main.sobre__nos {
@@ -3218,7 +3239,7 @@ footer div.right p {
     font-weight: 500;
     padding: 1rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button {
     width: 50vw;
   }
   body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
@@ -3669,18 +3690,6 @@ footer div.right p {
   body main.inicio section#home div.home__card2 div.home__parrafos h3 {
     font-size: 2.5rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   body main.inicio section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
     width: 35vw;
     margin-top: 0.5rem;
@@ -3707,11 +3716,13 @@ footer div.right p {
     font-weight: 500;
     padding: 1.4rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
-    width: 30vw;
+  body main.inicio section.pasos div.pasos__contenedor a {
+    margin: 2rem auto 0rem auto;
   }
   body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
-    margin: 0rem auto 5rem auto;
+    width: 40vw;
+    font-size: 1.4rem;
+    padding: 0.6rem 1.5rem;
   }
   body main.sobre__nos {
     margin-top: -73rem;
@@ -3852,10 +3863,8 @@ footer div.right p {
     color: #414141;
   }
   body main.inicio section#home div#comentario i.home__martillo {
-    color: #414141;
     -webkit-filter: drop-shadow(3px 3px 1px #fff);
             filter: drop-shadow(3px 3px 1px #fff);
-    font-size: 6rem;
     margin-top: 0rem;
     margin-left: -1.5rem;
   }
@@ -3864,14 +3873,9 @@ footer div.right p {
   }
   body main.inicio section#home div#comentario h2 strong {
     font-size: 4rem;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    color: white;
-    text-align: center;
     text-shadow: #000 3px 3px 4px;
   }
   body main.inicio section#home div#comentario h3 {
-    font-size: 1.4rem;
     padding: 0;
     margin-top: 6rem;
   }
@@ -3882,36 +3886,21 @@ footer div.right p {
   body main.inicio section#home div.home__card2 {
     width: 55%;
     margin: 4rem auto;
-    background-color: transparent;
-    padding: 1rem;
     border: 4px solid #ffd900;
   }
   body main.inicio section#home div.home__card2 i {
     left: 2.5rem;
     font-size: 3.5rem;
-    color: #ff156f;
   }
   body main.inicio section#home div.home__card2 div.home__parrafos h3 {
     font-size: 2.5rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   body main.inicio section.pasos div.pasos__contenedor h2 {
     margin-top: 2rem;
     font-size: 6rem;
-    color: #ffd900;
-    line-height: 4rem;
-    letter-spacing: 0.25rem;
+  }
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card:nth-child(5) {
+    margin: 0.8rem 0rem 1rem 0rem;
   }
   body main.inicio section.pasos div.pasos__contenedor div.pasos__card img#primerimg {
     width: 35vw;
@@ -3936,27 +3925,16 @@ footer div.right p {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div p:last-child {
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 1.4rem;
-  }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
-    width: 25vw;
-    font-size: 1.6rem;
-  }
   body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
     width: 40vw;
     font-size: 1.4rem;
-    padding: 0.8rem 1.5rem;
-    margin: 4rem auto;
+    padding: 0.6rem 1.5rem;
   }
   body main.sobre__nos {
     margin-top: -73rem;
   }
   body main.sobre__nos h1 {
     padding: 2rem;
-    letter-spacing: 0.2rem;
     text-align: center;
     font-size: 5.2rem;
     line-height: 3rem;
@@ -3965,6 +3943,9 @@ footer div.right p {
   }
   body main.sobre__nos h2 strong {
     font-size: 1.2rem;
+  }
+  body main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta h2 {
+    font-size: 2rem;
   }
   body main.como__funciona {
     margin-top: -75rem;
@@ -3982,7 +3963,7 @@ footer div.right p {
     font-size: 5.2rem;
   }
   body main.empeza {
-    margin-top: -74rem;
+    margin-top: -74.5rem;
   }
   body main.empeza div.contenedor h1 {
     margin: 0 0 1rem -0.8rem;
@@ -3992,9 +3973,6 @@ footer div.right p {
   body main.empeza div.contenedor h2 {
     font-size: 1.5rem;
     margin: 0rem 0rem 2rem 0rem;
-  }
-  body main.empeza div.contenedor h2 strong {
-    font-size: 1.2rem;
   }
   body main.empeza div.contenedor form#formulario img.contanos_personaje {
     right: 0rem;

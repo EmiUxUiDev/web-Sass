@@ -101,9 +101,6 @@
             }
             section.pasos{
                 div.pasos__contenedor{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     div.pasos__card{
                         img#primerimg{
                             width: 35vw;
@@ -130,14 +127,17 @@
                                     padding: 1.4rem;
                                 }
                             }
-                            a{  
-                                width: 30vw;
-                            }
+                            // a{  
+                            //     button{width: 50vw;}
+                            // }
                         }
                     }
                     a{
+                        margin: 2rem auto 0rem auto;
                         button.pasos__btn{
-                            margin: 0rem auto 5rem auto;
+                            width: 40vw;
+                            font-size: 1.4rem;
+                            padding: 0.6rem 1.5rem;
                         }
                     }
                 }
