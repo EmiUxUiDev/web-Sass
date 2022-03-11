@@ -281,10 +281,10 @@ main.sobre__nos{
             } 
             }
             
-            div.contenedor__grid{
+            section.contenedor__grid{
                 
                 grid-template-columns: repeat(auto-fit, 35rem);
-                div.grid__card{
+                article.grid__card{
                     padding-bottom: 1rem;
                     p{
                         color: $clr-gris-medio;
@@ -417,24 +417,12 @@ main.sobre__nos{
                 div.plan{
                     width: 95vw;
                     flex-direction: column;
+                    justify-content: space-between;
                     background-color: transparent;
                     
-                    div.personalizado{
+                    div.personalizado, div.premium{
                         width: 90vw;
-                        margin: 0.5rem 0rem;  
-                        h2{
-                            strong{font-size: 1.5rem;}
-                        } 
-                        .precio{font-size: 3rem;}                
-                        ul{
-                            font-weight: 600;
-                            margin:  2rem 2.5rem 2rem 2.5rem;
-                            line-height: 1.5rem;
-                            text-align: center;
-                        }
-                    }
-                    div.premium{
-                        width: 90vw; 
+                        margin-top: 2rem;
                         h2{
                             strong{font-size: 1.5rem;}
                         } 
@@ -459,15 +447,12 @@ main.sobre__nos{
                     }
                 }
                 div.contactar{
-                    width: 35vw;
-                    margin-bottom: 1rem;
+                    width: 45vw;
+                    margin: 1rem 0rem;
                     h2{
                         font-size: 1.5rem;
-                        margin: 0.25rem auto;
+                        margin: 1.5rem auto;
                     }
-                    // div{
-                    //     margin: 0.3rem 0rem 0rem 0rem;
-                    // }
                     input{
                         padding: 0.2rem 0rem 0.2rem 1rem;
                         border: 1px solid $clr-gris-oscuro;
@@ -475,6 +460,7 @@ main.sobre__nos{
                         &:last-child{margin-bottom: 1rem;}
                     }
                 }
+                button[type="submit"], button[type="reset"]{width: 35vw;}
             }
         }
     }

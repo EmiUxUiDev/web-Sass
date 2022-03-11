@@ -1,10 +1,9 @@
 @import '../bases/_variables';
 
-main{
+main{ 
     position:relative;
     svg{
         position:absolute;    
-        // margin-top: -100rem;
         z-index:10;
         opacity: 80%;
     }
@@ -15,7 +14,7 @@ main{
         height: 3rem;
         border-radius: 40%;
         bottom: 1.3rem;
-        left:2rem;
+        left:0.5rem;
         outline: 1px solid $clr-secundario;
         z-index: 100000;
         cursor: pointer;
@@ -32,7 +31,9 @@ main{
                 &:hover{animation: movimiento_scroll 1s ease-in 0s infinite;  }    
             }
         }
-        @keyframes movimiento_scroll{
+    }
+     
+    @keyframes movimiento_scroll{
         0%{
             transform: translateY(0px);
         }
@@ -48,9 +49,46 @@ main{
         100%{
             transform: translateY(0px);
         }  
-        }
-    }    
+        }   
     //-----FIN BOTON IR ARRIBA----
+
+
+    // ---BOTON WHATAPP CHAT----
+    div.whatsapp{
+        position: fixed;
+        bottom: 0.3rem;
+        right: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: #25d36542;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        animation: onda 3.5s ease-in-out 1s infinite;
+        div.whatsapp__chico{
+        width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 50%;
+        background-color: #25d365;
+        transition: all 350ms ease-in-out;
+        &:hover{box-shadow:0px 0px 12px #fff;}
+            a{
+                svg.wp{
+                    margin-top: 0.75rem;
+                    margin-left: 0.75rem;
+                }
+            } 
+        }
+         
+        
+    }
+    @keyframes onda{
+        0%{background-color: #25d36535;}
+        50%{background-color: #25d36580;}
+        100%{background-color: #25d36535;}
+    }
 }   
 
 
@@ -64,43 +102,6 @@ main{
         background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
         background-size:contain;
         background-repeat: no-repeat;
-        div.whatsapp{
-            top: 27rem;
-            left: 78rem;
-            position: fixed;
-            width: 6vw;
-            height: 6vw;
-            border-radius: 50%;
-            background-color: #25d36542;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            animation: onda 3s ease-in-out 5s infinite;
-            // &:hover{
-                
-        
-            // }
-            div.whatsapp__chico{
-            width: 4vw;
-            height: 4vw;
-            border-radius: 50%;
-            background-color: #25d365;
-            }
-            a{
-                svg.wp{
-                    margin-top: 0.75rem;
-                    margin-left: 0.75rem;
-                    color: #fff;
-                }
-            }  
-            }
-        }
-        @keyframes onda{
-            0%{background-color: #25d36542;}
-            50%{background-color: #25d36580;}
-            100%{background-color: #25d36542;}
-        }
         section#home {
             h1#titulo{
                 text-align: center;
@@ -294,8 +295,7 @@ main{
                 }   
             }
         }
-    
-
+    }
     
 
     // --------------------------------
@@ -697,9 +697,8 @@ main.como__funciona{
     // --------------------------------  
 main.contenedor__p3{
     background-color: transparent;
-    display: flex;  
+    display: flex;
     flex-direction: column;
-    text-align: center;
     div.titulo--p3{
         display: flex;
         align-items: center; 
@@ -709,10 +708,15 @@ main.contenedor__p3{
             margin-top: -2rem;
             font-size: 4.8rem;
             padding: 0.8rem;
-        } 
+        }
         p{
+            margin-left: 1rem;
             input{
                 margin:1rem 0.5rem;
+                height: 1.5rem;
+                width: 10rem;
+                border: 1px solid $clr-gris-oscuro;
+                border-radius:$radio-medio;
                 i{
                     display: inline-block;
                     margin-right: 0.5rem;
@@ -722,6 +726,7 @@ main.contenedor__p3{
             }
         }
     }
+    p{text-align: center;}
     section.contenedor__grid{
         display: grid;
         grid-template-columns: repeat(auto-fit, 24rem);
@@ -821,6 +826,11 @@ main.empeza{
                 top: -5vh;
                 width: 25vw;
             }
+            h2{
+                color: $clr-gris-oscuro;
+                text-transform: uppercase;
+            }
+            p{margin-bottom: 1rem;}
             div.base-card{
                 display: flex;
                 flex-direction: column;
@@ -917,18 +927,16 @@ main.empeza{
             }
             div.elegir-color{
                 display: flex;
+                align-items: center;
                 justify-content: space-evenly;
                 width: 80vw;
-                padding: 0rem 1rem 1rem 0rem;
+                padding-top: 0.8rem;
+                // padding: 0rem 1rem 1rem 0rem;
                 margin-top: 0.5rem;
                 border-radius: $radio-fuerte;
                 background-color: $clr-primario;
-
-                label{
-                    margin: 1rem 1rem 0rem 0.5rem;
-                }
                 input{
-                    margin: 1rem 0rem 0rem 0rem;
+                    margin: 1rem 0rem 1.5rem 0rem;
                 }
             } 
             div.imagen{
@@ -997,53 +1005,10 @@ main.empeza{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                margin: 0rem 0rem 4rem 0rem;
+                margin: 1.5rem 0rem 4rem 0rem;
                 padding: 1rem 0rem;
-                background-color: $clr-primario-hover;
-                border-radius: $radio-medio;
-                div.personalizado{
-                    width: 40vw;
-                    margin: 0.5rem 0rem;
-                    padding: 0.5rem;
-                    border: 1px solid $clr-gris-oscuro;
-                    border-radius: $radio-medio;
-                    transition: all 300ms ease-in-out 0ms;                   
-                    h2 {
-                        color: $clr-gris-oscuro;
-                        text-align: center;
-                        &:nth-child(2){font-size: 2.5rem;}
-                        &:first-child{margin-top: 1rem;}  
-                    }
-                    h3{
-                        text-align: center;
-                        padding: 0.5rem 0rem;
-                    }
+                div.personalizado, div.premium{
                     
-                    strong{
-                        color:$clr-secundario;
-                        transition: all 300ms ease-in-out 0ms;
-                    }
-                    p{
-                        text-align: center;
-                        padding: 0.15rem;
-                        &:last-child{padding: 1rem;}
-                    }
-                    ul{
-                        color:$clr-secundario;
-                        font-weight: 500;
-                        margin:  2rem 2.5rem 2rem 5rem;
-                        line-height: 1.5rem;
-                        
-                        li{
-                            padding: 0.2rem 0rem;
-                    }
-                    }
-                    &:hover{
-                        strong.precio{font-size: 4rem;}
-                        box-shadow:$clr-gris-medio 1px 2px 5px;
-                    }
-                }
-                div.premium{
                     width: 40vw;
                     margin: 0.5rem 0rem;
                     padding: 0.5rem;
@@ -1053,17 +1018,18 @@ main.empeza{
                     h2 {
                         color: $clr-gris-oscuro;
                         text-align: center;
-                        &:nth-child(2){font-size: 2.5rem;}
-                        &:first-child{margin-top: 1rem;}
+                        &:nth-child(1){font-size: 1.5rem;}
                     }
                     h3{
                         text-align: center;
                         padding: 0.5rem 0rem;
                     }
                     strong{
+                        font-size: 1.5rem;
                         color:$clr-secundario;
                         transition: all 300ms ease-in-out 0ms;
                     }
+                    .precio{font-size: 2rem;}
                     p{
                         text-align: center;
                         padding: 0.15rem;
@@ -1083,8 +1049,8 @@ main.empeza{
                     &:hover{
                         strong.precio{font-size: 4rem;}
                         box-shadow:$clr-gris-medio 1px 2px 5px;
-                    }
-                }
+                    } 
+                } 
             }
             div.formas-de-pago{
                 display: flex;
@@ -1142,10 +1108,11 @@ main.empeza{
                 }
             }
             button[type="submit"]{
+                width: 18vw;
                 font-size: 1rem;
                 font-weight: bold;
                 color:$clr-gris-oscuro;
-                padding: 0.5rem 3.6rem 0.5rem 3.6rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
                 margin: 1rem 0rem 1rem 0rem;
                 border: 1px solid black;
                 outline: 1px solid $clr-primario-hover;
@@ -1160,10 +1127,11 @@ main.empeza{
                 }
             }
             button[type="reset"]{
+                width: 18vw;
                 font-size: 1rem;
                 font-weight: bold;
                 color:$clr-gris-oscuro;
-                padding: 0.5rem 3.2rem 0.5rem 3.2rem;
+                padding: 0.5rem 1rem 0.5rem 1rem;
                 margin-bottom: 2rem;
                 border: 1px solid $clr-gris-oscuro;
                 border-radius:$radio-fuerte;

@@ -249,16 +249,14 @@ main.empeza{
                 top: 8vh;
                 width: 25vw;
             }
+            div.contactar{
+                width: 45vw;
+            }
+            button[type="submit"], button[type="reset"]{width: 30vw;}
         }
     }
-    .personalizado, .premium{
-        hr{
-            width: 90%;
-            align-self: center;
-            border:1px solid $clr-gris-medio;
-            margin: 0rem auto;
-        }
-    }
+    
+    
 }
 
 }   

@@ -343,10 +343,10 @@
                 }
             }
             
-            div.contenedor__grid{
+            section.contenedor__grid{
                 
                 grid-template-columns: repeat(auto-fit, 27rem);
-                div.grid__card{
+                article.grid__card{
                     padding-bottom: 1rem;
                     p{
                         color: $clr-gris-medio;
@@ -488,17 +488,9 @@
                 div.plan{
                     width: 95vw;
                     flex-direction: column;
-                    div.personalizado{
+                    div.personalizado, div.premium{
                         width: 90vw;
-                        margin: 0.5rem 0rem;                 
-                        ul{
-                            font-weight: 600;
-                            margin:  2rem 2.5rem 2rem 2.5rem;
-                            line-height: 1.5rem;
-                        }
-                    }
-                    div.premium{
-                        width: 90vw;                 
+                        margin: 1rem 0rem;                 
                         ul{
                             font-weight: 600;
                             margin:  2rem 2.5rem 2rem 2.5rem;
@@ -531,6 +523,7 @@
                         &:last-child{margin-bottom: 1rem;}
                     }
                 }
+                button[type="submit"], button[type="reset"]{width: 50vw;}
             }
         }
     }  
