@@ -1200,7 +1200,7 @@ main.contenedor__p3 section.contenedor__grid article.grid__card {
   background-color: #fff;
   border-radius: 1rem;
   margin: 1rem 1rem;
-  padding: 0rem 1rem;
+  padding: 0rem  1rem 0.5rem 1rem;
   border-top: 4px solid #ffd900;
   -webkit-box-shadow: #7a7a7a 0px 1px 3px;
           box-shadow: #7a7a7a 0px 1px 3px;
