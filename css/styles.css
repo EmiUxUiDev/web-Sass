@@ -346,7 +346,7 @@ main.inicio section#home div#comentario {
 
 main.inicio section#home div#comentario i.home__martillo {
   font-size: 6rem;
-  color: #414141;
+  color: #ffd900;
   margin-top: -3rem;
   margin-left: -1rem;
   -webkit-animation: martillar 2s ease-in-out 1s infinite normal none;
@@ -420,7 +420,7 @@ main.inicio section#home div.home__card2 {
   border-radius: 2rem;
   width: 65%;
   background-color: transparent;
-  border: 6px solid #ffd900;
+  border: 6px solid #d6d6d6;
   z-index: 100;
 }
 
@@ -429,7 +429,7 @@ main.inicio section#home div.home__card2 i {
   margin-left: -4rem;
   margin-top: -2rem;
   font-size: 5rem;
-  color: #7a7a7a;
+  color: #ff156f;
   text-shadow: rgba(0, 0, 0, 0.842) 2px 2px 1px;
   z-index: 10;
   -webkit-transform: rotate(-15deg);
@@ -511,7 +511,7 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div {
   border-radius: 2rem;
   text-align: center;
   background-color: #fff;
-  outline: 1px solid #7a7a7a;
+  outline: 4px solid #ffd900;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -555,7 +555,7 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div a {
   z-index: 10;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button.pasos__btn {
   width: 35vw;
   font-weight: bold;
   padding: 0.6rem 1rem;
@@ -570,13 +570,13 @@ main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button {
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button:hover {
+main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button.pasos__btn:hover {
   background-color: #ffd900;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-main.inicio section.pasos a button.pasos__btn {
+main.inicio section.pasos div.pasos__contenedor a button {
   width: 35vw;
   margin: 4rem auto 8rem auto;
   font-weight: bold;
@@ -591,7 +591,7 @@ main.inicio section.pasos a button.pasos__btn {
   transition: all 300ms ease-in-out;
 }
 
-main.inicio section.pasos a button.pasos__btn:hover {
+main.inicio section.pasos div.pasos__contenedor a button:hover {
   background-color: #ffd900;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -1232,7 +1232,6 @@ main.contenedor__p3 section.contenedor__grid article.grid__card div {
   height: 250px;
   width: 100%;
   margin-bottom: 1rem;
-  background-color: #ff156f;
   border-radius: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1290,7 +1289,7 @@ main.empeza div.contenedor form#formulario {
 main.empeza div.contenedor form#formulario:last-child {
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 main.empeza div.contenedor form#formulario img.contanos_personaje {
@@ -2024,13 +2023,10 @@ footer div.right p {
     padding: 0.25rem;
     border-radius: 2rem;
     background-color: #ffffff5e;
-    -webkit-box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-            box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
     font-size: 1rem;
     color: #414141;
   }
   body main.inicio section#home div#comentario i.home__martillo {
-    color: #f0f0f0;
     font-size: 3rem;
     margin-top: -2.5rem;
     margin-left: -0.5rem;
@@ -2116,9 +2112,11 @@ footer div.right p {
     padding: 1rem;
     margin-bottom: 1rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
-    width: 90vw;
-    padding: 0.5rem 1rem;
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button.pasos__btn {
+    width: 70vw;
+  }
+  body main.inicio section.pasos div.pasos__contenedor a button {
+    width: 70vw;
   }
   body main.sobre__nos {
     margin-top: -73rem;
@@ -2381,7 +2379,7 @@ footer div.right p {
     margin-bottom: 0;
   }
   body main.empeza div.contenedor h2 strong {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   body main.empeza div.contenedor form#formulario p:last-child {
     width: 75vw;
@@ -2392,7 +2390,7 @@ footer div.right p {
     top: 30vh;
     width: 35vw;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset {
     width: 80vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2401,22 +2399,27 @@ footer div.right p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-top: 0.5rem;
+    padding: 0rem;
+  }
+  body main.empeza div.contenedor form#formulario section.base-card fieldset div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0rem;
-  }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset legend {
-    font-weight: 600;
-  }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset div {
     margin: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset div input {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset div input {
     width: 65px;
     margin: 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.elegir-color {
+  body main.empeza div.contenedor form#formulario section.base-card div.elegir-color {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2427,10 +2430,10 @@ footer div.right p {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    background-color: transparent;
+    background-color: #fff;
     border: 4px solid #ffd900;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2440,59 +2443,58 @@ footer div.right p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas div {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas div {
     width: 80vw;
     padding-bottom: 0.25rem;
     overflow: auto;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas div p {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas div p {
     font-weight: 500;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas h3 {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas h3 {
     font-size: 1.4rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.253);
+    margin-top: -0.5rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan {
+  body main.empeza div.contenedor form#formulario section.plan {
     width: 95vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado, body main.empeza div.contenedor form#formulario div.plan div.premium {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado, body main.empeza div.contenedor form#formulario section.plan article.premium {
     width: 90vw;
     margin: 1rem 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado ul, body main.empeza div.contenedor form#formulario div.plan div.premium ul {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado ul, body main.empeza div.contenedor form#formulario section.plan article.premium ul {
     font-weight: 600;
     margin: 2rem 2.5rem 2rem 2.5rem;
     line-height: 1.5rem;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago h2, body main.empeza div.contenedor form#formulario div.formas-de-pago p {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago h2, body main.empeza div.contenedor form#formulario section.formas-de-pago p {
     width: 80vw;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos {
     width: 80vw;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div {
     width: 6rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar {
+  body main.empeza div.contenedor form#formulario section.contactar {
     width: 80vw;
     margin-bottom: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar div {
+  body main.empeza div.contenedor form#formulario section.contactar div {
     margin: 0.3rem 0rem 0rem 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar input {
+  body main.empeza div.contenedor form#formulario section.contactar input {
     padding: 0.2rem 0rem 0.2rem 1rem;
     border: 1px solid #414141;
     border-radius: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar input:last-child {
+  body main.empeza div.contenedor form#formulario section.contactar input:last-child {
     margin-bottom: 1rem;
   }
   body main.empeza div.contenedor form#formulario button[type="submit"], body main.empeza div.contenedor form#formulario button[type="reset"] {
@@ -2626,13 +2628,10 @@ footer div.right p {
     padding: 0.8rem;
     border-radius: 2rem;
     background-color: #ffffff80;
-    -webkit-box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-            box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
     font-size: 1rem;
     color: #414141;
   }
   body main.inicio section#home div#comentario i.home__martillo {
-    color: #414141;
     text-shadow: #ffe656 0px 0px 4px;
     font-size: 3.5rem;
     margin-top: -2rem;
@@ -2718,8 +2717,11 @@ footer div.right p {
     font-weight: 500;
     padding: 1rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
-    width: 70vw;
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button.pasos__btn {
+    width: 60vw;
+  }
+  body main.inicio section.pasos div.pasos__contenedor a button {
+    width: 60vw;
   }
   body main.sobre__nos {
     margin-top: -73rem;
@@ -2941,13 +2943,13 @@ footer div.right p {
     top: 30vh;
     width: 35vw;
   }
-  body main.empeza div.contenedor form#formulario div.base-card h2 {
+  body main.empeza div.contenedor form#formulario section.base-card h2 {
     font-size: 1.4rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card input {
+  body main.empeza div.contenedor form#formulario section.base-card input {
     margin-top: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset {
     width: 80vw;
     margin-top: 1rem;
     -webkit-box-orient: vertical;
@@ -2962,21 +2964,21 @@ footer div.right p {
             align-items: center;
     padding: 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset legend {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset legend {
     font-weight: 600;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset div {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset div {
     margin: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset div input {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset div input {
     width: 65px;
     margin: 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card ul li {
+  body main.empeza div.contenedor form#formulario section.base-card ul li {
     width: 22rem;
     height: 22rem;
   }
-  body main.empeza div.contenedor form#formulario div.elegir-color {
+  body main.empeza div.contenedor form#formulario section.base-card div.elegir-color {
     margin-top: 1rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2988,75 +2990,64 @@ footer div.right p {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    background-color: transparent;
+    background-color: #fff;
     border: 4px solid #ffd900;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas div {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas div {
     width: 80vw;
     padding-bottom: 0.25rem;
     overflow: auto;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas div p {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas div p {
     font-weight: 500;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas h3 {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas h3 {
     font-size: 1.4rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.253);
+    margin-top: -0.5rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan {
-    width: 95vw;
+  body main.empeza div.contenedor form#formulario section.plan {
+    width: 100vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado, body main.empeza div.contenedor form#formulario div.plan div.premium {
-    width: 90vw;
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado, body main.empeza div.contenedor form#formulario section.plan article.premium {
+    width: 85vw;
     margin: 1rem 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado ul, body main.empeza div.contenedor form#formulario div.plan div.premium ul {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado ul, body main.empeza div.contenedor form#formulario section.plan article.premium ul {
     font-weight: 600;
     margin: 2rem 2.5rem 2rem 2.5rem;
     line-height: 1.5rem;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago h2, body main.empeza div.contenedor form#formulario div.formas-de-pago p {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago h2, body main.empeza div.contenedor form#formulario section.formas-de-pago p {
     width: 80vw;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago h2 {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago h2 {
     font-size: 1.4rem;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos {
     width: 80vw;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div {
     width: 6rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar {
+  body main.empeza div.contenedor form#formulario section.contactar {
     width: 80vw;
     margin-bottom: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar div {
+  body main.empeza div.contenedor form#formulario section.contactar div {
     margin: 0.3rem 0rem 0rem 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar input {
+  body main.empeza div.contenedor form#formulario section.contactar input {
     padding: 0.2rem 0rem 0.2rem 1rem;
     border: 1px solid #414141;
     border-radius: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar input:last-child {
+  body main.empeza div.contenedor form#formulario section.contactar input:last-child {
     margin-bottom: 1rem;
   }
   body main.empeza div.contenedor form#formulario button[type="submit"], body main.empeza div.contenedor form#formulario button[type="reset"] {
@@ -3153,7 +3144,6 @@ footer div.right p {
     color: #414141;
   }
   body main.inicio section#home div#comentario i.home__martillo {
-    color: #414141;
     font-size: 4rem;
     margin-top: -2rem;
     margin-left: -1rem;
@@ -3165,9 +3155,8 @@ footer div.right p {
     font-size: 3rem;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    color: white;
+    color: #414141;
     text-align: center;
-    text-shadow: #414141 3px -3px 3px;
   }
   body main.inicio section#home div#comentario h3 {
     font-size: 1.2rem;
@@ -3239,10 +3228,10 @@ footer div.right p {
     font-weight: 500;
     padding: 1rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button {
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button.pasos__btn {
     width: 50vw;
   }
-  body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
+  body main.inicio section.pasos div.pasos__contenedor a button {
     width: 50vw;
   }
   body main.sobre__nos {
@@ -3419,25 +3408,28 @@ footer div.right p {
     text-align: center;
     padding: 1rem;
   }
+  body main.empeza div.contenedor h2 {
+    width: 80vw;
+    margin: 0rem auto 1rem auto;
+  }
   body main.empeza div.contenedor h2 strong {
     font-size: 1.2rem;
   }
   body main.empeza div.contenedor form#formulario p:last-child {
     width: 75vw;
     margin: 0rem auto 0.25rem auto;
-    text-align: center;
   }
   body main.empeza div.contenedor form#formulario img.contanos_personaje {
     top: 10vh;
     width: 30vw;
   }
-  body main.empeza div.contenedor form#formulario div.base-card h2 {
+  body main.empeza div.contenedor form#formulario section.base-card h2 {
     font-size: 1.4rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card input {
+  body main.empeza div.contenedor form#formulario section.base-card input {
     margin-top: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset {
     width: 80vw;
     margin-top: 1rem;
     -webkit-box-pack: space-evenly;
@@ -3448,21 +3440,21 @@ footer div.right p {
             align-items: center;
     padding: 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset legend {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset legend {
     font-weight: 600;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset div {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset div {
     margin: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card fieldset div input {
+  body main.empeza div.contenedor form#formulario section.base-card fieldset div input {
     width: 65px;
     margin: 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.base-card ul li {
+  body main.empeza div.contenedor form#formulario section.base-card ul li {
     width: 22rem;
     height: 22rem;
   }
-  body main.empeza div.contenedor form#formulario div.elegir-color {
+  body main.empeza div.contenedor form#formulario section.base-card div.elegir-color {
     margin-top: 1rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -3470,24 +3462,22 @@ footer div.right p {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    background-color: transparent;
-    border: 4px solid #ffd900;
+    background-color: #ffe656;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas div {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas div {
     width: 50vw;
     padding-bottom: 0.25rem;
     overflow: auto;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas div p {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas div p {
     font-weight: 500;
     width: 48vw;
   }
-  body main.empeza div.contenedor form#formulario div.arqui div.personas h3 {
+  body main.empeza div.contenedor form#formulario section.arqui div.personas h3 {
     font-size: 1.4rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.253);
+    margin-top: -0.5rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan {
+  body main.empeza div.contenedor form#formulario section.plan {
     width: 95vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3498,50 +3488,51 @@ footer div.right p {
             justify-content: space-between;
     background-color: transparent;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado, body main.empeza div.contenedor form#formulario div.plan div.premium {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado, body main.empeza div.contenedor form#formulario section.plan article.premium {
     width: 90vw;
     margin-top: 2rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado h2 strong, body main.empeza div.contenedor form#formulario div.plan div.premium h2 strong {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado h2 strong, body main.empeza div.contenedor form#formulario section.plan article.premium h2 strong {
     font-size: 1.5rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado .precio, body main.empeza div.contenedor form#formulario div.plan div.premium .precio {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado .precio, body main.empeza div.contenedor form#formulario section.plan article.premium .precio {
     font-size: 3rem;
   }
-  body main.empeza div.contenedor form#formulario div.plan div.personalizado ul, body main.empeza div.contenedor form#formulario div.plan div.premium ul {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado ul, body main.empeza div.contenedor form#formulario section.plan article.premium ul {
     font-weight: 600;
     margin: 2rem 2.5rem 2rem 2.5rem;
     line-height: 1.5rem;
     text-align: center;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago h2, body main.empeza div.contenedor form#formulario div.formas-de-pago p {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago h2, body main.empeza div.contenedor form#formulario section.formas-de-pago p {
     width: 80vw;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago h2 {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago h2 {
     font-size: 1.4rem;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos {
     width: 80vw;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  body main.empeza div.contenedor form#formulario div.formas-de-pago div.pagos div {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div {
     width: 6rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar {
+  body main.empeza div.contenedor form#formulario section.contactar {
     width: 45vw;
     margin: 1rem 0rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar h2 {
+  body main.empeza div.contenedor form#formulario section.contactar h2 {
+    width: 80%;
     font-size: 1.5rem;
     margin: 1.5rem auto;
   }
-  body main.empeza div.contenedor form#formulario div.contactar input {
+  body main.empeza div.contenedor form#formulario section.contactar input {
     padding: 0.2rem 0rem 0.2rem 1rem;
     border: 1px solid #414141;
     border-radius: 1rem;
   }
-  body main.empeza div.contenedor form#formulario div.contactar input:last-child {
+  body main.empeza div.contenedor form#formulario section.contactar input:last-child {
     margin-bottom: 1rem;
   }
   body main.empeza div.contenedor form#formulario button[type="submit"], body main.empeza div.contenedor form#formulario button[type="reset"] {
@@ -3557,15 +3548,8 @@ footer div.right p {
             align-items: center;
   }
   body footer div.contenedor__footer div {
-    width: 500px;
+    width: 280px;
     text-align: center;
-  }
-  body footer div.contenedor__footer div h3 {
-    font-size: 1.4rem;
-    padding-bottom: 0.25rem;
-  }
-  body footer div.contenedor__footer div.logo a img {
-    width: 6rem;
   }
   body footer div.contenedor__footer div.sociales h3 {
     margin-top: 1rem;
@@ -3574,14 +3558,8 @@ footer div.right p {
   body footer div.contenedor__footer div.sociales p {
     text-align: center;
   }
-  body footer div.contenedor__footer div.sociales div a i {
-    font-size: 2rem;
-  }
   body footer div.contenedor__footer div.contacto h3 {
     text-align: center;
-  }
-  body footer div.contenedor__footer div.contacto div i {
-    font-size: 2rem;
   }
   body footer div.contenedor__footer div.contacto div p {
     text-align: center;
@@ -3648,7 +3626,6 @@ footer div.right p {
     color: #414141;
   }
   body main.inicio section#home div#comentario i.home__martillo {
-    color: #414141;
     -webkit-filter: drop-shadow(2px 2px 1px #fff);
             filter: drop-shadow(2px 2px 1px #fff);
     font-size: 5rem;
@@ -3662,9 +3639,7 @@ footer div.right p {
     font-size: 4rem;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
-    color: white;
     text-align: center;
-    text-shadow: #000 3px 3px 4px;
   }
   body main.inicio section#home div#comentario h3 {
     font-size: 1.4rem;
@@ -3680,12 +3655,10 @@ footer div.right p {
     margin: 4rem auto;
     background-color: transparent;
     padding: 1rem;
-    border: 4px solid #ffd900;
   }
   body main.inicio section#home div.home__card2 i {
     left: 2.5rem;
     font-size: 3.5rem;
-    color: #ff156f;
   }
   body main.inicio section#home div.home__card2 div.home__parrafos h3 {
     font-size: 2.5rem;
@@ -3716,13 +3689,11 @@ footer div.right p {
     font-weight: 500;
     padding: 1.4rem;
   }
-  body main.inicio section.pasos div.pasos__contenedor a {
-    margin: 2rem auto 0rem auto;
+  body main.inicio section.pasos div.pasos__contenedor div.pasos__card div a button.pasos__btn {
+    width: 45vw;
   }
-  body main.inicio section.pasos div.pasos__contenedor a button.pasos__btn {
-    width: 40vw;
-    font-size: 1.4rem;
-    padding: 0.6rem 1.5rem;
+  body main.inicio section.pasos div.pasos__contenedor a button {
+    width: 45vw;
   }
   body main.sobre__nos {
     margin-top: -73rem;
@@ -3886,7 +3857,6 @@ footer div.right p {
   body main.inicio section#home div.home__card2 {
     width: 55%;
     margin: 4rem auto;
-    border: 4px solid #ffd900;
   }
   body main.inicio section#home div.home__card2 i {
     left: 2.5rem;

@@ -87,12 +87,10 @@ body{
                 padding: 0.25rem;
                 border-radius: $radio-fuerte;
                 background-color: #ffffff5e;
-                box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
                 font-size: 1rem;
                 color: $clr-gris-oscuro;
 
                 i.home__martillo{
-                    color: $clr-gris-claro;
                     font-size: 3rem;
                     margin-top: -2.5rem;
                     margin-left: -0.5rem;
@@ -178,16 +176,16 @@ body{
                                 margin-bottom: 1rem;
                             }
                         }
-                        
+                        a{
+                            button.pasos__btn{width: 70vw;}
+                        }
                     }
                 }
                 a{
-                    button.pasos__btn{
-                        width: 90vw;
-                        padding: 0.5rem 1rem;
-                    }
+                    button{width: 70vw;}
                 }
             }
+            
         }
     }
 
@@ -477,7 +475,7 @@ main.contenedor__p3{
                 font-size: 1.1rem;
                 line-height: 1.5; 
                 margin-bottom: 0;
-                strong{font-size: 1.2rem;}
+                strong{font-size: 1rem;}
             }
             form#formulario{
                 p{
@@ -492,15 +490,18 @@ main.contenedor__p3{
                     top: 30vh;
                     width: 35vw;
                 }
-                div.base-card{
+                section.base-card{
                     fieldset{
                         width: 80vw;
                         flex-direction: column; 
                         justify-content: space-between;
-                        align-items: center;   
+                        margin-top: 0.5rem;  
                         padding: 0rem;
-                        legend{font-weight: 600;}
+                        // legend{font-weight: 600;}
                         div{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
                             margin:1rem;
                             input{
                                 width: 65px;;
@@ -508,15 +509,16 @@ main.contenedor__p3{
                             }
                         }
                     }
+                    div.elegir-color{
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        background-color: #fff;
+                        border: 4px solid $clr-primario-hover;
+                    } 
                 }
-                div.elegir-color{
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    background-color: transparent;
-                    border: 4px solid $clr-primario-hover;
-                } 
-                div.arqui{
+                
+                section.arqui{
                     div.personas{
                         flex-direction: column;
                         justify-content: space-around;
@@ -531,15 +533,14 @@ main.contenedor__p3{
                         }
                         h3{
                             font-size: 1.4rem;
-                            color: #fff;
-                            background-color: rgba(0, 0, 0, 0.253);
+                            margin-top: -0.5rem;
                         }
                     }
                 }
-                div.plan{
+                section.plan{
                     width: 95vw;
                     flex-direction: column;
-                    div.personalizado, div.premium{
+                    article.personalizado, article.premium{
                         width: 90vw;
                         margin: 1rem 0rem;                 
                         ul{
@@ -549,7 +550,7 @@ main.contenedor__p3{
                         }
                     }
                 }
-                div.formas-de-pago{
+                section.formas-de-pago{
                     h2, p{width: 80vw;}
                     div.pagos{
                         width: 80vw;
@@ -559,7 +560,7 @@ main.contenedor__p3{
                         }
                     }
                 }
-                div.contactar{
+                section.contactar{
                     width: 80vw;
                     margin-bottom: 1rem;
                     

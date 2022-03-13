@@ -60,7 +60,6 @@
                     box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
                     color: $clr-gris-oscuro;
                     i.home__martillo{
-                        color: $clr-gris-oscuro;
                         font-size: 4rem;
                         margin-top: -2rem;
                         margin-left: -1rem;
@@ -71,9 +70,8 @@
                             font-size: 3rem;
                             font-family: $fuente-1;
                             font-weight: bold;
-                            color: white;
+                            color: $clr-gris-oscuro;
                             text-align: center;
-                            text-shadow: $clr-gris-oscuro 3px -3px 3px;
                         }
                     }
                     h3{
@@ -143,14 +141,14 @@
                                 }
                             }
                             a{  
-                                button{
+                                button.pasos__btn{
                                     width: 50vw;
                                 }
                             }
                         }
                     }
                     a{
-                        button.pasos__btn{
+                        button{
                             width: 50vw;
                         }
                     }
@@ -350,6 +348,8 @@ main.sobre__nos{
                 padding: 1rem; 
             }
             h2{
+                width: 80vw;
+                margin: 0rem auto 1rem auto;
                 strong{font-size: 1.2rem;}
             }
             form#formulario{
@@ -357,14 +357,13 @@ main.sobre__nos{
                     &:last-child{
                         width: 75vw;
                         margin: 0rem auto 0.25rem auto;
-                        text-align: center; 
                     }
                 }
                 img.contanos_personaje{
                     top: 10vh;
                     width: 30vw;
                 }
-                div.base-card{
+                section.base-card{
                     h2{font-size: 1.4rem;}
                     input{margin-top: 1rem;}
                     fieldset{
@@ -388,16 +387,16 @@ main.sobre__nos{
                             height: 22rem;
                         }
                     }
+                    div.elegir-color{
+                        margin-top: 1rem;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        background-color: $clr-primario;
+                    } 
                 }
                 
-                div.elegir-color{
-                    margin-top: 1rem;
-                    align-items: center;
-                    justify-content: space-evenly;
-                    background-color: transparent;
-                    border: 4px solid $clr-primario-hover;
-                } 
-                div.arqui{
+                
+                section.arqui{
                     div.personas{
                         div{
                             width: 50vw;
@@ -410,18 +409,17 @@ main.sobre__nos{
                         }
                         h3{
                             font-size: 1.4rem;
-                            color: #fff;
-                            background-color: rgba(0, 0, 0, 0.253);
+                            margin-top: -0.5rem;
                         }
                     }
                 }
-                div.plan{
+                section.plan{
                     width: 95vw;
                     flex-direction: column;
                     justify-content: space-between;
                     background-color: transparent;
                     
-                    div.personalizado, div.premium{
+                    article.personalizado, article.premium{
                         width: 90vw;
                         margin-top: 2rem;
                         h2{
@@ -436,7 +434,7 @@ main.sobre__nos{
                         }
                     }
                 }
-                div.formas-de-pago{
+                section.formas-de-pago{
                     h2, p{width: 80vw;}
                     h2{font-size: 1.4rem;}
                     div.pagos{
@@ -447,10 +445,11 @@ main.sobre__nos{
                         }
                     }
                 }
-                div.contactar{
+                section.contactar{
                     width: 45vw;
                     margin: 1rem 0rem;
                     h2{
+                        width: 80%;
                         font-size: 1.5rem;
                         margin: 1.5rem auto;
                     }
@@ -465,61 +464,51 @@ main.sobre__nos{
             }
         }
     }
-        // ---MODIFICACIONES AL FOOTER, ACORDE A MQ------
-        footer{
-            div.contenedor__footer{
-                flex-direction: column;
-                align-items: center;
-                div{
-                    width: 500px;
-                    text-align: center;
-                    h3{
-                        font-size: 1.4rem;
-                        padding-bottom: 0.25rem;
-                    }
-                }
-                div.logo{
-                    a{
-                        img{width: 6rem;}
-                    }
-                }
-                div.sociales{
-                    h3{
-                        margin-top: 1rem;
-                        text-align: center;
-                    }
-                    p{
-                        text-align: center;
-                    } 
-                    div{
-                        a{
-                            i{font-size: 2rem;}
-                        }
-                    }
-                }
-                div.contacto{
-                    h3{text-align: center;}
-                    div{
-                        i{font-size: 2rem;}
-                        p{text-align: center;}
-                    }
-                }
-                div.comentarios{
-                    h3{
-                        text-align: center;
-                    }
-                }
+
+    footer{
+        div.contenedor__footer{
+            flex-direction: column;
+            align-items: center;
+            div{
+                width: 280px;
+                text-align: center;
             }
-            div.right{
-                hr{
-                    width: 90vw;
-                    margin: 10px auto;
+            div.sociales{
+                h3{
+                    margin-top: 1rem;
+                    text-align: center;
                 }
                 p{
-                    padding: 0rem 1rem;
+                    text-align: center;
+                }    
+            }
+            div.contacto{
+                h3{
+                    text-align: center;
+                }
+                div{
+                    p{text-align: center;}
+                }
+            }
+            div.comentarios{
+                h3{
                     text-align: center;
                 }
             }
         }
+        div.right{
+            hr{
+                width: 90vw;
+                margin: 10px auto;
+            }
+            p{
+                padding: 0rem 1rem;
+                text-align: center;
+            }
+        }
+    }
     }   
-}
+    }  
+
+
+
