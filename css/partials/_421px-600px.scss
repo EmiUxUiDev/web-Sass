@@ -69,27 +69,22 @@
             background-size: 160%;
             background-position:center -0.5%;
             margin-top: -75rem;
-            svg{   
-                margin-top: -87rem;
-            }
+            // svg{   
+            //     margin-top: -87rem;
+            // }
             section#home{ 
                 h1#titulo{ 
                         font-size: 3.4rem;
                         line-height: 3.4rem;
                         text-align: center;
                         padding: 0.5rem; 
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
                     margin: 18rem auto 0rem auto;
                     width: 96%;
                     padding: 0.8rem;
-                    border-radius: $radio-fuerte;
-                    background-color: #ffffff80;
                     font-size: 1rem;
-                    color: $clr-gris-oscuro;
                     i.home__martillo{
-                        text-shadow: $clr-primario 0px 0px 4px;
                         font-size: 3.5rem;
                         margin-top: -2rem;
                         margin-left: -1.4rem;
@@ -98,12 +93,6 @@
                         margin: -4.3rem 0rem 0rem 0rem;
                         strong{
                             font-size: 2.2rem;
-                        font-family: $fuente-1;
-                        font-weight: bold;
-                        color: white;
-                        text-shadow: $clr-gris-oscuro 3px 3px 3px;
-                        text-align: center;
-
                         }
                     }
                     h3{
@@ -122,7 +111,6 @@
                     margin: 3rem auto;
                     background-color: transparent;
                     padding: 1rem;
-                    border: 4px solid $clr-primario-hover;
                     i{
                         left: 2.5rem;
                         font-size: 3rem;
@@ -136,15 +124,9 @@
             }
             section.pasos{
                 div.pasos__contenedor{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     h2{
                         margin-top: 2rem;
                         font-size: 4rem;
-                        color: $clr-primario-hover;
-                        line-height: 4rem;
-                        letter-spacing: 0.25rem;
                     }
                     div.pasos__card{
                         img#primerimg{
@@ -199,10 +181,6 @@
             font-size: 3.4rem;
             line-height: 3.4rem;
             text-align: center;
-        }
-        h2{
-            strong{font-size: 1.2rem;
-                color: $clr-gris-oscuro;}
         }
         section.contenedor__nos{
             div.contenedor__anidado{
@@ -263,12 +241,10 @@
         section.contenedor__pasos--p2{
             div.fila--p2{
                 article.pasos__card--p2{
-                    width: 340PX;
+                    width: 340px;
                     height: auto;
                     margin: 1.5rem 1rem 3.5rem 1rem;
-                    display: flex;
                     flex-direction: column;
-                    align-items: center;
                     img{
                         width: 280px;
                     }
@@ -311,8 +287,6 @@
                 }
             }
         }
-       
-
     }
 
 
@@ -325,16 +299,8 @@
             flex-direction: column;
             h1{
                 font-size: 3.4rem;
-                letter-spacing: 0.15rem;
                 line-height: 3.4rem;
-                margin: -2rem auto 0rem auto;
             } 
-            p{
-            margin: 0 auto;
-                input{
-                    margin:1rem 0.5rem;
-                    }
-            }
             }
             p{
                 text-align: center;
@@ -344,56 +310,19 @@
                     color: $clr-gris-oscuro;
                 }
             }
-            
             section.contenedor__grid{
-                
                 grid-template-columns: repeat(auto-fit, 27rem);
                 article.grid__card{
                     padding-bottom: 1rem;
-                    p{
-                        color: $clr-gris-medio;
-                        font-size: 0.8rem;
-                        text-transform: uppercase;
-                        letter-spacing: 0.1rem;
-                    }
                     h2{
-                        font-size: 1.1rem;
                         line-height: 1.5; 
                     }
                     iframe{
                         height: 300px;
-                        width: 100%;
-                        border-radius: $radio-medio;
-                        margin-bottom: 1rem;
                     }
-                    a{
-                        display: block;
-                        text-decoration: none;
-                        font-weight: bold; 
-                        margin: 1rem 0rem;
-                    }
-                    i{
-                        font-size: 0.8rem;
-                        margin-left: 0.5rem;  
-                    }
+
                     div{
                         height: 300px;
-                        width: 100%;
-                        margin-bottom: 1rem;
-                        background-color: $clr-secundario;
-                        border-radius: $radio-medio;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: center;
-                    }
-                    div.blog1{
-                        background-image: url(../multimedia/img/blog-pileta.jpg); 
-                    }
-                    div.blog2{
-                        background-image: url(../multimedia/img/blog-pisomadera.jpg);
-                    }
-                    div.blog3{
-                        background-image: url(../multimedia/img/blog-colores.jpg);
                     }
                 }
             }
@@ -429,22 +358,18 @@
                     }
                 }
                 img.contanos_personaje{
-                    top: 30vh;
+                    top: 20vh;
                     width: 35vw;
                 }
                 section.base-card{
                     h2{font-size: 1.4rem;}
                     input{margin-top: 1rem;}
                     fieldset{
-                        width: 80vw;
                         margin-top: 1rem;
                         flex-direction: column; 
                         justify-content: space-between;
-                        align-items: center;   
                         padding: 0rem;
-                        legend{font-weight: 600;}
                         div{
-                            margin:1rem;
                             input{
                                 width: 65px;
                                 margin: 0rem;
@@ -461,14 +386,12 @@
                         margin-top: 1rem;
                         flex-direction: column;
                         align-items: center;
-                        justify-content: space-evenly;
                         background-color: #fff;
                         border: 4px solid $clr-primario-hover;
                     }
                 }
                 section.arqui{
                     div.personas{
-
                         div{
                             width: 80vw;
                             padding-bottom: 0.25rem;
@@ -499,27 +422,10 @@
                 section.formas-de-pago{
                     h2, p{width: 80vw;}
                     h2{font-size: 1.4rem;}
-                    div.pagos{
-                        width: 80vw;
-                        flex-wrap: wrap;
-                        div{
-                            width: 6rem;
-                        }
-                    }
                 }
                 section.contactar{
                     width: 80vw;
                     margin-bottom: 1rem;
-                    
-                    div{
-                        margin: 0.3rem 0rem 0rem 0rem;
-                    }
-                    input{
-                        padding: 0.2rem 0rem 0.2rem 1rem;
-                        border: 1px solid $clr-gris-oscuro;
-                        border-radius:$radio-medio;
-                        &:last-child{margin-bottom: 1rem;}
-                    }
                 }
                 button[type="submit"], button[type="reset"]{width: 50vw;}
             }
@@ -532,7 +438,7 @@
             flex-direction: column;
             align-items: center;
             div{
-                width: 280px;
+                width: 360px;
                 text-align: center;
             }
             div.sociales{

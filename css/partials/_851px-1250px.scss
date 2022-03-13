@@ -33,27 +33,17 @@
         // -----INICIO MAIN-----
         main.inicio{
             margin-top: -75rem;
-            svg{margin-top: -100rem;}
             section#home{
                 h1#titulo{
                         padding: 2rem;
-                        letter-spacing: 0.2rem;
-                        text-align: center; 
                         font-size: 4.8rem;
                         line-height: 3rem;
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
                     margin: 26rem auto 0rem auto;
                     width: 96%;
                     padding: 0.8rem;
-                    border-radius: $radio-fuerte;
-                    background-color: #ffffff5b;
-                    box-shadow: rgba(48, 48, 48, 0.993) 3px 3px 15px;
-                    // border:6px solid $clr-secundario;
-                    color: $clr-gris-oscuro;
                     i.home__martillo{
-                        filter: drop-shadow(2px 2px 1px #fff);
                         font-size: 5rem;
                         margin-top: 0rem;
                         margin-left: -1rem;
@@ -62,14 +52,10 @@
                         margin: -2rem 0rem 3rem 0rem;
                         strong{
                             font-size: 4rem;
-                            font-family: $fuente-1;
-                            font-weight: bold;
-                            text-align: center;
                         }
                         
                     }
                     h3{
-                        font-size: 1.4rem;
                         padding: 0;
                         margin-top: 4rem;
                         &:last-child{
@@ -81,8 +67,6 @@
                 div.home__card2{
                     width: 55%;
                     margin: 4rem auto;
-                    background-color: transparent;
-                    padding: 1rem;
                     i{
                         left: 2.5rem;
                         font-size: 3.5rem;
@@ -141,11 +125,8 @@ main.sobre__nos{
     margin-top: -73rem;
     h1{
         padding: 2rem;
-        letter-spacing: 0.2rem;
-        text-align: center; 
         font-size: 4.8rem;
         line-height: 3rem;
-        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
     }
     h2{
         strong{font-size: 1.2rem;}

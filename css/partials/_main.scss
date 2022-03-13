@@ -108,7 +108,8 @@ main{
                 font-size: 5.8rem;
                 padding: 0.8rem;
                 letter-spacing: 0.2rem;
-                background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.699) 80%); 
+                text-align: center;
+                background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
             div#comentario{
                 position: relative;
@@ -116,14 +117,16 @@ main{
                 width: 98%;
                 padding: 2rem;
                 border-radius:$radio-fuerte;
-                background-color: #ffd90013;
+                color: $clr-gris-oscuro;
+                background-color: #ffffff5e;
                 box-shadow: rgba(143, 143, 143, 0.911) 3px 3px 15px;
                 backdrop-filter: blur(0.1rem);
                 border: 1px solid rgba(255, 255, 255, 0.363);
                 z-index: 100;
                 i.home__martillo{
                     font-size: 6rem;
-                    color: $clr-primario-hover;
+                    color: $clr-gris-medio;
+                    text-shadow: #000 1px 0px 1px;
                     margin-top: -3rem;
                     margin-left: -1rem;
                     animation: martillar 2s ease-in-out 1s infinite normal none;
@@ -145,10 +148,10 @@ main{
                     }
                 h2{
                     font-size: 3rem;
-                    text-shadow: $clr-gris-oscuro 3px 3px 3px;
+                    text-shadow: $clr-primario 2px 0px 1px;
                     font-family: $fuente-1;
                     font-weight: bold;
-                    color: #fff;
+                    color: $clr-gris-oscuro;
                     text-align: center;
                     margin: 2rem 0rem 3rem 0rem;
                 }
@@ -163,12 +166,11 @@ main{
             div.home__card2{
                 position: relative;
                     margin: 6rem auto 0rem auto;
-                    background-color: transparent;
+                    background-color: #fff;
                     padding: 1rem;
                     border-radius: $radio-fuerte;
                     width: 65%;
-                    background-color: transparent;
-                    border: 6px solid $clr-gris;
+                    border: 4px solid $clr-gris;
                     z-index: 100;
                 i{
                     position: absolute;
@@ -305,7 +307,6 @@ main{
                     }
                 }
             }
-               
         }
     }
     
@@ -319,11 +320,15 @@ main.sobre__nos{
         font-size: 5.4rem;
         padding: 0.8rem;
         letter-spacing: 0.2rem;
+        text-align: center;
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
     }
     h2{
         padding: 0.5rem;
-        margin: 2rem auto;
-        color: $clr-gris-oscuro;
+        margin: 1.5rem auto;
+        strong{
+            font-size: 1.2rem;
+            color: $clr-gris-oscuro;}
     }
     section.contenedor__nos{
         display:flex;
@@ -379,6 +384,7 @@ main.sobre__nos{
                     letter-spacing: 0.1rem;
                     color: $clr-gris-oscuro;
                     margin-top:13rem;
+                    background-color: $clr-primario;
                 }
                 p{
                     font-size: 1rem;
@@ -494,9 +500,10 @@ main.como__funciona{
             min-width: 100vw;
             article.pasos__card--p2{
                 position: relative;
-                width: 500PX;
-                height: 250PX;
+                width: 500px;
+                height: 250px;
                 margin: 2rem 1rem 3rem 1rem;
+                padding-bottom: 0.5rem;
                 display: flex;
                 align-items: center;
                 background-color: white;
@@ -515,7 +522,7 @@ main.como__funciona{
                     padding: 0.5rem;
                 }
                 div{
-                    width: 250px;
+                    width: 280px;
                     padding: 0.5rem;
                     h3{
                         text-align: center; 
@@ -723,9 +730,12 @@ main.contenedor__p3{
             margin-top: -2rem;
             font-size: 4.8rem;
             padding: 0.8rem;
+            letter-spacing: 0.15rem;
+            text-align: center;
         }
         p{
-            margin-left: 1rem;
+            // margin-left: 1rem;
+            text-align: center;
             input{
                 margin:1rem 0.5rem;
                 height: 1.5rem;
@@ -761,6 +771,7 @@ main.contenedor__p3{
                 font-size: 0.8rem;
                 text-transform: uppercase;
                 letter-spacing: 0.1rem;
+                padding-top: 0.2rem;
             }
             h2{
                 color: $clr-gris-oscuro;
@@ -819,6 +830,7 @@ main.empeza{
             margin: 0 0 1rem -0.8rem;  
             font-size: 4.8rem;
             padding: 0.8rem;
+            letter-spacing: 0.15rem;
         }
         h2{
             text-align: center;
@@ -830,17 +842,17 @@ main.empeza{
                 font-size: 1.4rem;
             }
         }
-
         p{
             color:$clr-gris-oscuro;   
         }
-
         form#formulario{
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             &:last-child{
+                width: 90vw;
+                margin: 0.2rem auto;
                 font-size: 0.9rem;
                 font-weight: 500 ;
                 text-align: center;
@@ -851,7 +863,6 @@ main.empeza{
                 top: -5vh;
                 width: 25vw;
             }
-           
             p{margin-bottom: 1rem;}
             section.base-card{
                 display: flex;
@@ -893,7 +904,6 @@ main.empeza{
                     border-radius: $radio-fuerte;
                     border: none;
                     background-color:$clr-primario;
-                    legend{font-weight: 600;}
                     div{
                         margin:1rem;
                         input{
@@ -1088,6 +1098,7 @@ main.empeza{
                     flex-wrap: wrap;
                     margin: 1.5rem 0rem;
                     div{
+                        width: 8rem;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -1119,7 +1130,8 @@ main.empeza{
                     margin: 0.3rem 0rem 0rem 0rem;
                 }
                 input{
-                    padding: 0.2rem 0rem 0.2rem 1rem;
+                    padding: 0.4rem 0rem 0.4rem 1rem;
+                    margin: 0rem 0rem 0.8rem 0rem;
                     border: 1px solid $clr-gris-oscuro;
                     border-radius:$radio-medio;
                     &:last-child{margin-bottom: 1rem;}

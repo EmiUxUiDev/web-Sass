@@ -47,18 +47,12 @@
                 h1#titulo{ 
                         font-size: 3.8rem;
                         line-height: 3.8rem;
-                        text-align: center;
                         padding: 1rem; 
-                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
                 }
                 div#comentario{
                     margin: 19rem 0rem 0rem 0.5rem;
-                    width: 98%;
                     padding: 0.8rem;
-                    border-radius: $radio-fuerte;
-                    background-color: #ffffff80;
-                    box-shadow: rgba(160, 160, 160, 0.753) 3px 3px 15px;
-                    color: $clr-gris-oscuro;
+
                     i.home__martillo{
                         font-size: 4rem;
                         margin-top: -2rem;
@@ -68,17 +62,12 @@
                         margin: -2rem 0rem 0rem 0rem;
                         strong{
                             font-size: 3rem;
-                            font-family: $fuente-1;
-                            font-weight: bold;
-                            color: $clr-gris-oscuro;
-                            text-align: center;
                         }
                     }
                     h3{
                         font-size: 1.2rem;
                         padding: 0;
                         margin-top: 2rem;
-                        color: $clr-gris-oscuro;
                         &:last-child{
                             margin-top: 2rem;
                             font-size: 1.1rem;
@@ -88,13 +77,9 @@
                 div.home__card2{
                     width: 70%;
                     margin: 4rem auto;
-                    background-color: transparent;
-                    padding: 1rem;
-                    border: 4px solid $clr-primario-hover;
                     i{
                         left: 2.5rem;
                         font-size: 3.5rem;
-                        color: $clr-secundario;
                     }
                     div.home__parrafos{
                         h3{
@@ -105,14 +90,9 @@
             }
             section.pasos{
                 div.pasos__contenedor{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     h2{
                         margin-top: 2rem;
                         font-size: 5rem;
-                        line-height: 4rem;
-                        letter-spacing: 0.25rem;
                     }
                     div.pasos__card{
                         img#primerimg{
@@ -164,13 +144,7 @@ main.sobre__nos{
     h1{
         font-size: 3.8rem;
         line-height: 3.8rem;
-        text-align: center;
         padding: 1rem; 
-        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.699) 80%); 
-    }
-    h2{
-        strong{font-size: 1.2rem;
-            color: $clr-gris-oscuro;}
     }
     section.contenedor__nos{
         div.contenedor__anidado{
@@ -182,9 +156,7 @@ main.sobre__nos{
     p{text-align: center;
         padding: 0.5rem;}
     section.contenedor__tecnologia{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
         h2{
             text-transform: uppercase;
             color: $clr-gris-oscuro;
@@ -204,7 +176,6 @@ main.sobre__nos{
             width: 95%;
             text-align: center;
         }
-
     }
 }
 
@@ -281,58 +252,23 @@ main.sobre__nos{
             }
             
             section.contenedor__grid{
-                
                 grid-template-columns: repeat(auto-fit, 35rem);
                 article.grid__card{
                     padding-bottom: 1rem;
-                    p{
-                        color: $clr-gris-medio;
-                        font-size: 0.8rem;
-                        text-transform: uppercase;
-                        letter-spacing: 0.1rem;
-                    }
                     h2{
-                        font-size: 1.1rem;
                         line-height: 1.5; 
                     }
                     iframe{
                         height: 360px;
                         width: 100%;
-                        border-radius: $radio-medio;
-                        margin-bottom: 1rem;
                     }
-                    a{
-                        display: block;
-                        text-decoration: none;
-                        font-weight: bold; 
-                        margin: 1rem 0rem;
-                    }
-                    i{
-                        font-size: 0.8rem;
-                        margin-left: 0.5rem;  
-                    }
+
                     div{
                         height: 360px;
                         width: 100%;
-                        margin-bottom: 1rem;
-                        background-color: $clr-secundario;
-                        border-radius: $radio-medio;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        background-position: center;
-                    }
-                    div.blog1{
-                        background-image: url(../multimedia/img/blog-pileta.jpg); 
-                    }
-                    div.blog2{
-                        background-image: url(../multimedia/img/blog-pisomadera.jpg);
-                    }
-                    div.blog3{
-                        background-image: url(../multimedia/img/blog-colores.jpg);
                     }
                 }
             }
-        
     }
         
     // --------------------------------
@@ -367,7 +303,6 @@ main.sobre__nos{
                     h2{font-size: 1.4rem;}
                     input{margin-top: 1rem;}
                     fieldset{
-                        width: 80vw;
                         margin-top: 1rem; 
                         justify-content: space-evenly;
                         align-items: center;   
@@ -387,15 +322,7 @@ main.sobre__nos{
                             height: 22rem;
                         }
                     }
-                    div.elegir-color{
-                        margin-top: 1rem;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        background-color: $clr-primario;
-                    } 
                 }
-                
-                
                 section.arqui{
                     div.personas{
                         div{
@@ -414,13 +341,12 @@ main.sobre__nos{
                     }
                 }
                 section.plan{
-                    width: 95vw;
                     flex-direction: column;
                     justify-content: space-between;
                     background-color: transparent;
                     
                     article.personalizado, article.premium{
-                        width: 90vw;
+                        width: 85vw;
                         margin-top: 2rem;
                         h2{
                             strong{font-size: 1.5rem;}
@@ -441,7 +367,7 @@ main.sobre__nos{
                         width: 80vw;
                         flex-wrap: wrap;
                         div{
-                            width: 6rem;
+                            width: 8rem;
                         }
                     }
                 }
@@ -452,12 +378,6 @@ main.sobre__nos{
                         width: 80%;
                         font-size: 1.5rem;
                         margin: 1.5rem auto;
-                    }
-                    input{
-                        padding: 0.2rem 0rem 0.2rem 1rem;
-                        border: 1px solid $clr-gris-oscuro;
-                        border-radius:$radio-medio;
-                        &:last-child{margin-bottom: 1rem;}
                     }
                 }
                 button[type="submit"], button[type="reset"]{width: 35vw;}
@@ -470,11 +390,20 @@ main.sobre__nos{
             flex-direction: column;
             align-items: center;
             div{
-                width: 280px;
+                width: 480px;
                 text-align: center;
+            }
+            
+            div.logo{
+                div.logo__img{
+                    a{
+                        img{width: 6rem;}
+                    }
+                }
             }
             div.sociales{
                 h3{
+                    font-size: 1.3rem;
                     margin-top: 1rem;
                     text-align: center;
                 }
@@ -484,6 +413,7 @@ main.sobre__nos{
             }
             div.contacto{
                 h3{
+                    font-size: 1.3rem;
                     text-align: center;
                 }
                 div{
@@ -492,6 +422,7 @@ main.sobre__nos{
             }
             div.comentarios{
                 h3{
+                    font-size: 1.3rem;
                     text-align: center;
                 }
             }
