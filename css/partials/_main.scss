@@ -94,7 +94,7 @@ main{
     
     // -----SECCION INICIO/HOME-------
     main.inicio{
-        background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+        background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.webp");
         background-size:contain;
         background-repeat: no-repeat;
         section#home {
@@ -355,16 +355,16 @@ main.sobre__nos{
                     transform: scale(1.02) rotate(0.5deg);
                 }
                 div.url1{
-                    background-image: url(../multimedia/img/la-cañada-light.jpg);
+                    background-image: url(../multimedia/img/la-cañada-light.webp);
                 }
                 div.url2{
-                    background-image: url(../multimedia/img/estudio-de-arquitectura2.jpg);
+                    background-image: url(../multimedia/img/estudio-de-arquitectura2.webp);
                 }
                 div.url3{
-                    background-image: url(../multimedia/img/charla.jpg);
+                    background-image: url(../multimedia/img/charla.webp);
                 }
                 div.url4{
-                    background-image: url(../multimedia/img/croquis.jpg);
+                    background-image: url(../multimedia/img/croquis.webp);
                 }
                 div.img-fondo{
                     position: absolute;
@@ -729,7 +729,6 @@ main.contenedor__p3{
             text-align: center;
         }
         p{
-            // margin-left: 1rem;
             text-align: center;
             input{
                 margin:1rem 0.5rem;
@@ -802,13 +801,13 @@ main.contenedor__p3{
                 background-position: center;
             }
             div.blog1{
-                background-image: url(../multimedia/img/blog-pileta.jpg); 
+                background-image: url(../multimedia/img/blog-pileta.webp); 
             }
             div.blog2{
-                background-image: url(../multimedia/img/blog-pisomadera.jpg);
+                background-image: url(../multimedia/img/blog-pisomadera.webp);
             }
             div.blog3{
-                background-image: url(../multimedia/img/blog-colores.jpg);
+                background-image: url(../multimedia/img/blog-colores.webp);
             }
         }
     }
@@ -909,19 +908,19 @@ main.empeza{
                 }
                 ul{
                     li.img1{
-                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.jpg");
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.webp");
                     }
                     li.img2{
-                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente vintage-light.jpg");
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente vintage-light.webp");
                     }
                     li.img3{
-                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente verde-light.jpg");
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente verde-light.webp");
                     }
                     li.img4{
-                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente rustico-light.jpg");
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente rustico-light.webp");
                     }
                     li.img5{
-                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente moderno-light.jpg");
+                        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente moderno-light.webp");
                     }
                 }               
                 ul{
@@ -999,28 +998,28 @@ main.empeza{
                         font-size: 1.2rem;
                     }
                     div.img1{
-                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui3-light.jpg");
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui3-light.webp");
                         background-size:cover;
                         background-position: center;
                         border-radius: $radio-medio; 
                         padding: 0.5rem;
                     }
                     div.img2{
-                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui5-light.jpg");
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui5-light.webp");
                         background-size:cover;
                         background-position: center;
                         border-radius: $radio-medio;
                         padding: 0.5rem;
                     }
                     div.img3{
-                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui2-light.jpg");
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui2-light.webp");
                         background-size:cover;
                         background-position: center;
                         border-radius: $radio-medio;
                         padding: 0.5rem;
                     }
                     div.img4{
-                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui4-light.jpg");
+                        background-image:linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui4-light.webp");
                         background-size:cover;
                         background-position: center;
                         border-radius: $radio-medio;

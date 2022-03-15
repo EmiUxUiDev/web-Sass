@@ -315,7 +315,7 @@ main div.whatsapp div.whatsapp__chico a svg.wp {
 }
 
 main.inicio {
-  background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.jpg");
+  background-image: url("../multimedia/img/living-room-g8c65edcdb_1920.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -669,19 +669,19 @@ main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tar
 }
 
 main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url1 {
-  background-image: url(../multimedia/img/la-cañada-light.jpg);
+  background-image: url(../multimedia/img/la-cañada-light.webp);
 }
 
 main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url2 {
-  background-image: url(../multimedia/img/estudio-de-arquitectura2.jpg);
+  background-image: url(../multimedia/img/estudio-de-arquitectura2.webp);
 }
 
 main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url3 {
-  background-image: url(../multimedia/img/charla.jpg);
+  background-image: url(../multimedia/img/charla.webp);
 }
 
 main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.url4 {
-  background-image: url(../multimedia/img/croquis.jpg);
+  background-image: url(../multimedia/img/croquis.webp);
 }
 
 main.sobre__nos section.contenedor__nos div.contenedor__anidado article.nos__tarjeta div.img-fondo {
@@ -1253,15 +1253,15 @@ main.contenedor__p3 section.contenedor__grid article.grid__card div {
 }
 
 main.contenedor__p3 section.contenedor__grid article.grid__card div.blog1 {
-  background-image: url(../multimedia/img/blog-pileta.jpg);
+  background-image: url(../multimedia/img/blog-pileta.webp);
 }
 
 main.contenedor__p3 section.contenedor__grid article.grid__card div.blog2 {
-  background-image: url(../multimedia/img/blog-pisomadera.jpg);
+  background-image: url(../multimedia/img/blog-pisomadera.webp);
 }
 
 main.contenedor__p3 section.contenedor__grid article.grid__card div.blog3 {
-  background-image: url(../multimedia/img/blog-colores.jpg);
+  background-image: url(../multimedia/img/blog-colores.webp);
 }
 
 main.empeza div.contenedor h1 {
@@ -1389,28 +1389,28 @@ main.empeza div.contenedor form#formulario section.base-card fieldset div input 
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img1 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente clasico-light.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente clasico-light.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.webp");
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente vintage-light.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente vintage-light.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente vintage-light.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente vintage-light.webp");
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img3 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente verde-light.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente verde-light.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente verde-light.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente verde-light.webp");
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img4 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente rustico-light.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente rustico-light.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente rustico-light.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente rustico-light.webp");
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img5 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente moderno-light.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente moderno-light.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(35%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/ambiente moderno-light.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente moderno-light.webp");
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul {
@@ -1521,8 +1521,8 @@ main.empeza div.contenedor form#formulario section.arqui div.personas h3 {
 }
 
 main.empeza div.contenedor form#formulario section.arqui div.personas div.img1 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui3-light.jpg");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui3-light.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui3-light.webp");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui3-light.webp");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
@@ -1530,8 +1530,8 @@ main.empeza div.contenedor form#formulario section.arqui div.personas div.img1 {
 }
 
 main.empeza div.contenedor form#formulario section.arqui div.personas div.img2 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui5-light.jpg");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui5-light.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui5-light.webp");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui5-light.webp");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
@@ -1539,8 +1539,8 @@ main.empeza div.contenedor form#formulario section.arqui div.personas div.img2 {
 }
 
 main.empeza div.contenedor form#formulario section.arqui div.personas div.img3 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui2-light.jpg");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui2-light.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui2-light.webp");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui2-light.webp");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
@@ -1548,8 +1548,8 @@ main.empeza div.contenedor form#formulario section.arqui div.personas div.img3 {
 }
 
 main.empeza div.contenedor form#formulario section.arqui div.personas div.img4 {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui4-light.jpg");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui4-light.jpg");
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(0, 0, 0, 0.7)), color-stop(50%, rgba(255, 255, 255, 0.1))), url("../multimedia/img/arqui4-light.webp");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.1) 50%), url("../multimedia/img/arqui4-light.webp");
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
