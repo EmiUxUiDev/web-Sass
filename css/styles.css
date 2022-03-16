@@ -50,7 +50,7 @@ header nav .nav__onoff {
 
 header nav ul {
   position: relative;
-  width: 100vw;
+  width: 100%;
   -webkit-box-shadow: 0px -5px 15px #7a7a7a;
           box-shadow: 0px -5px 15px #7a7a7a;
   padding: 0.5rem 0.5rem;
@@ -862,7 +862,7 @@ main.como__funciona section.contenedor__pasos--p2 div.fila--p2 {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 main.como__funciona section.contenedor__pasos--p2 div.fila--p2 article.pasos__card--p2 {
@@ -1774,7 +1774,7 @@ main.empeza div.contenedor form#formulario button[type="reset"]:hover {
 }
 
 footer {
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   background-color: #fff;
   border-radius: 8rem  0 0 0;
@@ -3466,9 +3466,6 @@ footer div.right p {
   }
   body main.inicio {
     margin-top: -74.5rem;
-  }
-  body main.inicio svg {
-    margin-top: -102rem;
   }
   body main.inicio section#home h1#titulo {
     font-size: 5.2rem;

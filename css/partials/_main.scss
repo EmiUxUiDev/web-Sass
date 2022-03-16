@@ -1,7 +1,7 @@
 @import '../bases/_variables';
 
 main{ 
-    position:relative;
+    position:relative;      
     //-----BOTON IR ARRIBA----
     div.scroll__btn{
         position: fixed;
@@ -492,7 +492,7 @@ main.como__funciona{
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
-            min-width: 100vw;
+            min-width: 100%;
             article.pasos__card--p2{
                 position: relative;
                 width: 500px;
