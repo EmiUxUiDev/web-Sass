@@ -1377,6 +1377,7 @@ main.empeza div.contenedor form#formulario section.base-card fieldset {
   border-radius: 2rem;
   border: none;
   background-color: #ffe656;
+  margin-bottom: 0.3rem;
 }
 
 main.empeza div.contenedor form#formulario section.base-card fieldset div {
@@ -1386,6 +1387,31 @@ main.empeza div.contenedor form#formulario section.base-card fieldset div {
 main.empeza div.contenedor form#formulario section.base-card fieldset div input {
   width: 5vw;
   margin: 0rem;
+}
+
+main.empeza div.contenedor form#formulario section.base-card fieldset button {
+  min-width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  margin-bottom: -0.25rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #414141;
+  text-shadow: #ffe656 2px 2px 2px;
+  background-color: #fff;
+  -webkit-box-shadow: #414141 1px 1px 2px;
+          box-shadow: #414141 1px 1px 2px;
+  -webkit-transition: all 100ms ease 0ms;
+  transition: all 100ms ease 0ms;
+}
+
+main.empeza div.contenedor form#formulario section.base-card fieldset button:hover {
+  text-shadow: none;
+  border: 1px solid #414141;
+  background-color: #ffd900;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img1 {
@@ -2313,11 +2339,14 @@ footer div.right p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1rem;
+    margin: 0.5rem;
   }
   body main.empeza div.contenedor form#formulario section.base-card fieldset div input {
     width: 65px;
     margin: 0rem;
+  }
+  body main.empeza div.contenedor form#formulario section.base-card fieldset button {
+    margin-top: 0.8rem;
   }
   body main.empeza div.contenedor form#formulario section.base-card div.elegir-color {
     -webkit-box-orient: vertical;
@@ -3128,7 +3157,6 @@ footer div.right p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0rem;
   }
   body main.empeza div.contenedor form#formulario section.base-card fieldset legend {
     font-weight: 600;
@@ -3139,6 +3167,9 @@ footer div.right p {
   body main.empeza div.contenedor form#formulario section.base-card fieldset div input {
     width: 65px;
     margin: 0rem;
+  }
+  body main.empeza div.contenedor form#formulario section.base-card fieldset button {
+    margin-top: 1rem;
   }
   body main.empeza div.contenedor form#formulario section.base-card ul li {
     width: 22rem;

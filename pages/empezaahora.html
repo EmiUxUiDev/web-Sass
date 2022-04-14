@@ -84,19 +84,27 @@
                     <p>Contanos cuantos metros tiene de largo y de ancho aproximado, ese espacio que queres remodelar
                     </p>
                     <fieldset>
+                        <!-- Select ambientes -->
+                        <div>
+                            <label for="listaAmbientes">Ambiente</label>
+                            <select name="ambiente" id="ambientes-Select">
+                                <option>Elegí un ambiente</option>
+                            </select>
+                        </div>
                         <!-- <legend>Ancho/Largo</legend> -->
                         <div>
                             <label for="ancho">Ancho del ambiente</label>
-                            <input type="number" placeholder="3.5" name="ancho" id="" required>
+                            <input id="ancho-Input" type="number" placeholder="3.5" name="ancho"  required>
                         </div>
 
                         <div>
                             <label for="largo">Largo del ambiente</label>
-                            <input type="number" placeholder="5" name="Largo del ambiente" id="" required>
+                            <input id="largo-Input" type="number" placeholder="5" name="Largo del ambiente" id="" required>
                         </div>
-
+                        <button id="agregarAmb-Btn">+</button>
                     </fieldset>
                     <p>*El ancho y largo, se escriben en metros y pueden ser fracción</p>
+                    <ul id="ul-element"></ul>
                 </section>
 
                 <!-- CARGAR FOTOS DE TÚ AMBIENTE -->
@@ -340,6 +348,6 @@
             <p>EmiDev &copy 2022 - Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="../JS/index.js"></script>    
 </body>
-
 </html>

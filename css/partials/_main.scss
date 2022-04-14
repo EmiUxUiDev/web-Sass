@@ -898,12 +898,32 @@ main.empeza{
                     border-radius: $radio-fuerte;
                     border: none;
                     background-color:$clr-primario;
+                    margin-bottom: 0.3rem;
                     div{
                         margin:1rem;
                         input{
                             width: 5vw;
                             margin: 0rem;
                         }
+                    }
+                    button{
+                        min-width: 3rem;
+                        height: 3rem;
+                        border: none;
+                        border-radius: 50%;
+                        margin-bottom: -0.25rem;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: $clr-gris-oscuro;
+                        text-shadow: $clr-primario 2px 2px 2px;
+                        background-color: #fff;
+                        box-shadow: $clr-gris-oscuro 1px 1px 2px;
+                        transition: all 100ms ease 0ms;
+                        &:hover{
+                            text-shadow: none;
+                            border: 1px solid $clr-gris-oscuro;
+                            background-color: $clr-primario-hover;
+                            transform: scale(0.95);}
                     }
                 }
                 ul{
