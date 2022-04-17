@@ -21,7 +21,7 @@ const agregaAmbienteBtn = document.querySelector('#agregarAmb-Btn')
 const selectAmbientes = document.querySelector('#ambientes-Select')
 const anchoInput = document.querySelector('#ancho-Input')
 const largoInput = document.querySelector('#largo-Input')
-const cardAmbientes = document.querySelector('#card-ambientes')
+const divAmbientes = document.querySelector('#div-ambientes')
 let listaAmbientesAgreados = []
 
 // CREO Y CARGO LOS OPTIONS DEL SELECT-------------------
@@ -67,15 +67,15 @@ function cargaEstilos(objeto) {
 }
 
 function mostrar(listaAmb) {
-    cardAmbientes.innerHTML = ''
+    divAmbientes.innerHTML = ''
 
     listaAmb.forEach(amb => {
         const divAmb = document.createElement('div')
-        divAmb.classList.add('div-ambiente')
-        divAmb.style.backgroundColor = '#d6d6d6'
-        divAmb.style.border = '1px solid #ffd900'
-        divAmb.style.borderRadius = '10px'
-        divAmb.style.margin = '5px'
+        divAmb.classList.add('card-ambiente')
+        // divAmb.style.backgroundColor = '#d6d6d6'
+        // divAmb.style.border = '1px solid #ffd900'
+        // divAmb.style.borderRadius = '10px'
+        // divAmb.style.margin = '5px'
 
         const nombreAmb = document.createElement('p')
         nombreAmb.classList.add('valores')
@@ -119,7 +119,7 @@ function mostrar(listaAmb) {
         divAmb.appendChild(superficieAmb)
         divAmb.appendChild(btnBorrar)
 
-        cardAmbientes.appendChild(divAmb)
+        divAmbientes.appendChild(divAmb)
     })
 }
 

@@ -31,7 +31,7 @@ h1{
     letter-spacing: 0.1rem;
     font-family: var(--fuente-2);
     color: var(--clr-gris-fuerte);
-    text-shadow: var(--clr-primario-hover)1px 1px 1px, var(--clr-secundario)2px 2px 3px;
+    text-shadow: var(--clr-primario-hover) 1px 1px 1px, var(--clr-secundario) 2px 2px 3px;
 }
 h2{
     text-align: center;
@@ -395,7 +395,7 @@ textarea{
 .home__card2 i{
     font-size: 4rem;
     color: var(--clr-primario-hover);
-    text-shadow: var(--clr-gris-fuerte)2px 2px 15px;
+    text-shadow: var(--clr-gris-fuerte) 2px 2px 15px;
     z-index: 10;
     transform: rotate(-15deg);
 }
@@ -432,7 +432,7 @@ textarea{
     font-family: var(--fuente-2);
     font-size: 3.4rem;
     color: var(--clr-primario);
-    text-shadow: var(--clr-gris-medio)3px 3px 5px;
+    text-shadow: var(--clr-gris-medio) 3px 3px 5px;
     text-transform: capitalize;
     letter-spacing: 0.2rem;
 }
@@ -461,7 +461,7 @@ textarea{
 
 .pasos__card h3{
     color: var(--clr-primario);
-    text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+    text-shadow: var(--clr-gris-fuerte) 1px 1px 5px;
     font-size: 2rem;
     letter-spacing: 0.2rem;
     padding: 1rem 2rem;
@@ -724,7 +724,7 @@ textarea{
      left: -1.5rem;
     font-size: 8rem;
     color: var(--clr-gris-medio);
-    text-shadow: var(--clr-primario-hover)1px 1px 1px;
+    text-shadow: var(--clr-primario-hover) 1px 1px 1px;
 }
 .contenedor__tiendas{
     display: flex;
@@ -1421,7 +1421,7 @@ iframe{
     
     .pasos__card h3{
         color: var(--clr-primario);
-        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        text-shadow: var(--clr-gris-fuerte) 1px 1px 5px;
         font-size: 2rem;
         letter-spacing: 0.2rem;
         padding: 0rem 2rem;
@@ -2006,7 +2006,7 @@ iframe{
     
     .pasos__card h3{
         color: var(--clr-primario);
-        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        text-shadow: var(--clr-gris-fuerte) 1px 1px 5px;
         font-size: 2rem;
         letter-spacing: 0.2rem;
         padding: 0rem 2rem;
@@ -2501,7 +2501,7 @@ iframe{
     
     .pasos__card h3{
         color: var(--clr-primario);
-        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        text-shadow: var(--clr-gris-fuerte) 1px 1px 5px;
         font-size: 2rem;
         letter-spacing: 0.2rem;
         padding: 0rem 2rem;
@@ -2982,7 +2982,7 @@ iframe{
     
     .pasos__card h3{
         color: var(--clr-primario);
-        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        text-shadow: var(--clr-gris-fuerte) 1px 1px 5px;
         font-size: 2.8rem;
         letter-spacing: 0.2rem;
         padding: 0rem 2rem;
@@ -3436,7 +3436,7 @@ iframe{
     
     .pasos__card h3{
         color: var(--clr-primario);
-        text-shadow: var(--clr-gris-fuerte)1px 1px 5px;
+        text-shadow: var(--clr-gris-fuerte) 1px 1px 5px;
         font-size: 2.8rem;
         letter-spacing: 0.2rem;
         padding: 0rem 2rem;

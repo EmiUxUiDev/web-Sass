@@ -889,6 +889,7 @@ main.empeza{
                     margin-top: 0.5rem;
                     border: 1px solid $clr-primario-hover;
                 }
+                
                 fieldset{
                     width: 80vw;
                     display: flex; 
@@ -924,11 +925,14 @@ main.empeza{
                             border: 1px solid $clr-gris-oscuro;
                             background-color: $clr-primario-hover;
                             transform: scale(0.95);}
-                    }
+                    }  
                 }
-                // div#card-ambientes{
-                //     padding: 8px;
-                // }
+                div#div-ambientes{
+                    background-color: #d6d6d6;
+                    border: 1px solid #ffd900;
+                    border-radius: 10px;
+                    margin: 5px;
+                }
                 ul{
                     li.img1{
                         background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.webp");
