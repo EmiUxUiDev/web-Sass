@@ -11,6 +11,14 @@ class Ambiente {
     }
 }
 
+class Cliente{
+    constructor(nombre, email, celular){
+        this.nombre = nombre
+        this.email = email
+        this.celular = celular
+    }
+}
+
 // VARIABLES---------------------------------------------
 const listaAmbientes = [
     { id: 01, ambiente: 'Cocina' }, { id: 02, ambiente: 'Baño' },
@@ -21,10 +29,10 @@ const listaAmbientes = [
 const listaEstilos = [
     {id:01, estilo: 'Clasico'}, {id:02, estilo: 'Vintage'}, {id:03, estilo: 'Green'}, {id:04, estilo: 'Rústico'}, {id:05, estilo: 'Moderno'}]
 
-    const listaArquis = [
-        {id:01, nombre: 'Carlos B.', bio:'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras'}, {id:02, nombre: 'Carla P.', bio:'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales'}, {id:03, nombre: 'Marcos H.', bio:'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.'}, {id:04, nombre: 'Martina L.', bio:'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.'}]
+const listaArquis = [
+    {id:01, nombre: 'Carlos B.', bio:'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras'}, {id:02, nombre: 'Carla P.', bio:'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales'}, {id:03, nombre: 'Marcos H.', bio:'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.'}, {id:04, nombre: 'Martina L.', bio:'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.'}]
          
-
+const enviarForm = document.querySelector('#enviar')
 const agregaAmbienteBtn = document.querySelector('#agregarAmb-Btn')
 const selectAmbientes = document.querySelector('#ambientes-Select')
 const anchoInput = document.querySelector('#ancho-Input')
@@ -32,7 +40,12 @@ const largoInput = document.querySelector('#largo-Input')
 const divAmbientes = document.querySelector('#div-ambientes')
 const ulEstilos = document.querySelector('#ul-estilos')
 const divPersonas = document.querySelector('.personas')
+const inNombre = document.querySelector('#in-nombre')
+const inEmail = document.querySelector('#in-email')
+const inCelular = document.querySelector('#in-celular')
+const enviarBtn = document.querySelector('#enviar-btn')
 let listaAmbientesAgreados = []
+let cliente = []
 
 document.addEventListener('DOMContentLoaded', ()=>{
     mostrarEstilo(listaEstilos)
@@ -187,3 +200,10 @@ function mostrarArquis(arquis) {
         divPersonas.appendChild(divArq)
     })
 }
+
+
+enviarBtn.addEventListener('click', ()=>{
+
+    cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
+    console.log(cliente);
+})
