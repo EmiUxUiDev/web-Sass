@@ -1,5 +1,6 @@
 class Ambiente {
-    constructor(nombre, ancho, largo) {
+    constructor(indice, nombre, ancho, largo) {
+        this.id = indice
         this.nombre = nombre
         this.ancho = (parseFloat(ancho)).toFixed(2)
         this.largo = (parseFloat(largo)).toFixed(2)
@@ -24,7 +25,6 @@ const cardAmbientes = document.querySelector('#card-ambientes')
 let listaAmbientesAgreados = []
 
 // CREO Y CARGO LOS OPTIONS DEL SELECT-------------------
-// for(let i=0; i < listaAmbientes.length; i++){
 listaAmbientes.forEach(ambienteLista => {
     const option = document.createElement('option')
     option.value = ambienteLista.id
@@ -41,21 +41,15 @@ agregaAmbienteBtn.addEventListener('click', function () {
         alert('Completa los datos del ambiente que querés agregar')
         selectAmbientes.focus()
     } else {
-        // ME COSTO MUCHO ENTENDER COMO MANEJAR EL SELECT
-        listaAmbientesAgreados.push(new Ambiente(valores[indice].text, anchoInput.value, largoInput.value))
-
-        // NO ME ANDA, TRATO DE INVOCAR A LA FUNCION DE ABAJO
+        listaAmbientesAgreados.push(new Ambiente(indice, valores[indice].text, anchoInput.value, largoInput.value))
+        // INVOCO A LA FUNCION DE ABAJO
         mostrar(listaAmbientesAgreados)
-
         // PREPARO LOS INPUTS PARA UNA NUEVA CARGA
         anchoInput.value = ''
         largoInput.value = ''
         selectAmbientes.selectedIndex = 0
     }
-
-
 })
-
 // FUNCION PARA AGREGAR TAGS HTML LI CON EL AMBIENTE CARGADO
 // function mostrar(lista){
 //     let listaAgregar = ''
@@ -66,7 +60,6 @@ agregaAmbienteBtn.addEventListener('click', function () {
 //     console.log(listaAgregar);
 //     ulElement.innerHTML = listaAgregar
 // }
-
 function cargaEstilos(objeto) {
     objeto.style.display = 'inline-block'
     objeto.style.padding = '8px 30px 4px 30px'
@@ -115,8 +108,10 @@ function mostrar(listaAmb) {
         btnBorrar.style.backgroundColor = 'transparent'
         btnBorrar.style.margin = '10px 30px 0px 0px'
         btnBorrar.appendChild(iconoBorrar)
-        
-        
+
+        btnBorrar.onclick = () =>{
+            borrarAmbiente(amb.id)
+        }
 
         divAmb.appendChild(nombreAmb)
         divAmb.appendChild(anchoAmb)
@@ -126,4 +121,14 @@ function mostrar(listaAmb) {
 
         cardAmbientes.appendChild(divAmb)
     })
+}
+
+function borrarAmbiente(id){
+    // const ambienteSeleccionado = listaAmbientesAgreados.find(item => item.id === index)
+    // console.log(listaAmbientesAgreados.splice(ambienteSeleccionado.id, 1))
+    // mostrar()
+    console.log(id);
+    console.log(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)))
+    listaAmbientesAgreados.splice(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)),1) 
+    mostrar(listaAmbientesAgreados)
 }
