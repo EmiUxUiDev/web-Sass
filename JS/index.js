@@ -21,17 +21,23 @@ const listaAmbientes = [
 const listaEstilos = [
     {id:01, estilo: 'Clasico'}, {id:02, estilo: 'Vintage'}, {id:03, estilo: 'Green'}, {id:04, estilo: 'Rústico'}, {id:05, estilo: 'Moderno'}]
 
+    const listaArquis = [
+        {id:01, nombre: 'Carlos B.', bio:'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras'}, {id:02, nombre: 'Carla P.', bio:'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales'}, {id:03, nombre: 'Marcos H.', bio:'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.'}, {id:04, nombre: 'Martina L.', bio:'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.'}]
+         
+
 const agregaAmbienteBtn = document.querySelector('#agregarAmb-Btn')
 const selectAmbientes = document.querySelector('#ambientes-Select')
 const anchoInput = document.querySelector('#ancho-Input')
 const largoInput = document.querySelector('#largo-Input')
 const divAmbientes = document.querySelector('#div-ambientes')
 const ulEstilos = document.querySelector('#ul-estilos')
+const divPersonas = document.querySelector('.personas')
 let listaAmbientesAgreados = []
 
 document.addEventListener('DOMContentLoaded', ()=>{
     mostrarEstilo(listaEstilos)
-})
+    mostrarArquis(listaArquis)
+} )
 
 // CREO Y CARGO LOS OPTIONS DEL SELECT-------------------
 listaAmbientes.forEach(ambienteLista => {
@@ -153,7 +159,6 @@ function mostrarEstilo(estilo) {
         const estiloAmb = document.createElement('h3')
         estiloAmb.textContent = est.estilo
         
-
         const inputAmb = document.createElement('input')
         inputAmb.id = 'check'+est.estilo
         inputAmb.type = 'checkbox'
@@ -161,5 +166,24 @@ function mostrarEstilo(estilo) {
         estiloAmb.appendChild(inputAmb)
         liEstilo.appendChild(estiloAmb)
         ulEstilos.appendChild(liEstilo)
+    })
+}
+
+function mostrarArquis(arquis) {
+    divPersonas.innerHTML = ''
+    arquis.forEach(arq => {
+
+        const divArq = document.createElement('div')
+        divArq.classList.add('img'+arq.id)
+
+        const nombreArq = document.createElement('h3')
+        nombreArq.textContent = arq.nombre
+        
+        const bioArq = document.createElement('p')
+        bioArq.textContent = arq.bio
+        
+        divArq.appendChild(nombreArq)
+        divArq.appendChild(bioArq)
+        divPersonas.appendChild(divArq)
     })
 }
