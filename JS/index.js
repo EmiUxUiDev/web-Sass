@@ -11,8 +11,8 @@ class Ambiente {
     }
 }
 
-class Cliente{
-    constructor(nombre, email, celular){
+class Cliente {
+    constructor(nombre, email, celular) {
         this.nombre = nombre
         this.email = email
         this.celular = celular
@@ -27,11 +27,13 @@ const listaAmbientes = [
 ]
 
 const listaEstilos = [
-    {id:01, estilo: 'Clasico'}, {id:02, estilo: 'Vintage'}, {id:03, estilo: 'Green'}, {id:04, estilo: 'Rústico'}, {id:05, estilo: 'Moderno'}]
+    { id: 01, estilo: 'Clasico' }, { id: 02, estilo: 'Vintage' }, { id: 03, estilo: 'Green' }, { id: 04, estilo: 'Rústico' }, { id: 05, estilo: 'Moderno' }]
 
 const listaArquis = [
-    {id:01, nombre: 'Carlos B.', bio:'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras'}, {id:02, nombre: 'Carla P.', bio:'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales'}, {id:03, nombre: 'Marcos H.', bio:'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.'}, {id:04, nombre: 'Martina L.', bio:'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.'}]
-         
+    { id: 01, nombre: 'Carlos B.', bio: 'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras' }, { id: 02, nombre: 'Carla P.', bio: 'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales' }, { id: 03, nombre: 'Marcos H.', bio: 'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.' }, { id: 04, nombre: 'Martina L.', bio: 'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.' }]
+
+const listaTarjetas = [{id: 01, path:'../multimedia/img/mercadpagorecurso_color.png', alt:'Logo Mercado pago'},{id: 02, path:'../multimedia/img/Uala-logo color.png', alt:'Logo Tarjeta Uala'},{id: 03, path:'../multimedia/img/Visa logo color.png', alt:'Logo Tarjeta Visa'},{id: 04, path:'../multimedia/img/Master logo color.png', alt:'Logo Tarjeta Mastercard'},{id: 05, path:'../multimedia/img/Red link logo color.png', alt:'Logo Tarjeta Link'},{id: 06, path:'../multimedia/img/Banelco logo color.png', alt:'Logo Tarjeta Banelco'}]
+
 const enviarForm = document.querySelector('#enviar')
 const agregaAmbienteBtn = document.querySelector('#agregarAmb-Btn')
 const selectAmbientes = document.querySelector('#ambientes-Select')
@@ -44,13 +46,15 @@ const inNombre = document.querySelector('#in-nombre')
 const inEmail = document.querySelector('#in-email')
 const inCelular = document.querySelector('#in-celular')
 const enviarBtn = document.querySelector('#enviar-btn')
+const divPagos = document.querySelector('.pagos')
 let listaAmbientesAgreados = []
 let cliente = []
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    mostrarEstilo(listaEstilos)
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarEstilos(listaEstilos)
+    mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
-} )
+})
 
 // CREO Y CARGO LOS OPTIONS DEL SELECT-------------------
 listaAmbientes.forEach(ambienteLista => {
@@ -74,42 +78,25 @@ agregaAmbienteBtn.addEventListener('click', function () {
         mostrar(listaAmbientesAgreados)
         // PREPARO LOS INPUTS PARA UNA NUEVA CARGA
         anchoInput.value = ''
-        largoInput.value = ''
+        largoInput.value = '0'
         selectAmbientes.selectedIndex = 0
     }
 })
-// FUNCION PARA AGREGAR TAGS HTML LI CON EL AMBIENTE CARGADO
-// function mostrar(lista){
-//     let listaAgregar = ''
-//     for(let i = 0; i< lista.length; i++){
-//         listaAgregar += 
-//         `<li>Ambiente: ${lista[i].nombre}</li>`
-//     }
-//     console.log(listaAgregar);
-//     ulElement.innerHTML = listaAgregar
-// }
 function cargaStyles(objeto) {
     objeto.style.display = 'inline-block'
     objeto.style.padding = '8px 30px 4px 30px'
     objeto.style.width = '100px'
 }
-
 function mostrar(listaAmb) {
     divAmbientes.innerHTML = ''
-
     listaAmb.forEach(amb => {
         const divAmb = document.createElement('div')
         divAmb.classList.add('card-ambiente')
-        // divAmb.style.backgroundColor = '#d6d6d6'
-        // divAmb.style.border = '1px solid #ffd900'
-        // divAmb.style.borderRadius = '10px'
-        // divAmb.style.margin = '5px'
 
         const nombreAmb = document.createElement('p')
         nombreAmb.classList.add('valores')
         nombreAmb.textContent = amb.nombre
         cargaStyles(nombreAmb)
-
 
         const anchoAmb = document.createElement('p')
         anchoAmb.classList.add('valores')
@@ -136,74 +123,81 @@ function mostrar(listaAmb) {
         btnBorrar.style.backgroundColor = 'transparent'
         btnBorrar.style.margin = '10px 30px 0px 0px'
         btnBorrar.appendChild(iconoBorrar)
-
-        btnBorrar.onclick = () =>{
+        btnBorrar.onclick = () => {
             borrarAmbiente(amb.id)
         }
-
         divAmb.appendChild(nombreAmb)
         divAmb.appendChild(anchoAmb)
         divAmb.appendChild(largoAmb)
         divAmb.appendChild(superficieAmb)
         divAmb.appendChild(btnBorrar)
-
         divAmbientes.appendChild(divAmb)
     })
 }
-
-function borrarAmbiente(id){
-    // const ambienteSeleccionado = listaAmbientesAgreados.find(item => item.id === index)
-    // console.log(listaAmbientesAgreados.splice(ambienteSeleccionado.id, 1))
-    // mostrar()
+function borrarAmbiente(id) {
     console.log(id);
     console.log(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)))
-    listaAmbientesAgreados.splice(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)),1) 
+    listaAmbientesAgreados.splice(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)), 1)
     mostrar(listaAmbientesAgreados)
 }
-
-
-function mostrarEstilo(estilo) {
+function mostrarEstilos(estilo) {
     ulEstilos.innerHTML = ''
     estilo.forEach(est => {
 
         const liEstilo = document.createElement('li')
-        liEstilo.classList.add('img'+est.id)
+        liEstilo.classList.add('img' + est.id)
 
         const estiloAmb = document.createElement('h3')
         estiloAmb.textContent = est.estilo
-        
+
         const inputAmb = document.createElement('input')
-        inputAmb.id = 'check'+est.estilo
+        inputAmb.id = 'check' + est.estilo
         inputAmb.type = 'checkbox'
-        
+
         estiloAmb.appendChild(inputAmb)
         liEstilo.appendChild(estiloAmb)
         ulEstilos.appendChild(liEstilo)
     })
 }
-
 function mostrarArquis(arquis) {
     divPersonas.innerHTML = ''
     arquis.forEach(arq => {
 
         const divArq = document.createElement('div')
-        divArq.classList.add('img'+arq.id)
+        divArq.classList.add('img' + arq.id)
 
         const nombreArq = document.createElement('h3')
         nombreArq.textContent = arq.nombre
-        
+
         const bioArq = document.createElement('p')
         bioArq.textContent = arq.bio
-        
+
         divArq.appendChild(nombreArq)
         divArq.appendChild(bioArq)
         divPersonas.appendChild(divArq)
     })
 }
 
+function mostrarTarjetas(tarjetas) {
+    divPagos.innerHTML = ''
+    tarjetas.forEach(tarj => {
 
-enviarBtn.addEventListener('click', ()=>{
+        const divTarjeta = document.createElement('div')
 
+        const img = document.createElement('img')
+        img.src = tarj.path
+
+        const checkTarjeta = document.createElement('input')
+        checkTarjeta.type = 'radio'
+        checkTarjeta.name = 'forma-pago'
+
+        divTarjeta.appendChild(img)
+        divTarjeta.appendChild(checkTarjeta)
+        divPagos.appendChild(divTarjeta)
+    })
+}
+
+enviarBtn.addEventListener('click', () => {
     cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
     console.log(cliente);
 })
