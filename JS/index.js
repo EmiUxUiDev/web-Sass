@@ -2,9 +2,9 @@ class Ambiente {
     constructor(indice, nombre, ancho, largo) {
         this.id = indice
         this.nombre = nombre
-        this.ancho = (parseFloat(ancho)).toFixed(2)
-        this.largo = (parseFloat(largo)).toFixed(2)
-        this.superficie = [(this.ancho * this.largo).toFixed(2)]
+        this.ancho = Number((parseFloat(ancho)).toFixed(2))
+        this.largo = Number((parseFloat(largo)).toFixed(2))
+        this.superficie = [Number((this.ancho * this.largo).toFixed(2))]
     }
     mostrarAmbientesAgregados() {
         alert(`El ambiente agregado es: ${this.nombre}, con un ancho de ${this.ancho} y un largo de ${this.largo}`)
@@ -47,6 +47,7 @@ const inEmail = document.querySelector('#in-email')
 const inCelular = document.querySelector('#in-celular')
 const enviarBtn = document.querySelector('#enviar-btn')
 const divPagos = document.querySelector('.pagos')
+const divSupTotal = document.querySelector('#div-supTotal')
 let listaAmbientesAgreados = []
 let cliente = []
 
@@ -78,7 +79,7 @@ agregaAmbienteBtn.addEventListener('click', function () {
         mostrar(listaAmbientesAgreados)
         // PREPARO LOS INPUTS PARA UNA NUEVA CARGA
         anchoInput.value = ''
-        largoInput.value = '0'
+        largoInput.value = ''
         selectAmbientes.selectedIndex = 0
     }
 })
@@ -89,6 +90,7 @@ function cargaStyles(objeto) {
 }
 function mostrar(listaAmb) {
     divAmbientes.innerHTML = ''
+    divSupTotal.innerHTML = ''
     listaAmb.forEach(amb => {
         const divAmb = document.createElement('div')
         divAmb.classList.add('card-ambiente')
@@ -100,17 +102,17 @@ function mostrar(listaAmb) {
 
         const anchoAmb = document.createElement('p')
         anchoAmb.classList.add('valores')
-        anchoAmb.textContent = amb.ancho
+        anchoAmb.textContent = `${amb.ancho}m`
         cargaStyles(anchoAmb)
 
         const largoAmb = document.createElement('p')
         largoAmb.classList.add('valores')
-        largoAmb.textContent = amb.largo
+        largoAmb.textContent = `${amb.largo}m`
         cargaStyles(largoAmb)
 
         const superficieAmb = document.createElement('p')
         superficieAmb.classList.add('valores')
-        superficieAmb.textContent = amb.superficie
+        superficieAmb.textContent = `${amb.superficie}m²`
         cargaStyles(superficieAmb)
 
         const iconoBorrar = document.createElement('img')
@@ -121,7 +123,7 @@ function mostrar(listaAmb) {
         btnBorrar.classList.add('borrar')
         btnBorrar.style.border = 'none'
         btnBorrar.style.backgroundColor = 'transparent'
-        btnBorrar.style.margin = '10px 30px 0px 0px'
+        btnBorrar.style.margin = '10px 30px 0px 30px'
         btnBorrar.appendChild(iconoBorrar)
         btnBorrar.onclick = () => {
             borrarAmbiente(amb.id)
@@ -133,6 +135,20 @@ function mostrar(listaAmb) {
         divAmb.appendChild(btnBorrar)
         divAmbientes.appendChild(divAmb)
     })
+    let supTotal = 0
+    for(let i=0; i < listaAmb.length; i++){
+        supTotal += Number(listaAmb[i].superficie)
+    }
+    const divSup = document.createElement('div')
+
+    const supTot = document.createElement('p')
+    supTot.textContent = `Superficie total de remodelación: ${supTotal}m²`
+    supTot.style.margin = '10px 30px 10px 30px'
+    supTot.style.border = '3px solid #ffd900'
+    supTot.style.borderRadius = '10px'
+
+    divSup.appendChild(supTot)
+    divSupTotal.appendChild(divSup)
 }
 function borrarAmbiente(id) {
     console.log(id);
@@ -158,6 +174,7 @@ function mostrarEstilos(estilo) {
         liEstilo.appendChild(estiloAmb)
         ulEstilos.appendChild(liEstilo)
     })
+
 }
 function mostrarArquis(arquis) {
     divPersonas.innerHTML = ''
@@ -169,9 +186,14 @@ function mostrarArquis(arquis) {
         const nombreArq = document.createElement('h3')
         nombreArq.textContent = arq.nombre
 
+        const checkArq = document.createElement('input')
+        checkArq.type = 'radio'
+        checkArq.name = 'arq'
+
         const bioArq = document.createElement('p')
         bioArq.textContent = arq.bio
 
+        nombreArq.appendChild(checkArq)
         divArq.appendChild(nombreArq)
         divArq.appendChild(bioArq)
         divPersonas.appendChild(divArq)
