@@ -145,7 +145,8 @@ function mostrar(listaAmb) {
     supTot.textContent = `Superficie total de remodelación: ${supTotal}m²`
     supTot.style.margin = '10px 30px 10px 30px'
     supTot.style.border = '3px solid #ffd900'
-    supTot.style.borderRadius = '10px'
+    supTot.style.borderRadius = '10px' 
+    supTot.style.padding = '5px 20px 5px 20px'
 
     divSup.appendChild(supTot)
     divSupTotal.appendChild(divSup)
