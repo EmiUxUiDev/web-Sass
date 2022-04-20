@@ -2,7 +2,7 @@
 ![reonline_ico](https://user-images.githubusercontent.com/94999530/156890166-4d86ac8c-c44d-477c-bdf2-18459e1c94ab.png)
 # Re+online | Trabajo practico de desarrollo de WEB
 Este sitio, es resultado de lo que voy aprendiendo en el cusrso de Desarrollo web de Coderhouse, en el que estoy estudiando.
-Se trata, de un desarrollo frontend con solo <strong>HTML, CSS y SASS</strong>.
+Se trata, de un desarrollo frontend con solo <strong>HTML, CSS, SASS y JavaScript</strong>.
 
 En lo que va del trabajo, he puesto en practica:<br><hr>
 
@@ -25,6 +25,12 @@ En lo que va del trabajo, he puesto en practica:<br><hr>
 
 ![image](https://user-images.githubusercontent.com/94999530/156891539-1872742b-7dd7-4ced-aa64-0b806e2a1257.png)
 ---<strong>Implementación de SASS</strong>, generando particiones, variables y más.
+
+
+
+![JavaScript3232](https://user-images.githubusercontent.com/94999530/164063168-bf4435c7-da86-4271-9f07-3390112eda28.svg)
+---<strong>Funcionalidad y dinamica con JS</strong>
+
 
 
 Por otro lado, la incorporacion y uso de una herramienta de versionado, <strong>Git</strong> ![git-original-wordmark](https://user-images.githubusercontent.com/94999530/156891602-1296a4d8-e789-4976-be32-dbeafbc68011.svg)
