@@ -6,9 +6,6 @@ class Ambiente {
         this.largo = Number((parseFloat(largo)).toFixed(2))
         this.superficie = [Number((this.ancho * this.largo).toFixed(2))]
     }
-    mostrarAmbientesAgregados() {
-        alert(`El ambiente agregado es: ${this.nombre}, con un ancho de ${this.ancho} y un largo de ${this.largo}`)
-    }
 }
 
 class Cliente {
@@ -19,6 +16,25 @@ class Cliente {
     }
 }
 
+class Reporte {
+    constructor(descripcion, ambiente, fotos, estilo, colores, arq, plan, tarjeta, cliente) {
+        this.descripcion = descripcion
+        this.ambiente = ambiente
+        this.fotos = fotos
+        this.estilo = estilo
+        this.colores = colores
+        this.arq = arq
+        this.plan = plan
+        this.tarjeta = tarjeta
+        this.cliente = cliente
+    }
+}
+class Fotos{
+    constructor(id, nombre){
+        this.id = id
+        this.nombre = nombre
+    }
+}
 // VARIABLES---------------------------------------------
 const listaAmbientes = [
     { id: 01, ambiente: 'Cocina' }, { id: 02, ambiente: 'Baño' },
@@ -32,7 +48,7 @@ const listaEstilos = [
 const listaArquis = [
     { id: 01, nombre: 'Carlos B.', bio: 'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras' }, { id: 02, nombre: 'Carla P.', bio: 'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales' }, { id: 03, nombre: 'Marcos H.', bio: 'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.' }, { id: 04, nombre: 'Martina L.', bio: 'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.' }]
 
-const listaTarjetas = [{id: 01, path:'../multimedia/img/mercadpagorecurso_color.png', alt:'Logo Mercado pago'},{id: 02, path:'../multimedia/img/Uala-logo color.png', alt:'Logo Tarjeta Uala'},{id: 03, path:'../multimedia/img/Visa logo color.png', alt:'Logo Tarjeta Visa'},{id: 04, path:'../multimedia/img/Master logo color.png', alt:'Logo Tarjeta Mastercard'},{id: 05, path:'../multimedia/img/Red link logo color.png', alt:'Logo Tarjeta Link'},{id: 06, path:'../multimedia/img/Banelco logo color.png', alt:'Logo Tarjeta Banelco'}]
+const listaTarjetas = [{ id: 01, path: '../multimedia/img/mercadpagorecurso_color.png', alt: 'Logo Mercado pago' }, { id: 02, path: '../multimedia/img/Uala-logo color.png', alt: 'Logo Tarjeta Uala' }, { id: 03, path: '../multimedia/img/Visa logo color.png', alt: 'Logo Tarjeta Visa' }, { id: 04, path: '../multimedia/img/Master logo color.png', alt: 'Logo Tarjeta Mastercard' }, { id: 05, path: '../multimedia/img/Red link logo color.png', alt: 'Logo Tarjeta Link' }, { id: 06, path: '../multimedia/img/Banelco logo color.png', alt: 'Logo Tarjeta Banelco' }]
 
 const enviarForm = document.querySelector('#enviar')
 const agregaAmbienteBtn = document.querySelector('#agregarAmb-Btn')
@@ -40,6 +56,8 @@ const selectAmbientes = document.querySelector('#ambientes-Select')
 const anchoInput = document.querySelector('#ancho-Input')
 const largoInput = document.querySelector('#largo-Input')
 const divAmbientes = document.querySelector('#div-ambientes')
+const btnFotos = document.querySelector('#foto-btn')
+const divFotos = document.querySelector('#div-fotos')
 const ulEstilos = document.querySelector('#ul-estilos')
 const divPersonas = document.querySelector('.personas')
 const inNombre = document.querySelector('#in-nombre')
@@ -50,12 +68,58 @@ const divPagos = document.querySelector('.pagos')
 const divSupTotal = document.querySelector('#div-supTotal')
 let listaAmbientesAgreados = []
 let cliente = []
+let listaFotosAgregadas = []
 
 document.addEventListener('DOMContentLoaded', () => {
     mostrarEstilos(listaEstilos)
     mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
 })
+
+
+btnFotos.addEventListener('change', () => {
+    mostrarFotos()
+})
+
+function mostrarFotos() {
+    divFotos.innerHTML = ''
+    let nombre = "";
+    listaFotosAgregadas = []
+    if ('files' in btnFotos) {
+        if (btnFotos.files.length == 0) {
+            nombre = "Selecciona alguna foto.";
+        } else {
+            for (let i = 0; i < btnFotos.files.length; i++) {
+                nombre = ` ${(i + 1)} . Archivo`;
+
+                if ('name' in btnFotos.files[i]) {
+                    nombre += btnFotos.files[i].name;
+                }
+                
+                listaFotosAgregadas.push(new Fotos(i+1, btnFotos.files[i].name))
+                const divArchivo = document.createElement('div')
+                const nombreArchivo = document.createElement('p')
+                nombreArchivo.textContent = nombre
+                divArchivo.appendChild(nombreArchivo)
+                divFotos.appendChild(divArchivo)
+            }
+            console.log(listaFotosAgregadas)
+            listaFotosAgregadas.forEach(foto =>{
+                console.log(typeof foto.id );
+                console.log(foto.id)
+                console.log(foto.nombre)
+            })
+        }
+    }
+    else {
+        if (btnFotos.value == "") {
+            nombre += "Seleccioná alguna foto";
+        } else {
+            nombre += "Archivo no soportado";
+        }
+    }
+    // divFotos.innerHTML = nombre
+}
 
 // CREO Y CARGO LOS OPTIONS DEL SELECT-------------------
 listaAmbientes.forEach(ambienteLista => {
@@ -66,7 +130,7 @@ listaAmbientes.forEach(ambienteLista => {
 })
 
 // CREO Y GUARDO EN UN ARRAY EL OBJETO CREADO
-agregaAmbienteBtn.addEventListener('click', function () {
+agregaAmbienteBtn.addEventListener('click', () => {
     const indice = selectAmbientes.selectedIndex
     const valores = selectAmbientes.options
 
@@ -136,7 +200,7 @@ function mostrar(listaAmb) {
         divAmbientes.appendChild(divAmb)
     })
     let supTotal = 0
-    for(let i=0; i < listaAmb.length; i++){
+    for (let i = 0; i < listaAmb.length; i++) {
         supTotal += Number(listaAmb[i].superficie)
     }
     const divSup = document.createElement('div')
@@ -145,7 +209,7 @@ function mostrar(listaAmb) {
     supTot.textContent = `Superficie total de remodelación: ${supTotal}m²`
     supTot.style.margin = '10px 30px 10px 30px'
     supTot.style.border = '3px solid #ffd900'
-    supTot.style.borderRadius = '10px' 
+    supTot.style.borderRadius = '10px'
     supTot.style.padding = '5px 20px 5px 20px'
 
     divSup.appendChild(supTot)
@@ -157,6 +221,8 @@ function borrarAmbiente(id) {
     listaAmbientesAgreados.splice(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)), 1)
     mostrar(listaAmbientesAgreados)
 }
+
+
 function mostrarEstilos(estilo) {
     ulEstilos.innerHTML = ''
     estilo.forEach(est => {
