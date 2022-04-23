@@ -1,127 +1,14 @@
-class Ambiente {
-    constructor(indice, nombre, ancho, largo) {
-        this.id = indice
-        this.nombre = nombre
-        this.ancho = Number((parseFloat(ancho)).toFixed(2))
-        this.largo = Number((parseFloat(largo)).toFixed(2))
-        this.superficie = [Number((this.ancho * this.largo).toFixed(2))]
-    }
-}
 
-class Cliente {
-    constructor(nombre, email, celular) {
-        this.nombre = nombre
-        this.email = email
-        this.celular = celular
-    }
-}
-
-class Reporte {
-    constructor(descripcion, ambiente, fotos, estilo, colores, arq, plan, tarjeta, cliente) {
-        this.descripcion = descripcion
-        this.ambiente = ambiente
-        this.fotos = fotos
-        this.estilo = estilo
-        this.colores = colores
-        this.arq = arq
-        this.plan = plan
-        this.tarjeta = tarjeta
-        this.cliente = cliente
-    }
-}
-class Fotos{
-    constructor(id, nombre){
-        this.id = id
-        this.nombre = nombre
-    }
-}
-// VARIABLES---------------------------------------------
-const listaAmbientes = [
-    { id: 01, ambiente: 'Cocina' }, { id: 02, ambiente: 'Baño' },
-    { id: 03, ambiente: 'Comedor' }, { id: 04, ambiente: 'Estar' },
-    { id: 05, ambiente: 'Dormitorio' }, { id: 06, ambiente: 'Quincho' }, { id: 07, ambiente: 'Cochera' }, { id: 08, ambiente: 'Otro' }
-]
-
-const listaEstilos = [
-    { id: 01, estilo: 'Clasico' }, { id: 02, estilo: 'Vintage' }, { id: 03, estilo: 'Green' }, { id: 04, estilo: 'Rústico' }, { id: 05, estilo: 'Moderno' }]
-
-const listaArquis = [
-    { id: 01, nombre: 'Carlos B.', bio: 'Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras' }, { id: 02, nombre: 'Carla P.', bio: 'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales' }, { id: 03, nombre: 'Marcos H.', bio: 'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.' }, { id: 04, nombre: 'Martina L.', bio: 'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.' }]
-
-const listaTarjetas = [{ id: 01, path: '../multimedia/img/mercadpagorecurso_color.png', alt: 'Logo Mercado pago' }, { id: 02, path: '../multimedia/img/Uala-logo color.png', alt: 'Logo Tarjeta Uala' }, { id: 03, path: '../multimedia/img/Visa logo color.png', alt: 'Logo Tarjeta Visa' }, { id: 04, path: '../multimedia/img/Master logo color.png', alt: 'Logo Tarjeta Mastercard' }, { id: 05, path: '../multimedia/img/Red link logo color.png', alt: 'Logo Tarjeta Link' }, { id: 06, path: '../multimedia/img/Banelco logo color.png', alt: 'Logo Tarjeta Banelco' }]
-
-const enviarForm = document.querySelector('#enviar')
-const agregaAmbienteBtn = document.querySelector('#agregarAmb-Btn')
-const selectAmbientes = document.querySelector('#ambientes-Select')
-const anchoInput = document.querySelector('#ancho-Input')
-const largoInput = document.querySelector('#largo-Input')
-const divAmbientes = document.querySelector('#div-ambientes')
-const btnFotos = document.querySelector('#foto-btn')
-const divFotos = document.querySelector('#div-fotos')
-const ulEstilos = document.querySelector('#ul-estilos')
-const divPersonas = document.querySelector('.personas')
-const inNombre = document.querySelector('#in-nombre')
-const inEmail = document.querySelector('#in-email')
-const inCelular = document.querySelector('#in-celular')
-const enviarBtn = document.querySelector('#enviar-btn')
-const divPagos = document.querySelector('.pagos')
-const divSupTotal = document.querySelector('#div-supTotal')
-let listaAmbientesAgreados = []
-let cliente = []
-let listaFotosAgregadas = []
-
+// INVOCA PRIMERO LAS FUNCIONES PRIORITARIAS---------------
 document.addEventListener('DOMContentLoaded', () => {
     mostrarEstilos(listaEstilos)
     mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
+    txtDescripcion.style.padding = '8px'
+    txtDescripcion.focus()
 })
 
-
-btnFotos.addEventListener('change', () => {
-    mostrarFotos()
-})
-
-function mostrarFotos() {
-    divFotos.innerHTML = ''
-    let nombre = "";
-    listaFotosAgregadas = []
-    if ('files' in btnFotos) {
-        if (btnFotos.files.length == 0) {
-            nombre = "Selecciona alguna foto.";
-        } else {
-            for (let i = 0; i < btnFotos.files.length; i++) {
-                nombre = ` ${(i + 1)} . Archivo`;
-
-                if ('name' in btnFotos.files[i]) {
-                    nombre += btnFotos.files[i].name;
-                }
-                
-                listaFotosAgregadas.push(new Fotos(i+1, btnFotos.files[i].name))
-                const divArchivo = document.createElement('div')
-                const nombreArchivo = document.createElement('p')
-                nombreArchivo.textContent = nombre
-                divArchivo.appendChild(nombreArchivo)
-                divFotos.appendChild(divArchivo)
-            }
-            console.log(listaFotosAgregadas)
-            listaFotosAgregadas.forEach(foto =>{
-                console.log(typeof foto.id );
-                console.log(foto.id)
-                console.log(foto.nombre)
-            })
-        }
-    }
-    else {
-        if (btnFotos.value == "") {
-            nombre += "Seleccioná alguna foto";
-        } else {
-            nombre += "Archivo no soportado";
-        }
-    }
-    // divFotos.innerHTML = nombre
-}
-
-// CREO Y CARGO LOS OPTIONS DEL SELECT-------------------
+// CREA Y CARGA LOS OPTIONS DEL SELECT----------------------
 listaAmbientes.forEach(ambienteLista => {
     const option = document.createElement('option')
     option.value = ambienteLista.id
@@ -129,14 +16,20 @@ listaAmbientes.forEach(ambienteLista => {
     selectAmbientes.appendChild(option)
 })
 
-// CREO Y GUARDO EN UN ARRAY EL OBJETO CREADO
+// GUARDA EN UNA VARIABLE EL CONTENIDO DEL TEXT AREA CON LA DESCRIPCION DE LO REQUERIDO------
+txtDescripcion.addEventListener('change', () => {
+    descripcionAgregada = (txtDescripcion.value).toUpperCase()
+    console.log(descripcionAgregada);
+})
+
+// CREA Y GUARDA EN UN ARRAY EL OBJETO CREADO----------------
 agregaAmbienteBtn.addEventListener('click', () => {
     const indice = selectAmbientes.selectedIndex
     const valores = selectAmbientes.options
 
     if (valores[indice].text === 'Elegí un ambiente' || anchoInput.value == '' || largoInput.value == '') {
         alert('Completa los datos del ambiente que querés agregar')
-        selectAmbientes.focus()
+        // selectAmbientes.focus()
     } else {
         listaAmbientesAgreados.push(new Ambiente(indice, valores[indice].text, anchoInput.value, largoInput.value))
         // INVOCO A LA FUNCION DE ABAJO
@@ -222,11 +115,52 @@ function borrarAmbiente(id) {
     mostrar(listaAmbientesAgreados)
 }
 
+// AGREGAR MULTIPLES ARCHIVOS(FOTOS) PARA ENVIAR-----------------
+btnFotos.addEventListener('change', () => {
+    mostrarFotos()
+})
+function mostrarFotos() {
+    divFotos.innerHTML = ''
+    let nombre = "";
+    listaFotosAgregadas = []
+    if ('files' in btnFotos) {
+        if (btnFotos.files.length == 0) {
+            nombre = "Selecciona alguna foto.";
+        } else {
+            for (let i = 0; i < btnFotos.files.length; i++) {
+                nombre = ` ${(i + 1)} . Archivo`;
 
+                if ('name' in btnFotos.files[i]) {
+                    nombre += btnFotos.files[i].name;
+                }
+                listaFotosAgregadas.push(new Fotos(i + 1, btnFotos.files[i].name))
+                const divArchivo = document.createElement('div')
+                const nombreArchivo = document.createElement('p')
+                nombreArchivo.textContent = nombre
+                divArchivo.appendChild(nombreArchivo)
+                divFotos.appendChild(divArchivo)
+            }
+            console.log(listaFotosAgregadas)
+            listaFotosAgregadas.forEach(foto => {
+                console.log(typeof foto.id);
+                console.log(foto.id)
+                console.log(foto.nombre)
+            })
+        }
+    }
+    else {
+        if (btnFotos.value == "") {
+            nombre += "Seleccioná alguna foto";
+        } else {
+            nombre += "Archivo no soportado";
+        }
+    }
+}
+// CREA INTERFAZ DE IMAGENES(ESTILOS) Y CHECKS EN EL DOM---------------
 function mostrarEstilos(estilo) {
     ulEstilos.innerHTML = ''
+    let i = 0
     estilo.forEach(est => {
-
         const liEstilo = document.createElement('li')
         liEstilo.classList.add('img' + est.id)
 
@@ -235,18 +169,42 @@ function mostrarEstilos(estilo) {
 
         const inputAmb = document.createElement('input')
         inputAmb.id = 'check' + est.estilo
+        inputAmb.name = est.estilo
         inputAmb.type = 'checkbox'
-
+        inputAmb.onclick = () => {
+            estiloSelecc += `${est.estilo} `
+            console.log(estiloSelecc);
+        }
+        if (i === 3) inputAmb.checked = true
+        i++
         estiloAmb.appendChild(inputAmb)
         liEstilo.appendChild(estiloAmb)
         ulEstilos.appendChild(liEstilo)
     })
-
 }
+// GUARDA VALORES DE COLORES SELECCIONADOS EN UN ARRAY--------------------
+colorPrim.addEventListener('change', () => {
+    cargarColores()
+    // console.log(colorPrim.value);
+})
+colorSec.addEventListener('change', () => {
+    cargarColores()
+    // console.log(colorSec.value);
+})
+colorNeutro.addEventListener('change', () => {
+    cargarColores()
+    // console.log(colorNeutro.value);
+})
+function cargarColores() {
+    listaColoresElegidos = []
+    listaColoresElegidos.push(new Colores(colorPrim.value, colorSec.value, colorNeutro.value))
+    console.log(listaColoresElegidos)
+}
+// CREA INTERFAZ EN DOM DE ARQUITECTOS---------------------
 function mostrarArquis(arquis) {
     divPersonas.innerHTML = ''
+    let i = 0
     arquis.forEach(arq => {
-
         const divArq = document.createElement('div')
         divArq.classList.add('img' + arq.id)
 
@@ -256,10 +214,16 @@ function mostrarArquis(arquis) {
         const checkArq = document.createElement('input')
         checkArq.type = 'radio'
         checkArq.name = 'arq'
+        checkArq.onclick = () => {
+            arqElegido = arq.nombre
+            console.log(arqElegido = arq.nombre)
+        }
 
         const bioArq = document.createElement('p')
         bioArq.textContent = arq.bio
 
+        if (i === 1) checkArq.checked = true
+        i++
         nombreArq.appendChild(checkArq)
         divArq.appendChild(nombreArq)
         divArq.appendChild(bioArq)
@@ -267,8 +231,85 @@ function mostrarArquis(arquis) {
     })
 }
 
+// GUARDA EL ESTADO DEL PLAN ELEGIDO-------------------------------
+chkPersonalizado.addEventListener('change', () => {
+    verificaPlan()
+})
+chkPremium.addEventListener('change', () => {
+    verificaPlan()
+})
+let paso = 0
+function verificaPlan() {
+    if (chkPersonalizado.checked) {
+        if (paso === 1) {
+            const divPremium = document.querySelector('#divPremCtas')
+            articlePremium.removeChild(divPremium)
+        }
+        planElegido = listaPagos[0].tipo
+        const divCuotas = document.createElement('div')
+        divCuotas.id = 'divPersonCtas'
+
+        const labelCuotas = document.createElement('p')
+        labelCuotas.textContent = 'Ingresa la cantidad de cuotas'
+        labelCuotas.style.fontWeight = 'bold'
+
+        const inputCuotas = document.createElement('input')
+        inputCuotas.required = true
+        inputCuotas.placeholder = '3'
+        inputCuotas.maxLength = 1
+        inputCuotas.onblur = ()=>{
+            if(inputCuotas.value === '' || isNaN(inputCuotas.value)){
+                console.log('verifique los datos')
+                inputCuotas.value = ''
+                inputCuotas.focus()
+            }else cuotas = inputCuotas.value
+        }
+        inputCuotas.style.width = '3rem'
+        inputCuotas.style.marginBottom = '1rem'
+
+        divCuotas.appendChild(labelCuotas)
+        divCuotas.appendChild(inputCuotas)
+        articlePersonalizado.appendChild(divCuotas)
+        paso = 1
+    } else {
+        if (paso === 1) {
+            const divPersonalizado = document.querySelector('#divPersonCtas')
+            articlePersonalizado.removeChild(divPersonalizado)
+        }
+        planElegido = listaPagos[1].tipo
+
+        const divCuotas = document.createElement('div')
+        divCuotas.id = 'divPremCtas'
+
+        const labelCuotas = document.createElement('p')
+        labelCuotas.textContent = 'Ingresa la cantidad de cuotas'
+        labelCuotas.style.fontWeight = 'bold'
+
+        const inputCuotas = document.createElement('input')
+        inputCuotas.required = true
+        inputCuotas.placeholder = '3'
+        inputCuotas.maxLength = 1
+        inputCuotas.onblur = ()=>{
+            if(inputCuotas.value === '' || isNaN(inputCuotas.value)){
+                console.log('verifique los datos')
+                inputCuotas.value = ''
+                inputCuotas.focus()
+            }else cuotas = inputCuotas.value
+        }
+        inputCuotas.style.width = '3rem'
+        inputCuotas.style.marginBottom = '1rem'
+
+        divCuotas.appendChild(labelCuotas)
+        divCuotas.appendChild(inputCuotas)
+        articlePremium.appendChild(divCuotas)
+        paso = 1
+    }
+}
+
+// CREA Y MUESTRA TARJETAS Y FORMAS DE PAGO  EN DOM----------------
 function mostrarTarjetas(tarjetas) {
     divPagos.innerHTML = ''
+    let i = 0
     tarjetas.forEach(tarj => {
 
         const divTarjeta = document.createElement('div')
@@ -279,14 +320,26 @@ function mostrarTarjetas(tarjetas) {
         const checkTarjeta = document.createElement('input')
         checkTarjeta.type = 'radio'
         checkTarjeta.name = 'forma-pago'
-
+        checkTarjeta.onclick = () => {
+            tarjetaElegida = tarj.nombre
+            console.log(tarjetaElegida = tarj.nombre)
+        }
+        if (i === 0) checkTarjeta.checked = true
+        i++
         divTarjeta.appendChild(img)
         divTarjeta.appendChild(checkTarjeta)
         divPagos.appendChild(divTarjeta)
     })
 }
+inCelular.addEventListener('blur', () => {
+    if (inNombre.value === '' || inEmail.value === '' || inCelular.value === '') {
+        console.log('Faltan datos');
+    }else{
+        cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
+        console.log(cliente);}
+})
 
+// CARGA LOS DATOS DEL CLIENTE EN UN OBJETO------------------
 enviarBtn.addEventListener('click', () => {
-    cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
-    console.log(cliente);
+
 })

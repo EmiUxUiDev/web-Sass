@@ -74,8 +74,8 @@
                     <h2>Hablemos de tú idea, detallemos!</h2>
                     <p>Queremos saber todo respecto a lo que deseas, soñas o te imaginas de ese ambiente, cuantos mas
                         detalles, mejor</p>
-                    <textarea name="" id="" cols="50" rows="8" placeholder=" Hola, el ambiente que quiero remodelar..."
-                        required></textarea>
+                    <textarea name="" id="el-txt" autofocus cols="50" rows="8" placeholder=" Hola, el ambiente que quiero remodelar..."
+                        required ></textarea>
                 </section>
 
                 <!-- TAMAÑOS DE TÚ AMBIENTE -->
@@ -149,12 +149,12 @@
                     <h2>Qué colores te gustan?</h2>
                     <p>Decinos que colores te gustarían para tú ambiente. Hace click en el cuadrito y elegí el que mas te guste!</p>
                     <div class="elegir-color">
-                        <label for="color1">Primer color</label>
-                        <input type="color" name="color1" id="" value="#ffd900">
-                        <label for="color1">Segundo color</label>
-                        <input type="color" name="color2" id="" value="#FF5733">
-                        <label for="color1">Neutro</label>
-                        <input type="color" name="color3" id="" value="#EEEEEE">
+                        <label for="color1">Color primario</label>
+                        <input type="color" name="color1" id="el-primario" value="#ffd900">
+                        <label for="color1">Color secundario</label>
+                        <input type="color" name="color2" id="el-secundario" value="#FF5733">
+                        <label for="color1">Color neutro</label>
+                        <input type="color" name="color3" id="el-neutro" value="#EEEEEE">
                     </div>
                 </section>
 
@@ -212,7 +212,7 @@
                         <h3>Quantos mas ambientes, mayor es el descuento</h3>
                         <p>2° ambiente por $25.000 o <strong>6X $4.500</strong></p>
                         <p>3° ambiente por $22.000<strong> 6X $4.000</strong></p>
-                        <p><input type="radio" name="plan" checked></p>
+                        <p><input id="chk-personalizado" type="radio" name="plan"></p>
                     </article>
 
                     <article class="premium">
@@ -233,7 +233,7 @@
                         <h3>Quantos mas ambientes, mayor es el descuento</h3>
                         <p>2° ambiente por $45.000 o <strong>6X $7.800</strong></p>
                         <p>3° ambiente por $ 43.000 o <strong>6X $7.200</strong></p>
-                        <p><input type="radio" name="plan"></p>
+                        <p><input id="chk-premium" type="radio" name="plan"></p>
                     </article>
                 </section>
 
@@ -341,7 +341,6 @@
                     <input class="enviar" type="submit" value="enviar">
                 </form>
             </div>
-
         </div>
 
         <!-- ULTIMA LINEA - DERECHOS RESERVADOS -->
@@ -350,6 +349,7 @@
             <p>EmiDev &copy 2022 - Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="../JS/clases.js"></script> 
     <script src="../JS/index.js"></script>    
 </body>
 </html>
