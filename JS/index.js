@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     listaColoresElegidos = [colorPrim.value, colorSec.value, colorNeutro.value]
     ocultaBotonesEnvio()
 })
-function ocultaBotonesEnvio(){
+function ocultaBotonesEnvio() {
     enviarBtn.style.display = 'none'
     borrarBtn.style.display = 'none'
 }
@@ -266,7 +266,7 @@ function verificaPlan() {
                 console.log('verifique los datos')
                 inputCuotas.value = ''
                 inputCuotas.focus()
-            } else{
+            } else {
                 planElegido.push(new PlanPago(listaPagos[0].tipo, listaPagos[0].precio, inputCuotas.value))
                 console.log(planElegido)
             }
@@ -349,11 +349,11 @@ inCelular.addEventListener('blur', () => {
         const chkChecked = document.querySelectorAll('input[type=checkbox]:checked')
         const chkEstilo1 = document.querySelector('#checkClasico')
         console.log(chkChecked)
-        if(chkChecked.length != 0){
-            chkChecked.forEach(chkActual =>{
+        if (chkChecked.length != 0) {
+            chkChecked.forEach(chkActual => {
                 estiloSelecc += `${chkActual.name} `
-            } )
-        }else{
+            })
+        } else {
             console.log('Selecciona algun estilo')
             chkEstilo1.focus()
         }
@@ -371,52 +371,68 @@ function manejadorSubm(e) {
     console.log(e)
     e.preventDefault()
     const validaForm = formularioPagina.checkValidity()
-    if(validaForm){
+    if (validaForm) {
         reporteAgregado.push(new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, cliente))
-    console.log(reporteAgregado)
-    ocultaBotonesEnvio()
-    localStorage.setItem('registroReporte', JSON.stringify(reporteAgregado))
-    cargarReporte(reporteAgregado)
-    }else alert('Formulario incompleto, no se puede enviar')
+        console.log(reporteAgregado)
+        ocultaBotonesEnvio()
+        localStorage.setItem('registroReporte', JSON.stringify(reporteAgregado))
+        cargarReporte(reporteAgregado)
+    } else alert('Formulario incompleto, no se puede enviar')
 }
-function cargarReporte(repo){
-    // repo.ambiente.forEach(item =>{
-    //     console.log(item)
-    // })
-    repo.forEach(elemento =>{
-        mostrarReporte += `
+// ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
+function cargarReporte(repo) {
+    let repoAmb = ''
+    let repoFotos = ''
+    let repoColores = ''
+    let repoPlan = ''
+    let repoCliente = ''
+
+    repo[0].ambiente.forEach(item => {
+        repoAmb += `*${item.nombre} superficie: ${item.superficie}m2  `
+    })
+    repo[0].fotos.forEach(item => {
+        repoFotos += `*${item.nombre}  `
+    })
+
+    repo[0].colores.forEach(item => {
+        repoColores += `*${item}  `
+    })
+
+    repo[0].plan.forEach(item => {
+        repoPlan += `*${item.nombre}, ${item.precioContado}, ${item.cuotass}`
+    })
+
+    mostrarReporte += `
         <li>
-            ${elemento.descripcion}
+            ${repo[0].descripcion}
         </li>
         <li>
-            ${elemento.ambiente}
+            ${repoAmb}
         </li>
         <li>
-            ${elemento.fotos}
+            ${repoFotos}
         </li>
         <li>
-            ${elemento.estilo}
+            ${repo[0].estilo}
         </li>
         <li>
-            ${elemento.colores}
+            ${repoColores}
         </li>
         <li>
-            ${elemento.arq}
+            ${repo[0].arq}
         </li>
         <li>
-            ${elemento.plan}
+            ${repoPlan}
         </li>
         <li>
-            ${elemento.tarjeta}
+            ${repo[0].tarjeta}
         </li>
         <li>
-            ${elemento.cliente}
-        </li>
-        <li>
-            ${elemento.fecha}
+            ${repo[0].fecha}
         </li>
         `
-    })
+    // })
+    ulReporte.innerHTML = `<h2>Hola ${repo[0].cliente[0].nombre}</h2>`
     ulReporte.innerHTML = mostrarReporte
 }
 
