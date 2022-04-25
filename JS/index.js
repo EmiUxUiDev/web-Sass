@@ -403,6 +403,7 @@ function cargarReporte(repo) {
     })
 
     mostrarReporte += `
+    <h2>Hola ${repo[0].cliente[0].nombre}</h2>
         <li>
             ${repo[0].descripcion}
         </li>
@@ -432,7 +433,7 @@ function cargarReporte(repo) {
         </li>
         `
     // })
-    ulReporte.innerHTML = `<h2>Hola ${repo[0].cliente[0].nombre}</h2>`
+    
     ulReporte.innerHTML = mostrarReporte
 }
 
