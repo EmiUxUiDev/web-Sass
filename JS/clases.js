@@ -4,7 +4,7 @@ class Ambiente {
         this.nombre = nombre
         this.ancho = Number((parseFloat(ancho)).toFixed(2))
         this.largo = Number((parseFloat(largo)).toFixed(2))
-        this.superficie = [Number((this.ancho * this.largo).toFixed(2))]
+        this.superficie = Number((this.ancho * this.largo).toFixed(2))
     }
 }
 class Fotos {
@@ -46,6 +46,7 @@ class Reporte {
         this.plan = plan
         this.tarjeta = tarjeta
         this.cliente = cliente
+        this.fecha = new Date()
     }
 }
 
@@ -55,7 +56,6 @@ const listaAmbientes = [
     { id: 03, ambiente: 'Comedor' }, { id: 04, ambiente: 'Estar' },
     { id: 05, ambiente: 'Dormitorio' }, { id: 06, ambiente: 'Quincho' }, { id: 07, ambiente: 'Cochera' }, { id: 08, ambiente: 'Otro' }
 ]
-
 const listaEstilos = [
     { id: 01, estilo: 'Clasico' }, { id: 02, estilo: 'Vintage' }, { id: 03, estilo: 'Green' }, { id: 04, estilo: 'Rústico' }, { id: 05, estilo: 'Moderno' }]
 
@@ -91,14 +91,21 @@ const inNombre = document.querySelector('#in-nombre')
 const inEmail = document.querySelector('#in-email')
 const inCelular = document.querySelector('#in-celular')
 const enviarBtn = document.querySelector('#enviar-btn')
+const borrarBtn = document.querySelector('#borrar-btn')
+const formularioPagina = document.querySelector('#formulario')
+const ulReporte = document.querySelector('#ul-reporte')
+const divContenedor = document.querySelector('.contenedor')
+// VARIABLES QUE GUARDAN VALORES PARA REGISTRO FINAL
 let descripcionAgregada = ''
 let listaAmbientesAgreados = []
-let estiloSelecc = []
 let listaFotosAgregadas = []
+let estiloSelecc = []
 let listaColoresElegidos = []
 let arqElegido = ''
-let planElegido = ''
+let planElegido = []
 let listaPlanCuotas = []
 let tarjetaElegida = ''
 let cliente = []
-let cuotas = 0
+let cuotas = 1
+let reporteAgregado = []
+let mostrarReporte = ''

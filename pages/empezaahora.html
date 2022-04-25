@@ -74,7 +74,7 @@
                     <h2>Hablemos de tú idea, detallemos!</h2>
                     <p>Queremos saber todo respecto a lo que deseas, soñas o te imaginas de ese ambiente, cuantos mas
                         detalles, mejor</p>
-                    <textarea name="" id="el-txt" autofocus cols="50" rows="8" placeholder=" Hola, el ambiente que quiero remodelar..."
+                    <textarea name="" id="el-txt"  cols="50" rows="8" placeholder=" Hola, el ambiente que quiero remodelar..."
                         required ></textarea>
                 </section>
 
@@ -112,7 +112,7 @@
                 <section class=" base-card imagen">
                     <h2>Fotos</h2>
                     <p>Mostranos las fotos actuales de ese espacio y los alrededores. Envianos varias!</p>
-                    <input id="foto-btn" type="file" multiple>
+                    <input id="foto-btn" type="file" multiple required>
                     <div id="div-fotos"></div>
                 </section>
 
@@ -283,10 +283,10 @@
                 </section>
 
                 <!-- BOTON DE ENVIAR FORM O RESETEAR DATOS -->
-                <button id="enviar-btn" type="submit">Enviá los datos!</button> <button type="reset">Borrá los datos</button>
+                <button id="enviar-btn" type="submit">Enviá los datos!</button> <button id="borrar-btn" type="reset">Borrá los datos</button>
                 <p><em>En el plazo de 48hs hábiles, se estarán contactando con vos, así acuerdan formas de pago, entrega
                     del proyecto y mucho más!</em></p>
-
+                <ul id="ul-reporte"></ul>
             </form>
         </div>
     </main>

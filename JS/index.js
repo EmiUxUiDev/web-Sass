@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarArquis(listaArquis)
     txtDescripcion.style.padding = '8px'
     txtDescripcion.focus()
+    listaColoresElegidos = [colorPrim.value, colorSec.value, colorNeutro.value]
+    ocultaBotonesEnvio()
 })
-
+function ocultaBotonesEnvio(){
+    enviarBtn.style.display = 'none'
+    borrarBtn.style.display = 'none'
+}
 // CREA Y CARGA LOS OPTIONS DEL SELECT----------------------
 listaAmbientes.forEach(ambienteLista => {
     const option = document.createElement('option')
@@ -19,25 +24,25 @@ listaAmbientes.forEach(ambienteLista => {
 // GUARDA EN UNA VARIABLE EL CONTENIDO DEL TEXT AREA CON LA DESCRIPCION DE LO REQUERIDO------
 txtDescripcion.addEventListener('change', () => {
     descripcionAgregada = (txtDescripcion.value).toUpperCase()
-    console.log(descripcionAgregada);
+    console.log(descripcionAgregada)
 })
 
 // CREA Y GUARDA EN UN ARRAY EL OBJETO CREADO----------------
 agregaAmbienteBtn.addEventListener('click', () => {
     const indice = selectAmbientes.selectedIndex
     const valores = selectAmbientes.options
-
     if (valores[indice].text === 'Elegí un ambiente' || anchoInput.value == '' || largoInput.value == '') {
         alert('Completa los datos del ambiente que querés agregar')
-        // selectAmbientes.focus()
     } else {
         listaAmbientesAgreados.push(new Ambiente(indice, valores[indice].text, anchoInput.value, largoInput.value))
+        console.log(listaAmbientesAgreados)
         // INVOCO A LA FUNCION DE ABAJO
         mostrar(listaAmbientesAgreados)
         // PREPARO LOS INPUTS PARA UNA NUEVA CARGA
-        anchoInput.value = ''
-        largoInput.value = ''
+        anchoInput.value = 0
+        largoInput.value = 0
         selectAmbientes.selectedIndex = 0
+        btnFotos.focus()
     }
 })
 function cargaStyles(objeto) {
@@ -159,7 +164,7 @@ function mostrarFotos() {
 // CREA INTERFAZ DE IMAGENES(ESTILOS) Y CHECKS EN EL DOM---------------
 function mostrarEstilos(estilo) {
     ulEstilos.innerHTML = ''
-    let i = 0
+    // let i = 0
     estilo.forEach(est => {
         const liEstilo = document.createElement('li')
         liEstilo.classList.add('img' + est.id)
@@ -171,12 +176,12 @@ function mostrarEstilos(estilo) {
         inputAmb.id = 'check' + est.estilo
         inputAmb.name = est.estilo
         inputAmb.type = 'checkbox'
-        inputAmb.onclick = () => {
-            estiloSelecc += `${est.estilo} `
-            console.log(estiloSelecc);
-        }
-        if (i === 3) inputAmb.checked = true
-        i++
+        // inputAmb.onclick = () => {
+        //     estiloSelecc += `${est.estilo} `
+        //     console.log(estiloSelecc);
+        // }
+        // if (i === 3) inputAmb.checked = true
+        // i++
         estiloAmb.appendChild(inputAmb)
         liEstilo.appendChild(estiloAmb)
         ulEstilos.appendChild(liEstilo)
@@ -203,7 +208,7 @@ function cargarColores() {
 // CREA INTERFAZ EN DOM DE ARQUITECTOS---------------------
 function mostrarArquis(arquis) {
     divPersonas.innerHTML = ''
-    let i = 0
+    // let i = 0
     arquis.forEach(arq => {
         const divArq = document.createElement('div')
         divArq.classList.add('img' + arq.id)
@@ -216,14 +221,13 @@ function mostrarArquis(arquis) {
         checkArq.name = 'arq'
         checkArq.onclick = () => {
             arqElegido = arq.nombre
-            console.log(arqElegido = arq.nombre)
+            console.log(arqElegido)
         }
 
         const bioArq = document.createElement('p')
         bioArq.textContent = arq.bio
-
-        if (i === 1) checkArq.checked = true
-        i++
+        // if (i === 1) checkArq.checked = true
+        // i++
         nombreArq.appendChild(checkArq)
         divArq.appendChild(nombreArq)
         divArq.appendChild(bioArq)
@@ -238,6 +242,7 @@ chkPersonalizado.addEventListener('change', () => {
 chkPremium.addEventListener('change', () => {
     verificaPlan()
 })
+// VARIABLE PASO, CHEQUEA SI ES LA PRIMERA VEZ Q SE EJECUTA LA FUNCION----
 let paso = 0
 function verificaPlan() {
     if (chkPersonalizado.checked) {
@@ -245,7 +250,6 @@ function verificaPlan() {
             const divPremium = document.querySelector('#divPremCtas')
             articlePremium.removeChild(divPremium)
         }
-        planElegido = listaPagos[0].tipo
         const divCuotas = document.createElement('div')
         divCuotas.id = 'divPersonCtas'
 
@@ -257,13 +261,17 @@ function verificaPlan() {
         inputCuotas.required = true
         inputCuotas.placeholder = '3'
         inputCuotas.maxLength = 1
-        inputCuotas.onblur = ()=>{
-            if(inputCuotas.value === '' || isNaN(inputCuotas.value)){
+        inputCuotas.onblur = () => {
+            if (inputCuotas.value === '' || isNaN(inputCuotas.value)) {
                 console.log('verifique los datos')
                 inputCuotas.value = ''
                 inputCuotas.focus()
-            }else cuotas = inputCuotas.value
+            } else{
+                planElegido.push(new PlanPago(listaPagos[0].tipo, listaPagos[0].precio, inputCuotas.value))
+                console.log(planElegido)
+            }
         }
+        console.log(cuotas)
         inputCuotas.style.width = '3rem'
         inputCuotas.style.marginBottom = '1rem'
 
@@ -276,7 +284,6 @@ function verificaPlan() {
             const divPersonalizado = document.querySelector('#divPersonCtas')
             articlePersonalizado.removeChild(divPersonalizado)
         }
-        planElegido = listaPagos[1].tipo
 
         const divCuotas = document.createElement('div')
         divCuotas.id = 'divPremCtas'
@@ -289,12 +296,15 @@ function verificaPlan() {
         inputCuotas.required = true
         inputCuotas.placeholder = '3'
         inputCuotas.maxLength = 1
-        inputCuotas.onblur = ()=>{
-            if(inputCuotas.value === '' || isNaN(inputCuotas.value)){
+        inputCuotas.onblur = () => {
+            if (inputCuotas.value === '' || isNaN(inputCuotas.value)) {
                 console.log('verifique los datos')
                 inputCuotas.value = ''
                 inputCuotas.focus()
-            }else cuotas = inputCuotas.value
+            } else {
+                planElegido.push(new PlanPago(listaPagos[1].tipo, listaPagos[1].precio, inputCuotas.value))
+                console.log(planElegido)
+            }
         }
         inputCuotas.style.width = '3rem'
         inputCuotas.style.marginBottom = '1rem'
@@ -309,7 +319,7 @@ function verificaPlan() {
 // CREA Y MUESTRA TARJETAS Y FORMAS DE PAGO  EN DOM----------------
 function mostrarTarjetas(tarjetas) {
     divPagos.innerHTML = ''
-    let i = 0
+    // let i = 0
     tarjetas.forEach(tarj => {
 
         const divTarjeta = document.createElement('div')
@@ -324,8 +334,8 @@ function mostrarTarjetas(tarjetas) {
             tarjetaElegida = tarj.nombre
             console.log(tarjetaElegida = tarj.nombre)
         }
-        if (i === 0) checkTarjeta.checked = true
-        i++
+        // if (i === 0) checkTarjeta.checked = true
+        // i++
         divTarjeta.appendChild(img)
         divTarjeta.appendChild(checkTarjeta)
         divPagos.appendChild(divTarjeta)
@@ -334,12 +344,81 @@ function mostrarTarjetas(tarjetas) {
 inCelular.addEventListener('blur', () => {
     if (inNombre.value === '' || inEmail.value === '' || inCelular.value === '') {
         console.log('Faltan datos');
-    }else{
+    } else {
+        // CARGA CHECKBOX SELECCIONADOS------------------------------
+        const chkChecked = document.querySelectorAll('input[type=checkbox]:checked')
+        const chkEstilo1 = document.querySelector('#checkClasico')
+        console.log(chkChecked)
+        if(chkChecked.length != 0){
+            chkChecked.forEach(chkActual =>{
+                estiloSelecc += `${chkActual.name} `
+            } )
+        }else{
+            console.log('Selecciona algun estilo')
+            chkEstilo1.focus()
+        }
+
+        enviarBtn.style.display = 'block'
+        borrarBtn.style.display = 'block'
+
         cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
-        console.log(cliente);}
+        console.log(cliente)
+    }
 })
-
 // CARGA LOS DATOS DEL CLIENTE EN UN OBJETO------------------
-enviarBtn.addEventListener('click', () => {
+formularioPagina.addEventListener('submit', manejadorSubm)
+function manejadorSubm(e) {
+    console.log(e)
+    e.preventDefault()
+    const validaForm = formularioPagina.checkValidity()
+    if(validaForm){
+        reporteAgregado.push(new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, cliente))
+    console.log(reporteAgregado)
+    ocultaBotonesEnvio()
+    localStorage.setItem('registroReporte', JSON.stringify(reporteAgregado))
+    cargarReporte(reporteAgregado)
+    }else alert('Formulario incompleto, no se puede enviar')
+}
+function cargarReporte(repo){
+    // repo.ambiente.forEach(item =>{
+    //     console.log(item)
+    // })
+    repo.forEach(elemento =>{
+        mostrarReporte += `
+        <li>
+            ${elemento.descripcion}
+        </li>
+        <li>
+            ${elemento.ambiente}
+        </li>
+        <li>
+            ${elemento.fotos}
+        </li>
+        <li>
+            ${elemento.estilo}
+        </li>
+        <li>
+            ${elemento.colores}
+        </li>
+        <li>
+            ${elemento.arq}
+        </li>
+        <li>
+            ${elemento.plan}
+        </li>
+        <li>
+            ${elemento.tarjeta}
+        </li>
+        <li>
+            ${elemento.cliente}
+        </li>
+        <li>
+            ${elemento.fecha}
+        </li>
+        `
+    })
+    ulReporte.innerHTML = mostrarReporte
+}
 
-})
+
+
