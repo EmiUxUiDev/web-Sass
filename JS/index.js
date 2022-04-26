@@ -360,97 +360,118 @@ inCelular.addEventListener('blur', () => {
 
         enviarBtn.style.display = 'block'
         borrarBtn.style.display = 'block'
-
-        cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
-        console.log(cliente)
     }
 })
 // CARGA LOS DATOS DEL CLIENTE EN UN OBJETO------------------
 formularioPagina.addEventListener('submit', manejadorSubm)
+
 function manejadorSubm(e) {
-    console.log(e)
     e.preventDefault()
+    debugger
     const validaForm = formularioPagina.checkValidity()
+    console.log(validaForm)
     if (validaForm) {
+
+        cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
+        console.log(cliente)
+
         reporteAgregado.push(new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, cliente))
         console.log(reporteAgregado)
+
+        subeALocalSorage(`${inNombre.value}`, reporteAgregado)
+
+        let repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) || []
+        cargarReporte(repoActualizado)
+
+        //     if (bajaDeLocalStorage(`${inNombre.value}`)) {
+        //         cargarReporte(bajaDeLocalStorage(`${inNombre.value}`))
+        //     } else {
+        //         ulReporte.innerHTML = `<p>Hola ${inNombre.value}, no hay registros previos</p>`
+        //     }
+        // } else alert('Formulario incompleto, no se puede generar el reporte, intentalo de nuevo')
+
         ocultaBotonesEnvio()
-        subeALocalSorage('cliente', reporteAgregado)
-        cargarReporte(bajaDeLocalStorage('cliente'))
-    } else alert('Formulario incompleto, no se puede enviar')
-}
+        divAmbientes.innerHTML = ''
+        divSupTotal.innerHTML = ''
+        divFotos.innerHTML = ''
+        e.target.reset()
+    }
 
-function subeALocalSorage(clave, archivo) {
-    localStorage.setItem(clave, JSON.stringify(archivo))
-}
-function bajaDeLocalStorage(clave) {
-    return bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave))
-}
+    function subeALocalSorage(clave, archivo) {
+        bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave)) || []
+        bajaDelLocalStorage.push(archivo)
+        localStorage.setItem(clave, JSON.stringify(bajaDelLocalStorage))
+    }
+    // function bajaDeLocalStorage(clave) {
+    //     if (clave == null) {
+    //         return false
+    //     } else return bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave))
+    // }
 
-// ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
-function cargarReporte(repo) {
-    let repoAmb = ''
-    let repoFotos = ''
-    let repoColores = ''
-    let repoPlan = ''
-    let supTotalAmb = 0
+    // ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
+    function cargarReporte(repo) {
+        ulReporte.innerHTML = ''
+        let repoAmb = ''
+        let repoFotos = ''
+        let repoColores = ''
+        let repoPlan = ''
+        let supTotalAmb = 0
+        console.log(repo)
+        repo.forEach(elemento => {
+            elemento.ambiente.forEach(item => {
+                repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
+                supTotalAmb += parseInt(item.superficie)
+            })
 
-    repo[0].ambiente.forEach(item => {
-        repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
-        supTotalAmb += parseInt(item.superficie)
-    })
-    repo[0].fotos.forEach(item => {
-        repoFotos += `Imagen: ${item.nombre}<br>`
-    })
+            elemento.fotos.forEach(item => {
+                repoFotos += `Imagen: ${item.nombre}<br>`
+            })
 
-    repo[0].colores.forEach(item => {
-        repoColores += `Color primario: ${item.primario}<br>
-        Color secundario: ${item.secundario}<br>
-        Color neutro: ${item.neutro}`
-    })
+            elemento.colores.forEach(item => {
+                repoColores += `Color primario: ${item.primario}<br>
+            Color secundario: ${item.secundario}<br>
+            Color neutro: ${item.neutro}`
+            })
 
-    repo[0].plan.forEach(item => {
-        repoPlan += `PLAN: ${item.nombre.toUpperCase()}<br>
-        Precio de contado por ambiente(hasta 18m²): $${item.precioContado}<br>
-        Superficie total a remodelar: ${supTotalAmb}m²<br>
-        con un precio total de obra de: $${Number(parseFloat((supTotalAmb/18)*item.precioContado).toFixed(2))}<br>
-        en ${item.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb/18)*item.precioContado)/item.cuotass).toFixed(2))} `
-    })
+            elemento.plan.forEach(item => {
+                repoPlan += `PLAN: ${item.nombre.toUpperCase()}<br>
+            Precio de contado por ambiente(hasta 18m²): $${item.precioContado}<br>
+            Superficie total a remodelar: ${supTotalAmb}m²<br>
+            con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * item.precioContado).toFixed(2))}<br>
+            en ${item.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * item.precioContado) / item.cuotass).toFixed(2))} `
+            })
 
-    mostrarReporte += `
-    <h2>Hola ${repo[0].cliente[0].nombre}</h2>
-        <li>
-            ${repo[0].descripcion}<br>
-        </li><hr><br>
-        <li>
-            ${repoAmb}
-        </li><hr><br>
-        <li>
-            ${repoFotos}
-        </li><hr><br>
-        <li>
-            Los estilos elegidos: ${repo[0].estilo}
-        </li><hr><br>
-        <li>
-            ${repoColores}
-        </li><hr><br>
-        <li>
-            El responsable del proyecto es: ${repo[0].arq}
-        </li><hr><br>
-        <li>
-            ${repoPlan}
-        </li><hr><br>
-        <li>
-            Los pagos los harías por medio de: ${repo[0].tarjeta}
-        </li><hr><br>
-        <li>
-            Fecha del presupuesto: ${repo[0].fecha}
-        </li><hr><br>
-        `
-    // })
-
-    ulReporte.innerHTML = mostrarReporte
-}
-
-
-
+            mostrarReporte += `
+        <h2>Hola ${elemento.cliente[0].nombre}</h2>
+            <li>
+                ${elemento.descripcion}<br>
+            </li><hr><br>
+            <li>
+                ${repoAmb}
+            </li><hr><br>
+            <li>
+                ${repoFotos}
+            </li><hr><br>
+            <li>
+                Los estilos elegidos: ${elemento.estilo}
+            </li><hr><br>
+            <li>
+                ${repoColores}
+            </li><hr><br>
+            <li>
+                Responsable del proyecto: ${elemento.arq}
+            </li><hr><br>
+            <li>
+                ${repoPlan}
+            </li><hr><br>
+            <li>
+                Los pagos los harías por medio de: ${elemento.tarjeta}
+            </li><hr><br>
+            <li>
+                Fecha del presupuesto: ${elemento.fecha}
+            </li><hr><br>
+            `
+            ulReporte.innerHTML = mostrarReporte
+        })
+    }
+}    
