@@ -109,3 +109,4 @@ let cliente = []
 let cuotas = 1
 let reporteAgregado = []
 let mostrarReporte = ''
+let bajaDelLocalStorage = []

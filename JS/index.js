@@ -375,65 +375,80 @@ function manejadorSubm(e) {
         reporteAgregado.push(new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, cliente))
         console.log(reporteAgregado)
         ocultaBotonesEnvio()
-        localStorage.setItem('registroReporte', JSON.stringify(reporteAgregado))
-        cargarReporte(reporteAgregado)
+        subeALocalSorage('cliente', reporteAgregado)
+        cargarReporte(bajaDeLocalStorage('cliente'))
     } else alert('Formulario incompleto, no se puede enviar')
 }
+
+function subeALocalSorage(clave, archivo) {
+    localStorage.setItem(clave, JSON.stringify(archivo))
+}
+function bajaDeLocalStorage(clave) {
+    return bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave))
+}
+
 // ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
 function cargarReporte(repo) {
     let repoAmb = ''
     let repoFotos = ''
     let repoColores = ''
     let repoPlan = ''
-    let repoCliente = ''
+    let supTotalAmb = 0
 
     repo[0].ambiente.forEach(item => {
-        repoAmb += `*${item.nombre} superficie: ${item.superficie}m2  `
+        repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
+        supTotalAmb += parseInt(item.superficie)
     })
     repo[0].fotos.forEach(item => {
-        repoFotos += `*${item.nombre}  `
+        repoFotos += `Imagen: ${item.nombre}<br>`
     })
 
     repo[0].colores.forEach(item => {
-        repoColores += `*${item}  `
+        repoColores += `Color primario: ${item.primario}<br>
+        Color secundario: ${item.secundario}<br>
+        Color neutro: ${item.neutro}`
     })
 
     repo[0].plan.forEach(item => {
-        repoPlan += `*${item.nombre}, ${item.precioContado}, ${item.cuotass}`
+        repoPlan += `PLAN: ${item.nombre.toUpperCase()}<br>
+        Precio de contado por ambiente(hasta 18m²): $${item.precioContado}<br>
+        Superficie total a remodelar: ${supTotalAmb}m²<br>
+        con un precio total de obra de: $${Number(parseFloat((supTotalAmb/18)*item.precioContado).toFixed(2))}<br>
+        en ${item.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb/18)*item.precioContado)/item.cuotass).toFixed(2))} `
     })
 
     mostrarReporte += `
     <h2>Hola ${repo[0].cliente[0].nombre}</h2>
         <li>
-            ${repo[0].descripcion}
-        </li>
+            ${repo[0].descripcion}<br>
+        </li><hr><br>
         <li>
             ${repoAmb}
-        </li>
+        </li><hr><br>
         <li>
             ${repoFotos}
-        </li>
+        </li><hr><br>
         <li>
-            ${repo[0].estilo}
-        </li>
+            Los estilos elegidos: ${repo[0].estilo}
+        </li><hr><br>
         <li>
             ${repoColores}
-        </li>
+        </li><hr><br>
         <li>
-            ${repo[0].arq}
-        </li>
+            El responsable del proyecto es: ${repo[0].arq}
+        </li><hr><br>
         <li>
             ${repoPlan}
-        </li>
+        </li><hr><br>
         <li>
-            ${repo[0].tarjeta}
-        </li>
+            Los pagos los harías por medio de: ${repo[0].tarjeta}
+        </li><hr><br>
         <li>
-            ${repo[0].fecha}
-        </li>
+            Fecha del presupuesto: ${repo[0].fecha}
+        </li><hr><br>
         `
     // })
-    
+
     ulReporte.innerHTML = mostrarReporte
 }
 
