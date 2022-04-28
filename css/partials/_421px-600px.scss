@@ -266,7 +266,7 @@
             }
             article.galeria__tec, article.galeria__renders{
                 div.grid__tec, div.grid__renders {
-                    grid-template-columns: repeat(auto-fit, minmax(380px,1fr));
+                    grid-template-columns: repeat (auto-fit, minmax(380px,1fr));
                     width: 95%;
                     margin:1rem auto 4rem auto;
                     padding: 1.5rem 0.25rem;
@@ -311,7 +311,7 @@
                 }
             }
             section.contenedor__grid{
-                grid-template-columns: repeat(auto-fit, 27rem);
+                grid-template-columns: repeat (auto-fit, 27rem);
                 article.grid__card{
                     padding-bottom: 1rem;
                     h2{

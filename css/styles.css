@@ -940,27 +940,33 @@ main.como__funciona section.recibir ul li:last-child {
   margin-bottom: 1.5rem;
 }
 
-main.como__funciona section.recibir article.galeria__tec, main.como__funciona section.recibir article.galeria__renders {
+main.como__funciona section.recibir article.galeria__tec,
+main.como__funciona section.recibir article.galeria__renders {
   padding-top: 0.6rem;
   background-color: #d6d6d6;
 }
 
-main.como__funciona section.recibir article.galeria__tec h2 strong, main.como__funciona section.recibir article.galeria__renders h2 strong {
+main.como__funciona section.recibir article.galeria__tec h2 strong,
+main.como__funciona section.recibir article.galeria__renders h2 strong {
   color: #fff;
   text-shadow: 1px 1px 1px #414141;
 }
 
-main.como__funciona section.recibir article.galeria__tec p, main.como__funciona section.recibir article.galeria__renders p {
+main.como__funciona section.recibir article.galeria__tec p,
+main.como__funciona section.recibir article.galeria__renders p {
   color: black;
   font-weight: 600;
   padding-bottom: 1rem;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.grid__tec, main.como__funciona section.recibir article.galeria__tec div.grid__renders, main.como__funciona section.recibir article.galeria__renders div.grid__tec, main.como__funciona section.recibir article.galeria__renders div.grid__renders {
+main.como__funciona section.recibir article.galeria__tec div.grid__tec,
+main.como__funciona section.recibir article.galeria__tec div.grid__renders,
+main.como__funciona section.recibir article.galeria__renders div.grid__tec,
+main.como__funciona section.recibir article.galeria__renders div.grid__renders {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr));
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: repeat auto-fit, minmax(300px, 1fr);
+      grid-template-columns: repeat auto-fit, minmax(300px, 1fr);
   width: 90%;
   margin: 1rem auto 4rem auto;
   grid-gap: 2rem;
@@ -971,7 +977,10 @@ main.como__funciona section.recibir article.galeria__tec div.grid__tec, main.com
   border-radius: 1rem;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.grid__tec a, main.como__funciona section.recibir article.galeria__tec div.grid__renders a, main.como__funciona section.recibir article.galeria__renders div.grid__tec a, main.como__funciona section.recibir article.galeria__renders div.grid__renders a {
+main.como__funciona section.recibir article.galeria__tec div.grid__tec a,
+main.como__funciona section.recibir article.galeria__tec div.grid__renders a,
+main.como__funciona section.recibir article.galeria__renders div.grid__tec a,
+main.como__funciona section.recibir article.galeria__renders div.grid__renders a {
   display: block;
   position: relative;
   overflow: hidden;
@@ -983,13 +992,19 @@ main.como__funciona section.recibir article.galeria__tec div.grid__tec a, main.c
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.grid__tec a:hover, main.como__funciona section.recibir article.galeria__tec div.grid__renders a:hover, main.como__funciona section.recibir article.galeria__renders div.grid__tec a:hover, main.como__funciona section.recibir article.galeria__renders div.grid__renders a:hover {
+main.como__funciona section.recibir article.galeria__tec div.grid__tec a:hover,
+main.como__funciona section.recibir article.galeria__tec div.grid__renders a:hover,
+main.como__funciona section.recibir article.galeria__renders div.grid__tec a:hover,
+main.como__funciona section.recibir article.galeria__renders div.grid__renders a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   z-index: 100;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.grid__tec a p, main.como__funciona section.recibir article.galeria__tec div.grid__renders a p, main.como__funciona section.recibir article.galeria__renders div.grid__tec a p, main.como__funciona section.recibir article.galeria__renders div.grid__renders a p {
+main.como__funciona section.recibir article.galeria__tec div.grid__tec a p,
+main.como__funciona section.recibir article.galeria__tec div.grid__renders a p,
+main.como__funciona section.recibir article.galeria__renders div.grid__tec a p,
+main.como__funciona section.recibir article.galeria__renders div.grid__renders a p {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: #fff;
@@ -997,7 +1012,10 @@ main.como__funciona section.recibir article.galeria__tec div.grid__tec a p, main
   letter-spacing: 0.05rem;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.grid__tec img, main.como__funciona section.recibir article.galeria__tec div.grid__renders img, main.como__funciona section.recibir article.galeria__renders div.grid__tec img, main.como__funciona section.recibir article.galeria__renders div.grid__renders img {
+main.como__funciona section.recibir article.galeria__tec div.grid__tec img,
+main.como__funciona section.recibir article.galeria__tec div.grid__renders img,
+main.como__funciona section.recibir article.galeria__renders div.grid__tec img,
+main.como__funciona section.recibir article.galeria__renders div.grid__renders img {
   width: 100%;
   max-width: 400px;
   vertical-align: top;
@@ -1008,7 +1026,8 @@ main.como__funciona section.recibir article.galeria__tec div.grid__tec img, main
   transition: transform 500ms ease-in-out 0s, -webkit-transform 500ms ease-in-out 0s;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.light-box, main.como__funciona section.recibir article.galeria__renders div.light-box {
+main.como__funciona section.recibir article.galeria__tec div.light-box,
+main.como__funciona section.recibir article.galeria__renders div.light-box {
   position: fixed;
   top: 0;
   left: 0;
@@ -1031,16 +1050,19 @@ main.como__funciona section.recibir article.galeria__tec div.light-box, main.com
   transition: all 300ms ease-in-out 0s;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.light-box:target, main.como__funciona section.recibir article.galeria__renders div.light-box:target {
+main.como__funciona section.recibir article.galeria__tec div.light-box:target,
+main.como__funciona section.recibir article.galeria__renders div.light-box:target {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-main.como__funciona section.recibir article.galeria__tec div.light-box a, main.como__funciona section.recibir article.galeria__renders div.light-box a {
+main.como__funciona section.recibir article.galeria__tec div.light-box a,
+main.como__funciona section.recibir article.galeria__renders div.light-box a {
   margin: 0rem 1.5rem;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.light-box .light__cerrar, main.como__funciona section.recibir article.galeria__renders div.light-box .light__cerrar {
+main.como__funciona section.recibir article.galeria__tec div.light-box .light__cerrar,
+main.como__funciona section.recibir article.galeria__renders div.light-box .light__cerrar {
   display: block;
   position: absolute;
   top: 3rem;
@@ -1056,7 +1078,8 @@ main.como__funciona section.recibir article.galeria__tec div.light-box .light__c
   cursor: pointer;
 }
 
-main.como__funciona section.recibir article.galeria__tec div.light-box .light__proxima, main.como__funciona section.recibir article.galeria__renders div.light-box .light__proxima {
+main.como__funciona section.recibir article.galeria__tec div.light-box .light__proxima,
+main.como__funciona section.recibir article.galeria__renders div.light-box .light__proxima {
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
@@ -1186,8 +1209,8 @@ main.contenedor__p3 p {
 main.contenedor__p3 section.contenedor__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (24rem);
-      grid-template-columns: repeat(auto-fit, 24rem);
+  -ms-grid-columns: repeat auto-fit, 24rem;
+      grid-template-columns: repeat auto-fit, 24rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1200,7 +1223,7 @@ main.contenedor__p3 section.contenedor__grid article.grid__card {
   background-color: #fff;
   border-radius: 1rem;
   margin: 1rem 1rem;
-  padding: 0rem  1rem 0.5rem 1rem;
+  padding: 0rem 1rem 0.5rem 1rem;
   border-top: 4px solid #ffd900;
   -webkit-box-shadow: #7a7a7a 0px 1px 3px;
           box-shadow: #7a7a7a 0px 1px 3px;
@@ -1414,22 +1437,11 @@ main.empeza div.contenedor form#formulario section.base-card fieldset button:hov
           transform: scale(0.95);
 }
 
-main.empeza div.contenedor form#formulario section.base-card div#div-ambientes{
+main.empeza div.contenedor form#formulario section.base-card div#div-ambientes {
   background-color: #d6d6d6;
   border: 1px solid #ffd900;
   border-radius: 10px;
   margin: 5px;
-}
-
-main.empeza div.contenedor form#formulario section.base-card div#div-fotos{
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-}
-
-main.empeza div.contenedor form#formulario section.base-card div#div-fotos div p{
-  padding: 0.1rem;
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img1 {
@@ -1615,7 +1627,8 @@ main.empeza div.contenedor form#formulario section.plan {
   padding: 1rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado, main.empeza div.contenedor form#formulario section.plan article.premium {
+main.empeza div.contenedor form#formulario section.plan article.personalizado,
+main.empeza div.contenedor form#formulario section.plan article.premium {
   width: 40vw;
   background-color: #fff;
   margin: 0.5rem 0rem;
@@ -1626,57 +1639,68 @@ main.empeza div.contenedor form#formulario section.plan article.personalizado, m
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado h2, main.empeza div.contenedor form#formulario section.plan article.premium h2 {
+main.empeza div.contenedor form#formulario section.plan article.personalizado h2,
+main.empeza div.contenedor form#formulario section.plan article.premium h2 {
   color: #414141;
   text-align: center;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado h2:nth-child(1), main.empeza div.contenedor form#formulario section.plan article.premium h2:nth-child(1) {
+main.empeza div.contenedor form#formulario section.plan article.personalizado h2:nth-child(1),
+main.empeza div.contenedor form#formulario section.plan article.premium h2:nth-child(1) {
   font-size: 1.5rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado h3, main.empeza div.contenedor form#formulario section.plan article.premium h3 {
+main.empeza div.contenedor form#formulario section.plan article.personalizado h3,
+main.empeza div.contenedor form#formulario section.plan article.premium h3 {
   text-align: center;
   padding: 0.5rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado strong, main.empeza div.contenedor form#formulario section.plan article.premium strong {
+main.empeza div.contenedor form#formulario section.plan article.personalizado strong,
+main.empeza div.contenedor form#formulario section.plan article.premium strong {
   font-size: 1.5rem;
   color: #ff156f;
   -webkit-transition: all 300ms ease-in-out 0ms;
   transition: all 300ms ease-in-out 0ms;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado .precio, main.empeza div.contenedor form#formulario section.plan article.premium .precio {
+main.empeza div.contenedor form#formulario section.plan article.personalizado .precio,
+main.empeza div.contenedor form#formulario section.plan article.premium .precio {
   font-size: 2rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado p, main.empeza div.contenedor form#formulario section.plan article.premium p {
+main.empeza div.contenedor form#formulario section.plan article.personalizado p,
+main.empeza div.contenedor form#formulario section.plan article.premium p {
   text-align: center;
   padding: 0.15rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado p:last-child, main.empeza div.contenedor form#formulario section.plan article.premium p:last-child {
+main.empeza div.contenedor form#formulario section.plan article.personalizado p:last-child,
+main.empeza div.contenedor form#formulario section.plan article.premium p:last-child {
   padding: 1rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado ul, main.empeza div.contenedor form#formulario section.plan article.premium ul {
+main.empeza div.contenedor form#formulario section.plan article.personalizado ul,
+main.empeza div.contenedor form#formulario section.plan article.premium ul {
   color: #ff156f;
   font-weight: 500;
   margin: 2rem 2.5rem 2rem 5rem;
   line-height: 1.5rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado ul li, main.empeza div.contenedor form#formulario section.plan article.premium ul li {
+main.empeza div.contenedor form#formulario section.plan article.personalizado ul li,
+main.empeza div.contenedor form#formulario section.plan article.premium ul li {
   padding: 0.2rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado:hover, main.empeza div.contenedor form#formulario section.plan article.premium:hover {
+main.empeza div.contenedor form#formulario section.plan article.personalizado:hover,
+main.empeza div.contenedor form#formulario section.plan article.premium:hover {
   -webkit-box-shadow: #7a7a7a 1px 2px 5px;
           box-shadow: #7a7a7a 1px 2px 5px;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado:hover strong.precio, main.empeza div.contenedor form#formulario section.plan article.premium:hover strong.precio {
+main.empeza div.contenedor form#formulario section.plan article.personalizado:hover strong.precio,
+main.empeza div.contenedor form#formulario section.plan article.premium:hover strong.precio {
   font-size: 4rem;
 }
 
@@ -1815,6 +1839,10 @@ main.empeza div.contenedor form#formulario button[type="reset"]:hover {
   background-color: #ffd900;
   -webkit-box-shadow: #7a7a7a 1px 1px 5px;
           box-shadow: #7a7a7a 1px 1px 5px;
+}
+
+main.empeza div.contenedor form#formulario ul#ul-reporte li h2 {
+  color: #ff156f;
 }
 
 footer {
@@ -2247,8 +2275,8 @@ footer div.right p {
     padding-bottom: 0.1rem;
   }
   body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
-    -ms-grid-columns: (minmax(280px, 1fr));
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    -ms-grid-columns: repeat auto-fit, minmax(280px, 1fr);
+        grid-template-columns: repeat auto-fit, minmax(280px, 1fr);
     width: 95%;
     padding: 1.5rem 0.25rem;
     grid-gap: 3.5rem;
@@ -2299,8 +2327,8 @@ footer div.right p {
     color: #414141;
   }
   body main.contenedor__p3 section.contenedor__grid {
-    -ms-grid-columns: (21rem);
-        grid-template-columns: repeat(auto-fit, 21rem);
+    -ms-grid-columns: repeat auto-fit, 21rem;
+        grid-template-columns: repeat auto-fit, 21rem;
   }
   body main.contenedor__p3 section.contenedor__grid article.grid__card {
     padding-bottom: 1rem;
@@ -2713,8 +2741,8 @@ footer div.right p {
     margin-bottom: 1.5rem;
   }
   body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
-    -ms-grid-columns: (minmax(380px, 1fr));
-        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    -ms-grid-columns: repeat auto-fit, minmax(380px, 1fr);
+        grid-template-columns: repeat auto-fit, minmax(380px, 1fr);
     width: 95%;
     margin: 1rem auto 4rem auto;
     padding: 1.5rem 0.25rem;
@@ -2756,8 +2784,8 @@ footer div.right p {
     color: #414141;
   }
   body main.contenedor__p3 section.contenedor__grid {
-    -ms-grid-columns: (27rem);
-        grid-template-columns: repeat(auto-fit, 27rem);
+    -ms-grid-columns: repeat auto-fit, 27rem;
+        grid-template-columns: repeat auto-fit, 27rem;
   }
   body main.contenedor__p3 section.contenedor__grid article.grid__card {
     padding-bottom: 1rem;
@@ -3074,8 +3102,8 @@ footer div.right p {
   body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(300px, 1fr));
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: repeat auto-fit, minmax(300px, 1fr);
+        grid-template-columns: repeat auto-fit, minmax(300px, 1fr);
     width: 90%;
     margin: 0.5rem auto 4rem auto;
     grid-gap: 1.5rem;
@@ -3120,8 +3148,8 @@ footer div.right p {
     line-height: 3.8rem;
   }
   body main.contenedor__p3 section.contenedor__grid {
-    -ms-grid-columns: (35rem);
-        grid-template-columns: repeat(auto-fit, 35rem);
+    -ms-grid-columns: repeat auto-fit, 35rem;
+        grid-template-columns: repeat auto-fit, 35rem;
   }
   body main.contenedor__p3 section.contenedor__grid article.grid__card {
     padding-bottom: 1rem;

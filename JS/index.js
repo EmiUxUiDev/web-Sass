@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarArquis(listaArquis)
     txtDescripcion.style.padding = '8px'
     txtDescripcion.focus()
-    listaColoresElegidos = [colorPrim.value, colorSec.value, colorNeutro.value]
+    listaColoresElegidos = new Colores(colorPrim.value, colorSec.value, colorNeutro.value)
     ocultaBotonesEnvio()
 })
 function ocultaBotonesEnvio() {
@@ -201,8 +201,8 @@ colorNeutro.addEventListener('change', () => {
     // console.log(colorNeutro.value);
 })
 function cargarColores() {
-    listaColoresElegidos = []
-    listaColoresElegidos.push(new Colores(colorPrim.value, colorSec.value, colorNeutro.value))
+    listaColoresElegidos = ''
+    listaColoresElegidos = new Colores(colorPrim.value, colorSec.value, colorNeutro.value)
     console.log(listaColoresElegidos)
 }
 // CREA INTERFAZ EN DOM DE ARQUITECTOS---------------------
@@ -267,7 +267,7 @@ function verificaPlan() {
                 inputCuotas.value = ''
                 inputCuotas.focus()
             } else {
-                planElegido.push(new PlanPago(listaPagos[0].tipo, listaPagos[0].precio, inputCuotas.value))
+                planElegido = new PlanPago(listaPagos[0].tipo, listaPagos[0].precio, inputCuotas.value)
                 console.log(planElegido)
             }
         }
@@ -302,7 +302,9 @@ function verificaPlan() {
                 inputCuotas.value = ''
                 inputCuotas.focus()
             } else {
-                planElegido.push(new PlanPago(listaPagos[1].tipo, listaPagos[1].precio, inputCuotas.value))
+                // planElegido.push(new PlanPago(listaPagos[1].tipo, listaPagos[1].precio, inputCuotas.value))
+                // console.log(planElegido)
+                planElegido = new PlanPago(listaPagos[1].tipo, listaPagos[1].precio, inputCuotas.value)
                 console.log(planElegido)
             }
         }
@@ -367,28 +369,22 @@ formularioPagina.addEventListener('submit', manejadorSubm)
 
 function manejadorSubm(e) {
     e.preventDefault()
-    debugger
+
     const validaForm = formularioPagina.checkValidity()
     console.log(validaForm)
     if (validaForm) {
 
-        cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
-        console.log(cliente)
+        // cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
+        const nuevoCliente = new Cliente(inNombre.value, inEmail.value, inCelular.value)
+        console.log(nuevoCliente)
 
-        reporteAgregado.push(new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, cliente))
-        console.log(reporteAgregado)
+        const nuevoReporte = new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, nuevoCliente)
+        console.log(nuevoReporte)
 
-        subeALocalSorage(`${inNombre.value}`, reporteAgregado)
+        subeALocalSorage(`${inNombre.value}`, nuevoReporte)
 
         let repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) || []
         cargarReporte(repoActualizado)
-
-        //     if (bajaDeLocalStorage(`${inNombre.value}`)) {
-        //         cargarReporte(bajaDeLocalStorage(`${inNombre.value}`))
-        //     } else {
-        //         ulReporte.innerHTML = `<p>Hola ${inNombre.value}, no hay registros previos</p>`
-        //     }
-        // } else alert('Formulario incompleto, no se puede generar el reporte, intentalo de nuevo')
 
         ocultaBotonesEnvio()
         divAmbientes.innerHTML = ''
@@ -402,47 +398,43 @@ function manejadorSubm(e) {
         bajaDelLocalStorage.push(archivo)
         localStorage.setItem(clave, JSON.stringify(bajaDelLocalStorage))
     }
-    // function bajaDeLocalStorage(clave) {
-    //     if (clave == null) {
-    //         return false
-    //     } else return bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave))
-    // }
 
     // ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
     function cargarReporte(repo) {
         ulReporte.innerHTML = ''
         let repoAmb = ''
         let repoFotos = ''
-        let repoColores = ''
-        let repoPlan = ''
+        // let repoColores = ''
+        // let repoPlan = ''
         let supTotalAmb = 0
         console.log(repo)
         repo.forEach(elemento => {
+            let repoAmb = ''
             elemento.ambiente.forEach(item => {
                 repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
                 supTotalAmb += parseInt(item.superficie)
             })
-
+            repoFotos = ''
             elemento.fotos.forEach(item => {
                 repoFotos += `Imagen: ${item.nombre}<br>`
             })
 
-            elemento.colores.forEach(item => {
-                repoColores += `Color primario: ${item.primario}<br>
-            Color secundario: ${item.secundario}<br>
-            Color neutro: ${item.neutro}`
-            })
+            // elemento.colores.forEach(item => {
+            //     repoColores += `Color primario: ${item.primario}<br>
+            // Color secundario: ${item.secundario}<br>
+            // Color neutro: ${item.neutro}`
+            // })
 
-            elemento.plan.forEach(item => {
-                repoPlan += `PLAN: ${item.nombre.toUpperCase()}<br>
-            Precio de contado por ambiente(hasta 18m²): $${item.precioContado}<br>
-            Superficie total a remodelar: ${supTotalAmb}m²<br>
-            con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * item.precioContado).toFixed(2))}<br>
-            en ${item.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * item.precioContado) / item.cuotass).toFixed(2))} `
-            })
+            // elemento.plan.forEach(item => {
+            // repoPlan += `PLAN: ${item.nombre.toUpperCase()}<br>
+            // Precio de contado por ambiente(hasta 18m²): $${item.precioContado}<br>
+            // Superficie total a remodelar: ${supTotalAmb}m²<br>
+            // con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * item.precioContado).toFixed(2))}<br>
+            // en ${item.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * item.precioContado) / item.cuotass).toFixed(2))} `
+            // })
 
             mostrarReporte += `
-        <h2>Hola ${elemento.cliente[0].nombre}</h2>
+        <h2>Hola ${elemento.cliente.nombre}</h2>
             <li>
                 ${elemento.descripcion}<br>
             </li><hr><br>
@@ -456,22 +448,34 @@ function manejadorSubm(e) {
                 Los estilos elegidos: ${elemento.estilo}
             </li><hr><br>
             <li>
-                ${repoColores}
+                Color primario: ${elemento.colores.primario}<br>
+                Color secundario: ${elemento.colores.secundario}<br>
+                Color neutro: ${elemento.colores.neutro}
             </li><hr><br>
             <li>
                 Responsable del proyecto: ${elemento.arq}
             </li><hr><br>
             <li>
-                ${repoPlan}
+                PLAN: ${elemento.plan.nombre.toUpperCase()}<br>
+                Precio de contado por ambiente(hasta 18m²): $${elemento.plan.precioContado}<br>
+                Superficie total a remodelar: ${supTotalAmb}m²<br>
+                con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * elemento.plan.precioContado).toFixed(2))}<br>
+                en ${elemento.plan.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * elemento.plan.precioContado) / elemento.plan.cuotass).toFixed(2))}
             </li><hr><br>
             <li>
                 Los pagos los harías por medio de: ${elemento.tarjeta}
             </li><hr><br>
             <li>
                 Fecha del presupuesto: ${elemento.fecha}
-            </li><hr><br>
+            </li><hr><br><br>
             `
-            ulReporte.innerHTML = mostrarReporte
         })
     }
+    ulReporte.innerHTML = mostrarReporte
+
+    const borraLStorageBtn = document.createElement('button')
+    borraLStorageBtn.id = 'borraLocS-Btn'
+    borraLStorageBtn.textContent = 'Borrar ultimo registro'
+
+    divBtn.appendChild(borraLStorageBtn)
 }    
