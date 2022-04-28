@@ -366,7 +366,71 @@ inCelular.addEventListener('blur', () => {
 })
 // CARGA LOS DATOS DEL CLIENTE EN UN OBJETO------------------
 formularioPagina.addEventListener('submit', manejadorSubm)
+function inhabilitaContactos(){
+    inNombre.disabled = true
+    inEmail.disabled = true
+    inCelular.disabled = true
+}
+function subeALocalSorage(clave, archivo) {
+    bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave)) || []
+    bajaDelLocalStorage.push(archivo)
+    localStorage.setItem(clave, JSON.stringify(bajaDelLocalStorage))
+}
+// ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
+function cargarReporte(repo) {
+    debugger
+    ulReporte.innerHTML = ''
+    let repoFotos = ''
+    let supTotalAmb = 0
+    repo.forEach(elemento => {
+        let repoAmb = ''
+        elemento.ambiente.forEach(item => {
+            repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
+            supTotalAmb += parseInt(item.superficie)
+        })
+        repoFotos = ''
+        elemento.fotos.forEach(item => {
+            repoFotos += `Imagen: ${item.nombre}<br>`
+        })
 
+        mostrarReporte += `
+    <h2>Hola ${elemento.cliente.nombre}</h2>
+        <li>
+            ${elemento.descripcion}<br>
+        </li><hr><br>
+        <li>
+            ${repoAmb}
+        </li><hr><br>
+        <li>
+            ${repoFotos}
+        </li><hr><br>
+        <li>
+            Los estilos elegidos: ${elemento.estilo}
+        </li><hr><br>
+        <li>
+            Color primario: ${elemento.colores.primario}<br>
+            Color secundario: ${elemento.colores.secundario}<br>
+            Color neutro: ${elemento.colores.neutro}
+        </li><hr><br>
+        <li>
+            Responsable del proyecto: ${elemento.arq}
+        </li><hr><br>
+        <li>
+            PLAN: ${elemento.plan.nombre.toUpperCase()}<br>
+            Precio de contado por ambiente(hasta 18m²): $${elemento.plan.precioContado}<br>
+            Superficie total a remodelar: ${supTotalAmb}m²<br>
+            con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * elemento.plan.precioContado).toFixed(2))}<br>
+            en ${elemento.plan.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * elemento.plan.precioContado) / elemento.plan.cuotass).toFixed(2))}
+        </li><hr><br>
+        <li>
+            Los pagos los harías por medio de: ${elemento.tarjeta}
+        </li><hr><br>
+        <li>
+            Fecha del presupuesto: ${elemento.fecha}
+        </li><hr><br><br>
+        `
+    })
+}
 function manejadorSubm(e) {
     e.preventDefault()
 
@@ -374,7 +438,6 @@ function manejadorSubm(e) {
     console.log(validaForm)
     if (validaForm) {
 
-        // cliente.push(new Cliente(inNombre.value, inEmail.value, inCelular.value))
         const nuevoCliente = new Cliente(inNombre.value, inEmail.value, inCelular.value)
         console.log(nuevoCliente)
 
@@ -382,100 +445,36 @@ function manejadorSubm(e) {
         console.log(nuevoReporte)
 
         subeALocalSorage(`${inNombre.value}`, nuevoReporte)
-
-        let repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) || []
+        repoActualizado = []
+        repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) || []
         cargarReporte(repoActualizado)
-
         ocultaBotonesEnvio()
+        inhabilitaContactos()
+        nombreCliente =  `${inNombre.value}`
         divAmbientes.innerHTML = ''
         divSupTotal.innerHTML = ''
         divFotos.innerHTML = ''
         e.target.reset()
     }
-
-    function subeALocalSorage(clave, archivo) {
-        bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave)) || []
-        bajaDelLocalStorage.push(archivo)
-        localStorage.setItem(clave, JSON.stringify(bajaDelLocalStorage))
-    }
-
-    // ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
-    function cargarReporte(repo) {
-        ulReporte.innerHTML = ''
-        let repoAmb = ''
-        let repoFotos = ''
-        // let repoColores = ''
-        // let repoPlan = ''
-        let supTotalAmb = 0
-        console.log(repo)
-        repo.forEach(elemento => {
-            let repoAmb = ''
-            elemento.ambiente.forEach(item => {
-                repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
-                supTotalAmb += parseInt(item.superficie)
-            })
-            repoFotos = ''
-            elemento.fotos.forEach(item => {
-                repoFotos += `Imagen: ${item.nombre}<br>`
-            })
-
-            // elemento.colores.forEach(item => {
-            //     repoColores += `Color primario: ${item.primario}<br>
-            // Color secundario: ${item.secundario}<br>
-            // Color neutro: ${item.neutro}`
-            // })
-
-            // elemento.plan.forEach(item => {
-            // repoPlan += `PLAN: ${item.nombre.toUpperCase()}<br>
-            // Precio de contado por ambiente(hasta 18m²): $${item.precioContado}<br>
-            // Superficie total a remodelar: ${supTotalAmb}m²<br>
-            // con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * item.precioContado).toFixed(2))}<br>
-            // en ${item.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * item.precioContado) / item.cuotass).toFixed(2))} `
-            // })
-
-            mostrarReporte += `
-        <h2>Hola ${elemento.cliente.nombre}</h2>
-            <li>
-                ${elemento.descripcion}<br>
-            </li><hr><br>
-            <li>
-                ${repoAmb}
-            </li><hr><br>
-            <li>
-                ${repoFotos}
-            </li><hr><br>
-            <li>
-                Los estilos elegidos: ${elemento.estilo}
-            </li><hr><br>
-            <li>
-                Color primario: ${elemento.colores.primario}<br>
-                Color secundario: ${elemento.colores.secundario}<br>
-                Color neutro: ${elemento.colores.neutro}
-            </li><hr><br>
-            <li>
-                Responsable del proyecto: ${elemento.arq}
-            </li><hr><br>
-            <li>
-                PLAN: ${elemento.plan.nombre.toUpperCase()}<br>
-                Precio de contado por ambiente(hasta 18m²): $${elemento.plan.precioContado}<br>
-                Superficie total a remodelar: ${supTotalAmb}m²<br>
-                con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * elemento.plan.precioContado).toFixed(2))}<br>
-                en ${elemento.plan.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * elemento.plan.precioContado) / elemento.plan.cuotass).toFixed(2))}
-            </li><hr><br>
-            <li>
-                Los pagos los harías por medio de: ${elemento.tarjeta}
-            </li><hr><br>
-            <li>
-                Fecha del presupuesto: ${elemento.fecha}
-            </li><hr><br><br>
-            `
-        })
-    }
+    
     ulReporte.innerHTML = mostrarReporte
 
     const borraLStorageBtn = document.createElement('button')
     borraLStorageBtn.id = 'borraLocS-Btn'
     borraLStorageBtn.textContent = 'Borrar ultimo registro'
-
+    borraLStorageBtn.addEventListener('click', () =>{
+        repoActualizado = JSON.parse(localStorage.getItem(nombreCliente)) || []
+        console.log(repoActualizado)
+        // debugger
+        if (repoActualizado != 0) {
+            repoActualizado.pop()
+            localStorage.removeItem(nombreCliente)
+            localStorage.setItem(nombreCliente, JSON.stringify(repoActualizado))
+            // NO SE PORQUE NO INVOCA A LA FUNCION 
+            cargarReporte(repoActualizado)
+        } else borraLStorageBtn.style.display = 'none'
+    }) 
+        
     divBtn.appendChild(borraLStorageBtn)
-}    
+}  
+
