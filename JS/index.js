@@ -20,13 +20,11 @@ listaAmbientes.forEach(ambienteLista => {
     option.innerText = ambienteLista.ambiente
     selectAmbientes.appendChild(option)
 })
-
 // GUARDA EN UNA VARIABLE EL CONTENIDO DEL TEXT AREA CON LA DESCRIPCION DE LO REQUERIDO------
 txtDescripcion.addEventListener('change', () => {
     descripcionAgregada = (txtDescripcion.value).toUpperCase()
     console.log(descripcionAgregada)
 })
-
 // CREA Y GUARDA EN UN ARRAY EL OBJETO CREADO----------------
 agregaAmbienteBtn.addEventListener('click', () => {
     const indice = selectAmbientes.selectedIndex
@@ -114,12 +112,9 @@ function mostrar(listaAmb) {
     divSupTotal.appendChild(divSup)
 }
 function borrarAmbiente(id) {
-    console.log(id);
-    console.log(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)))
     listaAmbientesAgreados.splice(listaAmbientesAgreados.indexOf(listaAmbientesAgreados.find(item => item.id === id)), 1)
     mostrar(listaAmbientesAgreados)
 }
-
 // AGREGAR MULTIPLES ARCHIVOS(FOTOS) PARA ENVIAR-----------------
 btnFotos.addEventListener('change', () => {
     mostrarFotos()
@@ -176,12 +171,7 @@ function mostrarEstilos(estilo) {
         inputAmb.id = 'check' + est.estilo
         inputAmb.name = est.estilo
         inputAmb.type = 'checkbox'
-        // inputAmb.onclick = () => {
-        //     estiloSelecc += `${est.estilo} `
-        //     console.log(estiloSelecc);
-        // }
-        // if (i === 3) inputAmb.checked = true
-        // i++
+
         estiloAmb.appendChild(inputAmb)
         liEstilo.appendChild(estiloAmb)
         ulEstilos.appendChild(liEstilo)
@@ -190,15 +180,12 @@ function mostrarEstilos(estilo) {
 // GUARDA VALORES DE COLORES SELECCIONADOS EN UN ARRAY--------------------
 colorPrim.addEventListener('change', () => {
     cargarColores()
-    // console.log(colorPrim.value);
 })
 colorSec.addEventListener('change', () => {
     cargarColores()
-    // console.log(colorSec.value);
 })
 colorNeutro.addEventListener('change', () => {
     cargarColores()
-    // console.log(colorNeutro.value);
 })
 function cargarColores() {
     listaColoresElegidos = ''
@@ -219,6 +206,7 @@ function mostrarArquis(arquis) {
         const checkArq = document.createElement('input')
         checkArq.type = 'radio'
         checkArq.name = 'arq'
+        checkArq.className
         checkArq.onclick = () => {
             arqElegido = arq.nombre
             console.log(arqElegido)
@@ -366,11 +354,7 @@ inCelular.addEventListener('blur', () => {
 })
 // CARGA LOS DATOS DEL CLIENTE EN UN OBJETO------------------
 formularioPagina.addEventListener('submit', manejadorSubm)
-function inhabilitaContactos(){
-    inNombre.disabled = true
-    inEmail.disabled = true
-    inCelular.disabled = true
-}
+
 function subeALocalSorage(clave, archivo) {
     bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave)) || []
     bajaDelLocalStorage.push(archivo)
@@ -378,10 +362,10 @@ function subeALocalSorage(clave, archivo) {
 }
 // ESTOY LOGRANDO HACER ANDAR LA FUNCION, MANIPULAR LOS DATOS
 function cargarReporte(repo) {
-    debugger
     ulReporte.innerHTML = ''
     let repoFotos = ''
     let supTotalAmb = 0
+    mostrarReporte = ''
     repo.forEach(elemento => {
         let repoAmb = ''
         elemento.ambiente.forEach(item => {
@@ -394,42 +378,45 @@ function cargarReporte(repo) {
         })
 
         mostrarReporte += `
-    <h2>Hola ${elemento.cliente.nombre}</h2>
+        <div>
+        <h2>Hola ${elemento.cliente.nombre}</h2>
         <li>
             ${elemento.descripcion}<br>
-        </li><hr><br>
+        </li>
         <li>
             ${repoAmb}
-        </li><hr><br>
+        </li>
         <li>
             ${repoFotos}
-        </li><hr><br>
+        </li>
         <li>
             Los estilos elegidos: ${elemento.estilo}
-        </li><hr><br>
+        </li>
         <li>
             Color primario: ${elemento.colores.primario}<br>
             Color secundario: ${elemento.colores.secundario}<br>
             Color neutro: ${elemento.colores.neutro}
-        </li><hr><br>
+        </li>
         <li>
             Responsable del proyecto: ${elemento.arq}
-        </li><hr><br>
+        </li>
         <li>
             PLAN: ${elemento.plan.nombre.toUpperCase()}<br>
             Precio de contado por ambiente(hasta 18m²): $${elemento.plan.precioContado}<br>
             Superficie total a remodelar: ${supTotalAmb}m²<br>
             con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * elemento.plan.precioContado).toFixed(2))}<br>
             en ${elemento.plan.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * elemento.plan.precioContado) / elemento.plan.cuotass).toFixed(2))}
-        </li><hr><br>
+        </li>
         <li>
             Los pagos los harías por medio de: ${elemento.tarjeta}
-        </li><hr><br>
+        </li>
         <li>
             Fecha del presupuesto: ${elemento.fecha}
-        </li><hr><br><br>
+        </li>
+        </div>
         `
     })
+    ulReporte.innerHTML = mostrarReporte
 }
 function manejadorSubm(e) {
     e.preventDefault()
@@ -449,32 +436,48 @@ function manejadorSubm(e) {
         repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) || []
         cargarReporte(repoActualizado)
         ocultaBotonesEnvio()
-        inhabilitaContactos()
-        nombreCliente =  `${inNombre.value}`
+        nombreCliente = `${inNombre.value}`
         divAmbientes.innerHTML = ''
         divSupTotal.innerHTML = ''
         divFotos.innerHTML = ''
         e.target.reset()
+        inhabilitaForm()
     }
-    
-    ulReporte.innerHTML = mostrarReporte
 
     const borraLStorageBtn = document.createElement('button')
     borraLStorageBtn.id = 'borraLocS-Btn'
     borraLStorageBtn.textContent = 'Borrar ultimo registro'
-    borraLStorageBtn.addEventListener('click', () =>{
+
+    borraLStorageBtn.addEventListener('click', () => {
         repoActualizado = JSON.parse(localStorage.getItem(nombreCliente)) || []
         console.log(repoActualizado)
-        // debugger
-        if (repoActualizado != 0) {
+
+        if (repoActualizado.length != 0) {
             repoActualizado.pop()
             localStorage.removeItem(nombreCliente)
             localStorage.setItem(nombreCliente, JSON.stringify(repoActualizado))
-            // NO SE PORQUE NO INVOCA A LA FUNCION 
-            cargarReporte(repoActualizado)
-        } else borraLStorageBtn.style.display = 'none'
-    }) 
-        
-    divBtn.appendChild(borraLStorageBtn)
-}  
 
+            cargarReporte(repoActualizado)
+
+            if (repoActualizado.length === 0) borraLStorageBtn.style.display = 'none'
+        } else {
+            borraLStorageBtn.style.display = 'none'
+        }
+    })
+
+    divBtn.appendChild(borraLStorageBtn)
+}
+function inhabilitaForm() {
+    txtDescripcion.disabled = true
+    agregaAmbienteBtn.disabled = true
+    selectAmbientes.disabled = true
+    btnFotos.disabled = true
+    colorPrim.disabled = true
+    colorSec.disabled = true
+    colorNeutro.disabled = true
+    chkPersonalizado.disabled = true
+    chkPremium.disabled = true
+    chksEstilos.forEach(checkbox => {
+        checkbox.disabled = true
+    })
+}

@@ -1841,8 +1841,25 @@ main.empeza div.contenedor form#formulario button[type="reset"]:hover {
           box-shadow: #7a7a7a 1px 1px 5px;
 }
 
-main.empeza div.contenedor form#formulario ul#ul-reporte li h2 {
+main.empeza div.contenedor form#formulario ul#ul-reporte div {
+  margin: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #ffd900;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: #7a7a7a 0px 1px 3px;
+          box-shadow: #7a7a7a 0px 1px 3px;
+  overflow: hidden;
+}
+
+main.empeza div.contenedor form#formulario ul#ul-reporte div h2 {
   color: #ff156f;
+  background-color: #ffd900;
+}
+
+main.empeza div.contenedor form#formulario ul#ul-reporte div li {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  padding: 0.15rem;
+  border-bottom: 1px solid #7a7a7a;
 }
 
 footer {

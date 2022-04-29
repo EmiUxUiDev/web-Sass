@@ -97,6 +97,7 @@ const formularioPagina = document.querySelector('#formulario')
 const ulReporte = document.querySelector('#ul-reporte')
 const divBtn = document.querySelector('#contiene-btn')
 const divContenedor = document.querySelector('.contenedor')
+const chksEstilos = document.querySelectorAll('input')
 // VARIABLES QUE GUARDAN VALORES PARA REGISTRO FINAL
 let descripcionAgregada = ''
 let listaAmbientesAgreados = []

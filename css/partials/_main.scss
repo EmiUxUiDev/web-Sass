@@ -1410,8 +1410,22 @@ main.empeza {
             }
 
             ul#ul-reporte {
-                li h2 {
-                    color: $clr-secundario;
+                div {
+                    margin: 1.5rem;
+                    background-color: #fff;
+                    border: 1px solid $clr-primario-hover;
+                    border-radius: 1.5rem;
+                    box-shadow: $clr-gris-medio 0px 1px 3px;
+                    overflow: hidden;
+                    h2 {
+                        color: $clr-secundario;
+                        background-color: $clr-primario-hover;
+                    }
+                    li{
+                        margin: 0.5rem 0rem 0.5rem 0rem;
+                        padding: 0.15rem;
+                        border-bottom: 1px solid $clr-gris-medio;
+                    }
                 }
             }
         }
