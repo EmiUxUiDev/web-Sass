@@ -66,6 +66,7 @@ const listaTarjetas = [{ id: 01, path: '../multimedia/img/mercadpagorecurso_colo
 
 const listaPagos = [{ id: 01, tipo: 'Personalizado', precio: 30000 }, { id: 02, tipo: 'Premium', precio: 48000 }]
 
+const divRegistroExistente = document.querySelector('#el-registroTop')
 const formulario = document.querySelector('#formulario')
 const enviarForm = document.querySelector('#enviar')
 const txtDescripcion = document.querySelector('#el-txt')
@@ -99,6 +100,7 @@ const divBtn = document.querySelector('#contiene-btn')
 const divContenedor = document.querySelector('.contenedor')
 const chksEstilos = document.querySelectorAll('input')
 // VARIABLES QUE GUARDAN VALORES PARA REGISTRO FINAL
+// const nombreToast = ''
 let descripcionAgregada = ''
 let listaAmbientesAgreados = []
 let listaFotosAgregadas = []

@@ -1,6 +1,68 @@
 
 // INVOCA PRIMERO LAS FUNCIONES PRIORITARIAS---------------
 document.addEventListener('DOMContentLoaded', () => {
+    Swal.fire({
+        title: "Hola!, ingresa tú nombre",
+        input: "text",
+        showCancelButton: true,
+        confirmButtonText: "Registrar",
+        cancelButtonText: "Cancelar",
+        toast: true,
+        inputValidator: nombre => {
+            if (!nombre) {
+                return "No ingresaste nada, proba de nuevo";
+            } else {
+                return undefined;
+            }
+        }
+    })
+        .then(resultado => {
+            if (resultado.value) {
+                let nombre = resultado.value;
+                Swal.fire({
+                    toast: true,
+                    icon: 'success',
+                    title: `Bien hecho ${nombre}!, ahora comenzemos con el presupuesto!`,
+                    showConfirmButton: false,
+                    timer: 3000
+                })
+                repoActualizado = JSON.parse(localStorage.getItem(nombre)) ?? []
+                
+                if (repoActualizado.length != 0) {
+                    divRegistroExistente.innerHTML = ''
+                    let i = 1
+                    let nomAmbiente = ''
+
+                    const tituloRegistro = document.createElement('h4')
+                    tituloRegistro.id = 'tituloreg'
+                    tituloRegistro.textContent = `Hola ${nombre}, tenes éstas remodelaciones registradas!`
+                    divRegistroExistente.appendChild(tituloRegistro)
+
+                    repoActualizado.forEach(({ ambiente, arq, plan }) => {
+                        nomAmbiente = ''
+                        ambiente.forEach(({ nombre, superficie }) => {
+                            nomAmbiente += `${nombre} sup.: ${superficie}m2 `
+                        })
+
+                        const registro = document.createElement('p')
+                        registro.id = 'registroExtist'
+                        registro.textContent = `${i} - Ambiente: ${nomAmbiente} -  ${plan.nombre}  - arq.: ${arq}`
+                        divRegistroExistente.appendChild(registro)
+                        i++
+                    })
+                } else {
+                    const tituloRegistro = document.createElement('h4')
+                    tituloRegistro.id = 'tituloreg'
+                    tituloRegistro.textContent = `Hola ${nombre}!`
+                    divRegistroExistente.appendChild(tituloRegistro)
+                    const registro = document.createElement('p')
+                    registro.style.textAlign = 'center'
+                    registro.id = 'registroExtist'
+                    registro.textContent = `No hay registros de remodelaciones a tú nombre`
+                    divRegistroExistente.appendChild(registro)
+                }
+            }
+        });
     mostrarEstilos(listaEstilos)
     mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
@@ -14,10 +76,10 @@ function ocultaBotonesEnvio() {
     borrarBtn.style.display = 'none'
 }
 // CREA Y CARGA LOS OPTIONS DEL SELECT----------------------
-listaAmbientes.forEach(ambienteLista => {
+listaAmbientes.forEach(({ id, ambiente }) => {
     const option = document.createElement('option')
-    option.value = ambienteLista.id
-    option.innerText = ambienteLista.ambiente
+    option.value = id
+    option.innerText = ambiente
     selectAmbientes.appendChild(option)
 })
 // GUARDA EN UNA VARIABLE EL CONTENIDO DEL TEXT AREA CON LA DESCRIPCION DE LO REQUERIDO------
@@ -51,28 +113,28 @@ function cargaStyles(objeto) {
 function mostrar(listaAmb) {
     divAmbientes.innerHTML = ''
     divSupTotal.innerHTML = ''
-    listaAmb.forEach(amb => {
+    listaAmb.forEach(({ id, nombre, ancho, largo, superficie }) => {
         const divAmb = document.createElement('div')
         divAmb.classList.add('card-ambiente')
 
         const nombreAmb = document.createElement('p')
         nombreAmb.classList.add('valores')
-        nombreAmb.textContent = amb.nombre
+        nombreAmb.textContent = nombre
         cargaStyles(nombreAmb)
 
         const anchoAmb = document.createElement('p')
         anchoAmb.classList.add('valores')
-        anchoAmb.textContent = `${amb.ancho}m`
+        anchoAmb.textContent = `${ancho}m`
         cargaStyles(anchoAmb)
 
         const largoAmb = document.createElement('p')
         largoAmb.classList.add('valores')
-        largoAmb.textContent = `${amb.largo}m`
+        largoAmb.textContent = `${largo}m`
         cargaStyles(largoAmb)
 
         const superficieAmb = document.createElement('p')
         superficieAmb.classList.add('valores')
-        superficieAmb.textContent = `${amb.superficie}m²`
+        superficieAmb.textContent = `${superficie}m²`
         cargaStyles(superficieAmb)
 
         const iconoBorrar = document.createElement('img')
@@ -86,7 +148,7 @@ function mostrar(listaAmb) {
         btnBorrar.style.margin = '10px 30px 0px 30px'
         btnBorrar.appendChild(iconoBorrar)
         btnBorrar.onclick = () => {
-            borrarAmbiente(amb.id)
+            borrarAmbiente(id)
         }
         divAmb.appendChild(nombreAmb)
         divAmb.appendChild(anchoAmb)
@@ -140,12 +202,12 @@ function mostrarFotos() {
                 divArchivo.appendChild(nombreArchivo)
                 divFotos.appendChild(divArchivo)
             }
-            console.log(listaFotosAgregadas)
-            listaFotosAgregadas.forEach(foto => {
-                console.log(typeof foto.id);
-                console.log(foto.id)
-                console.log(foto.nombre)
-            })
+
+            // listaFotosAgregadas.forEach(({id, nombre}) => {
+            //     console.log(typeof id);
+            //     console.log(id)
+            //     console.log(nombre)
+            // })
         }
     }
     else {
@@ -159,17 +221,16 @@ function mostrarFotos() {
 // CREA INTERFAZ DE IMAGENES(ESTILOS) Y CHECKS EN EL DOM---------------
 function mostrarEstilos(estilo) {
     ulEstilos.innerHTML = ''
-    // let i = 0
-    estilo.forEach(est => {
+    estilo.forEach(({ id, estilo }) => {
         const liEstilo = document.createElement('li')
-        liEstilo.classList.add('img' + est.id)
+        liEstilo.classList.add('img' + id)
 
         const estiloAmb = document.createElement('h3')
-        estiloAmb.textContent = est.estilo
+        estiloAmb.textContent = estilo
 
         const inputAmb = document.createElement('input')
-        inputAmb.id = 'check' + est.estilo
-        inputAmb.name = est.estilo
+        inputAmb.id = 'check' + estilo
+        inputAmb.name = estilo
         inputAmb.type = 'checkbox'
 
         estiloAmb.appendChild(inputAmb)
@@ -195,27 +256,24 @@ function cargarColores() {
 // CREA INTERFAZ EN DOM DE ARQUITECTOS---------------------
 function mostrarArquis(arquis) {
     divPersonas.innerHTML = ''
-    // let i = 0
-    arquis.forEach(arq => {
+    arquis.forEach(({ id, nombre, bio }) => {
         const divArq = document.createElement('div')
-        divArq.classList.add('img' + arq.id)
+        divArq.classList.add('img' + id)
 
         const nombreArq = document.createElement('h3')
-        nombreArq.textContent = arq.nombre
+        nombreArq.textContent = nombre
 
         const checkArq = document.createElement('input')
         checkArq.type = 'radio'
         checkArq.name = 'arq'
         checkArq.className
         checkArq.onclick = () => {
-            arqElegido = arq.nombre
+            arqElegido = nombre
             console.log(arqElegido)
         }
 
         const bioArq = document.createElement('p')
-        bioArq.textContent = arq.bio
-        // if (i === 1) checkArq.checked = true
-        // i++
+        bioArq.textContent = bio
         nombreArq.appendChild(checkArq)
         divArq.appendChild(nombreArq)
         divArq.appendChild(bioArq)
@@ -290,8 +348,6 @@ function verificaPlan() {
                 inputCuotas.value = ''
                 inputCuotas.focus()
             } else {
-                // planElegido.push(new PlanPago(listaPagos[1].tipo, listaPagos[1].precio, inputCuotas.value))
-                // console.log(planElegido)
                 planElegido = new PlanPago(listaPagos[1].tipo, listaPagos[1].precio, inputCuotas.value)
                 console.log(planElegido)
             }
@@ -309,23 +365,21 @@ function verificaPlan() {
 // CREA Y MUESTRA TARJETAS Y FORMAS DE PAGO  EN DOM----------------
 function mostrarTarjetas(tarjetas) {
     divPagos.innerHTML = ''
-    // let i = 0
-    tarjetas.forEach(tarj => {
+    tarjetas.forEach(({ path, nombre }) => {
 
         const divTarjeta = document.createElement('div')
 
         const img = document.createElement('img')
-        img.src = tarj.path
+        img.src = path
 
         const checkTarjeta = document.createElement('input')
         checkTarjeta.type = 'radio'
         checkTarjeta.name = 'forma-pago'
         checkTarjeta.onclick = () => {
-            tarjetaElegida = tarj.nombre
-            console.log(tarjetaElegida = tarj.nombre)
+            tarjetaElegida = nombre
+            console.log(tarjetaElegida = nombre)
         }
-        // if (i === 0) checkTarjeta.checked = true
-        // i++
+
         divTarjeta.appendChild(img)
         divTarjeta.appendChild(checkTarjeta)
         divPagos.appendChild(divTarjeta)
@@ -366,22 +420,22 @@ function cargarReporte(repo) {
     let repoFotos = ''
     let supTotalAmb = 0
     mostrarReporte = ''
-    repo.forEach(elemento => {
+    repo.forEach(({ descripcion, ambiente, fotos, estilo, colores, arq, plan, tarjeta, cliente, fecha }) => {
         let repoAmb = ''
-        elemento.ambiente.forEach(item => {
-            repoAmb += `${item.nombre} superficie: ${item.superficie}m²<br> `
-            supTotalAmb += parseInt(item.superficie)
+        ambiente.forEach(({ nombre, superficie }) => {
+            repoAmb += `${nombre} superficie: ${superficie}m²<br> `
+            supTotalAmb += parseInt(superficie)
         })
         repoFotos = ''
-        elemento.fotos.forEach(item => {
-            repoFotos += `Imagen: ${item.nombre}<br>`
+        fotos.forEach(({ nombre }) => {
+            repoFotos += `Imagen: ${nombre}<br>`
         })
 
         mostrarReporte += `
         <div>
-        <h2>Hola ${elemento.cliente.nombre}</h2>
+        <h2>Hola ${cliente.nombre}</h2>
         <li>
-            ${elemento.descripcion}<br>
+            ${descripcion}<br>
         </li>
         <li>
             ${repoAmb}
@@ -390,28 +444,28 @@ function cargarReporte(repo) {
             ${repoFotos}
         </li>
         <li>
-            Los estilos elegidos: ${elemento.estilo}
+            Los estilos elegidos: ${estilo}
         </li>
         <li>
-            Color primario: ${elemento.colores.primario}<br>
-            Color secundario: ${elemento.colores.secundario}<br>
-            Color neutro: ${elemento.colores.neutro}
+            Color primario: ${colores.primario}<br>
+            Color secundario: ${colores.secundario}<br>
+            Color neutro: ${colores.neutro}
         </li>
         <li>
-            Responsable del proyecto: ${elemento.arq}
+            Responsable del proyecto: ${arq}
         </li>
         <li>
-            PLAN: ${elemento.plan.nombre.toUpperCase()}<br>
-            Precio de contado por ambiente(hasta 18m²): $${elemento.plan.precioContado}<br>
+            PLAN: ${plan.nombre.toUpperCase()}<br>
+            Precio de contado por ambiente(hasta 18m²): $${plan.precioContado}<br>
             Superficie total a remodelar: ${supTotalAmb}m²<br>
-            con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * elemento.plan.precioContado).toFixed(2))}<br>
-            en ${elemento.plan.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * elemento.plan.precioContado) / elemento.plan.cuotass).toFixed(2))}
+            con un precio total de obra de: $${Number(parseFloat((supTotalAmb / 18) * plan.precioContado).toFixed(2))}<br>
+            en ${plan.cuotass} cuotas de : $${Number(parseFloat(((supTotalAmb / 18) * plan.precioContado) / plan.cuotass).toFixed(2))}
         </li>
         <li>
-            Los pagos los harías por medio de: ${elemento.tarjeta}
+            Los pagos los harías por medio de: ${tarjeta}
         </li>
         <li>
-            Fecha del presupuesto: ${elemento.fecha}
+            Fecha del presupuesto: ${fecha}
         </li>
         </div>
         `
@@ -433,9 +487,22 @@ function manejadorSubm(e) {
 
         subeALocalSorage(`${inNombre.value}`, nuevoReporte)
         repoActualizado = []
-        repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) || []
+        repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) ?? []
         cargarReporte(repoActualizado)
         ocultaBotonesEnvio()
+        Swal.fire({
+            Title: "Presupuesto enviado",
+            html: "<b class ='aviso'>Gracias por confiar en nosortros!<br>Vamos a trabajar en con tu caso y te contactaremos en no mas de 48hs!</b>",
+            icon: 'success',
+            background: '#ffd900',
+            timer: 5000,
+            timerProgressBar: true,
+            toast: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterkey: false,
+            stopKeydownPropagation: true
+        })
         nombreCliente = `${inNombre.value}`
         divAmbientes.innerHTML = ''
         divSupTotal.innerHTML = ''
@@ -449,7 +516,7 @@ function manejadorSubm(e) {
     borraLStorageBtn.textContent = 'Borrar ultimo registro'
 
     borraLStorageBtn.addEventListener('click', () => {
-        repoActualizado = JSON.parse(localStorage.getItem(nombreCliente)) || []
+        repoActualizado = JSON.parse(localStorage.getItem(nombreCliente)) ?? []
         console.log(repoActualizado)
 
         if (repoActualizado.length != 0) {

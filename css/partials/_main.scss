@@ -984,6 +984,28 @@ main.empeza {
             color: $clr-gris-oscuro;
         }
 
+        div#el-registroTop{
+            margin: 1.5rem;
+            background-color: #fff;
+            border-radius: 1.5rem;
+            box-shadow: $clr-gris-medio 0px 1px 3px;
+            overflow: hidden;
+            h4 {
+                text-align: center;
+                color: $clr-primario-hover;
+                background-color: $clr-gris-oscuro;
+                padding: 0.25rem;
+            }
+            p{
+                text-align: justify;
+                padding: 0.5rem 1rem;
+            }:last-child, :first-child{
+                margin-bottom: 0.25rem;
+            }
+            
+        } 
+            
+
         form#formulario {
             position: relative;
             display: flex;
@@ -1413,21 +1435,23 @@ main.empeza {
                 div {
                     margin: 1.5rem;
                     background-color: #fff;
-                    border: 1px solid $clr-primario-hover;
                     border-radius: 1.5rem;
                     box-shadow: $clr-gris-medio 0px 1px 3px;
                     overflow: hidden;
                     h2 {
-                        color: $clr-secundario;
-                        background-color: $clr-primario-hover;
+                        color: $clr-primario-hover;
+                        background-color: $clr-gris-oscuro;
                     }
                     li{
                         margin: 0.5rem 0rem 0.5rem 0rem;
                         padding: 0.15rem;
-                        border-bottom: 1px solid $clr-gris-medio;
                     }
-                }
+                } 
             }
+            .aviso{
+                color: $clr-gris-oscuro;
+            }
+
         }
     }
 }

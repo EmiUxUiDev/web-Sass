@@ -1310,6 +1310,31 @@ main.empeza div.contenedor p {
   color: #414141;
 }
 
+main.empeza div.contenedor div#el-registroTop {
+  margin: 1.5rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: #7a7a7a 0px 1px 3px;
+          box-shadow: #7a7a7a 0px 1px 3px;
+  overflow: hidden;
+}
+
+main.empeza div.contenedor div#el-registroTop h4 {
+  text-align: center;
+  color: #ffd900;
+  background-color: #414141;
+  padding: 0.25rem;
+}
+
+main.empeza div.contenedor div#el-registroTop p {
+  text-align: justify;
+  padding: 0.5rem 1rem;
+}
+
+main.empeza div.contenedor div#el-registroTop :last-child, main.empeza div.contenedor div#el-registroTop :first-child {
+  margin-bottom: 0.25rem;
+}
+
 main.empeza div.contenedor form#formulario {
   position: relative;
   display: -webkit-box;
@@ -1844,7 +1869,6 @@ main.empeza div.contenedor form#formulario button[type="reset"]:hover {
 main.empeza div.contenedor form#formulario ul#ul-reporte div {
   margin: 1.5rem;
   background-color: #fff;
-  border: 1px solid #ffd900;
   border-radius: 1.5rem;
   -webkit-box-shadow: #7a7a7a 0px 1px 3px;
           box-shadow: #7a7a7a 0px 1px 3px;
@@ -1852,14 +1876,17 @@ main.empeza div.contenedor form#formulario ul#ul-reporte div {
 }
 
 main.empeza div.contenedor form#formulario ul#ul-reporte div h2 {
-  color: #ff156f;
-  background-color: #ffd900;
+  color: #ffd900;
+  background-color: #414141;
 }
 
 main.empeza div.contenedor form#formulario ul#ul-reporte div li {
   margin: 0.5rem 0rem 0.5rem 0rem;
   padding: 0.15rem;
-  border-bottom: 1px solid #7a7a7a;
+}
+
+main.empeza div.contenedor form#formulario .aviso {
+  color: #414141;
 }
 
 footer {
