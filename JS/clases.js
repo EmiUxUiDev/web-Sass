@@ -22,7 +22,7 @@ class Colores {
 }
 class Cliente {
     constructor(nombre, email, celular) {
-        this.nombre = nombre
+        this.nombre = nombre.toUpperCase()
         this.email = email
         this.celular = celular
     }

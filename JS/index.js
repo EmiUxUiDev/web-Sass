@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .then(resultado => {
             if (resultado.value) {
-                let nombre = resultado.value;
+                let nombre = resultado.value.toUpperCase()
                 Swal.fire({
                     toast: true,
                     icon: 'success',
                     title: `Bien hecho ${nombre}!, ahora comenzemos con el presupuesto!`,
                     showConfirmButton: false,
-                    timer: 3000
+                    timer: 2000
                 })
                 repoActualizado = JSON.parse(localStorage.getItem(nombre)) ?? []
                 
@@ -35,8 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const tituloRegistro = document.createElement('h4')
                     tituloRegistro.id = 'tituloreg'
-                    tituloRegistro.textContent = `Hola ${nombre}, tenes éstas remodelaciones registradas!`
+                    tituloRegistro.textContent = `Hola ${nombre.toUpperCase()}, tenes éstas remodelaciones registradas!`
                     divRegistroExistente.appendChild(tituloRegistro)
+                    if(nombre != ''){
+                        inNombre.value = `${nombre}`.toUpperCase()
+                        inEmail.value = repoActualizado[0].cliente.email
+                        inCelular.value = repoActualizado[0].cliente.celular
+                        inNombre.disabled = true
+                        inEmail.disabled = true
+                        inCelular.disabled = true
+                    }
 
                     repoActualizado.forEach(({ ambiente, arq, plan }) => {
                         nomAmbiente = ''
@@ -485,7 +493,7 @@ function manejadorSubm(e) {
         const nuevoReporte = new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, nuevoCliente)
         console.log(nuevoReporte)
 
-        subeALocalSorage(`${inNombre.value}`, nuevoReporte)
+        subeALocalSorage(`${inNombre.value.toUpperCase()}`, nuevoReporte)
         repoActualizado = []
         repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) ?? []
         cargarReporte(repoActualizado)
@@ -503,7 +511,7 @@ function manejadorSubm(e) {
             allowEnterkey: false,
             stopKeydownPropagation: true
         })
-        nombreCliente = `${inNombre.value}`
+        nombreCliente = `${inNombre.value.toUpperCase()}`
         divAmbientes.innerHTML = ''
         divSupTotal.innerHTML = ''
         divFotos.innerHTML = ''
