@@ -22,7 +22,7 @@ class Colores {
 }
 class Cliente {
     constructor(nombre, email, celular) {
-        this.nombre = nombre.toUpperCase()
+        this.nombre = nombre.toUpperCase().trim()
         this.email = email
         this.celular = celular
     }
@@ -46,7 +46,8 @@ class Reporte {
         this.plan = plan
         this.tarjeta = tarjeta
         this.cliente = cliente
-        this.fecha = new Date()
+        this.fecha = new Date().toDateString()
+        
     }
 }
 

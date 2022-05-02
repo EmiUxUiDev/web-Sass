@@ -984,27 +984,32 @@ main.empeza {
             color: $clr-gris-oscuro;
         }
 
-        div#el-registroTop{
+        div#el-registroTop {
             margin: 1.5rem;
             background-color: #fff;
             border-radius: 1.5rem;
             box-shadow: $clr-gris-medio 0px 1px 3px;
             overflow: hidden;
+
             h4 {
                 text-align: center;
                 color: $clr-primario-hover;
                 background-color: $clr-gris-oscuro;
                 padding: 0.25rem;
             }
-            p{
+
+            p {
                 text-align: justify;
                 padding: 0.5rem 1rem;
-            }:last-child, :first-child{
+            }
+
+            :last-child,
+            :first-child {
                 margin-bottom: 0.25rem;
             }
-            
-        } 
-            
+
+        }
+
 
         form#formulario {
             position: relative;
@@ -1438,20 +1443,41 @@ main.empeza {
                     border-radius: 1.5rem;
                     box-shadow: $clr-gris-medio 0px 1px 3px;
                     overflow: hidden;
+
                     h2 {
                         color: $clr-primario-hover;
                         background-color: $clr-gris-oscuro;
                     }
-                    li{
+
+                    li {
                         margin: 0.5rem 0rem 0.5rem 0rem;
                         padding: 0.15rem;
                     }
-                } 
+                }
             }
-            .aviso{
+
+            .aviso {
                 color: $clr-gris-oscuro;
             }
 
+            div#contiene-btn {
+                #borraLocS-Btn {
+                    height: 2.5rem;
+                    padding: 0.2rem 1rem;
+                    border: none;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    color: $clr-primario;
+                    background-color: $clr-gris-oscuro;
+                    margin-bottom: 1rem;
+                    transition: all 150ms ease 0ms;
+                    &:hover{
+                        background-color: #000;
+                        color:$clr-primario-hover;
+                    }
+                }              
+            }
         }
     }
 }

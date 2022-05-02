@@ -2,15 +2,19 @@
 // INVOCA PRIMERO LAS FUNCIONES PRIORITARIAS---------------
 document.addEventListener('DOMContentLoaded', () => {
     Swal.fire({
-        title: "Hola!, ingresa tú nombre",
+        title: "Bienvenido!!, ingresá tú nombre",
         input: "text",
         showCancelButton: true,
         confirmButtonText: "Registrar",
         cancelButtonText: "Cancelar",
+        cancelButtonColor: '#d3b300',
+        confirmButtonColor: '#414141',
+        color: '#000',
         toast: true,
+
         inputValidator: nombre => {
             if (!nombre) {
-                return "No ingresaste nada, proba de nuevo";
+                return "No ingresaste nada, proba de nuevo"
             } else {
                 return undefined;
             }
@@ -18,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
         .then(resultado => {
             if (resultado.value) {
-                let nombre = resultado.value.toUpperCase()
+                let nombre = resultado.value.toUpperCase().trim()
                 Swal.fire({
                     toast: true,
                     icon: 'success',
@@ -26,49 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
-                repoActualizado = JSON.parse(localStorage.getItem(nombre)) ?? []
-                
-                if (repoActualizado.length != 0) {
-                    divRegistroExistente.innerHTML = ''
-                    let i = 1
-                    let nomAmbiente = ''
-
-                    const tituloRegistro = document.createElement('h4')
-                    tituloRegistro.id = 'tituloreg'
-                    tituloRegistro.textContent = `Hola ${nombre.toUpperCase()}, tenes éstas remodelaciones registradas!`
-                    divRegistroExistente.appendChild(tituloRegistro)
-                    if(nombre != ''){
-                        inNombre.value = `${nombre}`.toUpperCase()
-                        inEmail.value = repoActualizado[0].cliente.email
-                        inCelular.value = repoActualizado[0].cliente.celular
-                        inNombre.disabled = true
-                        inEmail.disabled = true
-                        inCelular.disabled = true
-                    }
-
-                    repoActualizado.forEach(({ ambiente, arq, plan }) => {
-                        nomAmbiente = ''
-                        ambiente.forEach(({ nombre, superficie }) => {
-                            nomAmbiente += `${nombre} sup.: ${superficie}m2 `
-                        })
-
-                        const registro = document.createElement('p')
-                        registro.id = 'registroExtist'
-                        registro.textContent = `${i} - Ambiente: ${nomAmbiente} -  ${plan.nombre}  - arq.: ${arq}`
-                        divRegistroExistente.appendChild(registro)
-                        i++
-                    })
-                } else {
-                    const tituloRegistro = document.createElement('h4')
-                    tituloRegistro.id = 'tituloreg'
-                    tituloRegistro.textContent = `Hola ${nombre}!`
-                    divRegistroExistente.appendChild(tituloRegistro)
-                    const registro = document.createElement('p')
-                    registro.style.textAlign = 'center'
-                    registro.id = 'registroExtist'
-                    registro.textContent = `No hay registros de remodelaciones a tú nombre`
-                    divRegistroExistente.appendChild(registro)
-                }
+                cardRegistrosExistentes(nombre)
             }
         });
     mostrarEstilos(listaEstilos)
@@ -79,6 +41,54 @@ document.addEventListener('DOMContentLoaded', () => {
     listaColoresElegidos = new Colores(colorPrim.value, colorSec.value, colorNeutro.value)
     ocultaBotonesEnvio()
 })
+
+function cardRegistrosExistentes(inputNombre){
+    repoActualizado = JSON.parse(localStorage.getItem(inputNombre)) ?? []
+
+    if (repoActualizado.length != 0) {
+        divRegistroExistente.innerHTML = ''
+        let i = 1
+        let nomAmbiente = ''
+
+        const tituloRegistro = document.createElement('h4')
+        tituloRegistro.id = 'tituloreg'
+        tituloRegistro.textContent = repoActualizado.length > 1 ? `Hola ${inputNombre.toUpperCase()}, tenes éstas remodelaciones registradas!` : `Hola ${inputNombre.toUpperCase()}, tenes una remodelación registrada!`
+        divRegistroExistente.appendChild(tituloRegistro)
+        if (inputNombre != '') {
+            inNombre.value = `${inputNombre}`.toUpperCase()
+            inEmail.value = repoActualizado[0].cliente.email
+            inCelular.value = repoActualizado[0].cliente.celular
+            inNombre.disabled = true
+        }
+
+        repoActualizado.forEach(({ ambiente, arq, plan, fecha }) => {
+            nomAmbiente = ''
+            ambiente.forEach(({ nombre, superficie }) => {
+                nomAmbiente += `${nombre} sup.: ${superficie}m2 `
+            })
+            const registro = document.createElement('p')
+            registro.id = 'registroExtist'
+            registro.textContent = `${fecha} -${i} - ${nomAmbiente} -  ${plan.nombre}  - arq.: ${arq}`
+            divRegistroExistente.appendChild(registro)
+            i++
+        })
+    } else {
+        divRegistroExistente.innerHTML = ''
+        const tituloRegistro = document.createElement('h4')
+        tituloRegistro.id = 'tituloreg'
+        tituloRegistro.textContent = `Hola ${inputNombre}!`
+        divRegistroExistente.appendChild(tituloRegistro)
+        const registro = document.createElement('p')
+        registro.style.textAlign = 'center'
+        registro.id = 'registroExtist'
+        registro.textContent = `No hay registros de remodelaciones a tú nombre`
+        inNombre.value = `${inputNombre}`.toUpperCase()
+        inNombre.disabled = true
+        divRegistroExistente.appendChild(registro)
+    }
+}
+
+
 function ocultaBotonesEnvio() {
     enviarBtn.style.display = 'none'
     borrarBtn.style.display = 'none'
@@ -210,12 +220,6 @@ function mostrarFotos() {
                 divArchivo.appendChild(nombreArchivo)
                 divFotos.appendChild(divArchivo)
             }
-
-            // listaFotosAgregadas.forEach(({id, nombre}) => {
-            //     console.log(typeof id);
-            //     console.log(id)
-            //     console.log(nombre)
-            // })
         }
     }
     else {
@@ -393,9 +397,23 @@ function mostrarTarjetas(tarjetas) {
         divPagos.appendChild(divTarjeta)
     })
 }
+
 inCelular.addEventListener('blur', () => {
     if (inNombre.value === '' || inEmail.value === '' || inCelular.value === '') {
-        console.log('Faltan datos');
+        const Toast = Swal.mixin({
+            toast: true,
+            showConfirmButton: false,
+            timer: 3000,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        Toast.fire({
+            icon: 'warning',
+            title: 'Error en los datos de contacto, proba de nuevo!'
+        })
+        inNombre.focus()
     } else {
         // CARGA CHECKBOX SELECCIONADOS------------------------------
         const chkChecked = document.querySelectorAll('input[type=checkbox]:checked')
@@ -418,7 +436,7 @@ inCelular.addEventListener('blur', () => {
 formularioPagina.addEventListener('submit', manejadorSubm)
 
 function subeALocalSorage(clave, archivo) {
-    bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave)) || []
+    bajaDelLocalStorage = JSON.parse(localStorage.getItem(clave)) ?? []
     bajaDelLocalStorage.push(archivo)
     localStorage.setItem(clave, JSON.stringify(bajaDelLocalStorage))
 }
@@ -497,11 +515,13 @@ function manejadorSubm(e) {
         repoActualizado = []
         repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) ?? []
         cargarReporte(repoActualizado)
+        cardRegistrosExistentes(`${inNombre.value.toUpperCase()}`)
         ocultaBotonesEnvio()
         Swal.fire({
             Title: "Presupuesto enviado",
             html: "<b class ='aviso'>Gracias por confiar en nosortros!<br>Vamos a trabajar en con tu caso y te contactaremos en no mas de 48hs!</b>",
             icon: 'success',
+            iconColor:'#414141',
             background: '#ffd900',
             timer: 5000,
             timerProgressBar: true,
@@ -509,7 +529,8 @@ function manejadorSubm(e) {
             allowOutsideClick: false,
             allowEscapeKey: false,
             allowEnterkey: false,
-            stopKeydownPropagation: true
+            stopKeydownPropagation: true,
+            confirmButtonColor:'#414141'
         })
         nombreCliente = `${inNombre.value.toUpperCase()}`
         divAmbientes.innerHTML = ''
@@ -531,9 +552,8 @@ function manejadorSubm(e) {
             repoActualizado.pop()
             localStorage.removeItem(nombreCliente)
             localStorage.setItem(nombreCliente, JSON.stringify(repoActualizado))
-
             cargarReporte(repoActualizado)
-
+            cardRegistrosExistentes(nombreCliente)
             if (repoActualizado.length === 0) borraLStorageBtn.style.display = 'none'
         } else {
             borraLStorageBtn.style.display = 'none'

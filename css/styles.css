@@ -1331,7 +1331,8 @@ main.empeza div.contenedor div#el-registroTop p {
   padding: 0.5rem 1rem;
 }
 
-main.empeza div.contenedor div#el-registroTop :last-child, main.empeza div.contenedor div#el-registroTop :first-child {
+main.empeza div.contenedor div#el-registroTop :last-child,
+main.empeza div.contenedor div#el-registroTop :first-child {
   margin-bottom: 0.25rem;
 }
 
@@ -1887,6 +1888,25 @@ main.empeza div.contenedor form#formulario ul#ul-reporte div li {
 
 main.empeza div.contenedor form#formulario .aviso {
   color: #414141;
+}
+
+main.empeza div.contenedor form#formulario div#contiene-btn #borraLocS-Btn {
+  height: 2.5rem;
+  padding: 0.2rem 1rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffe656;
+  background-color: #414141;
+  margin-bottom: 1rem;
+  -webkit-transition: all 150ms ease 0ms;
+  transition: all 150ms ease 0ms;
+}
+
+main.empeza div.contenedor form#formulario div#contiene-btn #borraLocS-Btn:hover {
+  background-color: #000;
+  color: #ffd900;
 }
 
 footer {
