@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 Swal.fire({
                     toast: true,
                     icon: 'success',
+                    iconColor: '#414141',
+                    color: '#414141',
+                    background: '#ffe656',
                     title: `Bien hecho ${nombre}!, ahora comenzemos con el presupuesto!`,
                     showConfirmButton: false,
                     timer: 2000
@@ -42,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ocultaBotonesEnvio()
 })
 
-function cardRegistrosExistentes(inputNombre){
+function cardRegistrosExistentes(inputNombre) {
     repoActualizado = JSON.parse(localStorage.getItem(inputNombre)) ?? []
 
     if (repoActualizado.length != 0) {
@@ -110,7 +113,14 @@ agregaAmbienteBtn.addEventListener('click', () => {
     const indice = selectAmbientes.selectedIndex
     const valores = selectAmbientes.options
     if (valores[indice].text === 'Elegí un ambiente' || anchoInput.value == '' || largoInput.value == '') {
-        alert('Completa los datos del ambiente que querés agregar')
+        Swal.fire({
+            toast: true,
+            icon: 'warning',
+            iconColor: '#414141',
+            title: 'Completa los datos del ambiente remodelar ;)',
+            showConfirmButton: false,
+            timer: 2000
+        })
     } else {
         listaAmbientesAgreados.push(new Ambiente(indice, valores[indice].text, anchoInput.value, largoInput.value))
         console.log(listaAmbientesAgreados)
@@ -244,6 +254,8 @@ function mostrarEstilos(estilo) {
         inputAmb.id = 'check' + estilo
         inputAmb.name = estilo
         inputAmb.type = 'checkbox'
+        inputAmb.style.width = '1.2rem'
+        inputAmb.style.height = '1.2rem'
 
         estiloAmb.appendChild(inputAmb)
         liEstilo.appendChild(estiloAmb)
@@ -278,7 +290,10 @@ function mostrarArquis(arquis) {
         const checkArq = document.createElement('input')
         checkArq.type = 'radio'
         checkArq.name = 'arq'
-        checkArq.className
+        checkArq.style.width = '1.2rem'
+        checkArq.style.height = '1.2rem'
+        checkArq.style.marginLeft = '0.8rem'
+
         checkArq.onclick = () => {
             arqElegido = nombre
             console.log(arqElegido)
@@ -331,6 +346,7 @@ function verificaPlan() {
         }
         console.log(cuotas)
         inputCuotas.style.width = '3rem'
+        inputCuotas.style.height = '1.5rem'
         inputCuotas.style.marginBottom = '1rem'
 
         divCuotas.appendChild(labelCuotas)
@@ -521,8 +537,9 @@ function manejadorSubm(e) {
             Title: "Presupuesto enviado",
             html: "<b class ='aviso'>Gracias por confiar en nosortros!<br>Vamos a trabajar en con tu caso y te contactaremos en no mas de 48hs!</b>",
             icon: 'success',
-            iconColor:'#414141',
-            background: '#ffd900',
+            iconColor: '#414141',
+            color: '#414141',
+            background: '#ffe656',
             timer: 5000,
             timerProgressBar: true,
             toast: true,
@@ -530,7 +547,7 @@ function manejadorSubm(e) {
             allowEscapeKey: false,
             allowEnterkey: false,
             stopKeydownPropagation: true,
-            confirmButtonColor:'#414141'
+            confirmButtonColor: '#414141'
         })
         nombreCliente = `${inNombre.value.toUpperCase()}`
         divAmbientes.innerHTML = ''
@@ -554,6 +571,7 @@ function manejadorSubm(e) {
             localStorage.setItem(nombreCliente, JSON.stringify(repoActualizado))
             cargarReporte(repoActualizado)
             cardRegistrosExistentes(nombreCliente)
+
             if (repoActualizado.length === 0) borraLStorageBtn.style.display = 'none'
         } else {
             borraLStorageBtn.style.display = 'none'

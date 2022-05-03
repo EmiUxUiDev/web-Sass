@@ -1436,6 +1436,15 @@ main.empeza div.contenedor form#formulario section.base-card fieldset div {
 main.empeza div.contenedor form#formulario section.base-card fieldset div input {
   width: 5vw;
   margin: 0rem;
+  border: 1px solid #7a7a7a;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+main.empeza div.contenedor form#formulario section.base-card fieldset div select {
+  border: 1px solid #7a7a7a;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 main.empeza div.contenedor form#formulario section.base-card fieldset button {
@@ -1549,7 +1558,7 @@ main.empeza div.contenedor form#formulario section.base-card div.elegir-color in
   margin: 1rem 0rem 1.5rem 0rem;
 }
 
-main.empeza div.contenedor form#formulario section.imagen input {
+main.empeza div.contenedor form#formulario section.imagen input#foto-btn {
   width: 80vw;
   padding: 1rem;
   margin-top: 0.5rem;
@@ -1728,6 +1737,12 @@ main.empeza div.contenedor form#formulario section.plan article.premium:hover {
 main.empeza div.contenedor form#formulario section.plan article.personalizado:hover strong.precio,
 main.empeza div.contenedor form#formulario section.plan article.premium:hover strong.precio {
   font-size: 4rem;
+}
+
+main.empeza div.contenedor form#formulario section.plan article.personalizado p input#chk-personalizado,
+main.empeza div.contenedor form#formulario section.plan article.premium p input#chk-personalizado {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 main.empeza div.contenedor form#formulario section.formas-de-pago {
