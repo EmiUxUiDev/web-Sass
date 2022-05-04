@@ -1739,8 +1739,9 @@ main.empeza div.contenedor form#formulario section.plan article.premium:hover st
   font-size: 4rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado p input#chk-personalizado,
-main.empeza div.contenedor form#formulario section.plan article.premium p input#chk-personalizado {
+main.empeza div.contenedor form#formulario section.plan article.personalizado p input#chk-personalizado, main.empeza div.contenedor form#formulario section.plan article.personalizado p #chk-premium,
+main.empeza div.contenedor form#formulario section.plan article.premium p input#chk-personalizado,
+main.empeza div.contenedor form#formulario section.plan article.premium p #chk-premium {
   width: 1.2rem;
   height: 1.2rem;
 }
