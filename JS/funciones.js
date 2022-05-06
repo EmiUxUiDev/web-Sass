@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 cardRegistrosExistentes(nombre)
             }
         });
-    mostrarEstilos(listaEstilos)
+
+    mostrarEstilos()
     mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
     txtDescripcion.style.padding = '8px'
@@ -95,21 +96,33 @@ function ocultaBotonesEnvio() {
     borrarBtn.style.display = 'none'
 }
 
-//SIMULA CARGA ASINCRONICA - RETARDO CON PROMESA Y SETTIMEOUT --------------------------------------
-const uploadSelectDelay = () =>{
-    return new Promise((resolve) =>{
-        setTimeout(()=>{
-            resolve (listaAmbientes.forEach(({ id, ambiente }) => {
-                const option = document.createElement('option')
-                option.value = id
-                option.innerText = ambiente
-                selectAmbientes.appendChild(option)
-            }))
-        }, 4000)
+// CARGA LISTA DESDE JSON LOCAL---------------------------------------------------------------------------
+const cargarLista = async () => {
+    const respuesta = await fetch('../JS/listaAmbientes.json')
+    ambientes = await respuesta.json()
+
+    ambientes.forEach(({ id, ambiente }) => {
+        const option = document.createElement('option')
+        option.value = id
+        option.innerText = ambiente
+        selectAmbientes.appendChild(option)
     })
 }
-uploadSelectDelay()
-.then((select) => select)
+//SIMULA CARGA ASINCRONICA - RETARDO CON PROMESA Y SETTIMEOUT --------------------------------------
+// const uploadSelectDelay = () =>{
+//     return new Promise((resolve) =>{
+//         setTimeout(()=>{
+//             resolve (listaAmbientes.forEach(({ id, ambiente }) => {
+//                 const option = document.createElement('option')
+//                 option.value = id
+//                 option.innerText = ambiente
+//                 selectAmbientes.appendChild(option)
+//             }))
+//         }, 4000)
+//     })
+// }
+// uploadSelectDelay()
+// .then((select) => select)
 
 function cargaStyles(objeto) {
     objeto.style.display = 'inline-block'
@@ -164,9 +177,9 @@ function mostrar(listaAmb) {
         divAmb.appendChild(superficieAmb)
         divAmb.appendChild(btnBorrar)
         divAmbientes.appendChild(divAmb)
-     
+
     })
-    
+
     let supTotal = 0
     for (let i = 0; i < listaAmb.length; i++) {
         supTotal += Number(listaAmb[i].superficie)
@@ -221,29 +234,56 @@ function mostrarFotos() {
     }
 }
 // CREA INTERFAZ DE IMAGENES(ESTILOS) Y CHECKS EN EL DOM---------------
-function mostrarEstilos(estilo) {
-    ulEstilos.innerHTML = ''
-    estilo.forEach(({ id, estilo }) => {
+// function mostrarEstilos(estilo) {
+//     ulEstilos.innerHTML = ''
+//     estilo.forEach(({ id, estilo }) => {
 
-            const liEstilo = document.createElement('li')
-            liEstilo.classList.add('img' + id)
-    
-            const estiloAmb = document.createElement('h3')
-            estiloAmb.textContent = estilo
-    
-            const inputAmb = document.createElement('input')
-            inputAmb.id = 'check' + estilo
-            inputAmb.name = estilo
-            inputAmb.type = 'checkbox'
-            inputAmb.style.width = '1.2rem'
-            inputAmb.style.height = '1.2rem'
-    
-            estiloAmb.appendChild(inputAmb)
-            liEstilo.appendChild(estiloAmb)
-            ulEstilos.appendChild(liEstilo)
+//         const liEstilo = document.createElement('li')
+//         liEstilo.classList.add('img' + id)
+
+//         const estiloAmb = document.createElement('h3')
+//         estiloAmb.textContent = estilo
+
+//         const inputAmb = document.createElement('input')
+//         inputAmb.id = 'check' + estilo
+//         inputAmb.name = estilo
+//         inputAmb.type = 'checkbox'
+//         inputAmb.style.width = '1.2rem'
+//         inputAmb.style.height = '1.2rem'
+
+//         estiloAmb.appendChild(inputAmb)
+//         liEstilo.appendChild(estiloAmb)
+//         ulEstilos.appendChild(liEstilo)
+//     })
+// }
+
+// CARGA ESTILOS DE SERVIDOR REMOTO (JSON ALOJADO EN https://www.mockable.io/)
+const mostrarEstilos = async () => {
+    const respuesta = await fetch('http://demo3158107.mockable.io/estilos')
+    estilos = await respuesta.json()
+
+    ulEstilos.innerHTML = ''
+    estilos.forEach(({ id, estilo }) => {
+
+        const liEstilo = document.createElement('li')
+        liEstilo.classList.add('img' + id)
+
+        const estiloAmb = document.createElement('h3')
+        estiloAmb.textContent = estilo
+
+        const inputAmb = document.createElement('input')
+        inputAmb.id = 'check' + estilo
+        inputAmb.name = estilo
+        inputAmb.type = 'checkbox'
+        inputAmb.style.width = '1.2rem'
+        inputAmb.style.height = '1.2rem'
+
+        estiloAmb.appendChild(inputAmb)
+        liEstilo.appendChild(estiloAmb)
+        ulEstilos.appendChild(liEstilo)
     })
-            
 }
+
 function cargarColores() {
     listaColoresElegidos = ''
     listaColoresElegidos = new Colores(colorPrim.value, colorSec.value, colorNeutro.value)
@@ -316,7 +356,7 @@ function verificaPlan() {
         inputCuotas.style.marginBottom = '1rem'
         inputCuotas.style.border = '2px solid #ff156f'
         inputCuotas.style.borderRadius = '8px'
-        inputCuotas.style.textAlign = 'center' 
+        inputCuotas.style.textAlign = 'center'
         inputCuotas.style.fontSize = '1.1rem'
 
         divCuotas.appendChild(labelCuotas)
@@ -355,7 +395,7 @@ function verificaPlan() {
         inputCuotas.style.marginBottom = '1rem'
         inputCuotas.style.border = '2px solid #ff156f'
         inputCuotas.style.borderRadius = '8px'
-        inputCuotas.style.textAlign = 'center' 
+        inputCuotas.style.textAlign = 'center'
         inputCuotas.style.fontSize = '1.1rem'
 
         divCuotas.appendChild(labelCuotas)
@@ -532,6 +572,7 @@ function inhabilitaForm() {
         checkbox.disabled = true
     })
 }
+
 
 
 

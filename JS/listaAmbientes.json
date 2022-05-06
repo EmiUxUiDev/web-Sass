@@ -1,0 +1,32 @@
+[
+    {   "id": 1,
+        "ambiente": "Cocina"
+    },
+
+    {   "id": 2, 
+        "ambiente": "Baño"
+    },
+
+    {   "id": 3, 
+        "ambiente": "Comedor"
+    },
+
+    {   "id": 4, 
+        "ambiente": "Estar"
+    },
+
+    {   "id": 5,
+        "ambiente": "Dormitorio"
+    },
+    
+    {   "id": 6,
+        "ambiente": "Quincho"
+    },
+
+    {   "id": 7, 
+        "ambiente": "Cochera"
+    },
+    {   "id": 8, 
+        "ambiente": "Otro"
+    }
+]

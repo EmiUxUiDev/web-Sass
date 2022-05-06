@@ -5,6 +5,23 @@ txtDescripcion.addEventListener('change', () => {
     descripcionAgregada = (txtDescripcion.value).toUpperCase()
     console.log(descripcionAgregada)
 })
+
+// CARGO LISTA CON ASYNC AWAIT FETCH LOCAL----------------------
+cargarLista()
+
+// CARGO SELECT CON VALORES TRAIDOS DE UN JSON LOCAL
+// const jsonEstilos = '../JS/listaAmbientes.json'
+// fetch(jsonEstilos)
+//     .then((response) => response.json()).then((ambientes) => {
+
+//         ambientes.forEach(({ id, ambiente }) => {
+//             const option = document.createElement('option')
+//             option.value = id
+//             option.innerText = ambiente
+//             selectAmbientes.appendChild(option)
+//         })
+//     })
+
 // CREA Y GUARDA EN UN ARRAY EL OBJETO CREADO----------------
 agregaAmbienteBtn.addEventListener('click', () => {
     const indice = selectAmbientes.selectedIndex
