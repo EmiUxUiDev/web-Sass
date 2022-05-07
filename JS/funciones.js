@@ -1,3 +1,24 @@
+//PROBANDO OBTENER COORDENADAS DE GEOLOCALIZACION PARA POSTERIOR USO EN LA PAGINA------
+window.addEventListener('load', () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(ubicacion=>{
+            const lat = ubicacion.coords.latitude
+            const lon = ubicacion.coords.longitude
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c8039287a702d0842ec17782871aba21`
+            fetch(url)
+                .then(response => {return response.json()})
+                .then(ciudad =>{
+                    console.log(`Estas en: ${ciudad.name}`)
+                })
+                .catch(error=>{console.log(error)})
+        })
+    }
+})
+// const cargarUbicacion = async () => {
+//     const respuesta = await fetch(url)
+//     ciudad = await respuesta.json()
+//     console.log(ciudad);
+//     } 
 // INVOCA PRIMERO LAS FUNCIONES PRIORITARIAS---------------
 document.addEventListener('DOMContentLoaded', () => {
     Swal.fire({
@@ -32,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
+                
                 cardRegistrosExistentes(nombre)
             }
         });
