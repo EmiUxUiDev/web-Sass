@@ -1,26 +1,34 @@
 //PROBANDO OBTENER COORDENADAS DE GEOLOCALIZACION PARA POSTERIOR USO EN LA PAGINA------
 window.addEventListener('load', () => {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(ubicacion=>{
+        navigator.geolocation.getCurrentPosition(ubicacion => {
             const lat = ubicacion.coords.latitude
             const lon = ubicacion.coords.longitude
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=c8039287a702d0842ec17782871aba21`
             fetch(url)
-                .then(response => {return response.json()})
-                .then(ciudad =>{
-                    console.log(`Estas en: ${ciudad.name}`)
+                .then(response => { return response.json() })
+
+                .then(ciudad => {
+                    console.log(ciudad)
+                    if (ciudad.name === 'Departamento de Capital') {
+                        ciudadAct = `Córdoba - ${ciudad.sys.country}`
+                        paisAct = ciudad.sys.country
+                        inCiudad.value = `${ciudadAct}`
+                        inCiudad.disabled = true
+                    } else ciudadAct = `${ciudad.sys.country} - ${ciudad.sys.country}`
                 })
-                .catch(error=>{console.log(error)})
+                .catch(error => { console.log(error) })
         })
     }
 })
 // const cargarUbicacion = async () => {
 //     const respuesta = await fetch(url)
-//     ciudad = await respuesta.json()
+//     const ciudad = await respuesta.json()
 //     console.log(ciudad);
 //     } 
 // INVOCA PRIMERO LAS FUNCIONES PRIORITARIAS---------------
 document.addEventListener('DOMContentLoaded', () => {
+
     Swal.fire({
         title: "Bienvenido!!, ingresá tú nombre",
         input: "text",
@@ -53,11 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
-                
+
                 cardRegistrosExistentes(nombre)
             }
-        });
-
+        })
     mostrarEstilos()
     mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
@@ -83,7 +90,9 @@ function cardRegistrosExistentes(inputNombre) {
             inNombre.value = `${inputNombre}`.toUpperCase()
             inEmail.value = repoActualizado[0].cliente.email
             inCelular.value = repoActualizado[0].cliente.celular
+            inCiudad.value = `${ciudadAct}`
             inNombre.disabled = true
+            inCiudad.disabled = true
         }
 
         repoActualizado.forEach(({ ambiente, arq, plan, fecha }) => {
@@ -108,7 +117,9 @@ function cardRegistrosExistentes(inputNombre) {
         registro.id = 'registroExtist'
         registro.textContent = `No hay registros de remodelaciones a tú nombre`
         inNombre.value = `${inputNombre}`.toUpperCase()
+        inCiudad.value = `${ciudadAct}`
         inNombre.disabled = true
+        inCiudad.disabled = true
         divRegistroExistente.appendChild(registro)
     }
 }
@@ -521,7 +532,7 @@ function manejadorSubm(e) {
     console.log(validaForm)
     if (validaForm) {
 
-        const nuevoCliente = new Cliente(inNombre.value, inEmail.value, inCelular.value)
+        const nuevoCliente = new Cliente(inNombre.value, inEmail.value, inCelular.value, `${inCiudad.value} - ${paisAct}`)
         console.log(nuevoCliente)
 
         const nuevoReporte = new Reporte(descripcionAgregada, listaAmbientesAgreados, listaFotosAgregadas, estiloSelecc, listaColoresElegidos, arqElegido, planElegido, tarjetaElegida, nuevoCliente)

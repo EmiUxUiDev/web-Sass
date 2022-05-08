@@ -21,10 +21,11 @@ class Colores {
     }
 }
 class Cliente {
-    constructor(nombre, email, celular) {
+    constructor(nombre, email, celular, ciudad) {
         this.nombre = nombre.toUpperCase().trim()
-        this.email = email
-        this.celular = celular
+        this.email = email.trim()
+        this.celular = celular.trim()
+        this.ciudad = ciudad.toUpperCase().trim()
     }
 }
 
@@ -47,7 +48,7 @@ class Reporte {
         this.tarjeta = tarjeta
         this.cliente = cliente
         this.fecha = new Date().toDateString()
-        
+
     }
 }
 
@@ -93,6 +94,7 @@ const sectionContactar = document.querySelector('.contactar')
 const inNombre = document.querySelector('#in-nombre')
 const inEmail = document.querySelector('#in-email')
 const inCelular = document.querySelector('#in-celular')
+const inCiudad = document.querySelector('#in-ciudad')
 const enviarBtn = document.querySelector('#enviar-btn')
 const borrarBtn = document.querySelector('#borrar-btn')
 const formularioPagina = document.querySelector('#formulario')
@@ -117,3 +119,5 @@ let cuotas = 1
 let mostrarReporte = ''
 let bajaDelLocalStorage = []
 let repoActualizado = []
+let ciudadAct = ''
+let paisAct = ''

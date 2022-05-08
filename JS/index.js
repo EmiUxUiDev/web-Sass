@@ -74,7 +74,7 @@ chkPremium.addEventListener('change', () => {
 let paso = 0
 
 inCelular.addEventListener('blur', () => {
-    if (inNombre.value === '' || inEmail.value === '' || inCelular.value === '') {
+    if (inNombre.value === '' || inEmail.value === '' || inCelular.value === '' || inCiudad.value === '') {
         const Toast = Swal.mixin({
             toast: true,
             showConfirmButton: false,
