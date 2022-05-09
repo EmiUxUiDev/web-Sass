@@ -996,6 +996,7 @@ main.empeza {
                 color: $clr-primario-hover;
                 background-color: $clr-gris-oscuro;
                 padding: 0.25rem;
+                font-weight: 500;
             }
 
             p {
@@ -1126,11 +1127,15 @@ main.empeza {
                 div#div-ambientes {
                     background-color: #d6d6d6;
                     border: 1px solid #ffd900;
-                    border-radius: 10px;
+                    border-radius: 15px;
                     margin: 5px;
                 }
 
+                
                 ul {
+                    input{
+                        margin-top: 0.5rem;
+                    }
                     li.img1 {
                         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.webp");
                     }
@@ -1383,6 +1388,10 @@ main.empeza {
                             padding: 0.5rem 0rem;
                         }
                     }
+                    input.tarjetasChk{
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
                 }
             }
 
@@ -1461,6 +1470,7 @@ main.empeza {
 
                     h2 {
                         color: $clr-primario-hover;
+                        font-weight: 500;
                         background-color: $clr-gris-oscuro;
                     }
 

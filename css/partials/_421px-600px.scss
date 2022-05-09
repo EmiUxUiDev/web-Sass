@@ -1,480 +1,614 @@
 @import '../bases/variables';
 
-@media screen and (min-width:421px) and (max-width:600px){
-    
+@media screen and (min-width:421px) and (max-width:600px) {
+
     // ---MODIFICACIONES AL NAVBAR, ACORDE A MQ-----
-    body{
-        header{
+    body {
+        header {
             height: 80rem;
-            nav{
+
+            nav {
                 position: sticky;
-                top:0rem;
+                top: 0rem;
                 z-index: 10000;
-                input.nav__checkbox{
-                    display:none;
-                    &:checked ~ ul.nav__listamenu li{display: block; }
-                    &:checked ~ label.nav__onoff .fas{display: none;}
-                    &:checked ~ label.nav__onoff .far{ display: block;}  
+
+                input.nav__checkbox {
+                    display: none;
+
+                    &:checked~ul.nav__listamenu li {
+                        display: block;
+                    }
+
+                    &:checked~label.nav__onoff .fas {
+                        display: none;
+                    }
+
+                    &:checked~label.nav__onoff .far {
+                        display: block;
+                    }
                 }
-                label.nav__onoff{
+
+                label.nav__onoff {
                     display: block;
                     position: absolute;
                     cursor: pointer;
                     margin: 1.8rem 1rem;
                     right: 0;
-                    font-size:1.5rem;
+                    font-size: 1.5rem;
                     color: $clr-secundario;
                     z-index: 10;
-                    i.fas{
+
+                    i.fas {
                         display: block;
                     }
-                    i.far{
+
+                    i.far {
                         display: none;
                     }
                 }
-                ul.nav__listamenu{
+
+                ul.nav__listamenu {
                     flex-direction: column;
                     align-items: center;
                     gap: 2rem;
-                    &:first-child{
-                        margin:auto; 
+
+                    &:first-child {
+                        margin: auto;
                         display: block;
                     }
-                    li{
-                        &:nth-child(2){
-                            display: none;    
-                        }
-                        &:nth-child(3){
+
+                    li {
+                        &:nth-child(2) {
                             display: none;
                         }
-                        &:nth-child(4){
+
+                        &:nth-child(3) {
                             display: none;
                         }
-                        &:nth-child(5){
+
+                        &:nth-child(4) {
                             display: none;
                         }
-                        a{
-                            img{
+
+                        &:nth-child(5) {
+                            display: none;
+                        }
+
+                        a {
+                            img {
                                 width: 3.6rem;
                             }
-                        }   
+                        }
                     }
                 }
             }
-    }
-    // --------------------------------
-    // -----PAGINA HOME/INICIO---------
-    // --------------------------------
-        main.inicio{
+        }
+
+        // --------------------------------
+        // -----PAGINA HOME/INICIO---------
+        // --------------------------------
+        main.inicio {
             background-size: 160%;
-            background-position:center -0.5%;
+            background-position: center -0.5%;
             margin-top: -75rem;
+
             // svg{   
             //     margin-top: -87rem;
             // }
-            section#home{ 
-                h1#titulo{ 
-                        font-size: 3.4rem;
-                        line-height: 3.4rem;
-                        text-align: center;
-                        padding: 0.5rem; 
+            section#home {
+                h1#titulo {
+                    font-size: 3.4rem;
+                    line-height: 3.4rem;
+                    text-align: center;
+                    padding: 0.5rem;
                 }
-                div#comentario{
+
+                div#comentario {
                     margin: 18rem auto 0rem auto;
                     width: 96%;
                     padding: 0.8rem;
                     font-size: 1rem;
-                    i.home__martillo{
+
+                    i.home__martillo {
                         font-size: 3.5rem;
                         margin-top: -2rem;
                         margin-left: -1.4rem;
                     }
-                    h2{
+
+                    h2 {
                         margin: -4.3rem 0rem 0rem 0rem;
-                        strong{
+
+                        strong {
                             font-size: 2.2rem;
                         }
                     }
-                    h3{
+
+                    h3 {
                         font-size: 1.2rem;
                         padding: 0;
                         margin-top: 2rem;
-                        &:last-child{
+
+                        &:last-child {
                             margin-top: 2rem;
                             font-size: 1.1rem;
                         }
                     }
-                    
+
                 }
-                div.home__card2{
+
+                div.home__card2 {
                     width: 85%;
                     margin: 3rem auto;
                     background-color: transparent;
                     padding: 1rem;
-                    i{
+
+                    i {
                         left: 2.5rem;
                         font-size: 3rem;
                     }
-                    div.home__parrafos{
-                        h3{
+
+                    div.home__parrafos {
+                        h3 {
                             font-size: 1.6rem;
                         }
                     }
                 }
             }
-            section.pasos{
-                div.pasos__contenedor{
-                    h2{
+
+            section.pasos {
+                div.pasos__contenedor {
+                    h2 {
                         margin-top: 2rem;
                         font-size: 4rem;
                     }
-                    div.pasos__card{
-                        img#primerimg{
+
+                    div.pasos__card {
+                        img#primerimg {
                             width: 65vw;
                             margin-bottom: -2.2rem;
                         }
-                        img{
+
+                        img {
                             width: 80vw;
                             margin-bottom: -1.9rem;
                         }
-                        div{
+
+                        div {
                             width: 90vw;
                             margin: 0rem auto;
-                            h3{
+
+                            h3 {
                                 font-size: 2rem;
                                 letter-spacing: 0.2rem;
                                 padding: 0.25rem 2rem;
                             }
-                            p{
-                                padding: 0.25rem 2rem ;
+
+                            p {
+                                padding: 0.25rem 2rem;
                                 font-size: 1.2rem;
-                                line-height:1.6rem;
-                                &:last-child{
+                                line-height: 1.6rem;
+
+                                &:last-child {
                                     font-size: 1.1rem;
                                     font-weight: 500;
                                     padding: 1rem;
                                 }
                             }
-                            a{
-                                button.pasos__btn{
+
+                            a {
+                                button.pasos__btn {
                                     width: 60vw;
                                 }
                             }
                         }
                     }
-                    a{
-                        button{
+
+                    a {
+                        button {
                             width: 60vw;
                         }
                     }
                 }
             }
-    }
-    // --------------------------------
-    // --- PAGINA SOBRE NOSOTROS-------
-    // --------------------------------    
-    
-    main.sobre__nos{
-        margin-top: -73rem;
-        h1{
-            letter-spacing: 0.15rem;
-            font-size: 3.4rem;
-            line-height: 3.4rem;
-            text-align: center;
         }
-        section.contenedor__nos{
-            div.contenedor__anidado{
-                article.nos__tarjeta{
-                    width: 22rem;
-                }
-            }
-        }
-        p{text-align: center;
-        padding: 0.5rem;}
-        section.contenedor__tecnologia{
-            div.tecnologia{
-                width: 60vw;
-                flex-direction: column;
 
-                div{
-                    text-align: center;
-                    margin-left: -0.8rem;
-                
-                    &:last-child{
-                        margin-bottom: 2rem;
-                        img{width: 45%;}
-                    }
-                    img{width: 50%;}
-                }
-            }
-            p{
-                width: 80vw;
+        // --------------------------------
+        // --- PAGINA SOBRE NOSOTROS-------
+        // --------------------------------    
+
+        main.sobre__nos {
+            margin-top: -73rem;
+
+            h1 {
+                letter-spacing: 0.15rem;
+                font-size: 3.4rem;
+                line-height: 3.4rem;
                 text-align: center;
-                margin: 0.5rem 0rem;
-                color: $clr-gris-oscuro;
-                em{
-                    font-weight: 600;
-                }
             }
-        }
-    }
 
-        
-    // --------------------------------
-    // -----PAGINA CÓMO FUNCIONA?---------
-    // --------------------------------
-    main.como__funciona{
-        margin-top: -73rem;
-        div.contenedor--p2{
-            div.primer__flex{
-                h1{
-                    font-size: 3.4rem;
-                    line-height: 3.4rem;
-                    text-align: center;
-                }
-                h2{
-                    strong{font-size: 1.2rem;
-                        color: $clr-gris-oscuro;}
-                }
-            }
-        }
-        section.contenedor__pasos--p2{
-            div.fila--p2{
-                article.pasos__card--p2{
-                    width: 340px;
-                    height: auto;
-                    margin: 1.5rem 1rem 3.5rem 1rem;
-                    flex-direction: column;
-                    img{
-                        width: 280px;
+            section.contenedor__nos {
+                div.contenedor__anidado {
+                    article.nos__tarjeta {
+                        width: 22rem;
                     }
                 }
-            }   
-        }
+            }
 
-        section.recibir{
-            p{
-                padding: 0rem 0.25rem;
+            p {
+                text-align: center;
+                padding: 0.5rem;
             }
-            ul{
-                li{
-                    font-size: 1rem;
-                    padding: 0.4rem;
-                    text-transform: uppercase;
-                    &:last-child{margin-bottom: 1.5rem;}
-                }
-            }
-            article.galeria__tec, article.galeria__renders{
-                div.grid__tec, div.grid__renders {
-                    grid-template-columns: repeat (auto-fit, minmax(380px,1fr));
-                    width: 95%;
-                    margin:1rem auto 4rem auto;
-                    padding: 1.5rem 0.25rem;
-                    grid-gap: 3.5rem;
-                    a{
-                        margin-bottom: 0.5rem;
-                        &:hover{transform: scale(1.15);}
-                        img{
-                            max-width: 400px;
+
+            section.contenedor__tecnologia {
+                div.tecnologia {
+                    width: 60vw;
+                    flex-direction: column;
+
+                    div {
+                        text-align: center;
+                        margin-left: -0.8rem;
+
+                        &:last-child {
+                            margin-bottom: 2rem;
+
+                            img {
+                                width: 45%;
+                            }
+                        }
+
+                        img {
+                            width: 50%;
                         }
                     }
                 }
-                div.light-box{
-                    &:target{
-                        transform: scale(0);
+
+                p {
+                    width: 80vw;
+                    text-align: center;
+                    margin: 0.5rem 0rem;
+                    color: $clr-gris-oscuro;
+
+                    em {
+                        font-weight: 600;
                     }
-                    
                 }
             }
         }
-    }
 
 
-    // --------------------------------
-    // -----TRUCOS PARA RENOVAR---------
-    // --------------------------------
-    main.contenedor__p3{
-        margin-top: -73rem;
-        div.titulo--p3{
-            flex-direction: column;
-            h1{
-                font-size: 3.4rem;
-                line-height: 3.4rem;
-            } 
+        // --------------------------------
+        // -----PAGINA CÓMO FUNCIONA?---------
+        // --------------------------------
+        main.como__funciona {
+            margin-top: -73rem;
+
+            div.contenedor--p2 {
+                div.primer__flex {
+                    h1 {
+                        font-size: 3.4rem;
+                        line-height: 3.4rem;
+                        text-align: center;
+                    }
+
+                    h2 {
+                        strong {
+                            font-size: 1.2rem;
+                            color: $clr-gris-oscuro;
+                        }
+                    }
+                }
             }
-            p{
+
+            section.contenedor__pasos--p2 {
+                div.fila--p2 {
+                    article.pasos__card--p2 {
+                        width: 340px;
+                        height: auto;
+                        margin: 1.5rem 1rem 3.5rem 1rem;
+                        flex-direction: column;
+
+                        img {
+                            width: 280px;
+                        }
+                    }
+                }
+            }
+
+            section.recibir {
+                p {
+                    padding: 0rem 0.25rem;
+                }
+
+                ul {
+                    li {
+                        font-size: 1rem;
+                        padding: 0.4rem;
+                        text-transform: uppercase;
+
+                        &:last-child {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+
+                article.galeria__tec,
+                article.galeria__renders {
+
+                    div.grid__tec,
+                    div.grid__renders {
+                        grid-template-columns: repeat (auto-fit, minmax(380px, 1fr));
+                        width: 95%;
+                        margin: 1rem auto 4rem auto;
+                        padding: 1.5rem 0.25rem;
+                        grid-gap: 3.5rem;
+
+                        a {
+                            margin-bottom: 0.5rem;
+
+                            &:hover {
+                                transform: scale(1.15);
+                            }
+
+                            img {
+                                max-width: 400px;
+                            }
+                        }
+                    }
+
+                    div.light-box {
+                        &:target {
+                            transform: scale(0);
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+        // --------------------------------
+        // -----TRUCOS PARA RENOVAR---------
+        // --------------------------------
+        main.contenedor__p3 {
+            margin-top: -73rem;
+
+            div.titulo--p3 {
+                flex-direction: column;
+
+                h1 {
+                    font-size: 3.4rem;
+                    line-height: 3.4rem;
+                }
+            }
+
+            p {
                 text-align: center;
                 padding: 0.5rem;
-                em{
+
+                em {
                     font-weight: 700;
                     color: $clr-gris-oscuro;
                 }
             }
-            section.contenedor__grid{
+
+            section.contenedor__grid {
                 grid-template-columns: repeat (auto-fit, 27rem);
-                article.grid__card{
+
+                article.grid__card {
                     padding-bottom: 1rem;
-                    h2{
-                        line-height: 1.5; 
+
+                    h2 {
+                        line-height: 1.5;
                     }
-                    iframe{
+
+                    iframe {
                         height: 300px;
                     }
 
-                    div{
+                    div {
                         height: 300px;
                     }
                 }
             }
-        
-    }
- 
-    
-    // --------------------------------
-    // ---PAGINA EMPEZÁ AHORA---
-    // -------------------------------- 
-    main.empeza{
-        margin-top: -73rem;
-        div.contenedor{
-            h1{
-                margin: 0rem auto; 
-                font-size: 3.4rem;
-                letter-spacing: 0.15rem;
-            }
-            h2{
-                width: 80vw;
-                margin: 0 auto;
-                font-size: 1.1rem;
-                line-height: 1.5; 
-                margin-bottom: 0;
-                strong{font-size: 1.2rem;}
-            }
-            form#formulario{
-                p{
-                    &:last-child{
-                        width: 75vw;
-                        margin: 0rem auto 0.25rem auto;
-                        text-align: center; 
-                    }
+
+        }
+
+
+        // --------------------------------
+        // ---PAGINA EMPEZÁ AHORA---
+        // -------------------------------- 
+        main.empeza {
+            margin-top: -73rem;
+
+            div.contenedor {
+                h1 {
+                    margin: 0rem auto;
+                    font-size: 3.4rem;
+                    letter-spacing: 0.15rem;
                 }
-                img.contanos_personaje{
-                    top: 20vh;
-                    width: 35vw;
-                }
-                section.base-card{
-                    h2{font-size: 1.4rem;}
-                    input{margin-top: 1rem;}
-                    fieldset{
-                        margin-top: 1rem;
-                        flex-direction: column; 
-                        justify-content: space-between;
-                        padding: 0rem;
-                        div{
-                            input{
-                                width: 65px;
-                                margin: 0rem;
-                            }
-                        }
-                    }
-                    ul{
-                        li{
-                            width: 22rem;
-                            height: 22rem;
-                        }
-                    }
-                    div.elegir-color{
-                        margin-top: 1rem;
-                        flex-direction: column;
-                        align-items: center;
-                        background-color: #fff;
-                        border: 4px solid $clr-primario-hover;
-                    }
-                }
-                section.arqui{
-                    div.personas{
-                        div{
-                            width: 80vw;
-                            padding-bottom: 0.25rem;
-                            overflow: auto;
-                            p{
-                                font-weight: 500;
-                            }
-                        }
-                        h3{
-                            font-size: 1.4rem;
-                            margin-top: -0.5rem;
-                        }
-                    }
-                }
-                section.plan{
-                    width: 100vw;
-                    flex-direction: column;
-                    article.personalizado, article.premium{
-                        width: 85vw;
-                        margin: 1rem 0rem;                 
-                        ul{
-                            font-weight: 600;
-                            margin:  2rem 2.5rem 2rem 2.5rem;
-                            line-height: 1.5rem;
-                        }
-                    }
-                }
-                section.formas-de-pago{
-                    h2, p{width: 80vw;}
-                    h2{font-size: 1.4rem;}
-                }
-                section.contactar{
+
+                h2 {
                     width: 80vw;
-                    margin-bottom: 1rem;
+                    margin: 0 auto;
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    margin-bottom: 0;
+
+                    strong {
+                        font-size: 1.2rem;
+                    }
                 }
-                button[type="submit"], button[type="reset"]{width: 50vw;}
+
+                form#formulario {
+                    p {
+                        &:last-child {
+                            width: 75vw;
+                            margin: 0rem auto 0.25rem auto;
+                            text-align: center;
+                        }
+                    }
+
+                    img.contanos_personaje {
+                        top: 20vh;
+                        width: 35vw;
+                    }
+
+                    section.base-card {
+                        h2 {
+                            font-size: 1.4rem;
+                        }
+
+                        input {
+                            margin-top: 1rem;
+                        }
+
+                        fieldset {
+                            margin-top: 1rem;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding: 0rem;
+
+                            div {
+                                input {
+                                    width: 65px;
+                                    margin: 0rem;
+                                }
+                            }
+                        }
+
+                        div#div-ambientes {
+                            margin: 0px;
+                        }
+
+                        ul {
+                            li {
+                                width: 22rem;
+                                height: 22rem;
+                            }
+                        }
+
+                        div.elegir-color {
+                            margin-top: 1rem;
+                            flex-direction: column;
+                            align-items: center;
+                            background-color: #fff;
+                            border: 4px solid $clr-primario-hover;
+                        }
+                    }
+
+                    section.arqui {
+                        div.personas {
+                            div {
+                                width: 80vw;
+                                padding-bottom: 0.25rem;
+                                overflow: auto;
+
+                                p {
+                                    font-weight: 500;
+                                }
+                            }
+
+                            h3 {
+                                font-size: 1.4rem;
+                                margin-top: -0.5rem;
+                            }
+                        }
+                    }
+
+                    section.plan {
+                        width: 100vw;
+                        flex-direction: column;
+
+                        article.personalizado,
+                        article.premium {
+                            width: 85vw;
+                            margin: 1rem 0rem;
+
+                            ul {
+                                font-weight: 600;
+                                margin: 2rem 2.5rem 2rem 2.5rem;
+                                line-height: 1.5rem;
+                            }
+                        }
+                    }
+
+                    section.formas-de-pago {
+
+                        h2,
+                        p {
+                            width: 80vw;
+                        }
+
+                        h2 {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    section.contactar {
+                        width: 80vw;
+                        margin-bottom: 1rem;
+                    }
+
+                    button[type="submit"],
+                    button[type="reset"] {
+                        width: 50vw;
+                    }
+                }
             }
         }
-    }  
 
 
-    footer{
-        div.contenedor__footer{
-            flex-direction: column;
-            align-items: center;
-            div{
-                width: 360px;
-                text-align: center;
-            }
-            div.sociales{
-                h3{
-                    margin-top: 1rem;
+        footer {
+            div.contenedor__footer {
+                flex-direction: column;
+                align-items: center;
+
+                div {
+                    width: 360px;
                     text-align: center;
                 }
-                p{
-                    text-align: center;
-                }    
+
+                div.sociales {
+                    h3 {
+                        margin-top: 1rem;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                div.contacto {
+                    h3 {
+                        text-align: center;
+                    }
+
+                    div {
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                div.comentarios {
+                    h3 {
+                        text-align: center;
+                    }
+                }
             }
-            div.contacto{
-                h3{
+
+            div.right {
+                hr {
+                    width: 90vw;
+                    margin: 10px auto;
+                }
+
+                p {
+                    padding: 0rem 1rem;
                     text-align: center;
                 }
-                div{
-                    p{text-align: center;}
-                }
-            }
-            div.comentarios{
-                h3{
-                    text-align: center;
-                }
-            }
-        }
-        div.right{
-            hr{
-                width: 90vw;
-                margin: 10px auto;
-            }
-            p{
-                padding: 0rem 1rem;
-                text-align: center;
             }
         }
     }
-    }   
-}    
-
+}

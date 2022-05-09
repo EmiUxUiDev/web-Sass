@@ -1,4 +1,4 @@
-//PROBANDO OBTENER COORDENADAS DE GEOLOCALIZACION PARA POSTERIOR USO EN LA PAGINA------
+//PROBANDO OBTENER COORDENADAS DE GEOLOCALIZACION, CARGA AUTOMATICAMENTE EL INPUT EN CONTACTO------
 window.addEventListener('load', () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(ubicacion => {
@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cardRegistrosExistentes(nombre)
             }
         })
+
     mostrarEstilos()
     mostrarTarjetas(listaTarjetas)
     mostrarArquis(listaArquis)
@@ -159,8 +160,8 @@ const cargarLista = async () => {
 
 function cargaStyles(objeto) {
     objeto.style.display = 'inline-block'
-    objeto.style.padding = '8px 30px 4px 30px'
-    objeto.style.width = '100px'
+    objeto.style.padding = '8px 20px 4px 20px'
+    objeto.style.width = '70px'
 }
 
 function mostrar(listaAmb) {
@@ -175,6 +176,7 @@ function mostrar(listaAmb) {
         nombreAmb.classList.add('valores')
         nombreAmb.textContent = nombre
         cargaStyles(nombreAmb)
+        nombreAmb.style.width = '100px'
 
         const anchoAmb = document.createElement('p')
         anchoAmb.classList.add('valores')
@@ -324,34 +326,38 @@ function cargarColores() {
 }
 
 // CREA INTERFAZ EN DOM DE ARQUITECTOS---------------------
-function mostrarArquis(arquis) {
-    divPersonas.innerHTML = ''
-    arquis.forEach(({ id, nombre, bio }) => {
-        const divArq = document.createElement('div')
-        divArq.classList.add('img' + id)
 
-        const nombreArq = document.createElement('h3')
-        nombreArq.textContent = nombre
+const cargarArquis = async () => {
+    const respuesta = await fetch('../JS/listaArquis.json')
+    arquis = await respuesta.json()
 
-        const checkArq = document.createElement('input')
-        checkArq.type = 'radio'
-        checkArq.name = 'arq'
-        checkArq.style.width = '1.2rem'
-        checkArq.style.height = '1.2rem'
-        checkArq.style.marginLeft = '0.8rem'
-
-        checkArq.onclick = () => {
-            arqElegido = nombre
-            console.log(arqElegido)
-        }
-
-        const bioArq = document.createElement('p')
-        bioArq.textContent = bio
-        nombreArq.appendChild(checkArq)
-        divArq.appendChild(nombreArq)
-        divArq.appendChild(bioArq)
-        divPersonas.appendChild(divArq)
-    })
+        divPersonas.innerHTML = ''
+        arquis.forEach(({ id, nombre, bio }) => {
+            const divArq = document.createElement('div')
+            divArq.classList.add('img' + id)
+    
+            const nombreArq = document.createElement('h3')
+            nombreArq.textContent = nombre
+    
+            const checkArq = document.createElement('input')
+            checkArq.type = 'radio'
+            checkArq.name = 'arq'
+            checkArq.style.width = '1.2rem'
+            checkArq.style.height = '1.2rem'
+            checkArq.style.marginLeft = '0.8rem'
+    
+            checkArq.onclick = () => {
+                arqElegido = nombre
+                console.log(arqElegido)
+            }
+    
+            const bioArq = document.createElement('p')
+            bioArq.textContent = bio
+            nombreArq.appendChild(checkArq)
+            divArq.appendChild(nombreArq)
+            divArq.appendChild(bioArq)
+            divPersonas.appendChild(divArq)
+        })
 }
 
 // VARIABLE PASO, CHEQUEA SI ES LA PRIMERA VEZ Q SE EJECUTA LA FUNCION----
@@ -451,6 +457,7 @@ function mostrarTarjetas(tarjetas) {
         const checkTarjeta = document.createElement('input')
         checkTarjeta.type = 'radio'
         checkTarjeta.name = 'forma-pago'
+        checkTarjeta.className = 'tarjetasChk'
         checkTarjeta.onclick = () => {
             tarjetaElegida = nombre
             console.log(tarjetaElegida = nombre)

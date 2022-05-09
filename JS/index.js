@@ -64,6 +64,9 @@ colorNeutro.addEventListener('change', () => {
     cargarColores()
 })
 
+// CARGA DATOS DE LOS ARQUITECTOS DEL EQUIPO EN LAS CARDS-----------------------
+cargarArquis()
+
 // GUARDA EL ESTADO DEL PLAN ELEGIDO-------------------------------
 chkPersonalizado.addEventListener('change', () => {
     verificaPlan()

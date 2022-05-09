@@ -1324,6 +1324,7 @@ main.empeza div.contenedor div#el-registroTop h4 {
   color: #ffd900;
   background-color: #414141;
   padding: 0.25rem;
+  font-weight: 500;
 }
 
 main.empeza div.contenedor div#el-registroTop p {
@@ -1475,8 +1476,12 @@ main.empeza div.contenedor form#formulario section.base-card fieldset button:hov
 main.empeza div.contenedor form#formulario section.base-card div#div-ambientes {
   background-color: #d6d6d6;
   border: 1px solid #ffd900;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 5px;
+}
+
+main.empeza div.contenedor form#formulario section.base-card ul input {
+  margin-top: 0.5rem;
 }
 
 main.empeza div.contenedor form#formulario section.base-card ul li.img1 {
@@ -1808,6 +1813,11 @@ main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos div 
   padding: 0.5rem 0rem;
 }
 
+main.empeza div.contenedor form#formulario section.formas-de-pago div.pagos input.tarjetasChk {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 main.empeza div.contenedor form#formulario section.contactar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1894,6 +1904,7 @@ main.empeza div.contenedor form#formulario ul#ul-reporte div {
 
 main.empeza div.contenedor form#formulario ul#ul-reporte div h2 {
   color: #ffd900;
+  font-weight: 500;
   background-color: #414141;
 }
 
@@ -2820,7 +2831,10 @@ footer div.right p {
   body main.como__funciona section.recibir ul li:last-child {
     margin-bottom: 1.5rem;
   }
-  body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec,
+  body main.como__funciona section.recibir article.galeria__tec div.grid__renders,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__tec,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
     -ms-grid-columns: repeat auto-fit, minmax(380px, 1fr);
         grid-template-columns: repeat auto-fit, minmax(380px, 1fr);
     width: 95%;
@@ -2828,17 +2842,27 @@ footer div.right p {
     padding: 1.5rem 0.25rem;
     grid-gap: 3.5rem;
   }
-  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a, body main.como__funciona section.recibir article.galeria__tec div.grid__renders a, body main.como__funciona section.recibir article.galeria__renders div.grid__tec a, body main.como__funciona section.recibir article.galeria__renders div.grid__renders a {
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a,
+  body main.como__funciona section.recibir article.galeria__tec div.grid__renders a,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__tec a,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__renders a {
     margin-bottom: 0.5rem;
   }
-  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a:hover, body main.como__funciona section.recibir article.galeria__tec div.grid__renders a:hover, body main.como__funciona section.recibir article.galeria__renders div.grid__tec a:hover, body main.como__funciona section.recibir article.galeria__renders div.grid__renders a:hover {
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a:hover,
+  body main.como__funciona section.recibir article.galeria__tec div.grid__renders a:hover,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__tec a:hover,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__renders a:hover {
     -webkit-transform: scale(1.15);
             transform: scale(1.15);
   }
-  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a img, body main.como__funciona section.recibir article.galeria__tec div.grid__renders a img, body main.como__funciona section.recibir article.galeria__renders div.grid__tec a img, body main.como__funciona section.recibir article.galeria__renders div.grid__renders a img {
+  body main.como__funciona section.recibir article.galeria__tec div.grid__tec a img,
+  body main.como__funciona section.recibir article.galeria__tec div.grid__renders a img,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__tec a img,
+  body main.como__funciona section.recibir article.galeria__renders div.grid__renders a img {
     max-width: 400px;
   }
-  body main.como__funciona section.recibir article.galeria__tec div.light-box:target, body main.como__funciona section.recibir article.galeria__renders div.light-box:target {
+  body main.como__funciona section.recibir article.galeria__tec div.light-box:target,
+  body main.como__funciona section.recibir article.galeria__renders div.light-box:target {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
@@ -2927,6 +2951,9 @@ footer div.right p {
     width: 65px;
     margin: 0rem;
   }
+  body main.empeza div.contenedor form#formulario section.base-card div#div-ambientes {
+    margin: 0px;
+  }
   body main.empeza div.contenedor form#formulario section.base-card ul li {
     width: 22rem;
     height: 22rem;
@@ -2962,16 +2989,19 @@ footer div.right p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body main.empeza div.contenedor form#formulario section.plan article.personalizado, body main.empeza div.contenedor form#formulario section.plan article.premium {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado,
+  body main.empeza div.contenedor form#formulario section.plan article.premium {
     width: 85vw;
     margin: 1rem 0rem;
   }
-  body main.empeza div.contenedor form#formulario section.plan article.personalizado ul, body main.empeza div.contenedor form#formulario section.plan article.premium ul {
+  body main.empeza div.contenedor form#formulario section.plan article.personalizado ul,
+  body main.empeza div.contenedor form#formulario section.plan article.premium ul {
     font-weight: 600;
     margin: 2rem 2.5rem 2rem 2.5rem;
     line-height: 1.5rem;
   }
-  body main.empeza div.contenedor form#formulario section.formas-de-pago h2, body main.empeza div.contenedor form#formulario section.formas-de-pago p {
+  body main.empeza div.contenedor form#formulario section.formas-de-pago h2,
+  body main.empeza div.contenedor form#formulario section.formas-de-pago p {
     width: 80vw;
   }
   body main.empeza div.contenedor form#formulario section.formas-de-pago h2 {
@@ -2981,7 +3011,8 @@ footer div.right p {
     width: 80vw;
     margin-bottom: 1rem;
   }
-  body main.empeza div.contenedor form#formulario button[type="submit"], body main.empeza div.contenedor form#formulario button[type="reset"] {
+  body main.empeza div.contenedor form#formulario button[type="submit"],
+  body main.empeza div.contenedor form#formulario button[type="reset"] {
     width: 50vw;
   }
   body footer div.contenedor__footer {

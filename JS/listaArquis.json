@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "nombre": "Carlos B.",
+        "bio": "Arquitecto de la UNLP, con 15 años de experiencia en la empresa, siendo su gran fuerte,instalaciónes y estructuras"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Carla P.",
+        "bio": "'Arquitecta de grandes habilidades en visualización y artistica, especialista en grandes interiores comerciales'"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Marcos H.",
+        "bio": "'Estudiante de arquitectura, entusiasta, de altísimo nivel de representación y montaje. Ideal para ambientes de escala residencial.'"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Martina L.",
+        "bio": "'Martina, es el alma tecnológica del grupo, al tanto de todos los avances y actualizaciones sustentables en arquitectura.'"
+    }
+]
