@@ -1070,6 +1070,7 @@ main.empeza {
                     font-weight: 500;
                     margin-top: 0.5rem;
                     border: 1px solid $clr-primario-hover;
+                    padding: 0.5rem;
                 }
 
                 fieldset {
@@ -1131,11 +1132,12 @@ main.empeza {
                     margin: 5px;
                 }
 
-                
+
                 ul {
-                    input{
+                    input {
                         margin-top: 0.5rem;
                     }
+
                     li.img1 {
                         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 35%), url("../multimedia/img/ambiente clasico-light.webp");
                     }
@@ -1204,10 +1206,10 @@ main.empeza {
             section.imagen {
                 input#foto-btn {
                     width: 80vw;
-                padding: 1rem;
-                margin-top: 0.5rem;
-                border-radius: $radio-fuerte;
-                background-color: $clr-primario;
+                    padding: 1rem;
+                    margin-top: 0.5rem;
+                    border-radius: $radio-fuerte;
+                    background-color: $clr-primario;
                 }
             }
 
@@ -1346,8 +1348,11 @@ main.empeza {
 
                         box-shadow:$clr-gris-medio 1px 2px 5px;
                     }
-                    p{
-                        input#chk-personalizado, #chk-premium{
+
+                    p {
+
+                        input#chk-personalizado,
+                        #chk-premium {
                             width: 1.2rem;
                             height: 1.2rem;
                         }
@@ -1388,7 +1393,8 @@ main.empeza {
                             padding: 0.5rem 0rem;
                         }
                     }
-                    input.tarjetasChk{
+
+                    input.tarjetasChk {
                         width: 1.2rem;
                         height: 1.2rem;
                     }
@@ -1469,9 +1475,13 @@ main.empeza {
                     overflow: hidden;
 
                     h2 {
+                        text-transform: capitalize;
+                        font-size: 1.2rem;
+                        text-align: center;
                         color: $clr-primario-hover;
-                        font-weight: 500;
                         background-color: $clr-gris-oscuro;
+                        padding: 0.25rem;
+                        font-weight: 500;
                     }
 
                     li {
@@ -1493,12 +1503,13 @@ main.empeza {
                     border-radius: 15px;
                     font-weight: bold;
                     font-size: 1.2rem;
-                    color: $clr-primario;
+                    color: #fff;
                     background-color: $clr-gris-oscuro;
                     margin-bottom: 1rem;
-                    transition: all 150ms ease 0ms;
+                    transition: all 200ms ease 0ms;
 
                     &:hover {
+                        transform: scale(.98);
                         background-color: #000;
                         color: $clr-primario-hover;
                     }

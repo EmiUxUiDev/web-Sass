@@ -1411,6 +1411,7 @@ main.empeza div.contenedor form#formulario section.base-card textarea {
   font-weight: 500;
   margin-top: 0.5rem;
   border: 1px solid #ffd900;
+  padding: 0.5rem;
 }
 
 main.empeza div.contenedor form#formulario section.base-card fieldset {
@@ -1744,7 +1745,8 @@ main.empeza div.contenedor form#formulario section.plan article.premium:hover st
   font-size: 4rem;
 }
 
-main.empeza div.contenedor form#formulario section.plan article.personalizado p input#chk-personalizado, main.empeza div.contenedor form#formulario section.plan article.personalizado p #chk-premium,
+main.empeza div.contenedor form#formulario section.plan article.personalizado p input#chk-personalizado,
+main.empeza div.contenedor form#formulario section.plan article.personalizado p #chk-premium,
 main.empeza div.contenedor form#formulario section.plan article.premium p input#chk-personalizado,
 main.empeza div.contenedor form#formulario section.plan article.premium p #chk-premium {
   width: 1.2rem;
@@ -1903,9 +1905,13 @@ main.empeza div.contenedor form#formulario ul#ul-reporte div {
 }
 
 main.empeza div.contenedor form#formulario ul#ul-reporte div h2 {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  text-align: center;
   color: #ffd900;
-  font-weight: 500;
   background-color: #414141;
+  padding: 0.25rem;
+  font-weight: 500;
 }
 
 main.empeza div.contenedor form#formulario ul#ul-reporte div li {
@@ -1924,14 +1930,16 @@ main.empeza div.contenedor form#formulario div#contiene-btn #borraLocS-Btn {
   border-radius: 15px;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #ffe656;
+  color: #fff;
   background-color: #414141;
   margin-bottom: 1rem;
-  -webkit-transition: all 150ms ease 0ms;
-  transition: all 150ms ease 0ms;
+  -webkit-transition: all 200ms ease 0ms;
+  transition: all 200ms ease 0ms;
 }
 
 main.empeza div.contenedor form#formulario div#contiene-btn #borraLocS-Btn:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
   background-color: #000;
   color: #ffd900;
 }

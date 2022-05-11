@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
 //     } 
 // INVOCA PRIMERO LAS FUNCIONES PRIORITARIAS---------------
 document.addEventListener('DOMContentLoaded', () => {
-
+    // debugger
     Swal.fire({
         title: "Bienvenido!!, ingresá tú nombre",
         input: "text",
@@ -61,15 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
-
                 cardRegistrosExistentes(nombre)
             }
         })
 
     mostrarEstilos()
     mostrarTarjetas(listaTarjetas)
-    mostrarArquis(listaArquis)
-    txtDescripcion.style.padding = '8px'
     txtDescripcion.focus()
     listaColoresElegidos = new Colores(colorPrim.value, colorSec.value, colorNeutro.value)
     ocultaBotonesEnvio()
@@ -331,33 +328,33 @@ const cargarArquis = async () => {
     const respuesta = await fetch('../JS/listaArquis.json')
     arquis = await respuesta.json()
 
-        divPersonas.innerHTML = ''
-        arquis.forEach(({ id, nombre, bio }) => {
-            const divArq = document.createElement('div')
-            divArq.classList.add('img' + id)
-    
-            const nombreArq = document.createElement('h3')
-            nombreArq.textContent = nombre
-    
-            const checkArq = document.createElement('input')
-            checkArq.type = 'radio'
-            checkArq.name = 'arq'
-            checkArq.style.width = '1.2rem'
-            checkArq.style.height = '1.2rem'
-            checkArq.style.marginLeft = '0.8rem'
-    
-            checkArq.onclick = () => {
-                arqElegido = nombre
-                console.log(arqElegido)
-            }
-    
-            const bioArq = document.createElement('p')
-            bioArq.textContent = bio
-            nombreArq.appendChild(checkArq)
-            divArq.appendChild(nombreArq)
-            divArq.appendChild(bioArq)
-            divPersonas.appendChild(divArq)
-        })
+    divPersonas.innerHTML = ''
+    arquis.forEach(({ id, nombre, bio }) => {
+        const divArq = document.createElement('div')
+        divArq.classList.add('img' + id)
+
+        const nombreArq = document.createElement('h3')
+        nombreArq.textContent = nombre
+
+        const checkArq = document.createElement('input')
+        checkArq.type = 'radio'
+        checkArq.name = 'arq'
+        checkArq.style.width = '1.2rem'
+        checkArq.style.height = '1.2rem'
+        checkArq.style.marginLeft = '0.8rem'
+
+        checkArq.onclick = () => {
+            arqElegido = nombre
+            console.log(arqElegido)
+        }
+
+        const bioArq = document.createElement('p')
+        bioArq.textContent = bio
+        nombreArq.appendChild(checkArq)
+        divArq.appendChild(nombreArq)
+        divArq.appendChild(bioArq)
+        divPersonas.appendChild(divArq)
+    })
 }
 
 // VARIABLE PASO, CHEQUEA SI ES LA PRIMERA VEZ Q SE EJECUTA LA FUNCION----
@@ -547,10 +544,13 @@ function manejadorSubm(e) {
 
         subeALocalSorage(`${inNombre.value.toUpperCase()}`, nuevoReporte)
         repoActualizado = []
-        repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value}`)) ?? []
+        console.log(`${inNombre.value}`)
+        repoActualizado = JSON.parse(localStorage.getItem(`${inNombre.value.toUpperCase()}`)) ?? []
+
         cargarReporte(repoActualizado)
         cardRegistrosExistentes(`${inNombre.value.toUpperCase()}`)
         ocultaBotonesEnvio()
+
         Swal.fire({
             Title: "Presupuesto enviado",
             html: "<b class ='aviso'>Gracias por confiar en nosortros!<br>Vamos a trabajar en con tu caso y te contactaremos en no mas de 48hs!</b>",
@@ -580,24 +580,42 @@ function manejadorSubm(e) {
     borraLStorageBtn.textContent = 'Borrar ultimo registro'
 
     borraLStorageBtn.addEventListener('click', () => {
-        repoActualizado = JSON.parse(localStorage.getItem(nombreCliente)) ?? []
-        console.log(repoActualizado)
 
-        if (repoActualizado.length != 0) {
-            repoActualizado.pop()
-            localStorage.removeItem(nombreCliente)
-            localStorage.setItem(nombreCliente, JSON.stringify(repoActualizado))
-            cargarReporte(repoActualizado)
-            cardRegistrosExistentes(nombreCliente)
+        Swal.fire({
+            title: 'Estás seguro que queres borrar el registro?',
+            text: "Una vez borrado, no se podra recuperar!",
+            icon: 'warning',
+            iconColor: '#414141',
+            background: '#ffe656',
+            cancelButtonColor: '#414141',
+            confirmButtonColor: '#F44336',
+            color: '#000',
+            showCancelButton: true,
+            confirmButtonText: 'Borrar!',
+            toast: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                repoActualizado = JSON.parse(localStorage.getItem(nombreCliente)) ?? []
+                console.log(repoActualizado)
 
-            if (repoActualizado.length === 0) borraLStorageBtn.style.display = 'none'
-        } else {
-            borraLStorageBtn.style.display = 'none'
-        }
+                if (repoActualizado.length != 0) {
+                    repoActualizado.pop()
+                    localStorage.removeItem(nombreCliente)
+                    localStorage.setItem(nombreCliente, JSON.stringify(repoActualizado))
+                    cargarReporte(repoActualizado)
+                    cardRegistrosExistentes(nombreCliente)
+
+                    if (repoActualizado.length === 0) borraLStorageBtn.style.display = 'none'
+                } else {
+                    borraLStorageBtn.style.display = 'none'
+                }
+            }
+        })
     })
 
     divBtn.appendChild(borraLStorageBtn)
 }
+
 function inhabilitaForm() {
     txtDescripcion.disabled = true
     agregaAmbienteBtn.disabled = true
