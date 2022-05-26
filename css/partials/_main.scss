@@ -676,7 +676,7 @@ main.como__funciona {
             div.grid__tec,
             div.grid__renders {
                 display: grid;
-                grid-template-columns: repeat (auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 width: 90%;
                 margin: 1rem auto 4rem auto;
                 grid-gap: 2rem;
@@ -879,7 +879,7 @@ main.contenedor__p3 {
 
     section.contenedor__grid {
         display: grid;
-        grid-template-columns: repeat (auto-fit, 24rem);
+        grid-template-columns: repeat(auto-fit, 24rem);
         justify-content: center;
         grid-gap: 2rem;
         margin: 3rem 0rem;

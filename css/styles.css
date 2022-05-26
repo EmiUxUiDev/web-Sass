@@ -965,8 +965,8 @@ main.como__funciona section.recibir article.galeria__renders div.grid__tec,
 main.como__funciona section.recibir article.galeria__renders div.grid__renders {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat auto-fit, minmax(300px, 1fr);
-      grid-template-columns: repeat auto-fit, minmax(300px, 1fr);
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 90%;
   margin: 1rem auto 4rem auto;
   grid-gap: 2rem;
@@ -1209,8 +1209,8 @@ main.contenedor__p3 p {
 main.contenedor__p3 section.contenedor__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat auto-fit, 24rem;
-      grid-template-columns: repeat auto-fit, 24rem;
+  -ms-grid-columns: (24rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 24rem);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2374,8 +2374,8 @@ footer div.right p {
     padding-bottom: 0.1rem;
   }
   body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
-    -ms-grid-columns: repeat auto-fit, minmax(280px, 1fr);
-        grid-template-columns: repeat auto-fit, minmax(280px, 1fr);
+    -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 95%;
     padding: 1.5rem 0.25rem;
     grid-gap: 3.5rem;
@@ -2426,8 +2426,8 @@ footer div.right p {
     color: #414141;
   }
   body main.contenedor__p3 section.contenedor__grid {
-    -ms-grid-columns: repeat auto-fit, 21rem;
-        grid-template-columns: repeat auto-fit, 21rem;
+    -ms-grid-columns: (21rem)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 21rem);
   }
   body main.contenedor__p3 section.contenedor__grid article.grid__card {
     padding-bottom: 1rem;
@@ -2843,8 +2843,8 @@ footer div.right p {
   body main.como__funciona section.recibir article.galeria__tec div.grid__renders,
   body main.como__funciona section.recibir article.galeria__renders div.grid__tec,
   body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
-    -ms-grid-columns: repeat auto-fit, minmax(380px, 1fr);
-        grid-template-columns: repeat auto-fit, minmax(380px, 1fr);
+    -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     width: 95%;
     margin: 1rem auto 4rem auto;
     padding: 1.5rem 0.25rem;
@@ -2896,8 +2896,8 @@ footer div.right p {
     color: #414141;
   }
   body main.contenedor__p3 section.contenedor__grid {
-    -ms-grid-columns: repeat auto-fit, 27rem;
-        grid-template-columns: repeat auto-fit, 27rem;
+    -ms-grid-columns: (27rem)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 27rem);
   }
   body main.contenedor__p3 section.contenedor__grid article.grid__card {
     padding-bottom: 1rem;
@@ -3221,8 +3221,8 @@ footer div.right p {
   body main.como__funciona section.recibir article.galeria__tec div.grid__tec, body main.como__funciona section.recibir article.galeria__tec div.grid__renders, body main.como__funciona section.recibir article.galeria__renders div.grid__tec, body main.como__funciona section.recibir article.galeria__renders div.grid__renders {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: repeat auto-fit, minmax(300px, 1fr);
-        grid-template-columns: repeat auto-fit, minmax(300px, 1fr);
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: 90%;
     margin: 0.5rem auto 4rem auto;
     grid-gap: 1.5rem;
@@ -3267,8 +3267,8 @@ footer div.right p {
     line-height: 3.8rem;
   }
   body main.contenedor__p3 section.contenedor__grid {
-    -ms-grid-columns: repeat auto-fit, 35rem;
-        grid-template-columns: repeat auto-fit, 35rem;
+    -ms-grid-columns: (35rem)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 35rem);
   }
   body main.contenedor__p3 section.contenedor__grid article.grid__card {
     padding-bottom: 1rem;
