@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-    mostrarEstilos()
+    mostrarEstilos(listaEstilos)
     mostrarTarjetas(listaTarjetas)
     txtDescripcion.focus()
     listaColoresElegidos = new Colores(colorPrim.value, colorSec.value, colorNeutro.value)
@@ -266,36 +266,9 @@ function mostrarFotos() {
     }
 }
 // CREA INTERFAZ DE IMAGENES(ESTILOS) Y CHECKS EN EL DOM---------------
-// function mostrarEstilos(estilo) {
-//     ulEstilos.innerHTML = ''
-//     estilo.forEach(({ id, estilo }) => {
-
-//         const liEstilo = document.createElement('li')
-//         liEstilo.classList.add('img' + id)
-
-//         const estiloAmb = document.createElement('h3')
-//         estiloAmb.textContent = estilo
-
-//         const inputAmb = document.createElement('input')
-//         inputAmb.id = 'check' + estilo
-//         inputAmb.name = estilo
-//         inputAmb.type = 'checkbox'
-//         inputAmb.style.width = '1.2rem'
-//         inputAmb.style.height = '1.2rem'
-
-//         estiloAmb.appendChild(inputAmb)
-//         liEstilo.appendChild(estiloAmb)
-//         ulEstilos.appendChild(liEstilo)
-//     })
-// }
-
-// CARGA ESTILOS DE SERVIDOR REMOTO (JSON ALOJADO EN https://www.mockable.io/)
-const mostrarEstilos = async () => {
-    const respuesta = await fetch('http://demo3158107.mockable.io/estilos')
-    estilos = await respuesta.json()
-
+function mostrarEstilos(estilo) {
     ulEstilos.innerHTML = ''
-    estilos.forEach(({ id, estilo }) => {
+    estilo.forEach(({ id, estilo }) => {
 
         const liEstilo = document.createElement('li')
         liEstilo.classList.add('img' + id)
@@ -315,6 +288,33 @@ const mostrarEstilos = async () => {
         ulEstilos.appendChild(liEstilo)
     })
 }
+
+// CARGA ESTILOS DE SERVIDOR REMOTO (JSON ALOJADO EN https://www.mockable.io/)
+// const mostrarEstilos = async () => {
+//     const respuesta = await fetch('http://demo3158107.mockable.io/estilos')
+//     estilos = await respuesta.json()
+
+//     ulEstilos.innerHTML = ''
+//     estilos.forEach(({ id, estilo }) => {
+
+//         const liEstilo = document.createElement('li')
+//         liEstilo.classList.add('img' + id)
+
+//         const estiloAmb = document.createElement('h3')
+//         estiloAmb.textContent = estilo
+
+//         const inputAmb = document.createElement('input')
+//         inputAmb.id = 'check' + estilo
+//         inputAmb.name = estilo
+//         inputAmb.type = 'checkbox'
+//         inputAmb.style.width = '1.2rem'
+//         inputAmb.style.height = '1.2rem'
+
+//         estiloAmb.appendChild(inputAmb)
+//         liEstilo.appendChild(estiloAmb)
+//         ulEstilos.appendChild(liEstilo)
+//     })
+// }
 
 function cargarColores() {
     listaColoresElegidos = ''
